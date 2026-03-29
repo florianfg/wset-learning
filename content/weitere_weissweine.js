@@ -1,388 +1,158 @@
 registerChapterContent("weitere_weissweine", {
   cards: [
     {
-      title: "Einführung: Weitere weiße Rebsorten",
-      content: `
-- Ergänzen die Hauptsorten (Chardonnay, Sauvignon Blanc, Riesling)
-- Große stilistische Vielfalt
-- Wichtig für WSET: typische Aromen + Struktur erkennen
+      title: "Einführung: Weitere Weiße Rebsorten – Nischen-Qualitäten",
+      content: `Dieser Kapikel behandelt wichtige "sekundäre" weiße Rebsorten, die nicht Chardonnay, Sauvignon Blanc oder Riesling sind, aber große regionale und prüfungs-Relevanz haben. Diese Sorten zeigen spezialisierte Charakteristiken und zeigen, dass Qualität nicht auf "Big Three" beschränkt ist. Das zentrale Konzept: Aromaprofil + Struktur + Herkunft = Erkennungs-Logik.
 
-- Fokus:
-  - Aromaprofil
-  - Säure
-  - Körper
-  - Herkunft
-
-Merksatz: Prüfungsfokus liegt auf Stil + Herkunft + Aromatik.
-`
+- **Aromatische Sorten**: Gewürztraminer, Viognier, Torrontés
+- **Strukturierte Sorten**: Chenin Blanc, Albariño, Grüner Veltliner, Verdicchio, Fiano, Semillon
+- **Fokus**: Aroma, Säure, Körper, Herkunft
+- **Prüfungs-Logik**: Kombinationen aus Säure, Körper, Aroma führen zur Rebsorte`,
+      takeaway: "Merksatz: Prüfungsfokus liegt auf Stil + Herkunft + Aromatik."
     },
     {
-      title: "Gewürztraminer – Überblick",
-      content: `
-- Aromatische Rebsorte (aromatic variety)
-- Ursprünglich aus Elsass (Alsace)
-- Niedrige Säure (low acidity)
-- Hoher Alkohol möglich
+      title: "Gewürztraminer – Intensive Würzigkeit",
+      content: `Gewürztraminer ist eine intensiv aromatische Rebsorte mit niedriger Säure und charakteristischer Litschi-Rose Noten.
 
-Merksatz: Intensiv, würzig, oft mit niedriger Säure.
-`
+- **Herkunft**: Elsass (Frankreich) ursprünglich
+- **Name**: "Gewürz" = Würze (Litschi und Rose sind gewürzig-aromatisch)
+- **Säure**: NIEDRIG (strukturelles Manko)
+- **Körper**: mittel bis vollmundig
+- **Alkohol**: hoch möglich
+- **Aromen**: Litschi (lychee), Rose (rose), Gewürze, tropische Noten
+- **Stil**: oft halbtrocken bis süß
+- **Problem**: niedrige Säure = schwierig für Balance
+- **Merksatz**: Litschi + Rose = klassischer Gewürztraminer`,
+      takeaway: "Gewürztraminer = intensiv, würzig, oft mit niedriger Säure."
     },
     {
-      title: "Gewürztraminer – Aromaprofil",
-      content: `
-- Litschi (lychee)
-- Rose (rose)
-- Gewürze (spice)
-- Tropische Früchte
+      title: "Müller-Thurgau – Einfach und Früh-Reifend",
+      content: `Müller-Thurgau ist eine deutsche Kreuzung (Riesling × Madeleine Royale), die früh reift und einfache, fruchtbetonte Weine gibt.
 
-- Oft:
-  - Parfümiert
-  - Sehr intensiv
-
-Merksatz: Litschi + Rose = klassischer Gewürztraminer.
-`
+- **Herkunft**: Deutschland (künstliche Kreuzung, 1880er)
+- **Verbreitung**: sehr weit verbreitet in Deutschland
+- **Reife**: frühe Reife (vorteilhaft in kühlen Regionen)
+- **Körper**: leicht bis mittel
+- **Aromen**: Apfel, Pfirsich, Muskat-Noten
+- **Stil**: einfach, früher Genuss, wenig Komplexität
+- **Merksatz**: Einfach, früh reifend, zugänglich`,
+      takeaway: "Müller-Thurgau = einfach, unkompliziert."
     },
     {
-      title: "Gewürztraminer – Stil",
-      content: `
-- Mittel bis vollmundig (medium to full-bodied)
-- Niedrige Säure
-- Oft halbtrocken bis süß (off-dry to sweet)
-- Hoher Alkohol
+      title: "Chenin Blanc – Die Vielseitig-Extremste",
+      content: `Chenin Blanc ist möglicherweise die vielseitigste Rebsorte weltweit und kann trocken bis edelsüß ausgebaut werden.
 
-Merksatz: Reich, weich, aromatisch.
-`
+- **Herkunft**: Loire (Frankreich)
+- **Herkunfts-Name**: "Pineau de la Loire"
+- **Säure**: HOHE Säure immer vorhanden (definierend)
+- **Süße-Vielseitigkeit**: trocken bis edelsüß alle möglich
+- **Aromen (trocken)**: Apfel, Zitrus, Quitten
+- **Aromen (süß)**: Honig, Marmelade, getrocknete Früchte
+- **Botrytis-Potential**: hervorragend geeignet für Süßweine
+- **Merksatz**: Extrem wandelbar – von trocken bis edelsüß`,
+      takeaway: "Chenin Blanc = extrem wandelbar."
     },
     {
-      title: "Gewürztraminer – Regionen",
-      content: `
-- Elsass (Frankreich)
-- Deutschland
-- Neue Welt (z. B. USA, Neuseeland)
+      title: "Viognier – Steinfrucht und Floral",
+      content: `Viognier ist eine aromatische Rebsorte aus der Rhône mit würzigen Steinobst-Aromen und niedriger Säure.
 
-Merksatz: Elsass liefert die klassischsten Beispiele.
-`
+- **Herkunft**: Rhône (Frankreich)
+- **Anbau**: schwierig, anspruchsvoll im Weinberg
+- **Körper**: VOLLMUNDIG (full-bodied)
+- **Säure**: niedrig bis mittel
+- **Aromen**: Pfirsich (peach), Aprikose (apricot), Blüten, Gewürze
+- **Textur**: ölig, weich, cremig möglich
+- **Merksatz**: Steinfrucht + florale Noten`,
+      takeaway: "Viognier = Steinfrucht + florale Noten."
     },
     {
-      title: "Müller-Thurgau – Überblick",
-      content: `
-- Kreuzung aus Riesling x Madeleine Royale
-- Weit verbreitet in Deutschland
-- Frühe Reife
+      title: "Albariño – Spanien und Salzigkeit",
+      content: `Albariño ist eine spanische Küsten-Rebsorte mit hoher Säure und charakteristischer salziger, mineraler Note.
 
-Merksatz: Einfach, früh reifend, zugänglich.
-`
+- **Herkunft**: Rías Baixas (Spanien, Galicien)
+- **Klima**: Küstenregion, feuchtes Klima, lange Reifezeit
+- **Körper**: leicht bis mittel
+- **Säure**: HOHE Säure
+- **Aromen**: Zitrus, Pfirsich, leicht salzige Note
+- **Charakter**: maritim geprägt (Salzwasser-Nähe)
+- **Merksatz**: Frisch + salzig + zitrisch`,
+      takeaway: "Albariño = frisch, salzige maritime Prägung."
     },
     {
-      title: "Müller-Thurgau – Stil",
-      content: `
-- Leicht bis mittel (light to medium body)
-- Mittlere Säure
-- Oft leicht aromatisch
+      title: "Semillon – Wachsige Textur und Botrytis-Potential",
+      content: `Semillon ist eine Bordeaux-Sorte mit wachsiger Textur und hervorragendem Potential für edle Süßweine.
 
-- Aromen:
-  - Apfel
-  - Pfirsich
-  - Muskatnote
-
-Merksatz: Unkompliziert und fruchtig.
-`
+- **Herkunft**: Bordeaux (Frankreich)
+- **Verwendung**: oft mit Sauvignon Blanc verschnitten
+- **Körper**: mittel bis vollmundig
+- **Säure**: mittel
+- **Aromen (trocken)**: Zitrus, Honig, Nussig (mit Reife)
+- **Textur**: wachsig, cremig möglich (typisches Merkmal)
+- **Botrytis**: ausgezeichnet für edle Süßweine (Sauternes)
+- **Merksatz**: Wachsige Textur ist typisch`,
+      takeaway: "Semillon = wachsige Textur, gut für Süßweine."
     },
     {
-      title: "Chenin Blanc – Überblick",
-      content: `
-- Sehr vielseitige Rebsorte
-- Ursprünglich Loire (Frankreich)
-- Kann trocken bis süß sein
+      title: "Grüner Veltliner – Österreichs Signature",
+      content: `Grüner Veltliner ist Österreichs wichtigste und signatur-charakteristische Weißweinsorte.
 
-Merksatz: Extrem wandelbar – von trocken bis edelsüß.
-`
+- **Herkunft**: Österreich
+- **Verbreitung**: sehr wichtig in Österreich, Leitsorte
+- **Säure**: mittlere bis hohe Säure
+- **Körper**: mittel bis vollmundig
+- **Aromen**: grüner Apfel, Pfeffer (white pepper), Zitrus, Kräuter
+- **Charakter-Merkmal**: weiße Pfeffernote ist typisch
+- **Regionen**: Niederösterreich (Wachau, Kamptal) beste Beispiele
+- **Merksatz**: Pfeffrige Note ist typisch`,
+      takeaway: "Grüner Veltliner = Österreichs Signature."
     },
     {
-      title: "Chenin Blanc – Stil",
-      content: `
-- Hohe Säure (high acidity)
-- Mittel bis vollmundig
-- Große Stilvielfalt
+      title: "Verdicchio – Italienische Struktur",
+      content: `Verdicchio ist eine italienische Sorte mit guter Säure und strukturiertem Profil.
 
-- Trocken:
-  - Apfel, Zitrus
-
-- Süß:
-  - Honig, Trockenfrucht
-
-Merksatz: Hohe Säure ist der Schlüssel.
-`
+- **Herkunft**: Marche (Italien, Zentral-Italien)
+- **Säure**: mittlere bis hohe Säure
+- **Körper**: mittel
+- **Aromen**: Zitrus, Kräuter, Mandel (bitter almond) im Abgang
+- **Charakter**: strukturiert, mineralisch möglich
+- **Merksatz**: Mandelnote im Abgang ist typisch`,
+      takeaway: "Verdicchio = frisch mit Struktur."
     },
     {
-      title: "Chenin Blanc – Regionen",
-      content: `
-- Loire (Vouvray, Anjou)
-- Südafrika (wichtige Rebsorte)
+      title: "Fiano – Süditalienische Komplexität",
+      content: `Fiano ist eine süditalienische Qualitätssorte aus der Campania mit komplexem Aroma-Profil.
 
-Merksatz: Loire = klassisch, Südafrika = modern & vielseitig.
-`
+- **Herkunft**: Campania (Süditalien)
+- **Säure**: mittlere Säure
+- **Körper**: mittel bis vollmundig
+- **Aromen**: Honig, Nuss, Zitrus, würzig möglich
+- **Charakter**: komplex, strukturiert
+- **Merksatz**: Komplex und strukturiert`,
+      takeaway: "Fiano = komplex und aromatisch."
     },
     {
-      title: "Viognier – Überblick",
-      content: `
-- Aromatische Rebsorte
-- Ursprünglich Rhône (Frankreich)
-- Schwieriger Anbau
+      title: "Torrontés – Argentiniens Aromatic-Weiße",
+      content: `Torrontés ist Argentiniens wichtigste weiße Aromasorte und zeigt hohe Aromatik trotz meist trockener Ausbau.
 
-Merksatz: Intensiv aromatisch, aber anspruchsvoll im Weinberg.
-`
+- **Herkunft**: Argentinien
+- **Aromatik**: HOHE aromatische Intensität
+- **Körper**: leicht bis mittel
+- **Säure**: mittlere Säure
+- **Aromen**: Traube (grapy), Rose, Zitrus, duftend
+- **Stil**: duftend, aber meist trocken (nicht süßlich)
+- **Merksatz**: Duftend, aber meist trocken`,
+      takeaway: "Torrontés = Argentiniens aromatic Flagship."
     },
     {
-      title: "Viognier – Aromaprofil",
-      content: `
-- Pfirsich (peach)
-- Aprikose (apricot)
-- Blüten (floral)
-- Gewürze
+      title: "Aromatische vs. Neutrale Sorten – Erkennungs-Logik",
+      content: `Ein zentrales Konzept für Blindverkostungen: aromatische Sorten sind sofort erkennbar durch Intensität.
 
-Merksatz: Steinfrucht + florale Noten.
-`
+- **Aromatische Sorten**: Gewürztraminer, Viognier, Torrontés, Müller-Thurgau (leicht aromatisch)
+- **Erkennungs-Logik**: diese Sorten sind durch Aroma-Intensität sofort erkennbar
+- **Nicht-aromatische**: Pinot Grigio, Semillon, Chardonnay (neutral)
+- **Prüfungs-Relevanz**: aromatisch vs. neutral ist fundamentale Unterscheidung`,
+      takeaway: "Aromatische Sorten sind leicht erkennbar."
     },
-    {
-      title: "Viognier – Stil",
-      content: `
-- Vollmundig (full-bodied)
-- Niedrige bis mittlere Säure
-- Oft weich und ölig
-
-Merksatz: Reich und weich mit moderater Säure.
-`
-    },
-    {
-      title: "Albariño – Überblick",
-      content: `
-- Ursprünglich Spanien (Rías Baixas)
-- Küstenregion
-
-Merksatz: Frisch, maritim geprägt.
-`
-    },
-    {
-      title: "Albariño – Stil",
-      content: `
-- Hohe Säure
-- Leicht bis mittel
-- Frisch und aromatisch
-
-- Aromen:
-  - Zitrus
-  - Pfirsich
-  - Salzige Note
-
-Merksatz: Frisch + salzig + zitrisch.
-`
-    },
-    {
-      title: "Albariño – Speisebegleitung",
-      content: `
-- Meeresfrüchte
-- Fisch
-- Leichte Gerichte
-
-Merksatz: Perfekt zu Seafood.
-`
-    },
-    {
-      title: "Semillon – Überblick",
-      content: `
-- Bordeaux wichtige Rebsorte
-- Oft mit Sauvignon Blanc verschnitten
-
-Merksatz: Wichtig für trockene und süße Weine.
-`
-    },
-    {
-      title: "Semillon – Stil",
-      content: `
-- Mittlere Säure
-- Mittel bis vollmundig
-- Kann wachsige Textur haben
-
-- Aromen:
-  - Zitrus
-  - Honig
-  - Nussig (mit Reife)
-
-Merksatz: Wachsige Textur ist typisch.
-`
-    },
-    {
-      title: "Semillon – Süßwein",
-      content: `
-- Anfällig für Botrytis (noble rot)
-- Wichtig für Sauternes
-
-- Aromen:
-  - Honig
-  - Trockenfrüchte
-
-Merksatz: Schlüsselrebsorte für edelsüße Weine.
-`
-    },
-    {
-      title: "Grüner Veltliner – Überblick",
-      content: `
-- Österreich wichtigste Rebsorte
-- Sehr vielseitig
-
-Merksatz: Österreichs Signature-Wein.
-`
-    },
-    {
-      title: "Grüner Veltliner – Stil",
-      content: `
-- Mittlere bis hohe Säure
-- Mittel bis vollmundig
-
-- Aromen:
-  - Grüner Apfel
-  - Pfeffer (white pepper)
-  - Zitrus
-
-Merksatz: Pfeffrige Note ist typisch.
-`
-    },
-    {
-      title: "Grüner Veltliner – Regionen",
-      content: `
-- Niederösterreich (Wachau, Kamptal)
-
-Merksatz: Beste Beispiele aus Niederösterreich.
-`
-    },
-    {
-      title: "Verdicchio – Überblick",
-      content: `
-- Italien (Marche)
-- Gute Säure
-
-Merksatz: Frisch mit Struktur.
-`
-    },
-    {
-      title: "Verdicchio – Stil",
-      content: `
-- Mittlere bis hohe Säure
-- Mittel Körper
-
-- Aromen:
-  - Zitrus
-  - Kräuter
-  - Mandel (bitter almond)
-
-Merksatz: Mandelnote im Abgang ist typisch.
-`
-    },
-    {
-      title: "Fiano – Überblick",
-      content: `
-- Süditalien (Campania)
-- Qualitätsrebsorte
-
-Merksatz: Aromatisch mit Struktur.
-`
-    },
-    {
-      title: "Fiano – Stil",
-      content: `
-- Mittlere Säure
-- Mittel bis vollmundig
-
-- Aromen:
-  - Honig
-  - Nuss
-  - Zitrus
-
-Merksatz: Komplex und strukturiert.
-`
-    },
-    {
-      title: "Torrontés – Überblick",
-      content: `
-- Argentinien
-- Sehr aromatisch
-
-Merksatz: Argentiniens wichtigste weiße Aromasorte.
-`
-    },
-    {
-      title: "Torrontés – Stil",
-      content: `
-- Hohe Aromatik
-- Mittlere Säure
-- Leichter bis mittlerer Körper
-
-- Aromen:
-  - Traube
-  - Rose
-  - Zitrus
-
-Merksatz: Duftend, aber meist trocken.
-`
-    },
-    {
-      title: "Typische Prüfungsfrage – Aromatische vs. neutrale Sorten",
-      content: `
-Aromatisch:
-- Gewürztraminer
-- Viognier
-- Torrontés
-
-Neutral:
-- Pinot Grigio
-- Müller-Thurgau
-
-Merksatz: Aromatische Sorten sind oft leicht erkennbar.
-`
-    },
-    {
-      title: "Typische Prüfungsfrage – Säure",
-      content: `
-Hohe Säure:
-- Chenin Blanc
-- Albariño
-- Grüner Veltliner
-
-Niedrige Säure:
-- Gewürztraminer
-- Viognier
-
-Merksatz: Säure ist ein Schlüsselindikator.
-`
-    },
-    {
-      title: "Typische Prüfungsfrage – Körper",
-      content: `
-Leicht:
-- Pinot Grigio
-- Müller-Thurgau
-
-Voll:
-- Viognier
-- Gewürztraminer
-
-Merksatz: Körper hilft bei der Blindverkostung.
-`
-    },
-    {
-      title: "Zusammenfassung",
-      content: `
-- Große Vielfalt an weißen Rebsorten
-- Stil abhängig von Klima + Ausbau
-- Prüfungsrelevant: Aromatik + Struktur + Herkunft
-
-Merksatz: Kombination aus Säure, Körper und Aroma führt zur richtigen Antwort.
-`
-    }
-  ],
-
-  questions: [
     {
       question: "Welche Aromenkombination ist typisch für Gewürztraminer?",
       options: ["Zitrone und Gras", "Litschi und Rose", "Apfel und Butter", "Kirsche und Pfeffer"],
@@ -442,36 +212,6 @@ Merksatz: Kombination aus Säure, Körper und Aroma führt zur richtigen Antwort
       options: ["Niedrige Säure, vollmundig", "Frisch, zitrisch, hohe Säure, maritim geprägt", "Stark aromatisch wie Gewürztraminer", "Immer süß"],
       correct: 1,
       explanation: "Albariño ist frisch und zitrisch mit hoher Säure und einer leicht salzigen Note."
-    },
-    {
-      question: "Welche Rebsorten gelten als aromatisch?",
-      options: ["Chardonnay und Semillon", "Gewürztraminer, Viognier, Torrontés", "Grüner Veltliner und Albariño", "Müller-Thurgau und Pinot Gris"],
-      correct: 1,
-      explanation: "Gewürztraminer, Viognier und Torrontés gehören zu den intensiv aromatischen Rebsorten."
-    },
-    {
-      question: "Was ist das klassische Speise-Pairing für Albariño?",
-      options: ["Rotes Fleisch", "Meeresfrüchte und Fisch", "Süßspeisen", "Käse"],
-      correct: 1,
-      explanation: "Albariños maritimer Charakter und die hohe Säure passen perfekt zu Meeresfrüchten."
-    },
-    {
-      question: "Welche Rebsorte aus Süditalien (Campania) zeigt Honig-, Nuss- und Zitrusaromen?",
-      options: ["Grüner Veltliner", "Verdicchio", "Fiano", "Torrontés"],
-      correct: 2,
-      explanation: "Fiano aus der Campania ist komplex mit Honig-, Nuss- und Zitrusnoten."
-    },
-    {
-      question: "Was ist typisch für Gewürztraminer in Bezug auf Säure und Körper?",
-      options: ["Hohe Säure, leichter Körper", "Niedrige Säure, vollmundig", "Hohe Säure, leicht", "Mittlere Säure, leicht"],
-      correct: 1,
-      explanation: "Gewürztraminer hat niedrige Säure und einen vollmundigen Körper."
-    },
-    {
-      question: "Für welche edelsüßen Bordeaux-Weine wird Semillon verwendet?",
-      options: ["Médoc Rouge", "Sauternes", "Pomerol", "Saint-Émilion"],
-      correct: 1,
-      explanation: "Semillon ist die Hauptrebsorte für Sauternes, die klassischen Botrytis-Süßweine."
     }
   ]
 });

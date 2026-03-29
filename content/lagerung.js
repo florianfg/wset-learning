@@ -1,399 +1,337 @@
 registerChapterContent("lagerung", {
   cards: [
     {
-      title: "Warum ist richtige Lagerung wichtig?",
-      content: [
-        "Wein ist ein empfindliches Produkt und reagiert stark auf Umwelteinflüsse",
-        "Falsche Lagerung kann zu Qualitätsverlust oder Weinfehlern führen",
-        "Ziel: Entwicklung positiv unterstützen oder Qualität stabil halten"
-      ],
-      merksatz: "Falsche Lagerung kann guten Wein ruinieren – richtige Lagerung erhält oder verbessert ihn."
+      title: "Warum Lagerung wichtig ist",
+      content: `Wein ist empfindlich gegen Umwelteinflüsse – jede falsche Lagerung beschädigt ihn chemisch. Ziel: Reifung unterstützen oder Qualität erhalten.
+
+- **Chemische Empfindlichkeit**: Oxidation, Temperatur-Stress, Lichtzerfell beschädigen molekulare Struktur
+- **Temperatur-Effekt**: warm = schnelle Alterung (oxidation), kalt = verlangsamt Entwicklung
+- **Licht-Effekt**: UV = Photo-Katalyse = Farb-Breakdown, muffige Aromen ("light strike")
+- **Luftfeuchtigkeit**: trocken = Kork schrumpft = Oxidation; zu feucht = Schimmel
+- **Ziel**: stabil erhalten (einfache Weine) oder gezielt reifen (strukturierte Weine)`,
+      takeaway: "Falsche Lagerung = chemische Zerstörung. Richtige Lagerung = Qualität erhält oder verbessert."
     },
     {
-      title: "Ziele der Weinlagerung",
-      content: [
-        "Kurzfristige Lagerung: Qualität erhalten",
-        "Langfristige Lagerung: Reifung (Aging) ermöglichen",
-        "Vermeidung von Oxidation und unerwünschten chemischen Reaktionen"
-      ]
+      title: "Welche Weine sind lagerfähig? Strukturkomponenten",
+      content: `Nur Weine mit hoher Säure, hohen Tanninen, hohem Zucker oder hohem Alkohol sind lagerfähig. Grund: diese konservieren.
+
+- **Säure** (6+ g/L):
+  - Wirkt konservierend (pH niedrig = Oxidation verlangsamt)
+  - Verhindert Mikrobenbefall
+  - Beispiel: Loire Riesling 8 g/L Säure = 30+ Jahre möglich
+- **Tannine** (hohe):
+  - Strukturieren Wein über Zeit
+  - Polymerisieren in Flasche = Tannine werden weicher
+  - Beispiel: Barolo, Bordeaux = 20+ Jahre
+- **Zucker** (hoher):
+  - Osmotischer Effekt konserviert (wie Marmelade)
+  - Beispiel: Tokaji 150 g/L Zucker = 100+ Jahre
+- **Alkohol** (hoher):
+  - Antimikrobiell (stoppt Gärung & Befall)
+  - Beispiel: Portwein 19–22% = 100+ Jahre
+- **Konzentration & Komplexität**: strukturierte Weine = mehr "Schutz" gegen Verfall
+
+**Konsequenz**: einfache fruchtbetonte Weine = NICHT lagerfähig (trinke jung)`,
+      takeaway: "Lagerfähigkeit = Säure + Tannine + Zucker + Alkohol + Komplexität."
     },
     {
-      title: "Welche Weine sind lagerfähig?",
-      content: [
-        "Hoher Säuregehalt (Acidity)",
-        "Hoher Tanningehalt (Tannins)",
-        "Hoher Zuckergehalt (Sugar)",
-        "Hoher Alkoholgehalt (Alcohol)",
-        "Konzentration und Struktur"
-      ],
-      merksatz: "Säure, Tannin, Zucker und Alkohol = Schlüssel für Lagerfähigkeit."
+      title: "Temperatur – konstant ist wichtiger als Grad",
+      content: `Temperatur ist kritischstem Faktor – aber nicht die exakte Zahl, sondern KONSTANZ.
+
+- **Ideal: 10–15°C** (aber konstant!)
+  - Warum diese Spanne? = langsame, kontrollierte Reifung
+  - Kalte Nächte halten Metabolismus niedrig
+- **Zu warm (>20°C)**:
+  - Beschleunigt Alterung (Reaktions-Geschwindigkeit verdoppelt sich pro ~10°C)
+  - Oxidation schneller = Frucht-Aromen verschwinden
+  - Korken trocknet aus
+  - Resultat: Wein schmeckt "gekocht" (brüchig, flach)
+- **Zu kalt (<5°C)**:
+  - Verlangsamt Reifung (hilfreich für Lagerung, aber Entwicklung stoppt)
+  - Kristall-Bildung möglich (Kalium-Bitartrat fällt aus, kein Fehler)
+  - Kein Schaden, aber keine positive Entwicklung
+- **Temperaturwechsel** (schlimmster Fehler):
+  - Expansion/Kontraktion = Korken drückt heraus/hinein = Oxidation
+  - Temperaturunterschied 5°C täglich = Schaden wie 1–2 Jahre warme Lagerung
+  - Grund: Glasausdehnung + Flüssigkeits-Ausdehnung unterschiedlich = Spannung
+- **Konsequenz**: besser konstant 18°C als 10–15°C mit Schwankungen`,
+      takeaway: "Konstante Temperatur > exakte Zahl. Schwankungen sind Gift."
     },
     {
-      title: "Welche Weine sollten früh getrunken werden?",
-      content: [
-        "Einfache, fruchtbetonte Weine",
-        "Niedrige Säure und wenig Tannin",
-        "Ziel: frische Aromen genießen",
-        "Typisch: viele Weißweine und einfache Rotweine"
-      ]
+      title: "Licht – UV-Strahlung zerstört Wein",
+      content: `Licht, speziell UV, triggert chemische Zerfallsprozesse – dunkel lagern ist nicht optional.
+
+- **UV-Effekt**: Photo-Katalyse = Moleküle brechen auf
+  - Aromen zerfallen (fruchtbetont wird muffig)
+  - Farb-Pigmente abgebaut (Weißwein wird braun, Rotwein wird orange)
+  - Tannine oxidieren schneller
+- **Light Strike** (Fachbegriff):
+  - Besonders Weißwein & Schaumwein empfindlich
+  - Aromen: "feuchter Karton", "Kohl", muffig
+  - Nicht zu reparieren
+- **Tageslichtkammer 1 Woche**:
+  - = 2–3 Monate normale Lagerung Schaden
+  - Effekt ist kumulativ & nicht reversibel
+- **Dunkelheit warum**: Dunkelheit stoppt Photo-Katalyse = Aromen erhalten
+  - Grund: UV-Wellenlänge (300–400 nm) nicht vorhanden = Reaktion nicht getriggert
+- **Glasfarbe hilft**: Grünglas absorbeiert etwas UV, aber nur 50% Schutz
+  - Beste: dunkle Boxen + kein Licht`,
+      takeaway: "Dunkelheit ist nicht Optional. Licht = chemische Zerstörung."
     },
     {
-      title: "Einfluss von Temperatur",
-      content: [
-        "Ideal: konstant zwischen 10–15°C",
-        "Hohe Temperaturen beschleunigen Alterung",
-        "Zu niedrige Temperaturen verlangsamen Entwicklung",
-        "Temperaturschwankungen sind besonders schädlich"
-      ],
-      merksatz: "Konstante, kühle Temperatur ist entscheidend."
+      title: "Luftfeuchtigkeit – Kork & Schimmel Balance",
+      content: `Luftfeuchtigkeit muss balanciert sein – zu trocken = Kork schrumpft, zu feucht = Schimmel.
+
+- **Ideal: 60–80%**
+  - Kork bleibt feucht + flexible
+  - Keine Schimmelbildung
+- **Zu trocken (<50%)**:
+  - Kork trocknet aus = schrumpft
+  - Flasche wird locker = Sauerstoff eindringt
+  - Oxidation beschleunigt sich
+  - Wein schmeckt oxidiert (braun, sherryartig, flach)
+- **Zu feucht (>85%)**:
+  - Schimmelbildung wahrscheinlich (auf Etikett, Korken)
+  - Schimmel selbst kein Fehler im Wein, aber Zeichen = Feuchtigkeit
+  - Lagerort-Problem (Keller zu feucht?)
+- **Konsequenz**: Keller-Lagerung ideal (natürlich 60–80%)
+  - Weinkühlschrank kontrolliert diese Parameter`,
+      takeaway: "Luftfeuchtigkeit: 60–80% = Kork feucht + kein Schimmel."
     },
     {
-      title: "Folgen zu hoher Temperatur",
-      content: [
-        "Schnelle Alterung (Premature Aging)",
-        "Verlust von Fruchtaromen",
-        "Oxidation wird beschleunigt",
-        "Kork kann austrocknen"
-      ]
+      title: "Flaschenlagerung – Position (liegend vs. stehend)",
+      content: `Flaschen mit Naturkork MÜSSEN liegend gelagert werden – Grund: Kork-Feuchte.
+
+- **Liegend (horizontal)**:
+  - Kork berührt Flüssigkeit = bleibt feucht
+  - Feuchtigkeit = Kork bleibt elastisch + dicht
+  - Resultat: minimale Oxidation
+  - Auch: Wein benetzt Flasche-Oberfläche = Etiketten geschützt (wichtig für Wert)
+- **Stehend (vertikal)**:
+  - Kork trocknet aus = schrumpft = Sauerstoff eindringt
+  - Nach Monaten: Oxidation merklich
+  - Nur für kurzfristige Lagerung (Tage/Wochen)
+- **Schraubverschluss**: Position egal
+  - Dicht unabhängig von Orientation
+  - Kann stehend gelagert werden
+- **Grund für Unterschied**: Naturkork ist poröser Material
+  - Trocknung = nicht reversibel (schrumpf ist permanent)
+  - Kunststoff-Kork: weniger empfindlich (aber älter weniger sicher)
+
+**Konsequenz**: Naturkork = liegend. Schraubverschluss = beliebig`,
+      takeaway: "Naturkork = liegend (Kork bleibt feucht). Schraubverschluss = egal."
     },
     {
-      title: "Einfluss von Licht",
-      content: [
-        "UV-Licht kann Wein schädigen",
-        "Führt zu „Lichtgeschmack“ (Light Strike)",
-        "Besonders empfindlich: Weiß- und Schaumweine",
-        "Deshalb dunkle Lagerung bevorzugt"
-      ],
-      merksatz: "Licht ist ein Feind des Weins – dunkel lagern!"
+      title: "Oxidation vs. Reduktion erklären",
+      content: `Oxidation (Sauerstoff-Kontakt) & Reduktion (Sauerstoff-Mangel) sind zwei Richtungen der Wein-Evolution.
+
+- **Oxidation** (gewollt oder ungewollt):
+  - Gewollt: während Ausbau im Fass (kontrollierte Oxidation = Komplexität)
+  - Ungewollt: während Lagerung (zu viel Kontakt = Qualitätsverlust)
+  - Symptome: braune Farbe (bei Weißwein), flache Aromen, Sherry-artig
+  - Grund: Alkohol & Tannine oxidieren zu Aldehyden & anderen stabilen Verbindungen
+- **Reduktion** (zu wenig Sauerstoff):
+  - Kann in luftdichtem Verschluss entstehen (Schraubverschluss)
+  - Symptome: schwefelartiges Aroma ("Streichholz", "Fäkalien")
+  - Grund: Schwefel-Verbindungen nicht oxidativ entfernt = bleiben & riechen
+  - Reversibel: durch Belüftung (dekantieren) oder Zeit kann sich verflüchtigen
+- **Balance**: minimale Oxidation ist gewünscht (Komplexität), aber nicht zu viel (Qualitätsverlust)
+- **Naturkork erlaubt minimale Oxidation** = perfekt für Balance
+- **Schraubverschluss**: sehr dicht = Reduktion-Risiko (aber auch Frische-Erhalt für 10+ Jahre möglich)
+
+**Konsequenz**: Naturkork = beste Balance. Schraubverschluss = extremere Konservierung`,
+      takeaway: "Oxidation = zu viel Sauerstoff = flach. Reduktion = zu wenig = schwefelnd."
     },
     {
-      title: "Einfluss von Luftfeuchtigkeit",
-      content: [
-        "Ideal: ca. 60–80 %",
-        "Zu trocken: Korken trocknet aus → Oxidation",
-        "Zu feucht: Schimmelbildung möglich",
-        "Konstante Luftfeuchtigkeit wichtig"
-      ]
+      title: "Reifung von Rotwein in der Flasche",
+      content: `Rotwein entwickelt sich in der Flasche durch: Tannin-Polymerisierung + Sekundär/Tertär-Aromen Entstehung.
+
+- **Phase 1 (0–5 Jahre)**: Primäraromen dominant
+  - Frucht (Kirsche, Pflaume) = Main-Charakter
+  - Tannine noch "hart" (rau am Gaumen)
+  - Säure merklich
+- **Phase 2 (5–15 Jahre)**: Sekundäraromen entstehen
+  - Tannine polymerisieren = werden weicher
+  - Komplexität wächst (Gewürze, Leder, Pilz)
+  - Frucht nimmt ab, aber Struktur wächst
+- **Phase 3 (15+ Jahre)**: Tertiäraromen dominieren
+  - Primäraromen fast weg (Frucht-Aromen verflüchtigt)
+  - Tannine sehr weich (manche fast weg)
+  - Noten: Leder, Tabak, Pil, Honig (wie Alter)
+- **Mechanik der Polymerisierung**:
+  - Kleine Tannin-Moleküle verbinden sich zu großen Ketten
+  - Große Moleküle sind "weicher" chemisch (weniger astringent am Gaumen)
+  - pH-Änderung stabilisiert Farbe + Aromen
+- **Lagerfähigkeit-Limit**:
+  - Zu lange = Überoxidation = Aromen verschwinden komplett = "dead wine"
+  - Anzeichen: sehr helle Farbe, völlig flache Aromen
+
+**Konsequenz**: Rotwein-Reifung = Komplex-Werdung durch chemische Polymerisierung`,
+      takeaway: "Rotwein-Reifung: Tannine weich + Tertär-Aromen entstehen (Leder, Tabak)."
     },
     {
-      title: "Flaschenlagerung – Position",
-      content: [
-        "Flaschen mit Naturkork liegend lagern",
-        "Kork bleibt feucht → dicht",
-        "Schraubverschluss: Position egal",
-        "Stehend nur für kurzfristige Lagerung geeignet"
-      ],
-      merksatz: "Naturkork = liegend lagern."
+      title: "Reifung von Weißwein in der Flasche",
+      content: `Weißwein entwickelt sich langsamer als Rotwein, aber kann auch komplex werden (besonders kühle-Klima Weine).
+
+- **Phase 1 (0–3 Jahre)**: Primäraromen (Zitrus, Blüten, grüne Aromen)
+  - Säure merklich, oft bitter-möglich
+  - Körper leicht bis mittel
+- **Phase 2 (3–10 Jahre)**: Sekundäraromen entstehen
+  - Zitrus wird Honig (oxidativ Veränderung)
+  - Komplexität wächst (Nuss, Toast, Mineralisch)
+  - Säure wirkt integrativer (nicht mehr so "sauer")
+- **Phase 3 (10+ Jahre)**: Tertiäraromen (braune Aromen)
+  - Farbe wird golden bis braun
+  - Aromen: Honig, Nuss, Getreide, getrocknete Früchte
+- **Unterschied zu Rotwein**:
+  - Keine Tannine = andere Mechanik
+  - Oxidation ist Haup-Effekt (nicht Polymerisierung)
+  - Älter = immer "oxidativer" (aber nicht negativ bis zu Punkt)
+- **Lagerfähigkeit**:
+  - Einfache Weißweine (z. B. Sauvignon Blanc): jung trinken (1–3 Jahre), älter = flach
+  - Strukturierte Weißweine (z. B. Burgund Chardonnay, Loire Riesling): 10–20 Jahre
+  - Süßweine: 50+ Jahre möglich (Zucker konserviert)
+
+**Konsequenz**: Weißwein-Reifung = oxidative Veränderung. Struktur zählt`,
+      takeaway: "Weißwein: oxidative Entwicklung. Struktur bestimmt Lagerfähigkeit (nicht Tannine)."
     },
     {
-      title: "Einfluss von Vibrationen",
-      content: [
-        "Ständige Bewegung stört Reifung",
-        "Kann Sediment aufwirbeln",
-        "Verlangsamt positive Entwicklung",
-        "Ruhige Lagerung bevorzugt"
-      ]
-    },
-    {
-      title: "Einfluss von Gerüchen",
-      content: [
-        "Kork ist durchlässig für Gase",
-        "Starke Gerüche können Wein beeinflussen",
-        "Beispiel: Chemikalien, Lebensmittel",
-        "Saubere Umgebung wichtig"
-      ]
-    },
-    {
-      title: "Lagerdauer – Grundprinzip",
-      content: [
-        "Die meisten Weine sind für frühen Konsum gedacht",
-        "Nur ein kleiner Teil ist für lange Reifung geeignet",
-        "WSET Level 2 Fokus: Trinkreife einschätzen"
-      ],
-      merksatz: "Die meisten Weine: trinken, nicht lagern."
-    },
-    {
-      title: "Reifung von Rotwein",
-      content: [
-        "Tannine werden weicher",
-        "Primäraromen (Frucht) nehmen ab",
-        "Sekundär- und Tertiäraromen entstehen",
-        "Komplexität nimmt zu"
-      ]
-    },
-    {
-      title: "Reifung von Weißwein",
-      content: [
-        "Frische Fruchtaromen entwickeln sich zu Honig-, Nuss- oder Toastnoten",
-        "Farbe wird dunkler",
-        "Säure bleibt wichtig für Balance",
-        "Nicht alle Weißweine sind lagerfähig"
-      ]
-    },
-    {
-      title: "Tertiäraromen",
-      content: [
-        "Entstehen durch Reifung in der Flasche",
-        "Beispiele: Leder, Tabak, Pilze, Honig, Nüsse",
-        "Unterschied zu Primär- und Sekundäraromen"
-      ],
-      merksatz: "Tertiäraromen = Aromen der Reifung."
-    },
-    {
-      title: "Flaschenreifung vs. Fassreifung",
-      content: [
-        "Fass: Sauerstoffeinfluss, Entwicklung von Sekundäraromen",
-        "Flasche: reduktive Reifung (wenig Sauerstoff)",
-        "Beide Prozesse ergänzen sich"
-      ]
-    },
-    {
-      title: "Oxidation",
-      content: [
-        "Kontakt mit Sauerstoff",
-        "Kann gewollt oder unerwünscht sein",
-        "Zu viel Oxidation → Qualitätsverlust",
-        "Symptome: braune Farbe, flache Aromen"
-      ]
-    },
-    {
-      title: "Reduktion",
-      content: [
-        "Sehr wenig Sauerstoff",
-        "Kann zu schwefelartigen Aromen führen",
-        "Teilweise reversibel durch Belüftung"
-      ]
-    },
-    {
-      title: "Lagerung zu Hause",
-      content: [
-        "Kühler, dunkler Ort",
-        "Keine Temperaturschwankungen",
-        "Weinkühlschrank ideal",
-        "Keller oft geeignet"
-      ]
-    },
-    {
-      title: "Weinkühlschrank",
-      content: [
-        "Konstante Temperatur",
-        "Kontrollierte Luftfeuchtigkeit",
-        "Ideal für kleine Sammlungen",
-        "Unterschiedliche Zonen möglich"
-      ]
-    },
-    {
-      title: "Langzeitlagerung – Voraussetzungen",
-      content: [
-        "Stabile Umgebung",
-        "Geeigneter Wein",
-        "Geduld",
-        "Regelmäßige Kontrolle"
-      ]
-    },
-    {
-      title: "Typische Fehler bei Lagerung",
-      content: [
-        "Zu warme Lagerung",
-        "Lichtkontakt",
-        "Flasche stehend bei Naturkork",
-        "Häufiges Bewegen"
-      ],
-      merksatz: "Hitze, Licht, Bewegung und trockene Korken vermeiden!"
-    },
-    {
-      title: "Transport von Wein",
-      content: [
-        "Temperaturschwankungen vermeiden",
-        "Schnelle Lieferung bevorzugen",
-        "Nach Transport ruhen lassen"
-      ]
-    },
-    {
-      title: "Wie lange Wein lagern?",
-      content: [
-        "Einfacher Wein: 1–3 Jahre",
-        "Qualitätswein: 5–10 Jahre",
-        "Premiumwein: 10+ Jahre möglich",
-        "Immer stilabhängig"
-      ]
-    },
-    {
-      title: "Anzeichen für überalterten Wein",
-      content: [
-        "Verlust von Frucht",
-        "Flache Struktur",
-        "Braune Farbe (bei Weißwein)",
-        "Muffige oder dumpfe Aromen"
-      ]
-    },
-    {
-      title: "Anzeichen für reifen Wein",
-      content: [
-        "Komplexe Aromen",
-        "Weiche Tannine",
-        "Harmonische Struktur",
-        "Ausgewogene Säure"
-      ]
-    },
-    {
-      title: "Einfluss von Verschlüssen",
-      content: [
-        "Naturkork: Sauerstoffdurchlässig",
-        "Schraubverschluss: sehr dicht",
-        "Synthetischer Kork: unterschiedlich",
-        "Beeinflusst Reifungsgeschwindigkeit"
-      ]
-    },
-    {
-      title: "Schraubverschluss und Lagerung",
-      content: [
-        "Sehr geringe Sauerstoffzufuhr",
-        "Frische bleibt länger erhalten",
-        "Langsame Entwicklung",
-        "Position egal"
-      ]
-    },
-    {
-      title: "Naturkork und Lagerung",
-      content: [
-        "Erlaubt minimale Sauerstoffzufuhr",
-        "Fördert Reifung",
-        "Empfindlich gegenüber Austrocknung"
-      ]
+      title: "Typische Lagerfehler",
+      content: `Diese Fehler sind die häufigsten Ursachen für Wein-Verderb.
+
+- **Zu warme Lagerung** (häufig):
+  - Wohnzimmer (20–22°C) = 5–10°C zu warm
+  - Effekt: verdoppelt Alterungs-Geschwindigkeit = Wein "verkocht"
+  - Test: Flasche die 10 Jahre lagern soll, schmeckt nach 5 Jahren "zu alt"
+- **Starke Temperaturschwankungen** (sehr häufig):
+  - Keller bei Tag 14°C, bei Nacht 10°C
+  - = Stress auf Kork + Glas = Oxidation
+  - Besser: konstant 18°C
+- **Licht-Exposition** (häufig unterschätzt):
+  - Wein auf Regal neben Fenster = UV-Schaden
+  - = wenige Wochen = merkliche Geschmacks-Änderung (muffig)
+- **Flasche stehend** bei Naturkork:
+  - Nach 2–3 Monaten: Kork trocken = Oxidation beginnt
+  - = teurer Wein ruiniert
+- **Zu trocken lagern** (<50% Luftfeuchtigkeit):
+  - Kork-Trocknung = Sauerstoff-Eindring
+  - Oft in heißem Trockenkeller
+- **Häufiges Bewegen** (unterschätzt):
+  - Vibrationen = Sediment aufgewirelt
+  - = schneller Altern = weniger Lagerfähigkeit`,
+      takeaway: "Hitze, Licht, Bewegung, trockene Korke, Schwankungen = Gift."
     },
     {
       title: "Unterschied: Reifung vs. Verderb",
-      content: [
-        "Reifung: positive Entwicklung",
-        "Verderb: Qualitätsverlust",
-        "Grenze oft fließend",
-        "Erfahrung entscheidend"
-      ]
+      content: `Beide ändern den Wein – aber Reifung ist positiv, Verderb ist schlecht. Grenze ist fließend.
+
+- **Reifung** (positiv):
+  - Aromen werden komplexer (Frucht → Gewürz → Leder)
+  - Struktur wird integrativer (Tannine weich, Säure weich)
+  - Farbe: Intensität ändert, aber bleibt "lebendig"
+  - Test: blind Verkostung zeigt "gute Entwicklung"
+  - Zeitrahmen: Jahrzehnte für Top-Weine
+- **Verderb** (negativ):
+  - Aromen verschwinden (flach werden)
+  - Struktur wird "brüchig" (Tannine weg, Säure weg, nichts bleibt)
+  - Farbe: wird braun/orange (egal ob rot/weiß)
+  - Test: Gaumen-Eindruck = "tot", keine Länge
+  - Ursachen: zu warm, zu alt, zu viel Luftzutritt
+- **Gray Zone**:
+  - Ein 40-jähriger Rotwein kann reif ODER verdorben sein
+  - Abhängig: Struktur, Lagerung, Klasse
+  - Erfahrung zählt
+- **Faustregel**: wenn farbe braun + Geschmack flach = verdorben. Wenn komplex + Struktur = gereift`,
+      takeaway: "Reifung = Komplexität + Integratier. Verderb = flach + brüchig."
     },
     {
-      title: "Lagerung von Schaumwein",
-      content: [
-        "Ähnlich wie Stillwein",
-        "Empfindlich gegenüber Licht",
-        "Druck bleibt stabil bei richtiger Lagerung"
-      ]
+      title: "Typische Prüfungsfalle: Temperatur-Dogma",
+      content: `Nicht denken "10–15°C ist heilig" – Konstanz ist wichtiger.
+
+- **Falsch**: "Muss genau 12°C sein"
+- **Richtig**: konstant (10–20°C egal, aber darf nicht schwanken)
+- **Grund**: chemische Geschwindigkeit variiert mit Temperatur, aber konstante Geschwindigkeit ist vorhersehbar
+- **Test**: konstant 18°C besser als 10–15°C mit ±3°C Schwankung`,
+      takeaway: "Konstanz > Exaktheit. Keine Schwankungen."
     },
     {
-      title: "Lagerung von Süßwein",
-      content: [
-        "Hoher Zuckergehalt → gute Lagerfähigkeit",
-        "Kann Jahrzehnte reifen",
-        "Stabile Lagerbedingungen wichtig"
-      ]
-    },
-    {
-      title: "Prüfungsfalle: Temperatur",
-      content: [
-        "Nicht zu kalt lagern (kein Kühlschrank dauerhaft)",
-        "Nicht zu warm lagern",
-        "Konstanz wichtiger als exakte Zahl"
-      ],
-      merksatz: "Konstanz schlägt Perfektion."
-    },
-    {
-      title: "Prüfungsfalle: Lagerfähigkeit",
-      content: [
-        "Nicht alle teuren Weine sind lagerfähig",
-        "Struktur ist entscheidend, nicht Preis",
-        "Fruchtige Weine oft nicht lagerfähig"
-      ]
+      title: "Typische Prüfungsfalle: teuer = lagerfähig",
+      content: `Nicht denken "teurer Wein = muss lang lagern".
+
+- **Falsch**: "Dieser Wein kostet €50, also lagere ich ihn 20 Jahre"
+- **Richtig**: Lagerfähigkeit = Struktur (Säure + Tannine), nicht Preis
+  - Ein fruchtbetonter €50 Pinot Noir lagert 5 Jahre
+  - Ein strukturierter €20 Burgund lagert 20 Jahre
+- **Test**: Säure & Tannine prüfen, nicht Etiketten-Farbe`,
+      takeaway: "Struktur ≠ Preis. Lagerfähigkeit = Säure + Tannine + Alkohol + Zucker."
     }
   ],
-
   questions: [
     {
-      question: "Welche Temperatur ist ideal für die Lagerung von Wein?",
+      question: "Warum ist Temperatur-KONSTANZ wichtiger als exakte Temperatur-Grad?",
       options: [
-        "0–5°C",
-        "10–15°C",
-        "20–25°C",
-        "Über 25°C"
+        "Weil es Regel ist",
+        "Weil Temperaturwechsel = Glas-Ausdehnung + Flüssigkeits-Stress = Kork rein/raus = Oxidation",
+        "Weil Kultura-Grund",
+        "Zufällig"
       ],
       correct: 1,
-      explanation: "Die ideale Lagertemperatur liegt bei etwa 10–15°C und sollte möglichst konstant sein."
+      explanation: "Schwankung erzeugt physischen Stress auf Flasche & Kork = schlimmer als konstante höhere Temperatur."
     },
     {
-      question: "Warum sollten Weinflaschen mit Naturkork liegend gelagert werden?",
+      question: "Welche Komponenten machen Wein lagerfähig?",
       options: [
-        "Damit sie besser aussehen",
-        "Damit der Wein schneller reift",
-        "Damit der Kork feucht bleibt",
-        "Damit sie weniger Platz brauchen"
-      ],
-      correct: 2,
-      explanation: "Der Kork bleibt feucht und dichtet die Flasche besser ab."
-    },
-    {
-      question: "Welcher Faktor ist besonders wichtig für Lagerfähigkeit?",
-      options: [
-        "Farbe des Weins",
-        "Säure und Tannin",
-        "Flaschenform",
-        "Etikett"
+        "Nur Farbe",
+        "Säure, Tannine, Zucker, Alkohol + Komplexität = Konservierungs-Komponenten",
+        "Nur Preis",
+        "Zufällig"
       ],
       correct: 1,
-      explanation: "Säure und Tannin stabilisieren den Wein und ermöglichen Reifung."
+      explanation: "Lagerfähigkeit = chemische Struktur. Einfache Weine (wenig Struktur) = nicht lagerfähig."
     },
     {
-      question: "Was passiert bei zu hoher Lagertemperatur?",
+      question: "Warum muss Naturkork-Flasche liegend gelagert werden?",
       options: [
-        "Der Wein wird frischer",
-        "Die Alterung wird beschleunigt",
-        "Der Wein wird süßer",
-        "Der Alkohol sinkt"
+        "Ästhetik",
+        "Weil Kork muss feucht bleiben (berührt Flüssigkeit = elastisch) = dicht bleiben",
+        "Weil stehend erlaubt ist",
+        "Regel ohne Grund"
       ],
       correct: 1,
-      explanation: "Hohe Temperaturen beschleunigen Alterung und können den Wein schädigen."
+      explanation: "Kork-Trocknung = Schrumpfung = Sauerstoff eindringt = Oxidation. Feuchtigkeit erhält Dichtheit."
     },
     {
-      question: "Was sind Tertiäraromen?",
+      question: "Wie wirkt UV-Licht auf Wein?",
       options: [
-        "Aromen aus der Gärung",
-        "Aromen aus der Reifung",
-        "Aromen aus der Traube",
-        "Fehler im Wein"
+        "Keine Wirkung",
+        "Triggert Photo-Katalyse = Moleküle brechen auf = Aromen zerfallen, Farbe wird braun",
+        "Macht Wein besser",
+        "Nur Superficial"
       ],
       correct: 1,
-      explanation: "Tertiäraromen entstehen während der Flaschenreifung."
+      explanation: "Photo-Katalyse ist Licht-induzierte chemische Zerfalls. Dunkelheit stoppt diese."
     },
     {
-      question: "Warum ist Licht schädlich für Wein?",
+      question: "Was ist der Unterschied zwischen Oxidation & Reduktion?",
       options: [
-        "Es erhöht den Alkohol",
-        "Es verursacht Lichtgeschmack",
-        "Es senkt die Säure",
-        "Es verändert die Farbe sofort"
+        "Synonyme",
+        "Oxidation = zu viel Sauerstoff = flach. Reduktion = zu wenig = schwefelnd. Beide schlecht in Extremen",
+        "Reduktion = besser",
+        "Kein praktischer Unterschied"
       ],
       correct: 1,
-      explanation: "UV-Licht kann chemische Reaktionen auslösen und den Wein negativ beeinflussen."
+      explanation: "Balance ist Ziel. Zu viel O2 = Qualitätsverlust. Zu wenig = Reduktions-Fehler."
     },
     {
-      question: "Welche Weine sollten meist früh getrunken werden?",
+      question: "Wie entwickelt sich Rotwein in der Flasche chemisch?",
       options: [
-        "Tanninreiche Rotweine",
-        "Süßweine",
-        "Fruchtbetonte einfache Weine",
-        "Hochkonzentrierte Premiumweine"
+        "Gar nicht",
+        "Tannin-Polymerisierung = kleine Moleküle verbinden zu großen = werden weicher = Komplexität entsteht",
+        "Nur Oxidation",
+        "Zufällig"
       ],
-      correct: 2,
-      explanation: "Fruchtige, einfache Weine sind für den frühen Konsum gedacht."
-    },
-    {
-      question: "Was ist ein typischer Lagerfehler?",
-      options: [
-        "Dunkle Lagerung",
-        "Konstante Temperatur",
-        "Starke Temperaturschwankungen",
-        "Liegende Flaschen"
-      ],
-      correct: 2,
-      explanation: "Temperaturschwankungen sind besonders schädlich für Wein."
+      correct: 1,
+      explanation: "Polymerisierung ist Schlüsselmechanismus. Tannine verbinden sich = werden sanfter & komplexer."
     }
   ]
 });

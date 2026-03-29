@@ -2,392 +2,283 @@ registerChapterContent("suedafrika", {
   cards: [
     {
       title: "Überblick Südafrika",
-      content: [
-        "Wichtiges Weinland der Neuen Welt (New World)",
-        "Lange Weinbautradition seit dem 17. Jahrhundert",
-        "Starker Fokus auf Exportmärkte",
-        "Qualitätssteigerung seit Ende der Apartheid (1990er)",
-        "Bekannt für fruchtbetonte, oft zugängliche Weine"
-      ],
-      merksatz: "Südafrika verbindet Alte-Welt-Struktur mit Neue-Welt-Frucht."
+      content: `Südafrika ist aufstrebendes Weinland mit älteren Wurzeln (17. Jahrhundert) – modernisierung seit 1990er, Benguela-Strom ist zentral.
+
+- **Geschichte**: lange Tradition, aber international isoliert (Apartheid), Qualitäts-Boom nach 1990
+- **Lage**: südwestlichster Punkt Afrikas (Kap)
+  - Atlantik- & Indischer Ozean treffen sich
+  - Benguela-Strom (kalter Ozean-Strom) = Qualitäts-Werkzeug
+- **Rebsorten**: international (Cabernet, Chardonnay) + autochthone (Pinotage)
+- **Stil**: Balance zwischen Alter-Welt-Struktur (Frankreich-Vorbildern) + Neue-Welt-Frucht`,
+      takeaway: "Südafrika = Benguela-Strom + moderne Qualität. Alter & Neuer-Welt Mix."
     },
     {
-      title: "Geografische Lage",
-      content: [
-        "Weinbau vor allem im Südwesten des Landes",
-        "Nähe zum Atlantischen und Indischen Ozean",
-        "Kühlender Einfluss durch Meeresströmungen",
-        "Wichtige Region: Western Cape"
-      ]
+      title: "Benguela-Strom – Südafrikas Kühlfaktor",
+      content: `Der Benguela-Strom ist kalter Meeresstrom entlang Westküste – er bringt Frische & Säure.
+
+- **Effekt**: kaltes Wasser senkt Luft-Temperatur + bringt marine Feuchtigkeit
+  - Morgens: Nebel & kalte Luft
+  - Tagsüber: moderiert Hitze (anders als zentrales Süd-Afrika)
+- **Konsequenz**:
+  - Küsten-Regionen (Stellenbosch, Constantia, Walker Bay) = kühl
+  - Inland (Paarl, Robertson) = wärmer
+- **Logik**: ähnlich zu Kalifornien (Pazifik-Kühlung), aber südlich & stärker
+- **Wassertempetatur**: ca. 14°C = extremer kühl für 34°S Breitengrad
+- **Resultat**: Säure bleibt, Reife möglich = Balance`,
+      takeaway: "Benguela-Strom = kalter Pazifik-ähnlicher Effekt. Küsten = Frische, Inland = Wärmte."
     },
     {
-      title: "Klima in Südafrika",
-      content: [
-        "Überwiegend warmes bis heißes Klima",
-        "Mediterranes Klima in vielen Regionen",
-        "Starker Einfluss durch kühle Meeresbrisen",
-        "Temperaturunterschiede durch Höhenlagen"
-      ],
-      merksatz: "Ozeane sind der wichtigste kühlende Faktor im südafrikanischen Weinbau."
+      title: "Coastal Region – Top-Gebiet",
+      content: `Coastal Region ist Südafrikas Premium-Zone – maritime Einfluss + verschiedene Subregionen.
+
+- **Lage**: Westküste, starker Benguela-Einfluss überall
+- **Subregionen** (wichtigste):
+  - Stellenbosch: berühmteste, warme Tage, kühle Nächte = strukturierte Rotweine
+  - Constantia: sehr kühl (südlich, Ozean-Nähe) = frische Weißweine
+  - Walker Bay: maritim = elegante Pinot Noir & Chardonnay
+  - Elgin: Höhenlagen + maritim = aromatische Weißweine
+  - Hermanus: Wal-Beobachtung bekannt, aber auch Qualitätsweine
+- **Fokus**: Qualität über Menge (im Gegensatz zu östlichen Regionen)
+- **Preis**: moderat bis teuer (€15–50+)`,
+      takeaway: "Coastal Region = maritim gekühlt = Südafrikas Premium-Qualität."
     },
     {
-      title: "Einfluss des Benguela-Stroms",
-      content: [
-        "Kalter Meeresstrom entlang der Westküste",
-        "Senkt Temperaturen in Küstenregionen",
-        "Verlangsamt Reifung der Trauben",
-        "Fördert Frische und Säure"
-      ],
-      merksatz: "Der Benguela-Strom bringt Frische in südafrikanische Weine."
-    },
-    {
-      title: "Niederschlag & Bewässerung",
-      content: [
-        "Winterregen typisch für mediterrane Zonen",
-        "Teilweise trockene Sommer",
-        "Bewässerung (irrigation) häufig notwendig",
-        "Wasserknappheit kann Herausforderung sein"
-      ]
-    },
-    {
-      title: "Böden",
-      content: [
-        "Sehr vielfältig: Granit, Schiefer, Sandstein",
-        "Gute Drainage häufig gegeben",
-        "Beeinflussen Stil und Struktur der Weine"
-      ]
+      title: "Stellenbosch – Rotwein-Zentrum",
+      content: `Stellenbosch ist Südafrikas berühmteste Region – warmere Seite der Coastal Zone, strukturierte Rotweine.
+
+- **Lage**: östlich von Stellenbosch, wärmere als direkt-Küsten-Gemeinden
+  - Warme Tage (28–30°C), kühle Nächte (Benguela-Einfluss)
+  - Berg-Exposition: südlich & westlich = beste Lagen
+- **Rebsorten**: Cabernet Sauvignon dominiert (Bordeaux-Stil), auch Shiraz, Pinotage
+- **Cabernet Sauvignon-Charakter**:
+  - Schwarze Johannisbeere, Zedernholz, strukturiert
+  - Mittlere bis hohe Tannine
+  - Säure: moderat bis hoch (Benguela-Effekt)
+  - Alkohol: 13–14%
+  - Lagerfähigkeit: 10–20 Jahre
+- **Stilistik**: Bordeaux-ähnlich aber fruchtbetonter (Neue-Welt-Einfluss)
+- **Preis**: teuer (€20–60+) = Südafrikas Prestige-Region
+- **Trend**: weltklasse = vergleichbar mit Bordeaux-Qualität`,
+      takeaway: "Stellenbosch: Benguela-Kühe + warm-Tag/kalt-Nacht = strukturierte Rotweine."
     },
     {
       title: "Wine of Origin System",
-      content: [
-        "Qualitätssystem ähnlich Appellationen",
-        "Regelt Herkunft (Geographie)",
-        "Keine direkte Qualitätsaussage",
-        "Hierarchie: Region → District → Ward"
-      ],
-      merksatz: "WO-System garantiert Herkunft, nicht automatisch Qualität."
+      content: `Südafrika hat WO (Wine of Origin) System – geografisch definiert, ähnlich Frankreich AOC aber weniger streng.
+
+- **Hierarchie**:
+  - Region: große geografische Gebiete (z. B. Western Cape)
+  - District: kleinere Gebiete (z. B. Stellenbosch)
+  - Ward: spezifische Subregion (z. B. Simonsberg-Stellenbosch)
+- **WO-Garantie**: nur Herkunft, nicht Qualität
+  - Mindestens 85% der Trauben von benannter Zone
+  - Aber keine Rebsorte-Regeln, keine Ertrag-Beschränkung, keine Ausbau-Vorschrift
+- **Kontrast zu AOC**: weniger streng = moderne Flexibilität erlaubt
+- **Qualitäts-Kontrolle**: optional (nicht obligatorisch wie DOCG)`,
+      takeaway: "WO = Herkunfts-Angabe nur, nicht Qualitätssystem wie AOC."
     },
     {
-      title: "Wichtige Regionen – Überblick",
-      content: [
-        "Coastal Region – wichtigste Zone",
-        "Breede River Valley – große Produktionsmenge",
-        "Klein Karoo – heiß und trocken",
-        "Olifants River – heiß, oft Massenproduktion"
-      ]
+      title: "Pinotage – Südafrikas Nationalrebsorte",
+      content: `Pinotage ist einzigartig südafrikanisch – Kreuzung aus Pinot Noir & Cinsault, 1925 entwickelt.
+
+- **Herkunft**: Dr. Perold (1925) = erste südafrikanische Rebsorte
+- **Genetik**: Pinot Noir (Eleganz) + Cinsault (Wärme-Toleranz)
+- **Charakteristiken**:
+  - Dunkle Farbe, kräftig
+  - Aromen: dunkle Früchte (Kirsche, Pflaume), Rauch, Gewürze, sometimes "Nail Polish Remover" (kontrovers)
+  - Tannine: mittlere bis hohe
+  - Körper: vollmundig
+  - Säure: moderat
+- **Stilistik**: vielfältig
+  - Einfache: fruchtbetont, früh trinken
+  - Premium: strukturiert, lagerfähig (10–15 Jahre)
+- **Kontroverse**: "Nail Polish Remover" Aroma = Fehler oder Charakteristik? (Diskussion in Südafrika)
+- **Preis**: günstig bis mittel (€10–30)
+- **Trend**: Pinotage-Rehabilitation = moderner, eleganter, weniger "chemisch"`,
+      takeaway: "Pinotage: Südafrika-Kreuzung. Dunkle Früchte, Rauch, charakteristisch (aber kontrovers)."
     },
     {
-      title: "Coastal Region",
-      content: [
-        "Qualitativ wichtigste Region",
-        "Starker maritimer Einfluss",
-        "Enthält viele Top-Districts",
-        "Ausgewogene Reifung möglich"
-      ]
+      title: "Chenin Blanc – Südafrikas Weißwein-Rebsorte",
+      content: `Chenin Blanc ist Südafrikas meistangebaute Rebsorte – vielseitig, alt, aber unterschätzt.
+
+- **Anbau**: über 20% aller südafrikanischen Reben
+- **Charakteristiken**:
+  - Natürlich hohe Säure (7–8 g/L)
+  - Vielseitig: von einfach bis komplex
+  - Aromen: Apfel, Birne, tropische Früchte, Honig (mit Reife)
+  - Körper: mittlerer Körper
+- **Stilrichtungen**:
+  - Einfach/jung: fruchtig, 1–2 Jahre
+  - Trocken & komplex: 5–10 Jahre lagerfähig
+  - Süßwein: auch möglich (wie Loire)
+- **Alte Reben** (Old Vines): Fokus wachsend
+  - Viele 30–50 Jahr alte Reben existieren
+  - Niedrige Erträge = Konzentration
+  - Premiumprodukte entstehen
+- **Preis**: günstig (€8–15) bis mittel (€15–30 alte Reben)
+- **Trend**: Chenin-Renaissance = von "bulk wine" zu Premium-Fokus`,
+      takeaway: "Chenin Blanc: Südafrikas Hauptrebsorte. Vielseitig, hohe Säure, lagerfähig."
     },
     {
-      title: "Stellenbosch",
-      content: [
-        "Berühmteste Region Südafrikas",
-        "Warme Tage, kühle Nächte",
-        "Hügelige Landschaft",
-        "Hochwertige Rotweine (v.a. Cabernet Sauvignon)"
-      ],
-      merksatz: "Stellenbosch steht für strukturierte Premium-Rotweine."
+      title: "Constantia – historisch & kühl",
+      content: `Constantia ist Südafrikas historischste Region – sehr kühl, maritime, bekannt für Süßweine (historisch).
+
+- **Lage**: südlichster Punkt (Kap), extreme Benguela-Kühlung
+  - Sehr kühl: 14–18°C Sommer-Durchschnitt
+  - Maritime Feuchtigkeit überall
+- **Historischer Fokus**: edelsüße Weine (18.–19. Jahrhundert, weltberühmt)
+- **Moderner Fokus**: trockene Weißweine + Cabernet Sauvignon
+- **Charakteristiken**:
+  - Sauvignon Blanc: frisch, mineralisch, hohe Säure
+  - Chardonnay: elegant, nicht butterig (zu kühl für Malolaktische Gärung)
+  - Cabernet Sauvignon: strukturiert, elegant (ähnlich Bordeaux)
+- **Lagerfähigkeit**: 10–20 Jahre für trockene Weine
+- **Preis**: moderat bis teuer (€15–40)
+- **Trend**: Constantia-Renaissance = weltklasse-Qualität erkannt`,
+      takeaway: "Constantia: südlichstes Kap, sehr kühl = frische Weißweine + elegante Rotweine."
     },
     {
-      title: "Paarl",
-      content: [
-        "Wärmer als Stellenbosch",
-        "Fruchtbetonte, oft kräftigere Weine",
-        "Große Vielfalt an Rebsorten"
-      ]
+      title: "Walker Bay & Elgin – Pinot Noir & frische Weißweine",
+      content: `Walker Bay (maritim) & Elgin (Höhenlagen) sind Südafrikas Pinot Noir- & aromatischen Weißwein-Zonen.
+
+- **Walker Bay**:
+  - Maritime, sehr kühl (Benguela-stark)
+  - Rebsorten: Pinot Noir (elegant), Chardonnay
+  - Pinot Noir: ähnlich Neuseeland/Burgund (hohe Säure, rote Früchte)
+  - Preis: moderat (€15–35)
+- **Elgin**:
+  - Höhenlagen (300–400 m) + maritime
+  - Rebsorten: Sauvignon Blanc, Chardonnay, auch Pinot Noir
+  - Stil: aromatisch (Sauvignon), frisch, mineralisch
+  - Preis: moderat (€12–30)
+- **Gemeinsam**: beide = Säure-Fokus, frische Primär-Aromen, keine Eiche-Dominanz
+- **Trend**: aufstrebend = Weltklasse-Potential erkannt`,
+      takeaway: "Walker Bay & Elgin: maritim/Höhe-gekühlt = Pinot Noir & aromatische Weißweine."
     },
     {
-      title: "Constantia",
-      content: [
-        "Kühl durch Nähe zum Ozean",
-        "Historisch bedeutend",
-        "Bekannt für hochwertige Süßweine",
-        "Auch frische Weißweine"
-      ]
+      title: "Breede River Valley & Klein Karoo – Mengen & Einfachheit",
+      content: `Breede River Valley (viel Produktion) & Klein Karoo (halbwüst) sind Südafrikas Volumen-Zonen.
+
+- **Breede River Valley**:
+  - Große Flachflächen, hohe Produktionsmenge
+  - Heißes Klima (keine Benguela-Kühlung)
+  - Stil: einfach, fruchtbetont, früh trinken
+  - Preis: günstig (€5–12)
+  - Fokus: Massenmarkt, nicht Qualität
+- **Klein Karoo**:
+  - Halbwüstenklima, sehr trocken & heiß
+  - Bewässerung notwendig
+  - Stil: einfache Rotweine, manchmal fortified wines
+  - Preis: sehr günstig (€3–10)
+  - Fokus: Volumen
+- **Kontrast zu Coastal**: Breede/Klein = Quantität. Coastal = Qualität`,
+      takeaway: "Breede Valley & Klein Karoo: heiß & trocken = einfache Weine, Massenmarkt."
     },
     {
-      title: "Walker Bay",
-      content: [
-        "Sehr kühl durch Ozeaneinfluss",
-        "Ideal für Pinot Noir und Chardonnay",
-        "Frische, elegante Stilistik"
-      ]
+      title: "Südafrika Stilistik gesamt",
+      content: `Südafrika kombiniert Alte-Welt-Struktur mit Neue-Welt-Frucht – dieser Mix ist charakteristisch.
+
+- **Struktur** (von Frankreich-Vorbildern):
+  - Säure bleibt (Benguela-Kühlung)
+  - Tannine integriert (längere Ausbau)
+  - Komplexität bevorzugt (nicht nur Frucht)
+- **Frucht** (von Neue-Welt-Technologie):
+  - Temperaturkontrolle erhalten Frische
+  - Reife Frucht möglich (warme Lage + Benguela)
+  - Zugänglichkeit (nicht zu komplex)
+- **Resultat**: Balance-fokussiert = weder europäisch austrocknend, noch kalifornisch überreif
+- **Preis**: oft günstiger als Kalifornien/Australien für ähnliche Qualität
+- **Trend**: weltweite Anerkennung wächst = Südafrika = Qualitäts-Geheimtipp`,
+      takeaway: "Südafrika = Balance zwischen Alter & Neue-Welt. Günstig für Qualität."
     },
     {
-      title: "Elgin",
-      content: [
-        "Eine der kühlsten Regionen",
-        "Höhenlage + Meeresnähe",
-        "Aromatische Weißweine",
-        "Auch Pinot Noir"
-      ]
+      title: "Typische Prüfungsfalle: Pinotage ist kein Pinot Noir",
+      content: `Verwechslung: Pinotage mit Pinot Noir.
+
+- **Falsch**: "Pinotage = südafrikanischer Pinot Noir"
+- **Richtig**: Pinotage = Kreuzung aus Pinot Noir & Cinsault (1925)
+  - Genetik 50/50
+  - Charakter: Pinot-ähnlich aber kräftiger, Cinsault-ähnlich aber komplexer
+- **Test**: Pinotage hat "charakteristische" Aromen (Rauch, Nail Polish?), Pinot Noir = elegant & fein`,
+      takeaway: "Pinotage ≠ Pinot Noir. Kreuzung mit eigenem Charakter."
     },
     {
-      title: "Breede River Valley",
-      content: [
-        "Hohe Produktionsmengen",
-        "Heißes Klima",
-        "Bewässerung wichtig",
-        "Oft einfache bis mittlere Qualität"
-      ]
-    },
-    {
-      title: "Klein Karoo",
-      content: [
-        "Halbwüstenklima",
-        "Sehr heiß und trocken",
-        "Häufig Bewässerung nötig",
-        "Produktion einfacher Weine"
-      ]
-    },
-    {
-      title: "Olifants River",
-      content: [
-        "Sehr heiß",
-        "Große Mengenproduktion",
-        "Oft einfache Weine"
-      ]
-    },
-    {
-      title: "Wichtige weiße Rebsorten",
-      content: [
-        "Chenin Blanc (wichtigste Sorte)",
-        "Sauvignon Blanc",
-        "Chardonnay"
-      ]
-    },
-    {
-      title: "Chenin Blanc – Bedeutung",
-      content: [
-        "Meistangebaute Rebsorte",
-        "Sehr vielseitig",
-        "Von einfach bis hochwertig",
-        "Trocken bis süß möglich"
-      ],
-      merksatz: "Chenin Blanc ist das Herz des südafrikanischen Weinbaus."
-    },
-    {
-      title: "Chenin Blanc – Stil",
-      content: [
-        "Aromen: Apfel, Birne, tropische Früchte",
-        "Mittlere bis hohe Säure",
-        "Oft fruchtbetont",
-        "Auch komplexe, im Holz ausgebaute Varianten"
-      ]
-    },
-    {
-      title: "Sauvignon Blanc",
-      content: [
-        "Frische, aromatische Weine",
-        "Aromen: Stachelbeere, Gras, Zitrus",
-        "Hohe Säure",
-        "Besonders gut in kühleren Regionen"
-      ]
-    },
-    {
-      title: "Chardonnay",
-      content: [
-        "Große Stilvielfalt",
-        "Von frisch bis voll und holzbetont",
-        "Oft in kühleren Regionen angebaut"
-      ]
-    },
-    {
-      title: "Wichtige rote Rebsorten",
-      content: [
-        "Cabernet Sauvignon",
-        "Shiraz (Syrah)",
-        "Pinotage"
-      ]
-    },
-    {
-      title: "Cabernet Sauvignon",
-      content: [
-        "Strukturierte, tanninreiche Weine",
-        "Aromen: schwarze Johannisbeere, Zedernholz",
-        "Häufig in Stellenbosch"
-      ]
-    },
-    {
-      title: "Shiraz / Syrah",
-      content: [
-        "Fruchtig bis würzig",
-        "Aromen: dunkle Früchte, Pfeffer",
-        "Unterschiedliche Stilrichtungen möglich"
-      ]
-    },
-    {
-      title: "Pinotage – Herkunft",
-      content: [
-        "Kreuzung aus Pinot Noir und Cinsault",
-        "Ursprünglich aus Südafrika",
-        "Einzigartige nationale Rebsorte"
-      ],
-      merksatz: "Pinotage ist die Signature-Rebsorte Südafrikas."
-    },
-    {
-      title: "Pinotage – Stil",
-      content: [
-        "Kräftige Weine",
-        "Aromen: dunkle Früchte, Rauch, Gewürze",
-        "Kann auch einfache, rustikale Stile haben"
-      ]
-    },
-    {
-      title: "Alte Reben (Old Vines)",
-      content: [
-        "Viele alte Chenin Blanc Reben",
-        "Geringere Erträge",
-        "Höhere Konzentration",
-        "Zunehmend wichtig für Premium-Weine"
-      ]
-    },
-    {
-      title: "Weinbereitung – Weißwein",
-      content: [
-        "Temperaturkontrollierte Gärung",
-        "Erhalt frischer Aromen",
-        "Teilweise Holzfassausbau bei Premium-Weinen"
-      ]
-    },
-    {
-      title: "Weinbereitung – Rotwein",
-      content: [
-        "Extraktion von Farbe und Tanninen",
-        "Häufig Holzfassreifung",
-        "Stil: von fruchtig bis strukturiert"
-      ]
-    },
-    {
-      title: "Nachhaltigkeit",
-      content: [
-        "Wachsende Bedeutung",
-        "Programme für nachhaltigen Weinbau",
-        "Umwelt- und Sozialstandards"
-      ]
-    },
-    {
-      title: "Exportmärkte",
-      content: [
-        "Großer Fokus auf Export",
-        "Wichtige Märkte: UK, Deutschland",
-        "Breites Preisspektrum"
-      ]
-    },
-    {
-      title: "Stilistik Südafrika",
-      content: [
-        "Kombination aus Frucht und Struktur",
-        "Moderate bis hohe Säure",
-        "Vielfalt durch unterschiedliche Klimazonen"
-      ],
-      merksatz: "Südafrika liefert Balance zwischen Frische und Reife."
-    },
-    {
-      title: "Typische Prüfungsfalle",
-      content: [
-        "WO-System = Herkunft, nicht Qualität",
-        "Pinotage nicht mit Pinot Noir verwechseln",
-        "Kühlung durch Ozean unterschätzen"
-      ],
-      merksatz: "Prüfung: Klimaeinfluss und Pinotage klar verstehen!"
+      title: "Typische Prüfungsfalle: Benguela-Effekt verstehen",
+      content: `Nicht verstehen, dass Benguela-Strom = maritime Kühlung = Säure-Erhalt.
+
+- **Falsch**: "Südafrika = immer heiß"
+- **Richtig**: Benguela = kalter Strom = Küsten kalt, Inland warm
+  - Küsten-Regionen (Stellenbosch, Constantia) = frisch
+  - Inland (Breede, Klein Karoo) = heiß & einfach
+- **Logik**: Maritime Moderation = Qualitäts-Werkzeug`,
+      takeaway: "Benguela = Kühlfaktor. Nähe zum Strom = Qualität."
     }
   ],
   questions: [
     {
-      question: "Was ist die wichtigste weiße Rebsorte in Südafrika?",
+      question: "Welcher Faktor kühlt Südafrikas Weinregionen am stärksten?",
       options: [
-        "Chardonnay",
-        "Sauvignon Blanc",
-        "Chenin Blanc",
-        "Riesling"
-      ],
-      correct: 2,
-      explanation: "Chenin Blanc ist die meistangebaute und wichtigste weiße Rebsorte Südafrikas."
-    },
-    {
-      question: "Welcher Faktor kühlt die Weinregionen Südafrikas am stärksten?",
-      options: [
-        "Höhenlage",
-        "Benguela-Strom",
-        "Niederschlag",
-        "Wind aus der Wüste"
+        "Die Höhenlagen",
+        "Benguela-Strom (kalter Pazifik-ähnlicher Strom) = maritime Kühlung & Nebel",
+        "Der Druck-Tiefgebiet",
+        "Atlantik-Regen"
       ],
       correct: 1,
-      explanation: "Der kalte Benguela-Strom bringt kühlende Einflüsse von der Atlantikküste."
+      explanation: "Benguela = kalter Strom mit extremem Kühl-Effekt. Südafrikas Qualitäts-Werkzeug."
     },
     {
-      question: "Welche Rebsorte ist typisch für Südafrika?",
+      question: "Was ist Pinotage?",
       options: [
-        "Merlot",
-        "Pinotage",
-        "Tempranillo",
-        "Malbec"
+        "Südafrikanischer Pinot Noir",
+        "Kreuzung aus Pinot Noir & Cinsault (1925), südafrikanisch entwickelt",
+        "Französische Rebsorte",
+        "Synonym für Cabernet"
       ],
       correct: 1,
-      explanation: "Pinotage ist eine in Südafrika entwickelte Rebsorte."
+      explanation: "Pinotage = südafrikanische Kreuzung mit eigenem Charakter (Rauch, Früchte)."
     },
     {
-      question: "Welche Region gilt als wichtigste Qualitätsregion?",
+      question: "Welche Region ist Südafrikas Top-Qualität?",
       options: [
-        "Olifants River",
         "Klein Karoo",
-        "Stellenbosch",
-        "Breede River Valley"
+        "Breede River Valley",
+        "Coastal Region (mit Subregionen: Stellenbosch, Constantia, Walker Bay)",
+        "Olifants River"
       ],
       correct: 2,
-      explanation: "Stellenbosch ist die bekannteste Premium-Region Südafrikas."
+      explanation: "Coastal = maritim-gekühlt = Benguela-Effekt = Premium-Zone."
     },
     {
-      question: "Was garantiert das Wine of Origin System?",
+      question: "Warum ist Constantia heute weniger bekannt als historisch?",
       options: [
-        "Qualität",
-        "Rebsorte",
-        "Herkunft",
-        "Alkoholgehalt"
-      ],
-      correct: 2,
-      explanation: "Das WO-System garantiert die geografische Herkunft, nicht die Qualität."
-    },
-    {
-      question: "Welcher Stil ist typisch für Sauvignon Blanc aus Südafrika?",
-      options: [
-        "Sehr süß",
-        "Frisch und aromatisch",
-        "Stark oxidativ",
-        "Sehr tanninreich"
+        "Weil die Region geschlossen wurde",
+        "Weil historischer Fokus auf Süßweine war (18.–19. Jhdt), modern = trockene Weine",
+        "Weil andere Regionen besser sind",
+        "Zufällig"
       ],
       correct: 1,
-      explanation: "Sauvignon Blanc ist meist frisch, aromatisch und säurebetont."
+      explanation: "Constantia: historisch edelsüß weltberühmt, modern = trockene Weine + Cabernet."
     },
     {
-      question: "Warum ist Bewässerung oft notwendig?",
+      question: "Welche Aussage zu südafrikanischer Stilistik ist wahr?",
       options: [
-        "Zu viel Regen",
-        "Trockene Sommer",
-        "Zu kaltes Klima",
-        "Zu viel Schatten"
+        "Südafrika = nur Neue-Welt",
+        "Südafrika = Alte-Welt-Struktur (Säure, Tannine) + Neue-Welt-Frucht (Balance)",
+        "Südafrika = nur europäisch",
+        "Südafrika = überreif & kraftvoll"
       ],
       correct: 1,
-      explanation: "Viele Regionen haben trockene Sommer und benötigen Bewässerung."
+      explanation: "Südafrika = bewusster Mix. Benguela = Säure. Technologie = Frische. Balance-Fokus."
     },
     {
-      question: "Welche Aussage zu Pinotage ist korrekt?",
+      question: "Warum ist Chenin Blanc unterschätzt in Südafrika?",
       options: [
-        "Ist identisch mit Pinot Noir",
-        "Ist eine Kreuzung aus Pinot Noir und Cinsault",
-        "Ist eine weiße Rebsorte",
-        "Wird nur für Schaumwein verwendet"
+        "Weil es schlecht ist",
+        "Weil historisch als 'bulk wine' genutzt, aber Premium-Potential erkennt (alte Reben, Komplexität)",
+        "Weil andere Sorten besser sind",
+        "Zufällig"
       ],
       correct: 1,
-      explanation: "Pinotage ist eine Kreuzung aus Pinot Noir und Cinsault."
+      explanation: "Chenin-Renaissance: alte Reben (30–50 Jahre) = Konzentration = Premium-Potenzial."
     }
   ]
 });

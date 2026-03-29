@@ -1,359 +1,216 @@
 registerChapterContent("syrah", {
   cards: [
     {
-      title: "Syrah – Überblick",
-      content: `
-• Rebsorte: Syrah (Shiraz)
-• Herkunft: Frankreich (Rhône-Tal)
-• Bedeutende Anbaugebiete:
-  - Frankreich (Nord- und Süd-Rhône)
-  - Australien
-  - Spanien, USA, Südafrika
+      title: "Einführung: Syrah/Shiraz – Würzige Kraft und Klimavarianz",
+      content: `Syrah ist eine kräftige Rotwein-Rebsorte, die deutlich zeigt, wie Klima den Stil determiniert. In kühlerem französischem Klima zeigt sie würzige, strukturierte "Syrah"-Noten; in wärmerem australischem Klima wird sie fruchtig-opulent "Shiraz". Die Name-Unterscheidung ist Stil-konvention, nicht genetisch. Syrah verkörpert, dass Pfeffer und Säure nicht unerwünscht sind – sie sind Qualitätszeichen.
 
-• Stil: kräftige, tanninreiche Rotweine
-
-Merksatz: Syrah = kraftvoll, würzig, dunkel.
-`
+- **Zwei Namenkonventionen**: Syrah (Frankreich, elegant) vs. Shiraz (Australien, opulent)
+- **Klimabestimmtheit**: kühler Klima = Pfeffer + Säure, warm = Frucht + Kraft
+- **Würze als Identität**: Pfeffer ist nicht Fehler, sondern Charakteristik
+- **Struktur**: hohe Tannine + hohe Säure + hoher Alkohol`,
+      takeaway: "Merksatz: Syrah = kraftvoll, würzig, dunkel."
     },
     {
-      title: "Syrah vs. Shiraz",
-      content: `
-• Syrah:
-  - Begriff meist in Frankreich & kühleren Regionen
-  - eleganter, strukturierter Stil
+      title: "Syrah vs. Shiraz – Nomen-Konvention verstehen",
+      content: `Die zwei Namen bezeichnen dieselbe Rebsorte, aber die Namenkonvention signalisiert Klimasituation und Stil.
 
-• Shiraz:
-  - Begriff v. a. in Australien
-  - fruchtiger, reifer, oft alkoholreicher Stil
-
-Merksatz: Syrah = elegant, Shiraz = opulent.
-`
+- **Syrah**: Begriff verwendet in Frankreich und kühleren Regionen (Nord-Rhône, Elsass, USA-Küste)
+- **Shiraz**: Term verwendet in Australien und warmen Regionen
+- **Stil-Unterschied**: ist Klima-Unterschied, nicht Genetik
+- **Merksatz**: Syrah = elegant-würzig, Shiraz = opulent-fruchtig
+- **Prüfungs-Relevanz**: dieser Unterschied ist zentral`,
+      takeaway: "Name = Klima-Stil, nicht genetische Unterschied."
     },
     {
-      title: "Klimaanforderungen",
-      content: `
-• bevorzugt:
-  - warmes bis heißes Klima
+      title: "Klimaanforderungen – Der Kern der Stil-Differenzierung",
+      content: `Das Klima ist der fundamentale Treiber für den Syrah/Shiraz-Unterschied und bestimmt Aroma-Profile.
 
-• in kühleren Klimazonen:
-  - höhere Säure
-  - mehr Pfefferaromen
-
-• in warmen Klimazonen:
-  - reifere Frucht
-  - höherer Alkohol
-
-Merksatz: Klima bestimmt, ob Syrah pfeffrig oder fruchtig wirkt.
-`
+- **Warmes bis heißes Klima**: bevorzugt, volle Reife garantiert
+- **Kühles Klima**: höhere Säure, Pfeffer-Aromen entstehen
+- **Warmes Klima**: tropische/reife Frucht, höherer Alkohol
+- **Pyrazin-Abbau**: mit Wärme bauen sich Pyrazine (Pfeffer) ab
+- **Logik**: Klima = Aroma-Typ`,
+      takeaway: "Klima bestimmt, ob Syrah pfeffrig oder fruchtig wirkt."
     },
     {
-      title: "Typische Struktur",
-      content: `
-• Säure: mittel bis hoch
-• Tannin: mittel bis hoch
-• Alkohol: mittel bis hoch
-• Körper: mittel bis voll
+      title: "Primäraromen (Kühles Klima) – Pfeffer und Struktur",
+      content: `In kühleren Klimazonen (Nord-Rhône, Washington State) zeigt Syrah würzige, strukturierte Aromen mit Pfeffer dominierend.
 
-→ sehr strukturierte Weine
-
-Merksatz: Syrah = viel Struktur (Säure + Tannin).
-`
+- **Schwarze Johannisbeere (blackcurrant)**: Basis
+- **Brombeere (blackberry)**: dunkle Frucht
+- **Schwarzer Pfeffer (black pepper)**: charakteristisch für Kühle-Klima
+- **Veilchen (violets)**: florale Komponente
+- **Stil**: frischer, würziger, weniger unmittelbar fruchtbetont
+- **Säure**: präsent und strukturgebend`,
+      takeaway: "Kühles Klima = Pfeffer + Frische."
     },
     {
-      title: "Primäraromen (cool climate)",
-      content: `
-• schwarze Johannisbeere
-• Brombeere
-• schwarzer Pfeffer
-• Veilchen
+      title: "Primäraromen (Warmes Klima) – Reife Früchte und Lakritz",
+      content: `In wärmeren Klimazonen (Australien, südliche Rhône, Kalifornien) zeigt Shiraz reife, fruchtbetonte Aromen.
 
-→ frischer, würziger Stil
-
-Merksatz: Kühle Syrah = Pfeffer + Frische.
-`
+- **Reife Brombeere (ripe blackberry)**: dominant
+- **Pflaume (plum)**: Süße möglich
+- **Schwarzkirsche (black cherry)**: reife Komponente
+- **Lakritz (licorice)**: exotischere Note
+- **Stil**: intensiv, fruchtbetonter, süßlicher wirkend
+- **Säure**: moderater durch Wärme`,
+      takeaway: "Warmes Klima = dunkle, reife Frucht."
     },
     {
-      title: "Primäraromen (warm climate)",
-      content: `
-• reife Brombeere
-• Pflaume
-• Schwarzkirsche
-• Lakritz
+      title: "Rotundone-Molekül – Die Pfeffer-Chemie",
+      content: `Das Rotundone-Molekül ist chemisch für die charakteristische Pfeffer-Note bei Syrah verantwortlich – ein prüfungs-wichtiges Konzept.
 
-→ intensiver, fruchtbetonter Stil
-
-Merksatz: Warme Syrah = dunkle, reife Frucht.
-`
+- **Rotundone**: eine flüchtige Verbindung, die Pfeffer-Wahrnehmung erzeugt
+- **Entstehung**: bei kühleren Temperaturen stärker in den Trauben entwickelt
+- **Wärmeverlauf**: mit steigender Temperatur baut sich Rotundone ab
+- **Klima-Signal**: Pfeffer-Intensität zeigt Temperatur-Regim an
+- **Prüfungs-Relevanz**: zeigt, dass "Pfeffer" = Wissenschaft, nicht Fehler`,
+      takeaway: "Pfeffer (Rotundone) ist klima-abhängig."
     },
     {
-      title: "Sekundäraromen (Ausbau)",
-      content: `
-• Vanille (Eiche)
-• Rauch
-• Schokolade
-• Gewürze
+      title: "Nord-Rhône (Frankreich) – Das Syrah-Heartland",
+      content: `Nord-Rhône ist das klassische, kühle Anbaugebiet für eleganten, strukturierten Syrah.
 
-→ abhängig vom Holzeinsatz
-
-Merksatz: Eiche bringt Wärme & Süße in Syrah.
-`
+- **Klima**: kühler, lange Reifeperiode
+- **Stil**: 100% Syrah reinsortig, hohe Säure, hohe Tannine, Pfeffer dominant
+- **Aromen**: schwarze Johannisbeere, Pfeffer, Veilchen, Rauch
+- **Berühmte Appellationen**: Côte-Rôtie, Hermitage, Cornas
+- **Merksatz**: Nord-Rhône = elegant, strukturiert, pfeffrig`,
+      takeaway: "Nord-Rhône = klassischer, eleganter Syrah."
     },
     {
-      title: "Tertiäraromen (Reifung)",
-      content: `
-• Leder
-• Erde
-• Tabak
-• getrocknete Früchte
+      title: "Süd-Rhône (Frankreich) – Cuvée-Kultur",
+      content: `Süd-Rhône ist wärmer und nutzt Syrah oft in Cuvées mit anderen Sorten wie Grenache.
 
-→ entstehen mit Flaschenreife
-
-Merksatz: Gereifter Syrah wird erdig und komplex.
-`
+- **Klima**: wärmer als Nord-Rhône
+- **Stil**: oft Blend, weniger rein Syrah
+- **Aromen**: weicher, fruchtiger als Nord-Rhône
+- **Klassiker**: Châteauneuf-du-Pape basiert oft auf Grenache mit Syrah-Support
+- **Merksatz**: Süd-Rhône = fruchtig, zugänglicher, Blends`,
+      takeaway: "Süd-Rhône = wärmer, oft Grenache-basiert."
     },
     {
-      title: "Nord-Rhône – Stil",
-      content: `
-• kühleres Klima
-• 100 % Syrah (oft reinsortig)
+      title: "Australien – Shiraz als National-Wein",
+      content: `Australien produziert Shiraz im opulentesten Stil und hat die Rebsorte als National-Sorte etabliert.
 
-• Stil:
-  - hohe Säure
-  - hohe Tannine
-  - Pfeffer, Veilchen, Rauch
-
-Merksatz: Nord-Rhône = elegant & pfeffrig.
-`
+- **Klima**: heiß bis sehr heiß, volle Reife
+- **Stil**: vollmundig, hoher Alkohol (14–15%), süßliche Frucht, weiche Tannine
+- **Ausbau**: häufig neue Eiche mit intensiven Aromen
+- **Regionen**: Barossa Valley, McLaren Vale (warm/heiß)
+- **Merksatz**: Australien = kräftig, opulent, alkoholreich`,
+      takeaway: "Australischer Shiraz = kraftvoll & opulent."
     },
     {
-      title: "Süd-Rhône – Stil",
-      content: `
-• wärmeres Klima
-• oft Cuvées (z. B. mit Grenache)
+      title: "USA – Kalifornien und Washington: Stilmischung",
+      content: `USA zeigt beide Syrah/Shiraz-Stile je nach Region und Klima-Auswahl.
 
-• Stil:
-  - weicher
-  - fruchtiger
-  - weniger Tannin
-
-Merksatz: Süd-Rhône = fruchtig & zugänglicher.
-`
+- **Kalifornien (warm)**: fruchtig & voll, ähnlich Australien
+- **Washington State (kühler)**: strukturierter, mehr Pfeffer wie Nord-Rhône
+- **Mischung**: USA zeigt Spektrum von elegant bis opulent`,
+      takeaway: "USA = Mischung aus Old & New World Stil."
     },
     {
-      title: "Australien – Shiraz Stil",
-      content: `
-• heißes Klima
-• sehr reife Trauben
+      title: "Struktur als Kerneigenschaft",
+      content: `Syrah ist definiert durch hohe Strukturmerkmale, die mit Ausbau harmonieren müssen.
 
-• Stil:
-  - vollmundig
-  - hoher Alkohol
-  - süßliche Frucht
-  - oft Eiche
-
-Merksatz: Australischer Shiraz = kraftvoll & opulent.
-`
+- **Säure**: mittel bis hoch, strukturgebend
+- **Tannine**: mittel bis hoch, dicke Schale
+- **Alkohol**: mittel bis hoch (14–15%)
+- **Körper**: mittel bis voll
+- **Ergebnis**: sehr strukturierte Weine, oft lagerfähig`,
+      takeaway: "Syrah = viel Struktur (Säure + Tannin)."
     },
     {
-      title: "USA – Syrah",
-      content: `
-• Kalifornien:
-  - warm → fruchtig & voll
+      title: "Farbe – Tiefes Rubin bis Violett",
+      content: `Die Farbe von Syrah ist ein visuelles Erkennungs-Merkmal.
 
-• Washington State:
-  - kühler → strukturierter
-
-Merksatz: USA = Mischung aus Old & New World Stil.
-`
+- **Tiefes Rubin bis violett**: sehr intensive Farbausprägung
+- **Grund**: dickschalige Trauben mit hohem Farbstoff
+- **Signal**: Farbtiefe zeigt oft Konzentration an
+- **Mit Alter**: langsame Entwicklung zu Ziegelrot`,
+      takeaway: "Syrah = dunkel und intensiv."
     },
     {
-      title: "Spanien & Südafrika",
-      content: `
-• Spanien:
-  - oft warm, fruchtbetont
+      title: "Tertiäre Aromen bei Reife",
+      content: `Mit Reife entwickelt Syrah komplexe, würzige tertiäre Aromen.
 
-• Südafrika:
-  - Mischung aus würzig & fruchtig
-
-Merksatz: Syrah ist weltweit sehr flexibel im Stil.
-`
+- **Leder (leather)**: klassisches Reife-Aroma
+- **Erde (earth)**: erdig, komplexe Note
+- **Tabak (tobacco)**: würzig, komplexe Note
+- **Getrocknete Früchte**: süßliche, kompromierte Noten
+- **Signal**: Komplexität zeigt Reife an`,
+      takeaway: "Gereifter Syrah wird erdig und komplex."
     },
     {
-      title: "Weinbereitung – Syrah",
-      content: `
-• häufig:
-  - Maischegärung (skin contact)
-  - moderate bis lange Extraktion
+      title: "Holzausbau – Struktur und Intensität",
+      content: `Holzfassausbau ist typisch für Syrah und verstärkt natürliche Kraft.
 
-• Ziel:
-  - Farbe
-  - Tannin
-  - Struktur
-
-Merksatz: Syrah braucht Extraktion für Struktur.
-`
+- **Eiche**: häufig verwendet, oft französische oder amerikanische
+- **Neue Fässer**: intensive Vanille und Toast möglich
+- **Effekt**: stabilisiert Tannine, gibt Würze
+- **Merksatz**: Eiche bringt Wärme & Süße in Syrah`,
+      takeaway: "Eiche verstärkt Syrahs Kraft."
     },
     {
-      title: "Holzeinsatz",
-      content: `
-• häufig in Eiche ausgebaut
-• neue Eiche möglich
+      title: "Tanninmanagement – Zur Kontrolle Erforderlich",
+      content: `Syrahs hohe natürliche Tannine erfordern sorgfältige Weinbereitung-Management.
 
-• Effekte:
-  - Vanille
-  - Toast
-  - mehr Körper
-
-Merksatz: Eiche verstärkt Syrahs Kraft.
-`
+- **Extraktion**: müssen kontrolliert sein
+- **Reifung**: lange Lagerfähigkeit ermöglicht Tannin-Integration
+- **Ausbau**: Holz hilft, Tannine zu integrieren
+- **Ziel**: seidig statt körnig am Ende`,
+      takeaway: "Syrah-Tannine müssen gezähmt werden."
     },
     {
-      title: "Tanninmanagement",
-      content: `
-• wichtig wegen hoher natürlicher Tannine
+      title: "Blending-Potential – GSM und Rhône-Blends",
+      content: `Syrah wird oft mit anderen Sorten geblendet, besonders in südlichen Regionen.
 
-• Methoden:
-  - kontrollierte Extraktion
-  - Reifung (weicher machen)
-
-Merksatz: Syrah-Tannine müssen gezähmt werden.
-`
+- **GSM-Blend**: Grenache, Syrah, Mourvèdre (typisch Süd-Rhône, Australien)
+- **Rhône-Blends**: verschiedene Kombinationen
+- **Rolle**: Syrah bringt Struktur und Würze in Blends
+- **Merksatz**: Syrah bringt Struktur in Cuvées`,
+      takeaway: "Syrah = strukturelles Rückgrat in Blends."
     },
     {
-      title: "Farbe",
-      content: `
-• tiefes Rubin bis violett
-• hohe Farbdichte
+      title: "Speisebegleitung – Würzige Speisen als Partner",
+      content: `Syrahs würzige Noten und Struktur passen zu würzigen Speisen und Grill.
 
-→ typisch für dickschalige Trauben
-
-Merksatz: Syrah = dunkel und intensiv.
-`
+- **Rotes Fleisch (Steak, Lamm)**: klassisch, Tannine binden Protein
+- **Grillgerichte**: rauchwürzige Harmonie
+- **BBQ und Pfeffer-Steak**: würzige Speisen spiegeln Würze im Wein
+- **Merksatz**: Würze im Essen ↔ Würze im Wein`,
+      takeaway: "Syrah liebt Fleisch und Würze."
     },
     {
-      title: "Alterungspotenzial",
-      content: `
-• gute Lagerfähigkeit bei hochwertigen Weinen
+      title: "Typische Prüfungsfrage – Klima-Stil-Link",
+      content: `Die Fähigkeit, Klima-Unterschiede in Aromen zu erkennen, ist zentral für WSET Syrah-Verständnis.
 
-• Gründe:
-  - hohe Tannine
-  - hohe Säure
-
-Merksatz: Struktur = Langlebigkeit.
-`
+- **Kühles Klima → Pfeffer**: Nord-Rhône-Logik
+- **Warmes Klima → reife Frucht**: Australien-Logik
+- **Name-Signal**: Syrah/Shiraz signalisiert Klima/Stil
+- **Klassiker**: "Warum Pfeffer bei Nord-Rhône Syrah?": Klima`,
+      takeaway: "Pfeffer = kühl, Frucht = warm (zentral!)."
     },
     {
-      title: "Syrah-Blends",
-      content: `
-• häufig kombiniert mit:
-  - Grenache
-  - Mourvèdre
+      title: "Lagerfähigkeit und Reife-Potenzial",
+      content: `Syrah hat gutes Alterungspotenzial durch hohe Tannine und Säure.
 
-• Ziel:
-  - Balance
-  - Komplexität
-
-Merksatz: Syrah bringt Struktur in Cuvées.
-`
-    },
-    {
-      title: "Typische Prüfungsfrage – Klima",
-      content: `
-• kühles Klima → mehr Pfeffer
-• warmes Klima → mehr Frucht
-
-→ Klassiker in WSET-Prüfungen
-
-Merksatz: Pfeffer = kühl, Frucht = warm.
-`
-    },
-    {
-      title: "Typische Prüfungsfalle – Name",
-      content: `
-• Syrah = Shiraz (gleiche Rebsorte!)
-
-• Unterschied:
-  - Stil, nicht Genetik
-
-Merksatz: Name ≠ andere Rebsorte.
-`
-    },
-    {
-      title: "Typische Prüfungsfalle – Rhône",
-      content: `
-• Nord-Rhône:
-  - reinsortig
-
-• Süd-Rhône:
-  - meist Blend
-
-Merksatz: Norden = rein, Süden = Mischung.
-`
-    },
-    {
-      title: "Food Pairing – Grundlagen",
-      content: `
-• passt zu:
-  - rotem Fleisch
-  - Grillgerichten
-  - Lamm
-
-• Grund:
-  - Tannin bindet Protein
-
-Merksatz: Syrah liebt Fleisch.
-`
-    },
-    {
-      title: "Food Pairing – Würzige Speisen",
-      content: `
-• besonders gut zu:
-  - BBQ
-  - Pfeffersteak
-
-• Grund:
-  - würzige Aromen spiegeln sich
-
-Merksatz: Würze im Essen ↔ Würze im Wein.
-`
-    },
-    {
-      title: "Serviertemperatur",
-      content: `
-• ideal: 16–18 °C
-
-• zu warm:
-  - Alkohol wirkt stärker
-
-• zu kalt:
-  - Aromen unterdrückt
-
-Merksatz: Zu warm = alkoholisch, zu kalt = flach.
-`
+- **Gute Lagerfähigkeit**: 10–20+ Jahre für gute Qualitäten
+- **Gründe**: hohe Tannine + hohe Säure = konservierend
+- **Entwicklung**: mit Reife werden Tannine seidig, tertiäre Aromen entstehen
+- **Merksatz**: Struktur = Langlebigkeit`,
+      takeaway: "Struktur = Lagerfähigkeit."
     },
     {
       title: "Qualitätsfaktoren",
-      content: `
-• Klima
-• Ertrag
-• Reifegrad
-• Ausbau
+      content: `Syrah-Qualität wird durch mehrere Faktoren bestimmt.
 
-→ bestimmen Stil & Qualität
-
-Merksatz: Qualität = Balance aus Struktur & Frucht.
-`
-    },
-    {
-      title: "Syrah – Zusammenfassung",
-      content: `
-• dunkle Frucht
-• Pfeffer (v. a. kühl)
-• hohe Struktur
-• vielseitig weltweit
-
-Merksatz: Syrah verbindet Kraft mit Würze.
-`
+- **Klima**: determiniert Stil und Qualitäts-Potential
+- **Ertrag**: niedriger Ertrag = konzentriertere Aromen
+- **Reifegrad**: phenolische Reife wichtig
+- **Ausbau**: Holz-Integration kritisch
+- **Balance**: Struktur, Frucht, Würze müssen harmonieren`,
+      takeaway: "Qualität = Balance aus Struktur & Frucht."
     }
   ],
 
@@ -368,7 +225,7 @@ Merksatz: Syrah verbindet Kraft mit Würze.
       question: "Was ist der Hauptunterschied zwischen Syrah und Shiraz?",
       options: ["Unterschiedliche Rebsorten", "Unterschiedliche Farbe", "Unterschiedlicher Stil, nicht Genetik", "Unterschiedliche Säurestruktur"],
       correct: 2,
-      explanation: "Syrah und Shiraz sind dieselbe Rebsorte – der Unterschied liegt im Stil."
+      explanation: "Syrah und Shiraz sind dieselbe Rebsorte – der Unterschied liegt im Stil/Klima."
     },
     {
       question: "Wie ist Syrah typischerweise strukturiert?",
@@ -407,39 +264,26 @@ Merksatz: Syrah verbindet Kraft mit Würze.
       explanation: "GSM steht für Grenache, Syrah, Mourvèdre – ein klassischer südfranzösischer und australischer Blend."
     },
     {
-      question: "Was ist ein typisches Sekundäraroma bei im Holz ausgebautem Syrah?",
-      options: ["Schwarzer Pfeffer", "Vanille, Rauch und Gewürze", "Frische Brombeere", "Zitrus"],
-      correct: 1,
-      explanation: "Holzfassausbau gibt Syrah Aromen wie Vanille, Rauch und Gewürze."
-    },
-    {
-      question: "Was unterscheidet Nord-Rhône von Süd-Rhône bei Syrah?",
+      question: "Was ist das Rotundone-Molekül?",
       options: [
-        "Nord = Blend, Süd = reinsortig",
-        "Nord = reinsortig und strukturiert, Süd = oft Blend und zugänglicher",
-        "Süd hat mehr Tannin",
-        "Es gibt keinen Unterschied"
+        "Eine Hefeart in der Gärung",
+        "Eine flüchtige Verbindung, die Pfeffer-Note erzeugt",
+        "Ein Konservierungsstoff",
+        "Ein Fehler in der Weinbereitung"
       ],
       correct: 1,
-      explanation: "Nord-Rhône: reinsortig, elegant, pfeffrig. Süd-Rhône: häufig im Blend, weicher und zugänglicher."
+      explanation: "Rotundone ist eine flüchtige Verbindung, die bei kühleren Temperaturen stärker entwickelt wird und Pfeffer-Wahrnehmung erzeugt."
     },
     {
-      question: "Welche Farbe hat Syrah typischerweise?",
-      options: ["Helles Rubin wie Pinot Noir", "Tiefes Rubin bis Violett", "Goldgelb", "Orangefarben"],
+      question: "Warum ist Pfeffer bei Nord-Rhône-Syrah ein Qualitäts-Zeichen?",
+      options: [
+        "Es ist ein Fehler",
+        "Es zeigt kühles Klima und längere Reifung",
+        "Es ist ein Konservierungsstoff",
+        "Es ist ein Herkunfts-Fehler"
+      ],
       correct: 1,
-      explanation: "Syrah hat dickschalige Beeren und zeigt eine tiefe, intensive Farbe."
-    },
-    {
-      question: "Was sind tertiäre Aromen bei gereiftem Syrah?",
-      options: ["Frische Brombeere", "Schwarzer Pfeffer", "Leder, Erde und getrocknete Früchte", "Vanille und Toast"],
-      correct: 2,
-      explanation: "Mit Flaschenreife entwickelt Syrah tertiäre Aromen wie Leder, Erde und getrocknete Früchte."
-    },
-    {
-      question: "Welches Klima bevorzugt Syrah für beste Qualität?",
-      options: ["Sehr kalt", "Warm bis heiß", "Tropisch", "Arktisch"],
-      correct: 1,
-      explanation: "Syrah gedeiht in warmen bis heißen Klimazonen, obwohl kühleres Klima pfeffrigere Stile ergibt."
+      explanation: "Pfeffer (Rotundone) ist kein Fehler, sondern ein Qualitäts-Zeichen für kühles Klima und kontrollierte Reifung."
     }
   ]
 });

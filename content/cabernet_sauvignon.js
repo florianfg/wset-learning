@@ -1,296 +1,242 @@
 registerChapterContent("cabernet_sauvignon", {
   cards: [
     {
-      title: "Einführung: Cabernet Sauvignon",
-      content: [
-        "Eine der wichtigsten und weltweit am häufigsten angebauten roten Rebsorten",
-        "Ursprung: Bordeaux (Frankreich)",
-        "Eltern: Cabernet Franc × Sauvignon Blanc",
-        "Wird oft als 'König der Rotweine' bezeichnet"
-      ],
-      merksatz: "Cabernet Sauvignon = kraftvoll, tanninreich, weltweit verbreitet."
+      title: "Einführung: Cabernet Sauvignon – Struktur und Kraft",
+      content: `Cabernet Sauvignon ist eine der weltweit wichtigsten Rotwein-Rebsorten und symbolisiert strukturierte Kraft: hohe Tannine (tannins) + hohe Säure + tiefe Farbe. Diese Struktur schafft großes Reifepotenzial und macht Cabernet zu einem Kultwein. Die Rebsorte beweist, dass großartige Weine nicht süffig sein müssen – Struktur und Alterungsfähigkeit sind Qualitätszeichen.
+
+- **Dicke Schale** → hoher Tanningehalt und Farbe
+- **Späte Reife** (late ripening) → braucht warmes Klima
+- **Strukturgebung**: hohe Tannine + hohe Säure + Alkohol
+- **Lagerfähigkeit**: Jahrzehnte möglich durch Struktur`,
+      takeaway: "Merksatz: Cabernet = strukturiert, tanninreich, langlebig."
     },
     {
-      title: "Wichtige Eigenschaften der Rebsorte",
-      content: [
-        "Dicke Schalen → hoher Tanningehalt (tannins)",
-        "Spät reifend (late ripening)",
-        "Relativ resistent gegen Krankheiten",
-        "Benötigt warmes Klima für vollständige Reife"
-      ],
-      merksatz: "Dicke Schale + späte Reife = viel Tannin und Reifebedarf."
+      title: "Rebsorten-Charakteristiken – Dicke Schale als Schlüssel",
+      content: `Die dicke Schale von Cabernet Sauvignon ist die biologische Basis für seine Struktur und das Alterungspotenzial.
+
+- **Dicke Schale** → hohe Tannin-Extraktion möglich, tiefe Farbe
+- **Spät reifend**: benötigt längere Reifeperiode, volle phenolische Reife wichtig
+- **Resistent gegen Krankheiten**: relativ robust im Weinberg
+- **Ertrag-Management**: niedriger Ertrag = konzentriertere Aromen`,
+      takeaway: "Dicke Schale + späte Reife = Struktur-Potential."
     },
     {
-      title: "Typisches Aromaprofil (kühles Klima)",
-      content: [
-        "Schwarze Johannisbeere (blackcurrant)",
-        "Grüne Paprika (green bell pepper)",
-        "Hohe Säure (high acidity)",
-        "Hohe Tannine"
-      ],
-      merksatz: "Kühles Klima → grünere, frischere Aromen."
+      title: "Klimaeinfluss – Die Pyrazin-Säure-Balance",
+      content: `Das Klima bestimmt, ob Cabernet grüne Aromen (unreif, kühler) oder reife Früchte (warm) zeigt – über die Pyrazin-Chemie (Methoxypyrazine).
+
+- **Kühles Klima (unreif)** → Pyrazine (grüne Paprika, Kräuter, Gras) bleiben → grüne Noten möglich
+- **Warmes Klima (reif)** → Pyrazine bauen ab, reife schwarze Früchte entstehen
+- **Säure-Balance**: kühles Klima erhält Säure, warmes reduziert sie
+- **Prüfungs-Logik**: grüne Noten = unreife Trauben/zu kühles Klima`,
+      takeaway: "Kühles Klima → grüne Noten; warmes Klima → reife Früchte."
     },
     {
-      title: "Typisches Aromaprofil (warmes Klima)",
-      content: [
-        "Schwarze Früchte (black plum, blackberry)",
-        "Reife Cassis-Noten",
-        "Geringere Säure",
-        "Weichere Tannine"
-      ],
-      merksatz: "Warmes Klima → reifere, fruchtigere Aromen."
+      title: "Aromen (Kühles Klima) – Grüne Paprika und Säure",
+      content: `In kühleren Klimazonen (z. B. Bordeaux linkes Ufer) zeigt Cabernet grüne, strukturierte Aromen.
+
+- **Schwarze Johannisbeere (blackcurrant)** mit grüner Komponente
+- **Grüne Paprika (green bell pepper)**: charakteristisch für weniger vollständige Reife
+- **Hohe Säure**: strukturgebend, oft Zitrus-Qualität
+- **Hohe Tannine**: durch dicke Schale und längere Extraktion
+- **Stil**: elegant, strukturiert, weniger sofort zugänglich`,
+      takeaway: "Kühles Klima = grüne Noten + präsente Säure."
     },
     {
-      title: "Einfluss von Pyrazinen",
-      content: [
-        "Verantwortlich für grüne Aromen (Paprika, Kräuter)",
-        "Stärker ausgeprägt bei unvollständiger Reife",
-        "Typisch für kühle Klimazonen"
-      ],
-      merksatz: "Pyrazine = grüne Noten bei weniger Reife."
+      title: "Aromen (Warmes Klima) – Schwarze Früchte und Reife",
+      content: `In wärmeren Klimazonen (z. B. Kalifornien, Australien) zeigt Cabernet reife, fruchtige Aromen.
+
+- **Schwarze Früchte (blackberry, black plum)**: Brombeere, Pflaume
+- **Cassis-Noten**: reife schwarze Johannisbeere
+- **Geringere Säure**: weniger strukturell präsent
+- **Weichere Tannine**: obwohl noch präsent, weniger kantig
+- **Stil**: fruchtbetonter, zugänglicher, üppiger`,
+      takeaway: "Warmes Klima = reife schwarze Frucht + Geschmeidi gkeit."
     },
     {
-      title: "Struktur des Weins",
-      content: [
-        "Hoher Tanningehalt",
-        "Mittlere bis hohe Säure",
-        "Mittlerer bis voller Körper (body)",
-        "Hoher Alkohol in warmen Regionen"
-      ],
-      merksatz: "Cabernet = strukturiert, kraftvoll und langlebig."
+      title: "Bordeaux-Blend – Warum Merlot als Partner?",
+      content: `Cabernet Sauvignon wird oft mit Merlot und Cabernet Franc verschnitten, um Struktur mit Fruchtzugänglichkeit zu balancieren – eine klassische Strategie.
+
+- **Cabernet Sauvignon**: bringt Struktur, Tannin, Säure, Langlebigkeit
+- **Merlot**: bringt weichere Tannine, mehr Frucht, Trinkbarkeit
+- **Cabernet Franc**: bringt Aromatik, elegante Note, Frische
+- **Synergie**: Cabernet + Merlot = Balance aus Struktur und Zugänglichkeit
+- **Warum Merlot wichtig**: Merlot mildert harte Tannine, macht Cabernet früher trinkabar`,
+      takeaway: "Bordeaux-Blend: Cabernet (Struktur) + Merlot (Frucht) = Balance."
     },
     {
-      title: "Eignung für Holzfassausbau",
-      content: [
-        "Sehr gut geeignet für Barrique (oak)",
-        "Typische Aromen: Vanille, Zedernholz, Rauch",
-        "Holz hilft, Tannine zu integrieren"
-      ],
-      merksatz: "Cabernet + Holz = klassische Kombination."
+      title: "Kalifornien – Napa Valley als Weltstadt",
+      content: `Kalifornien (besonders Napa Valley) produziert Cabernet im opulentesten Stil: reif, vollmundig, oft intensiver Holzeinsatz.
+
+- **Klima**: warm bis heiß → volle Reife garantiert
+- **Stil**: opulent, reif, hoch Alkohol, oft Holzbetont
+- **Ausbau**: frequent neue Eiche, intensive Vanille und Gewürz
+- **Alkohol**: oft 14–15% alc.
+- **Zugänglichkeit**: früher trinkabar als Bordeaux durch Weichheit`,
+      takeaway: "Napa = opulent, reif, alkoholreich."
     },
     {
-      title: "Reifepotenzial",
-      content: [
-        "Sehr hohes Alterungspotenzial (aging potential)",
-        "Tannine und Säure wirken konservierend",
-        "Entwicklung tertiärer Aromen (Leder, Tabak)"
-      ],
-      merksatz: "Hohe Struktur = lange Lagerfähigkeit."
+      title: "Bordeaux (Linkes Ufer / Left Bank) – Das klassische Modell",
+      content: `Bordeaux linkes Ufer (Médoc, Pauillac, Saint-Julien) ist der Referenzmaßstab für strukturierten, eleganten Cabernet.
+
+- **Klima**: gemäßigt, kühler → gute Säure und Tannin-Balance
+- **Stil**: elegant, strukturiert, weniger unmittelbar fruchtbetont
+- **Holzeinsatz**: traditionell, aber integriert, nicht dominierend
+- **Tannin-Profile**: hohe, aber edle Tannine
+- **Reifepotenzial**: extrem lange Lagerfähigkeit (20–40+ Jahre)`,
+      takeaway: "Bordeaux Linkes Ufer = elegant, strukturiert, klassisch."
     },
     {
-      title: "Cabernet Sauvignon in Bordeaux",
-      content: [
-        "Hauptsorte im linken Ufer (Left Bank)",
-        "Oft Verschnitt mit Merlot und Cabernet Franc",
-        "Typische Regionen: Médoc, Pauillac"
-      ],
-      merksatz: "Linkes Ufer Bordeaux = Cabernet-dominiert."
+      title: "Struktur als Kerneigenschaft",
+      content: `Die hohe Tannin + Säure Struktur ist das definierende Merkmal von Cabernet Sauvignon und erklärt Lagerfähigkeit und Speisen-Pairing.
+
+- **Tannine**: nicht "weich" wie Merlot, sondern präsent und körnig
+- **Säure**: mittel bis hoch, strukturgebend
+- **Körper**: mittel bis vollmundig, Alkohol trägt bei
+- **Mouthfeel**: kann jugendlich astringent sein, wird mit Reife seidenartig
+- **Prüfungs-Logik**: hohe Tannine + hohe Säure = definierend für Cabernet vs. Merlot`,
+      takeaway: "Struktur ist Identität: hohe Tannine + Säure."
     },
     {
-      title: "Bordeaux Blend",
-      content: [
-        "Cabernet Sauvignon → Struktur & Tannin",
-        "Merlot → Frucht & Weichheit",
-        "Cabernet Franc → Aromatik & Frische"
-      ],
-      merksatz: "Blend = Balance zwischen Struktur und Frucht."
+      title: "Holzausbau – Integration versus Überdeckung",
+      content: `Holzfassausbau ist typisch für Cabernet, aber die Balance zwischen Struktur-Unterstützung und Aroma-Überdeckung ist kritisch.
+
+- **Positive Effekte**: Vanille, Toast, Rauchige Noten, stabilisiert Tannine
+- **Fassgröße/Alter**: neue Fässer = intensiver Einfluss, alt = subtiler
+- **Integration**: bei guter Qualität harmoniert Holz mit Frucht
+- **Fehler**: zu viel Holz überdeckt Frucht und Terroir
+- **Klassische Dauer**: 12–18 Monate im Barrique typisch`,
+      takeaway: "Holz unterstützt Struktur, muss aber integriert sein."
     },
     {
-      title: "Cabernet Sauvignon in Kalifornien",
-      content: [
-        "Wichtige Region: Napa Valley",
-        "Reife Frucht, hoher Alkohol",
-        "Oft intensiver Holzeinsatz",
-        "Meist sortenrein (single varietal)"
-      ],
-      merksatz: "Napa = opulent, reif, kraftvoll."
+      title: "Phänolische Reife – Nicht nur Zucker-Reife",
+      content: `Für Cabernet ist "phenolische Reife" entscheidend: die Schalen, Tannine und Kerne müssen komplett ausgereift sein, nicht nur der Zucker.
+
+- **Unterschied zu normaler Reife**: phenolische Reife = strukturelle Reife
+- **Effekt**: weichere, reifers Tannine statt grüner, harter Tannine
+- **Weinberg-Management**: Tannin-Entwicklung monitoren, nicht nur Zucker
+- **Resultat**: bei phenolischer Reife werden Tannine "seidig" vs. "körnig" wenn unreif`,
+      takeaway: "Phenolische Reife = Tannin-Reife, nicht nur Zucker."
     },
     {
-      title: "Cabernet Sauvignon in Chile",
-      content: [
-        "Konstante Qualität",
-        "Ausgewogene Frucht und Struktur",
-        "Oft gutes Preis-Leistungs-Verhältnis"
-      ],
-      merksatz: "Chile = zuverlässig und zugänglich."
+      title: "Reifepotenzial – Das goldene Merkmal",
+      content: `Das außergewöhnliche Reifepotenzial ist Cabernets großer Vorteil und erklärt hohe Bewertungen und Preise.
+
+- **Gründe**: hohe Tannine + hohe Säure = konservierend
+- **Zeitrahmen**: 5–15 Jahre für normale Weine, 20–40+ Jahre für Top-Weine
+- **Entwicklung**: mit Reife werden Tannine seidig, tertiäre Aromen entstehen (Leder, Tabak)
+- **Investitions-Logik**: Lagerfähigkeit macht Cabernet attraktiv für Sammler`,
+      takeaway: "Lagerfähigkeit ist ein Qualitäts-Merkmal."
     },
     {
-      title: "Cabernet Sauvignon in Australien",
-      content: [
-        "Regionen: Coonawarra, Margaret River",
-        "Intensive Frucht, oft Eukalyptusnoten",
-        "Struktur ähnlich Bordeaux, aber reifer"
-      ],
-      merksatz: "Australien = Frucht + Struktur."
+      title: "Farbe – Tiefdunkel und Bleibend",
+      content: `Die Farbe von Cabernet ist ein visueller Hinweis auf Konzentration und Tannin-Gehalt.
+
+- **Tiefes Rubin bis Purpur**: sehr intensive Farbausprägung
+- **Grund**: dicke Schale mit hohem Farbstoff-Gehalt
+- **Mit Alter**: Farbe entwickelt sich langsam zu Ziegelrot/Orangerot (decades)
+- **Erkennungs-Merkmal**: Farbintensität zeigt oft Qualität an`,
+      takeaway: "Tiefe Farbe = konzentrierte Tannine."
     },
     {
-      title: "Cabernet Sauvignon in Südafrika",
-      content: [
-        "Reife Frucht mit würzigen Noten",
-        "Oft Kombination aus alter und neuer Welt Stil",
-        "Regionen: Stellenbosch"
-      ],
-      merksatz: "Südafrika = Mischung aus Struktur und Reife."
+      title: "Tertiäre Aromen bei Reife",
+      content: `Mit Jahrzehnte-langer Reifung entwickelt Cabernet komplexe tertiäre Aromen, die Eleganz widerspiegeln.
+
+- **Leder (leather)**: klassisches Reife-Aroma
+- **Tabak**: erdige, komplexe Note
+- **Zedernholz (cedarwood)**: feine, würzige Note
+- **Getrocknete Früchte**: süßliche, komprimierende Noten
+- **Unterholz**: erdig, pilzartig möglich
+- **Signal**: tertiäre Aromen zeigen Reife und Komplexität an`,
+      takeaway: "Reife bringt komplexe, erdige Noten."
     },
     {
-      title: "Typische Qualitätsfaktoren",
-      content: [
-        "Vollständige phenolische Reife",
-        "Balance zwischen Tannin, Säure und Alkohol",
-        "Holzeinsatz gut integriert",
-        "Komplexität und Länge"
-      ],
-      merksatz: "Qualität = Balance + Reife + Integration."
+      title: "Speisen-Pairing – Protein und Fett sind Schlüssel",
+      content: `Cabernets hohe Tannine erfordern spezifische Speisen-Partner: Tannine binden Proteine, Fett reduziert Bitterkeit.
+
+- **Rotes Fleisch (Steak, Lamm)**: klassische Paarung, Tannine + Protein-Balance
+- **Fettgehalt**: je mehr Fett, desto weniger bitter wirken Tannine
+- **Hartkäse**: funktioniert durch Protein-Bindung
+- **Grillgerichte**: rauchwürzige Noten harmonieren mit Cabernet
+- **Nicht geeignet**: leichte Gerichte, Fisch ohne Sauce, Gemüse-lastig`,
+      takeaway: "Tannin + Fett/Protein = beste Balance."
     },
     {
-      title: "Häufige Fehler (Prüfungsfalle)",
-      content: [
-        "Zu grüne Noten = unreife Trauben",
-        "Zu viel Holz = überdeckt Frucht",
-        "Unbalancierte Struktur = Qualitätsmangel"
-      ],
-      merksatz: "Unausgewogenheit = Hinweis auf geringere Qualität."
+      title: "Alte Welt vs. Neue Welt – Stilkontrast",
+      content: `Der Stilkontrast zwischen europäischem (Bordeaux) und Neue-Welt-Cabernet (Kalifornien, Australien) ist prüfungsrelevant.
+
+- **Alte Welt (Bordeaux)**: strukturierter, weniger Frucht, eleganter, längere Reifung nötig
+- **Neue Welt (Kalifornien)**: fruchtiger, reiffer, alkoholreicher, oft oaky, früher trinkabar
+- **Holzeinsatz**: Alte Welt subtil, Neue Welt oft intensiv
+- **Tannin-Reifegrad**: Neue Welt tendenziell softer durch Wärme`,
+      takeaway: "Alte Welt = Struktur, Neue Welt = Frucht."
     },
     {
-      title: "Speiseempfehlungen (Food Pairing)",
-      content: [
-        "Rotes Fleisch (Steak, Lamm)",
-        "Gerichte mit hohem Fettgehalt",
-        "Hartkäse",
-        "Grillgerichte"
-      ],
-      merksatz: "Tannin braucht Fett → perfekte Kombination mit Fleisch."
+      title: "Chile – Zuverlässigkeit und Preis-Leistung",
+      content: `Chile produziert konstant hochwertige Cabernet mit gutem Preis-Leistungs-Verhältnis.
+
+- **Konsistenz**: zuverlässiger Stil, nicht extrem variabel
+- **Frucht und Struktur**: ausgewogene Balance zwischen Frucht und Tannin
+- **Preis**: oft günstiger als Napa oder Bordeaux bei ähnlicher Qualität
+- **Stil**: zwischen Bordeaux-elegant und Kalifornien-opulent positioniert`,
+      takeaway: "Chile = zuverlässig, ausgewogen, preiswert."
     },
     {
-      title: "Warum passt Cabernet zu Fleisch?",
-      content: [
-        "Tannine binden Proteine",
-        "Fett reduziert Bitterkeit",
-        "Wein wirkt weicher und harmonischer"
-      ],
-      merksatz: "Protein + Tannin = bessere Balance."
+      title: "Australien – Intensive Frucht und Eukalyptus",
+      content: `Australische Cabernets zeigen intensive Frucht und oft charakteristische Eukalyptus-Noten.
+
+- **Regionen**: Coonawarra (terra rossa Böden), Margaret River
+- **Stil**: intensive schwarze Frucht, oft Eukalyptus
+- **Struktur**: ähnlich Bordeaux, aber reifer präsentiert
+- **Terra Rossa Effekt**: Böden prägen terracotta-Noten möglich
+- **Alkohol**: oft hoch (14–15%)`,
+      takeaway: "Australien = Frucht + Struktur + Eukalyptus."
     },
     {
-      title: "Typische Stilunterschiede",
-      content: [
-        "Alte Welt: strukturierter, weniger Frucht",
-        "Neue Welt: fruchtiger, alkoholreicher",
-        "Holzeinsatz oft stärker in neuer Welt"
-      ],
-      merksatz: "Alte Welt = Struktur, Neue Welt = Frucht."
+      title: "Qualitätsfaktoren und Erkennungs-Merkmale",
+      content: `Die Qualität von Cabernet wird durch mehrere messbare Faktoren bestimmt.
+
+- **Phenolische Reife**: weiche vs. grüne Tannine
+- **Balance**: Tannin + Säure + Alkohol müssen harmonieren
+- **Holz-Integration**: sekundäre Aromen dürfen Frucht nicht überdecken
+- **Komplexität**: Tiefe und Länge im Abgang
+- **Fehler-Freiheit**: keine Oxidation, keine übertriebene Extraction`,
+      takeaway: "Qualität = Balance + Reife + Integration."
     },
     {
-      title: "Klimaanforderungen",
-      content: [
-        "Benötigt viel Sonne zur Reifung",
-        "Zu kühles Klima → grüne Noten",
-        "Zu heiß → Verlust von Säure"
-      ],
-      merksatz: "Optimales Klima = warm, aber nicht extrem heiß."
-    },
-    {
-      title: "Ertragsmanagement",
-      content: [
-        "Niedrige Erträge → höhere Qualität",
-        "Zu hohe Erträge → verdünnte Aromen",
-        "Weinbergmanagement entscheidend"
-      ],
-      merksatz: "Weniger Ertrag = mehr Konzentration."
-    },
-    {
-      title: "Weinbereitung",
-      content: [
-        "Lange Maischestandzeit (maceration)",
-        "Extraktion von Tanninen und Farbe",
-        "Häufiger Ausbau im Holzfass"
-      ],
-      merksatz: "Lange Maische = viel Struktur."
-    },
-    {
-      title: "Vergleich zu Merlot",
-      content: [
-        "Cabernet: mehr Tannin, mehr Säure",
-        "Merlot: weicher, fruchtiger",
-        "Cabernet braucht länger zur Reife"
-      ],
-      merksatz: "Cabernet = strenger, Merlot = zugänglicher."
-    },
-    {
-      title: "Vergleich zu Pinot Noir",
-      content: [
-        "Cabernet: kräftig, tanninreich",
-        "Pinot Noir: leicht, wenig Tannin",
-        "Unterschiedliche Stilwelten"
-      ],
-      merksatz: "Cabernet = kraftvoll, Pinot = elegant."
-    },
-    {
-      title: "Alkoholgehalt",
-      content: [
-        "Mittelhoch bis hoch",
-        "Höher in warmen Regionen",
-        "Einfluss auf Körper und Stil"
-      ],
-      merksatz: "Wärme → mehr Alkohol."
-    },
-    {
-      title: "Farbe",
-      content: [
-        "Tiefes Rubin bis Purpur",
-        "Sehr intensive Farbausprägung",
-        "Langsame Farbentwicklung mit Alter"
-      ],
-      merksatz: "Dunkle Farbe = hohe Konzentration."
-    },
-    {
-      title: "Sekundäre Aromen",
-      content: [
-        "Vanille, Toast (durch Holz)",
-        "Gewürze",
-        "Rauchige Noten"
-      ],
-      merksatz: "Holz bringt Würze und Komplexität."
-    },
-    {
-      title: "Tertiäre Aromen",
-      content: [
-        "Leder",
-        "Tabak",
-        "Zedernholz",
-        "Getrocknete Früchte"
-      ],
-      merksatz: "Reife bringt komplexe, erdige Noten."
-    },
-    {
-      title: "Warum ist Cabernet so beliebt?",
-      content: [
-        "Klare Struktur",
-        "Gutes Alterungspotenzial",
-        "Vielseitigkeit in verschiedenen Regionen",
-        "Hohe Wiedererkennbarkeit"
-      ],
-      merksatz: "Struktur + Wiedererkennbarkeit = Erfolg."
-    },
-    {
-      title: "Typische Prüfungsfrage",
-      content: [
-        "Welche Rebsorte hat hohe Tannine und schwarze Johannisbeere?",
-        "→ Cabernet Sauvignon"
-      ]
+      title: "Häufige Verkostungs-Fehler",
+      content: `Bei Blindverkostung oder Prüfung können typische Fehler auftreten.
+
+- **Zu grüne Noten**: unreife Trauben/zu kühles Klima → Punktabzug für Qualität
+- **Zu viel Holz**: überdeckt Frucht und Terroir
+- **Unbalancierte Struktur**: z. B. high Alkohol aber low Tannine = Fehler
+- **Verwechslung mit anderen Sorten**: ohne Blind-Verkostung leicht möglich
+- **Aldehyde/Oxidation**: zeigen sich in hellen Farbtönen oder muffi gen Aromen`,
+      takeaway: "Unreife/Unbalance sind Qualitäts-Hinweise."
     }
   ],
+
   questions: [
     {
-      question: "Welche Eigenschaft ist typisch für Cabernet Sauvignon?",
-      options: ["Niedrige Tannine", "Hohe Tannine", "Keine Säure", "Sehr helle Farbe"],
+      question: "Warum hat Cabernet Sauvignon typischerweise hohe Tannine und ein großes Alterungspotenzial – was ist die strukturelle Ursache?",
+      options: [
+        "Weil Cabernet in heißen Regionen angebaut wird",
+        "Weil die dicke Schale der Cab-Beere reich an Tanninen ist – diese binden sich mit Anthocyanen und Sauerstoff zu stabilen Tannin-Komplexen, die sich über Jahre runden",
+        "Weil Cabernet immer in neuen Eichenfässern ausgebaut wird",
+        "Weil Cabernet eine späte Rebsorte ist und daher mehr Zeit für Aromaentwicklung hat"
+      ],
       correct: 1,
-      explanation: "Cabernet Sauvignon ist bekannt für seinen hohen Tanningehalt durch dicke Beerenschalen."
+      explanation: "Ursache-Wirkung: Dicke Schale → viele Tannine extrahiert → Tannine reagieren mit Anthocyanen und Sauerstoff → bilden stabile Polymer-Tannine → werden weich über Zeit → hohes Alterungspotenzial."
     },
     {
-      question: "Welche Aromen sind typisch für kühles Klima?",
-      options: ["Mango und Ananas", "Grüne Paprika und schwarze Johannisbeere", "Karamell", "Banane"],
+      question: "Wie entstehen grüne Aromen bei unreifer Cabernet?",
+      options: [
+        "Durch Holzausbau",
+        "Durch Pyrazine bei unvollständiger Reife",
+        "Durch malolaktische Gärung",
+        "Durch Oxidation"
+      ],
       correct: 1,
-      explanation: "Grüne Paprika entsteht durch Pyrazine in kühleren Klimazonen."
+      explanation: "Pyrazine (Methoxypyrazine) erzeugen grüne Paprika- und Kraut-Aromen bei weniger reife Trauben."
     },
     {
       question: "Wo ist Cabernet Sauvignon traditionell dominierend?",
@@ -300,76 +246,57 @@ registerChapterContent("cabernet_sauvignon", {
     },
     {
       question: "Warum wird Cabernet oft im Holz ausgebaut?",
-      options: ["Um Farbe zu entfernen", "Um Tannine zu integrieren und Aromen hinzuzufügen", "Um Alkohol zu senken", "Um Säure zu erhöhen"],
+      options: [
+        "Um Farbe zu entfernen",
+        "Um Tannine zu integrieren und Vanille-Aromen hinzuzufügen",
+        "Um Alkohol zu senken",
+        "Um Säure zu erhöhen"
+      ],
       correct: 1,
       explanation: "Holz hilft, die hohen Tannine zu integrieren und gibt zusätzliche Aromen wie Vanille."
     },
     {
-      question: "Welche Region ist bekannt für reifen, opulenten Cabernet?",
-      options: ["Napa Valley (USA)", "Mosel", "Elsass", "Champagne"],
-      correct: 0,
-      explanation: "Napa Valley produziert kraftvolle, reife und oft opulente Cabernet Sauvignon Weine."
+      question: "Welche Region produziert den reifsten, opulentesten Cabernet?",
+      options: ["Bordeaux Linkes Ufer", "Napa Valley (USA)", "Mosel", "Champagne"],
+      correct: 1,
+      explanation: "Napa Valley produziert kraftvolle, reife und oft opulente Cabernet Sauvignon Weine mit hohem Alkohol."
     },
     {
-      question: "Welche Kombination passt am besten zu Cabernet Sauvignon?",
+      question: "Welche Speisen passen am besten zu Cabernet?",
       options: ["Salat", "Fisch", "Steak oder Lamm", "Dessert"],
       correct: 2,
       explanation: "Fettreiches Fleisch passt ideal zu tanninreichen Weinen, da Tannine Proteine binden."
     },
     {
-      question: "Was sind Pyrazine und wie wirken sie sich auf Cabernet aus?",
+      question: "Warum hat Cabernet Sauvignon ein hohes Alterungspotenzial?",
       options: [
-        "Zucker, der Süße erzeugt",
-        "Phenolverbindungen, die grüne/pflanzliche Aromen erzeugen",
-        "Säuren, die Frische geben",
-        "Hefen, die Gärung starten"
+        "Wegen niedrigem Alkohol",
+        "Wegen hohen Tanninen und mittlerer bis hoher Säure",
+        "Wegen niedrigen Tanninen",
+        "Wegen süßer Frucht"
       ],
       correct: 1,
-      explanation: "Pyrazine sind für grüne Paprika- und Kräuteraromen verantwortlich und entstehen bei unvollständiger Reife."
+      explanation: "Hohe Tannine und Säure wirken konservierend und ermöglichen langes Reifen."
     },
     {
-      question: "Was sind typische tertiäre Aromen bei gereiftem Cabernet Sauvignon?",
+      question: "Was sind typische tertiäre Aromen bei gereiftem Cabernet?",
       options: ["Zitrus und Gras", "Himbeere und Erdbeere", "Leder, Tabak und Zedernholz", "Frische Brombeere"],
       correct: 2,
       explanation: "Mit Reife entwickelt Cabernet Sauvignon tertiäre Aromen wie Leder, Tabak und Zedernholz."
     },
     {
-      question: "Was ist typisch für Cabernet Sauvignon aus Chile?",
-      options: ["Sehr grün und unreif", "Konstante Qualität, ausgewogene Frucht und Struktur", "Immer sehr teuer", "Nur in Blends verwendet"],
-      correct: 1,
-      explanation: "Chilenischer Cabernet bietet konstante Qualität mit gutem Preis-Leistungs-Verhältnis."
-    },
-    {
-      question: "Was sind typische Partnersorten für Cabernet im Bordeaux-Blend?",
-      options: ["Pinot Noir und Syrah", "Riesling und Chardonnay", "Merlot und Cabernet Franc", "Grenache und Mourvèdre"],
-      correct: 2,
-      explanation: "Merlot liefert Weichheit und Frucht, Cabernet Franc Aromatik; zusammen mit Cabernet ein klassischer Blend."
-    },
-    {
-      question: "Welche australische Region ist besonders für Cabernet bekannt?",
-      options: ["Hunter Valley", "Coonawarra und Margaret River", "Clare Valley", "Yarra Valley"],
-      correct: 1,
-      explanation: "Coonawarra (terra rossa Böden) und Margaret River sind Australiens bekannteste Cabernet-Regionen."
-    },
-    {
-      question: "Was bedeutet 'phenolische Reife' bei Cabernet Sauvignon?",
+      question: "Welche Rebsorten sind klassische Partner im Bordeaux-Blend?",
       options: [
-        "Die Hefe hat vollständig vergoren",
-        "Schalen, Tannine und Kerne sind vollständig ausgereift",
-        "Der Alkohol hat ein Maximum erreicht",
-        "Die Farbe ist tief genug"
+        "Pinot Noir und Syrah",
+        "Riesling und Chardonnay",
+        "Merlot und Cabernet Franc",
+        "Grenache und Mourvèdre"
       ],
-      correct: 1,
-      explanation: "Phenolische Reife bedeutet, dass Schalen und Tannine vollständig ausgereift sind, was weichere Tannine ergibt."
+      correct: 2,
+      explanation: "Merlot liefert Weichheit und Frucht, Cabernet Franc Aromatik; zusammen mit Cabernet Sauvignon ein klassischer Blend."
     },
     {
-      question: "Warum hat Cabernet Sauvignon ein hohes Alterungspotenzial?",
-      options: ["Wegen niedrigem Alkohol", "Wegen hohen Tanninen und mittlerer bis hoher Säure", "Wegen niedrigen Tanninen", "Wegen süßer Frucht"],
-      correct: 1,
-      explanation: "Hohe Tannine und Säure wirken konservierend und ermöglichen langes Reifen."
-    },
-    {
-      question: "Was ist der Hauptunterschied zwischen Alte-Welt- und Neue-Welt-Cabernet?",
+      question: "Was unterscheidet Alte-Welt (Bordeaux) von Neue-Welt Cabernet?",
       options: [
         "Alte Welt hat mehr Frucht",
         "Neue Welt ist strukturierter",
@@ -377,13 +304,7 @@ registerChapterContent("cabernet_sauvignon", {
         "Es gibt keinen Unterschied"
       ],
       correct: 2,
-      explanation: "Alte Welt Cabernet ist strukturierter, Neue Welt ist typisch fruchtiger und alkoholreicher."
-    },
-    {
-      question: "Welche Eltern hat Cabernet Sauvignon?",
-      options: ["Merlot × Pinot Noir", "Cabernet Franc × Sauvignon Blanc", "Syrah × Grenache", "Riesling × Gewürztraminer"],
-      correct: 1,
-      explanation: "Cabernet Sauvignon entstand durch Kreuzung von Cabernet Franc und Sauvignon Blanc."
+      explanation: "Alte Welt Cabernet ist strukturierter und braucht längere Reifung; Neue Welt ist fruchtiger und alkoholreicher."
     }
   ]
 });

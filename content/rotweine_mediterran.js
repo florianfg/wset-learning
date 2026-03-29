@@ -1,329 +1,187 @@
 registerChapterContent("rotweine_mediterran", {
   cards: [
     {
-      title: "Einführung: Mediterrane Rotweine",
-      content: `
-Mediterrane und südeuropäische Rotweine zählen zu den wichtigsten Sorten für WSET:
+      title: "Einführung: Mediterrane Rotweine – Regionale Identität",
+      content: `Mediterrane Rotweine sind definiert durch regionale Rebsorten und zeigen stark, wie Klima + Rebsorte = Stil erzeugen. Keine dieser Sorten ist "universell" wie Cabernet oder Merlot – sie sind regional verankert und reflektieren ihre Heimat. Das Verständnis dieser Sorten ist zentral für WSET, da die Prüfung regionale Erkenntnisse testet.
 
-- Grenache (Garnacha)
-- Tempranillo
-- Sangiovese
-- Nebbiolo
-- Gamay
-- Barbera
-
-Merksatz: Regionale Sorten = Schlüssel zur Herkunftsidentifikation.
-`
+- **Rebsorten**: Grenache (Spanien/Frankreich), Tempranillo (Spanien), Sangiovese (Italien), Nebbiolo (Italien), Gamay (Frankreich), Barbera (Italien)
+- **Struktur-Vielfalt**: von leicht-fruchtbetont (Gamay) bis kräftig-strukturiert (Nebbiolo)
+- **Säure-Rolle**: oft hoch, strukturgebend, nicht nur "sauer"
+- **Prüfungslogik**: Rebsorte + Region = Erkennungs-Schlüssel`,
+      takeaway: "Merksatz: Regionale Sorten = Schlüssel zur Herkunftsidentifikation."
     },
     {
-      title: "Grenache (Garnacha) – Überblick",
-      content: `
-Herkunft:
-- Spanien (Garnacha)
-- Südfrankreich (Grenache)
+      title: "Grenache (Garnacha) – Wenig Tannin, Viel Alkohol",
+      content: `Grenache zeigt das Prinzip Klima → Struktur besonders klar: warmes Klima erzeugt extreme Zuckerreife bei dünner Schale – das erklärt das charakteristische Profil.
 
-Eigenschaften:
-- hohe Zuckerreife → hoher Alkohol
-- dünne Schale → wenig Tannin, helle Farbe
-- hitzeresistent
+**Klima-Struktur-Kausalkette (prüfungsrelevant):**
+- **Warmes Klima** (Südfrankreich, Spanien, Sardinien) → sehr hohe Zuckerreife
+  - Zucker → Alkohol: 14–16% typisch (höchster Alkohol unter "normalen" Rotweinen)
+  - Schale bleibt dünn (genetisch) → wenig Tannin-Extraktion trotz Wärme
+  - Rote Frucht (Erdbeere, Himbeer, Kirsche) bei Reife
+- **Wenig Tannin** (trotz Wärme) → Ursache: dünne Beerenschale (genetisch, nicht Klima)
+  - Folge: Wein wirkt "satt" durch Alkohol, aber nicht "adstringent"
+- **Fehlende Säure** bei sehr warmem Klima → Wein kann flach wirken ohne Balance
+  - Lösung: kühle Berglagen oder Mischung mit säurereicheren Sorten (Syrah)
 
-Aromen:
-- rote Früchte (Erdbeere, Himbeere)
-- Gewürze
-
-Merksatz: Grenache = viel Alkohol, wenig Tannin, rote Frucht.
-`
+**Charakteristisches Profil (Ursache erklärt Stil):**
+- Hoher Alkohol + niedriges Tannin + mittlere Säure = voluminös, rund, leicht
+- Typisch: GSM-Blend (Grenache, Syrah, Mourvèdre) = Grenache gibt Frucht + Körper, Syrah gibt Struktur/Tannin`,
+      takeaway: "Merksatz: Grenache = warmes Klima → hoher Alkohol (dünne Schale = wenig Tannin trotzdem). Frucht + Körper ohne Tanninstruktur."
     },
     {
-      title: "Grenache – Struktur",
-      content: `
-Typische Struktur:
-- Säure: mittel bis niedrig
-- Tannin: niedrig
-- Alkohol: hoch
-- Körper: mittel bis voll
+      title: "Grenache Klimaeinfluss – Wärme erzeugt Alkohol, nicht Tannin",
+      content: `Grenache ist ein Lehrbeispiel: Klima bestimmt Alkohol, aber Genetik bestimmt Tannin.
 
-Problematik:
-- oxidationsanfällig
-- wenig Farbe
+**Warm vs. kühl bei Grenache:**
+- **Sehr warmes Klima** (Priorat, südliche Rhône im heißen Jahr):
+  - Zuckerakkumulation extrem hoch → 15–16% Alkohol möglich
+  - Körper: sehr vollmundig
+  - Aromen: reife rote Früchte, Konfitüre, etwas Rosine
+  - Säure: moderat bis niedrig
+- **Gemäßigtes warmes Klima** (Südfrankreich, Châteauneuf-du-Pape):
+  - Alkohol 13,5–14,5%
+  - Aromen: frische rote Früchte, etwas Würze
+  - Balance besser durch erhaltene Säure
 
-Oft im Blend verwendet
-`
+**Warum Tannin immer niedrig bleibt:**
+- Tannin kommt aus Beerenschale → Grenache-Schale genetisch dünn
+- Egal wie warm = immer wenig Tannin-Extraktion
+- Klima verändert Alkohol (Zucker) und Aromen, aber nicht das Tannin-Level
+
+**Prüfungsfalle:**
+- Nicht verwechseln: "Warmes Klima = viel Tannin" → falsch für Grenache!
+- Bei Grenache: Warmes Klima = mehr Alkohol, NICHT mehr Tannin`,
+      takeaway: "Grenache: Klima → Alkohol. Genetik → (immer wenig) Tannin. Das ist der Lernunterschied."
     },
     {
-      title: "Grenache – Regionen",
-      content: `
-Wichtige Regionen:
+      title: "Tempranillo – Spaniens Qualitäts-Rebsorte",
+      content: `Tempranillo ist die wichtigste spanische Qualitätsrebsorte und zeigt ausgezeichnete Holzfähigkeit, besonders in Rioja.
 
-Frankreich:
-- Rhône Süd (Châteauneuf-du-Pape)
-- Languedoc
-
-Spanien:
-- Priorat
-- Rioja (Blends)
-
-Neue Welt:
-- Australien (GSM-Blends)
-
-Merksatz: Grenache liebt Hitze – Rhône Süd & Spanien sind ideal.
-`
+- **Name**: von "temprano" = früh reifend
+- **Aromen**: rote Kirsche, Pflaume, Tabak (mit Reife)
+- **Struktur**: mittlere Säure + mittlere bis hohe Tannine = strukturiert
+- **Holzeinsatz**: hervorragend geeignet für Holzfassreifung
+- **Rioja-Klassifikation**: Crianza (kurz), Reserva (mittel), Gran Reserva (lang)
+- **Merksatz**: Tempranillo = Spaniens wichtigste Qualitätsrebsorte`,
+      takeaway: "Tempranillo = Spaniens Qualitäts-Flaggschiff."
     },
     {
-      title: "Tempranillo – Überblick",
-      content: `
-Herkunft:
-- Spanien
+      title: "Sangiovese – Italiens Struktur-Säure-Säule",
+      content: `Sangiovese ist Italiens wichtigste Rebsorte und zeigt hohe Säure + mittlere Tannine als strukturgebendes Merkmal. Sangiovese ist extremer Terroir-abhängig.
 
-Name:
-- von "temprano" = früh reifend
-
-Aromen:
-- rote Kirsche
-- Pflaume
-- Tabak
-- Leder (mit Reife)
-
-Wichtigste spanische Rebsorte
-
-Merksatz: Tempranillo = Spaniens wichtigste Qualitätsrebsorte.
-`
+- **Herkunft**: Toskana (Italien)
+- **Aromen**: Sauerkirsche, Kräuter, getrocknete Früchte
+- **Struktur**: hohe Säure (strukturgebend!), mittlere bis hohe Tannine
+- **Besonderheit**: hohe Säure ist nicht "sauer" sondern strukturgebend
+- **Klima-Anforderung**: warmes Klima für volle Reife notwendig
+- **Terroir-Sensibilität**: extrem terroirabhängig, reflektiert Boden deutlich
+- **Merksatz**: Sangiovese = hohe Säure als Kernelement`,
+      takeaway: "Sangiovese = hohe Säure + Kirscharomen."
     },
     {
-      title: "Tempranillo – Struktur",
-      content: `
-Struktur:
-- Säure: mittel
-- Tannin: mittel
-- Alkohol: mittel bis hoch
-- Körper: mittel bis voll
+      title: "Nebbiolo – Das Paradox: Hell aber Stark",
+      content: `Nebbiolo zeigt ein faszinierendes Paradox: helle Farbe bei SEHR hohen Tanninen + hoher Säure. Diese ist eine der komplexesten und strukturstärksten Rebsorten.
 
-Besonderheit:
-- gut geeignet für Holzreifung
-`
+- **Herkunft**: Norditalien (Piemont)
+- **Name**: von "nebbia" (Nebel) – frühjahrs-Nebel prägt Region
+- **Aromen**: Rosen, Teer, Kirsche, komplexe Noten
+- **Farbe**: eher hell, trotz hoher Struktur (überraschend)
+- **Säure**: HOCH, strukturgebend
+- **Tannine**: SEHR HOCH, können hart sein (lange Reife nötig)
+- **Reife**: benötigt lange Reife (10–20+ Jahre)
+- **Merksatz**: Nebbiolo = hell in Farbe, stark in Struktur (Paradox)`,
+      takeaway: "Nebbiolo = hell + extrem strukturiert."
     },
     {
-      title: "Tempranillo – Rioja Stil",
-      content: `
-Rioja-Stil:
+      title: "Barolo vs. Barbaresco – Zwei Nebbiolo-Stile",
+      content: `Barolo und Barbaresco sind zwei unterschiedliche Nebbiolo-Appellationen mit unterschiedlichen Charakteren.
 
-- häufig im Eichenfass gereift
-- Aromen:
-  - Vanille
-  - Kokos
-  - Gewürze
-
-Klassifikation:
-- Crianza
-- Reserva
-- Gran Reserva
-
-Merksatz: Rioja = Tempranillo + Eiche.
-`
+- **Barolo**: größere Gemeinde, traditionell kräftiger, weniger elegantanzuschließen
+- **Barbaresco**: kleinere Gemeinde, traditionell eleganter, eleganter strukturiert
+- **Beiden**: 100% Nebbiolo
+- **Unterschied**: marginal in Biologie, groß in Terroir/Ausbau-Philosophie
+- **Merksatz**: Barolo = kraftvoller, Barbaresco = eleganter`,
+      takeaway: "Barolo = kraftvoll; Barbaresco = elegant."
     },
     {
-      title: "Sangiovese – Überblick",
-      content: `
-Herkunft:
-- Italien (Toskana)
+      title: "Gamay – Das Ausnahme-Leicht-Rote",
+      content: `Gamay ist eine Ausnahme im mediterranen Spektrum: leicht, fruchtbetont, wenig Tannin. Sie wird vor allem in Beaujolais angebaut.
 
-Aromen:
-- Sauerkirsche
-- Kräuter
-- getrocknete Früchte
-
-Sehr terroirabhängig
-
-Merksatz: Sangiovese = hohe Säure + Kirscharomen.
-`
+- **Herkunft**: Frankreich (Beaujolais)
+- **Aromen**: rote Früchte, Banane (besonders bei Carbonic Maceration)
+- **Struktur**: NIEDRIG Tannin, leicht bis mittel Körper, mittlere Säure
+- **Stil**: jung und fruchtig, nicht strukturiert
+- **Trinkstil**: jung trinken (1–3 Jahre), nicht lagern
+- **Merksatz**: Gamay = leicht, fruchtig, wenig Tannin`,
+      takeaway: "Gamay = leicht, fruchtig, sofort trinkabar."
     },
     {
-      title: "Sangiovese – Struktur",
-      content: `
-Struktur:
-- Säure: hoch
-- Tannin: mittel bis hoch
-- Körper: mittel
+      title: "Carbonic Maceration – Eine Gärung für Frucht",
+      content: `Carbonic Maceration ist eine Gärungstechnik, die für Gamay (und besonders Beaujolais) zentral ist und extreme Fruchtigkeit + Weichheit erzeugt.
 
-Wichtig:
-- benötigt warmes Klima für Reife
-`
+- **Technik**: Trauben in CO₂-Atmosphäre gären, intrazellulare Gärung
+- **Effekte**: fruchtige Aromen (Banane, süßliche), wenig Tannin, wenig Struktur
+- **Timing**: optimal für frühen Genuss (Beaujolais Nouveau)
+- **Alternative**: herkömmliche Maischestandzeit gibt strukturiertere Weine
+- **Merksatz**: Carbonic Maceration = fruchtig + weich + wenig Tannin`,
+      takeaway: "Carbonic Maceration = fruchtig + weich."
     },
     {
-      title: "Sangiovese – wichtige Weine",
-      content: `
-Wichtige Weine:
+      title: "Barbera – Italiens Säure-Säule",
+      content: `Barbera zeigt das Gegenteil von Grenache: hohe Säure + wenig Tannin. Diese Kombination macht sie strukturgebend, aber zugänglich.
 
-- Chianti
-- Chianti Classico
-- Brunello di Montalcino
-
-Unterschiede:
-- Qualität & Reifegrad
-- Holz- vs. Fruchtstil
-`
+- **Herkunft**: Italien (Piemont)
+- **Aromen**: Kirsche, rote Früchte
+- **Struktur**: HOHE Säure (strukturgebend!), NIEDRIGES Tannin
+- **Ausbau**: oft im Holz ausgebaut trotz niedriger Tannine (Säure trägt Struktur)
+- **Merksatz**: Barbera = hohe Säure, wenig Tannin`,
+      takeaway: "Barbera = hohe Säure, weniges Tannin."
     },
     {
-      title: "Nebbiolo – Überblick",
-      content: `
-Herkunft:
-- Norditalien (Piemont)
+      title: "Vergleich: Grenache vs. Sangiovese",
+      content: `Trotz beide südliche Rebsorten zeigen sie fundamentale Unterschiede.
 
-Name:
-- von "nebbia" (Nebel)
-
-Aromen:
-- Rosen
-- Teer
-- Kirsche
-
-Sehr komplex
-
-Merksatz: Nebbiolo = hell in der Farbe, stark in Struktur.
-`
-    },
-    {
-      title: "Nebbiolo – Struktur",
-      content: `
-Struktur:
-- Säure: hoch
-- Tannin: sehr hoch
-- Körper: mittel bis voll
-- Farbe: eher hell
-
-Lange Reifung nötig
-`
-    },
-    {
-      title: "Nebbiolo – Regionen",
-      content: `
-Wichtige Regionen:
-
-- Barolo
-- Barbaresco
-
-Unterschied:
-- Barolo = kräftiger
-- Barbaresco = eleganter
-`
-    },
-    {
-      title: "Gamay – Überblick",
-      content: `
-Herkunft:
-- Frankreich (Beaujolais)
-
-Aromen:
-- rote Früchte
-- Banane (bei Carbonic Maceration)
-
-Leicht und fruchtig
-
-Merksatz: Gamay = leicht, fruchtig, wenig Tannin.
-`
-    },
-    {
-      title: "Gamay – Stil",
-      content: `
-Struktur:
-- Säure: mittel bis hoch
-- Tannin: niedrig
-- Körper: leicht
-
-Trinkstil:
-- jung trinken
-`
-    },
-    {
-      title: "Carbonic Maceration",
-      content: `
-Technik:
-- Gärung in CO₂-Atmosphäre
-
-Effekte:
-- fruchtige Aromen
-- wenig Tannin
-- wenig Struktur
-
-Typisch für Beaujolais
-
-Merksatz: Carbonic Maceration = fruchtig + weich + wenig Tannin.
-`
-    },
-    {
-      title: "Barbera – Überblick",
-      content: `
-Herkunft:
-- Italien (Piemont)
-
-Aromen:
-- Kirsche
-- rote Früchte
-
-Sehr säurebetont
-
-Merksatz: Barbera = hohe Säure, wenig Tannin.
-`
-    },
-    {
-      title: "Barbera – Struktur",
-      content: `
-Struktur:
-- Säure: hoch
-- Tannin: niedrig
-- Körper: mittel
-
-Oft im Holz ausgebaut
-`
+- **Grenache**: wenig Tannin, hoher Alkohol, rote Frucht
+- **Sangiovese**: hohe Säure, mittlere Tannine, Kirschton
+- **Struktur-Unterschied**: Grenache braucht Blends für Struktur, Sangiovese strukturiert bereits in rein`,
+      takeaway: "Grenache = Alkohol-Power, Sangiovese = Säure-Power."
     },
     {
       title: "Vergleich: Sangiovese vs. Nebbiolo",
-      content: `
-Sangiovese:
-- hohe Säure
-- mittlere Tannine
-- Kirscharomen
+      content: `Beide sind italienische Säure-Säulen, aber Nebbiolo ist dramatisch strukturierter.
 
-Nebbiolo:
-- hohe Säure
-- sehr hohe Tannine
-- Rosen- und Teeraromen
-
-Nebbiolo strukturstärker
-
-Merksatz: Nebbiolo hat deutlich mehr Tannin als Sangiovese.
-`
+- **Sangiovese**: hohe Säure, mittlere Tannine, Kirschton
+- **Nebbiolo**: hohe Säure, SEHR hohe Tannine, Rosen-/Teeraton, lange Reife nötig
+- **Farbe**: Sangiovese dunkelrot, Nebbiolo heller trotz höherer Tannine
+- **Reife**: Sangiovese 5–10 Jahre, Nebbiolo 10–20+ Jahre
+- **Merksatz**: Nebbiolo hat deutlich mehr Tannin als Sangiovese`,
+      takeaway: "Nebbiolo >> strukturstärker als Sangiovese."
     },
     {
       title: "Vergleich: Grenache vs. Syrah",
-      content: `
-Grenache:
-- wenig Tannin
-- viel Alkohol
-- rote Frucht
+      content: `Diese zwei häufig zusammen geplanzten Sorten sind Gegenpole in Struktur.
 
-Syrah:
-- viel Tannin
-- mehr Farbe
-- dunklere Frucht
-
-Oft kombiniert (GSM)
-`
+- **Grenache**: wenig Tannin, hoher Alkohol, rote Frucht
+- **Syrah**: viel Tannin, Pfeffer/Würze, dunkle Frucht
+- **In Blends**: Grenache + Syrah = Balance (Grenache Frucht, Syrah Struktur)
+- **GSM-Blend**: Grenache + Syrah + Mourvèdre = klassische süd-Rhône-Kombination`,
+      takeaway: "Grenache (Frucht) + Syrah (Struktur) = klassisches Blend."
     },
     {
-      title: "Typische Prüfungsfrage – Stil erkennen",
-      content: `
-Hinweise:
+      title: "Typische Prüfungsfrage – Struktur-Erkennungs-Logik",
+      content: `Die Fähigkeit, Struktur-Profile zu identifizieren, ist zentral für WSET-Erfolg bei mediterranen Sorten.
 
-- hohe Säure + Kirsche → Sangiovese
-- Rosen + sehr viel Tannin → Nebbiolo
-- hoher Alkohol + rote Frucht + wenig Tannin → Grenache
-- leicht + Banane + wenig Tannin → Gamay
-
-Merksatz: Struktur + Aroma = Rebsorte erkennen.
-`
+- **Hohe Säure + Mittel-Tannin → Sangiovese**: Säure strukturgebend
+- **Hohe Säure + SEHR Hohe Tannine → Nebbiolo**: extrem strukturiert
+- **Hoher Alkohol + Niedrig Tannin → Grenache**: Alkohol "vorhanden" aber strukturarm
+- **Hohe Säure + Niedrig Tannin → Barbera**: Säure strukturgebend, zugänglich
+- **Niedrig Tannin + leicht → Gamay**: fruchtig, nicht strukturiert
+- **Merksatz**: Struktur + Aroma = Rebsorte erkennen`,
+      takeaway: "Struktur-Profil ist Erkennungs-Schlüssel."
     }
   ],
+
   questions: [
     {
       question: "Welche Rebsorte hat typischerweise sehr hohe Tannine?",
@@ -389,23 +247,6 @@ Merksatz: Struktur + Aroma = Rebsorte erkennen.
       options: ["Tropische Früchte", "Sauerkirsche und Kräuter", "Blaubeere und Schokolade", "Erdbeere und Vanille"],
       correct: 1,
       explanation: "Sangiovese ist bekannt für Sauerkirsche, Kräuter und hohe Säure."
-    },
-    {
-      question: "In welchen Weinregionen Italiens wird Nebbiolo angebaut?",
-      options: ["Toskana", "Sizilien", "Piemont (Barolo, Barbaresco)", "Venetien"],
-      correct: 2,
-      explanation: "Nebbiolo ist die Hauptsorte in Barolo und Barbaresco im Piemont."
-    },
-    {
-      question: "Was ist typisch für die Rioja-Klassifikation Crianza?",
-      options: [
-        "Mindestens 5 Jahre Reifung",
-        "Kürzere Reifung als Reserva und Gran Reserva",
-        "Kein Holzeinsatz",
-        "Nur für Weißweine"
-      ],
-      correct: 1,
-      explanation: "Crianza hat die kürzeste Reifezeit der drei Kategorien."
     }
   ]
 });

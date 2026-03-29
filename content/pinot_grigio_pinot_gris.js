@@ -1,359 +1,222 @@
 registerChapterContent("pinot_grigio_pinot_gris", {
   cards: [
     {
-      title: "Einführung: Pinot Grigio / Pinot Gris",
-      content: `
-- Gleiche Rebsorte: Pinot Grigio (Italien), Pinot Gris (Frankreich)
-- Mutation von Pinot Noir (red grape variety)
-- Unterschiedlicher Stil je nach Region
-- Wichtig: Stil hängt stark von Klima und Ausbau ab
+      title: "Einführung: Pinot Grigio vs. Pinot Gris – Eine Rebsorte, zwei Welten",
+      content: `Pinot Grigio und Pinot Gris sind genetisch identisch (beide Mutationen von Pinot Noir), aber der Name signalisiert fundamentale Stilunterschied e: Grigio steht für leicht-frisch-trocken (italienischer Stil), Gris für vollmundig-aromatisch-oft-süßlich (elsässischer Stil). Diese zwei Stilwelten entstehen durch Klima, Ausbau und önologische Philosophie, nicht durch genetische Unterschiedlichkeit.
 
-Merksatz: Eine Rebsorte – zwei sehr unterschiedliche Stilwelten.
-`
+- **Genetisch identisch**: gleiche Rebsorte
+- **Stilunterschied**: massive Unterschiede durch Region + Ausbau
+- **Namenkonvention**: Grigio (Italien) = leicht, Gris (Frankreich) = reichhaltig
+- **Prüfungsrelevant**: verstehen, dass name nicht = andere Sorte`,
+      takeaway: "Merksatz: Eine Rebsorte – zwei sehr unterschiedliche Stilwelten."
     },
     {
-      title: "Rebsorten-Eigenschaften",
-      content: `
-- Dünne Schale, grau-rosa Farbe
-- Frühe Reife (early ripening)
-- Mittlerer bis niedriger Säuregehalt (medium to low acidity)
-- Anfällig für Fäulnis (rot risk)
+      title: "Rebsorten-Charakteristiken – Dünne Schale, frühe Reife",
+      content: `Pinot Grigio/Gris (die Rebsorte allgemein) hat spezifische Wachstums- und Qualitätsmerkmale.
 
-Merksatz: Früh reifend, aromatisch variabel, aber empfindlich.
-`
+- **Grau-rosafarbe Beeren**: resultiert aus teilweise rotem Pigment (Mutant von rot-traubigem Pinot Noir)
+- **Dünne Schale**: weniger Tannine, weniger Farbe möglich als bei Rotwein
+- **Frühe Reife**: treibt früh aus, reift früh → Vorteil in kühlen Regionen
+- **Mittel bis niedrige Säure**: variabel je nach Klima
+- **Krankheits-Anfälligkeit**: empfindlich gegen Fäulnis (Botrytis/Gray Rot)`,
+      takeaway: "Früh reifend, dünne Schale, empfindlich."
     },
     {
-      title: "Allgemeines Aromaprofil",
-      content: `
-- Zitrusfrüchte (citrus)
-- Grüner Apfel (green apple)
-- Birne (pear)
-- Melone (melon)
+      title: "Allgemeines Aromaprofil – Von Neutral bis Komplex",
+      content: `Das breite Aroma-Spektrum von Pinot Grigio/Gris zeigt, wie sehr Klima und Ausbau den Stil prägen.
 
-- Bei reiferen Stilen:
-  - Steinfrucht (stone fruit)
-  - Honig (honey)
-  - Gewürze (spice)
-
-Merksatz: Von frisch & neutral bis reich & würzig.
-`
+- **Kühles Klima (Grigio-Stil)**: Zitrus, grüner Apfel, Birne, Melone
+- **Warmes Klima (Gris-Stil)**: Steinfrucht, Honig, Gewürze, exotischere Aromen
+- **Neutral bis aromatisch**: je nach Reifegrad
+- **Mit Ausbau (Gris typisch)**: Eiche bringt Vanille und Gewürze hinzu`,
+      takeaway: "Aroma-Spektrum reicht von frisch-neutral bis reich-würzig."
     },
     {
-      title: "Pinot Grigio vs. Pinot Gris",
-      content: `
-Pinot Grigio:
-- Leicht (light-bodied)
-- Frisch, neutral
-- Hohe Trinkbarkeit
+      title: "Der Grigio-Stil: Leicht, Frisch, Neutral – Italienische Philosophie",
+      content: `Pinot Grigio (italienischer Stil) ist definiert durch Leichtheit, Frische und wenig Extraktion – eine bewusste Weinmacher-Philosophie.
 
-Pinot Gris:
-- Voller (fuller-bodied)
-- Aromatischer
-- Oft leicht süßlich
-
-Merksatz: Grigio = leicht & frisch, Gris = reich & aromatisch.
-`
+- **Körper**: leicht (light-bodied), nicht schwer
+- **Säure**: höher, um Frische zu erzeugen
+- **Ausbau**: Edelstahl (kein Holz), temperaturkontrollierte Gärung
+- **Aromen**: Zitrus, grüner Apfel, Birne, Melone – rein und elegant
+- **Philosophie**: maximale Frische und Trinkbarkeit, nicht Komplexität`,
+      takeaway: "Grigio = leicht, frisch, unkompliziert."
     },
     {
-      title: "Pinot Grigio – Stil",
-      content: `
-- Leicht (light body)
-- Hohe Säure (high acidity)
-- Trocken (dry)
-- Neutral bis leicht fruchtig
+      title: "Der Gris-Stil: Voll, Aromatisch, Oft Süßlich – Französische Philosophie",
+      content: `Pinot Gris (französischer/elsässischer Stil) ist definiert durch volleren Körper, höhere Alkoholie, Restzucker und Komplexität.
 
-- Häufig:
-  - Edelstahl-Ausbau (stainless steel)
-  - Keine Eiche
-
-Merksatz: Einfach, frisch, unkompliziert.
-`
+- **Körper**: mittel bis vollmundig (medium to full-bodied)
+- **Alkohol**: höher (13–14,5%) durch wärmeres Klima oder späte Lese
+- **Säure**: moderater, weniger strukturell
+- **Aromen**: intensiv, teilweise Honig, Steinobst, Gewürze
+- **Ausbau**: oft Holz-Eichenkontakt, Restzucker häufig
+- **Stil**: komplexer, runder, weniger azidisch als Grigio`,
+      takeaway: "Gris = voll, aromatisch, oft leicht süßlich."
     },
     {
-      title: "Pinot Gris – Stil",
-      content: `
-- Mittel bis vollmundig (medium to full body)
-- Moderate Säure (medium acidity)
-- Intensivere Aromen
-- Oft leicht süß (off-dry)
+      title: "Italien (Norditalien) – Grigio-Heimat und Massenproduktion",
+      content: `Italien (besonders Norditalien: Veneto, Friuli, Alto Adige) ist die Heimat des Pinot Grigio und größte Produktionsregion.
 
-- Teilweise:
-  - Eichenkontakt (oak)
-  - Restzucker
-
-Merksatz: Komplexer, runder, oft etwas süßer.
-`
+- **Volumen**: enorme Produktionsmengen, oft einfache bis mittlere Qualität
+- **Stil**: leicht, frisch, unkompliziert – Massenpublikums-orientiert
+- **Qualitäts-Variation**: sehr breit (von einfach bis hochwertig)
+- **Premium-Beispiele**: Friuli und Alto Adige zeigen höchste Qualitäten mit Komplexität
+- **Preissegment**: meist budget-freundlich`,
+      takeaway: "Italien = Grigio-Heimat, riesige Volumen, großer Qualitäts-Spread."
     },
     {
-      title: "Wichtige Regionen: Pinot Grigio",
-      content: `
-- Italien:
-  - Norditalien (Veneto, Friuli, Alto Adige)
+      title: "Das Elsass (Frankreich) – Gris-Heimat und Qualitäts-Orientierung",
+      content: `Das Elsass ist die klassische Heimat von Pinot Gris im französischen Stil und konzentriert sich auf Qualität.
 
-- Stil:
-  - Leicht
-  - Frisch
-  - Neutral
-
-Merksatz: Italien = leichter, frischer Stil.
-`
+- **Region**: Elsass (östliche Frankreich an der deutschen Grenze)
+- **Stil**: trocken bis süß, hoher Alkohol, intensive Aromen
+- **Ausbau**: oft mit Eiche für Struktur und Komplexität
+- **Restzucker**: häufig leicht süßlich oder deutlich süß (off-dry bis sweet)
+- **Späte Lese**: oft verwendet, um Reife und Restzucker zu erreichen
+- **Qualität**: sehr hochwertig, weltbekannt`,
+      takeaway: "Elsass = Gris-Heimat, kraftvoll und oft süßlich."
     },
     {
-      title: "Wichtige Regionen: Pinot Gris",
-      content: `
-- Frankreich:
-  - Elsass (Alsace)
+      title: "Klimaeinfluss – Frische vs. Reife",
+      content: `Das Klima ist der primäre Treiber für den Übergang von Grigio (leicht, frisch) zu Gris (voll, reif) und erklärt den Stilkontrast perfekt.
 
-- Stil:
-  - Voller Körper
-  - Aromatisch
-  - Oft Restzucker
-
-Merksatz: Elsass = reich, würzig, oft halbtrocken.
-`
+- **Kühles Klima (Norditalien)**: höhere Säure, niedrigere Alkohologie, frischere Aromen → Grigio-Stil
+- **Warmes Klima (Elsass)**: höherer Alkohol, geringere Säure, reifere Frucht → Gris-Stil
+- **Fazit**: Grigio + Gris = Klima-Unterschied übersetzt in Stil`,
+      takeaway: "Klima steuert den Grigio-zu-Gris-Übergang."
     },
     {
-      title: "Pinot Grigio aus Italien",
-      content: `
-- Sehr große Produktionsmengen
-- Häufig einfache Qualität
-- Ziel: frischer, unkomplizierter Wein
+      title: "Lesezeitpunkt und Körper-Entwicklung",
+      content: `Frühe vs. späte Lese ist ein kritischer Faktor für Körper und Alkohol – besonders bei dieser frühen Reifungs-Sorte.
 
-- Premium-Beispiele:
-  - Friuli
-  - Alto Adige
-
-Merksatz: Qualität schwankt stark – Region ist entscheidend.
-`
+- **Frühe Lese**: höhere Säure, leichterer Körper, frischere Aromen → typisch Grigio
+- **Späte Lese**: mehr Zucker, höherer Alkohol, vollerer Körper, reifere Frucht → typisch Gris
+- **Auswirkung**: kleine zeitliche Unterschiede bei früh reifender Sorte = große Stil-Unterschiede`,
+      takeaway: "Frühe Lese = Grigio, späte Lese = Gris."
     },
     {
-      title: "Pinot Gris aus dem Elsass",
-      content: `
-- Trocken bis süß (dry to sweet)
-- Hoher Alkohol (high alcohol)
-- Intensive Aromen
+      title: "Weinbereitung – Schonende Pressung und Temperaturkontrolle",
+      content: `Die Weinbereitung unterscheidet sich zwischen Grigio (maximal schonend) und Gris (strukturgebender).
 
-- Häufig:
-  - Spät gelesen (late harvest)
-  - Botrytis möglich
-
-Merksatz: Elsass = kraftvoll und oft komplex.
-`
+- **Grigio-Philosophie**: schonende Pressung, schnelle Gärung bei kühlen Temperaturen, minimal Kontakt
+- **Gris-Philosophie**: etwas mehr Saft-Kontakt, teilweise Holz für Struktur
+- **Temperaturkontrolle**: bei beiden wichtig für Aromaentwicklung
+- **Fokus**: Grigio auf Frische, Gris auf Komplexität`,
+      takeaway: "Grigio = maximal schonend; Gris = strukturbewusst."
     },
     {
-      title: "Klimaeinfluss",
-      content: `
-Kühles Klima:
-- Höhere Säure
-- Frischere Aromen
+      title: "Restzucker – Der Gris-Differenzierungsfaktor",
+      content: `Restzucker ist ein Schlüsselunterschied zwischen Grigio (meist komplett trocken) und Gris (oft süßlich).
 
-Warmes Klima:
-- Mehr Alkohol
-- Reifere Frucht
-- Geringere Säure
-
-Merksatz: Klima steuert Frische vs. Reife.
-`
+- **Pinot Grigio**: meist komplett trocken (< 2g/L), occasionally halbtrocken
+- **Pinot Gris**: oft halbtrocken (4–12g/L), manchmal süß
+- **Balance-Funktion**: bei Gris balanciert Restzucker die geringere Säure
+- **Geschmacks-Effekt**: subtil, aber wahrnehmbar süßlich bei Gris`,
+      takeaway: "Gris kann deutlich süßer sein."
     },
     {
-      title: "Einfluss der Lese",
-      content: `
-Frühe Lese:
-- Höhere Säure
-- Leichter Stil
+      title: "Säurestruktur – Höher bei Grigio, Moderater bei Gris",
+      content: `Die Säurestruktur ist ein zentraler Unterscheidungsfaktor und erklärt die unterschiedliche Trink-Experience.
 
-Späte Lese:
-- Mehr Zucker
-- Höherer Alkohol
-- Vollerer Körper
-
-Merksatz: Späte Lese = mehr Körper & Intensität.
-`
+- **Pinot Grigio**: mittlere bis hohe Säure, trägt zu Frische-Eindruck bei
+- **Pinot Gris**: mittlere Säure, weniger dominant
+- **Wahrnehmung**: Grigio wirkt knackig, Gris wirkt weicher
+- **Struktur-Rolle**: Grigio braucht Säure zur Struktur, Gris hat Struktur durch Körper/Alkohol`,
+      takeaway: "Grigio = höhere Säure (strukturgebend); Gris = moderater (softer)."
     },
     {
-      title: "Weinbereitung",
-      content: `
-- Meist schonende Pressung
-- Temperaturkontrollierte Gärung
-- Edelstahl für Frische
+      title: "Körper – Extreme Unterschiede",
+      content: `Der Körper ist visuell und geschmacklich der auffälligste Unterschied zwischen Grigio und Gris.
 
-- Optional:
-  - Eiche für Struktur
-  - Restzucker für Balance
-
-Merksatz: Technik bestimmt Stil stark.
-`
+- **Pinot Grigio**: leicht (light-bodied), nicht üppig, elegant
+- **Pinot Gris**: mittel bis vollmundig (medium to full-bodied), runder Mundgefühl
+- **Ursachen**: Alkohol, Ausbau, Restzucker kombinieren sich zu Körper-Unterschied
+- **Erkennungs-Merkmal**: in der Verkostung sehr deutlich`,
+      takeaway: "Körper ist ein zentraler Unterschied: Grigio leicht, Gris voll."
     },
     {
-      title: "Rosé-/Orange-Wein Potenzial",
-      content: `
-- Aufgrund der grauen Schale möglich
-- Kurzer Schalenkontakt → Farbe
-- Orange Wine durch längere Maischestandzeit
+      title: "Aromen nach Klimazonen",
+      content: `Aromen unterscheiden sich in kühlen vs. warmen Zonen für dieselbe genetische Rebsorte.
 
-Merksatz: Pinot Gris eignet sich für experimentelle Stile.
-`
+- **Kühl (Grigio-Regionen)**: Zitrone, grüner Apfel, Birne, Melone, Kräuter
+- **Warm (Gris-Regionen)**: Pfirsich, Aprikose, Honig, Gewürze, orange Zitrusfrüchte
+- **Klima-Logik**: je wärmer, desto reifer und tropischer die Aromen`,
+      takeaway: "Klima = Aroma-Typ; Grigio grün/frisch, Gris warm/reif."
     },
     {
-      title: "Alkoholgehalt",
-      content: `
-- Pinot Grigio:
-  - Niedrig bis mittel (11–12,5%)
+      title: "Holzeinsatz – Philosophie-Unterschied",
+      content: `Holzeinsatz unterscheidet sich fundamental zwischen Grigio (kaum je) und Gris (oft).
 
-- Pinot Gris:
-  - Mittel bis hoch (13–14,5%)
-
-Merksatz: Gris meist alkoholreicher als Grigio.
-`
+- **Grigio**: standard Edelstahl, Holz vermieden (würde Frische zerstören)
+- **Gris**: oft Eichenkontakt für Struktur, Vanille und Gewürze
+- **Philosophie**: Grigio maximiert Frucht, Gris sucht Komplexität`,
+      takeaway: "Grigio = Edelstahl-Standard; Gris = Eiche häufig."
     },
     {
-      title: "Säurestruktur",
-      content: `
-- Pinot Grigio:
-  - Mittlere bis hohe Säure
+      title: "Alkoholgehalt – Signifikanter Unterschied",
+      content: `Der Alkoholgehalt ist eine praktische Methode zur Unterscheidung zwischen Grigio und Gris.
 
-- Pinot Gris:
-  - Mittlere Säure
-
-Merksatz: Grigio wirkt frischer durch höhere Säure.
-`
+- **Pinot Grigio**: 11–12,5% alc.
+- **Pinot Gris**: 13–14,5% alc.
+- **Grund**: Grigio aus kühlerem Klima mit weniger Zuckerbildung
+- **Erkennungs-Hilfe**: auf Etikett überprüfbar`,
+      takeaway: "Grigio: 11–12,5%; Gris: 13–14,5% – deutlicher Unterschied."
     },
     {
-      title: "Körper (Body)",
-      content: `
-- Pinot Grigio:
-  - Leicht (light-bodied)
+      title: "Lagerfähigkeit – Gris > Grigio",
+      content: `Lagerpotenzial unterscheidet sich deutlich zwischen den zwei Stilen.
 
-- Pinot Gris:
-  - Mittel bis voll (medium to full-bodied)
-
-Merksatz: Körper ist ein zentraler Unterschied.
-`
+- **Pinot Grigio**: kurz (1–3 Jahre), sollte jung getrunken werden
+- **Pinot Gris**: mittel (5–10 Jahre möglich), entwickelt Komplexität mit Reife
+- **Grund**: Gris hat mehr Struktur (höherer Alkohol, Tannine aus Holz, Restzucker)
+- **Empfehlung**: Grigio nicht lagern, Gris kann reif werden`,
+      takeaway: "Gris deutlich lagerfähiger als Grigio."
     },
     {
-      title: "Restzucker",
-      content: `
-- Pinot Grigio:
-  - Meist trocken (dry)
+      title: "Food Pairing – Nach Stil gestaffelt",
+      content: `Die Pairing-Logik unterscheidet sich fundamental je nach Stil.
 
-- Pinot Gris:
-  - Oft halbtrocken (off-dry)
-  - Manchmal süß (sweet)
-
-Merksatz: Gris kann deutlich süßer sein.
-`
+- **Pinot Grigio**: leichte Gerichte, Salate, heller Fisch, Meeresfrüchte, Vorspeisen
+- **Pinot Gris**: würzige Gerichte, asiatische Küche, Geflügel, Schwein, Käse
+- **Logik**: je höher der Körper, desto reichhaltiger die Speisen`,
+      takeaway: "Grigio = leichte Küche; Gris = intensivere Speisen."
     },
     {
-      title: "Typische Aromen – kühl",
-      content: `
-- Zitrone
-- Grüner Apfel
-- Birne
+      title: "Marktbedeutung und Verfügbarkeit",
+      content: `Die Marktbedeutung unterscheidet sich stark.
 
-Merksatz: Kühl = frisch & zitrusbetont.
-`
+- **Pinot Grigio**: sehr populär weltweit, riesige Volumen, preiswert
+- **Pinot Gris**: kleiner Markt, aber hochwertiger und teurer
+- **Konsumenten-Logik**: Grigio = alltäglich/breit, Gris = Premium/gezielt`,
+      takeaway: "Grigio = Masse, Gris = Klasse."
     },
     {
-      title: "Typische Aromen – warm",
-      content: `
-- Pfirsich
-- Aprikose
-- Honig
-- Gewürze
+      title: "Zusammenfassung – Stilkontrast verstehen",
+      content: `Für WSET-Prüfungen ist es kritisch, den Stilkontrast zu verstehen und ihn nicht als unterschiedliche Rebsorte zu interpretieren.
 
-Merksatz: Warm = reif & würzig.
-`
-    },
-    {
-      title: "Speiseempfehlung – Pinot Grigio",
-      content: `
-- Leichte Gerichte
-- Salate
-- Fisch
-- Meeresfrüchte
-
-Merksatz: Frischer Wein → leichte Küche.
-`
-    },
-    {
-      title: "Speiseempfehlung – Pinot Gris",
-      content: `
-- Würzige Gerichte
-- Asiatische Küche
-- Geflügel
-- Schwein
-
-Merksatz: Mehr Körper → intensivere Speisen.
-`
-    },
-    {
-      title: "Qualitätsfaktoren",
-      content: `
-- Ertrag (yield)
-- Standort (site)
-- Klima
-- Ausbau
-
-Merksatz: Niedriger Ertrag = höhere Qualität.
-`
-    },
-    {
-      title: "Marktbedeutung",
-      content: `
-- Pinot Grigio: sehr populär weltweit
-- Pinot Gris: kleiner, aber hochwertiger Markt
-
-Merksatz: Grigio = Masse, Gris = Klasse.
-`
-    },
-    {
-      title: "Typische Fehler",
-      content: `
-- Zu hohe Erträge → dünner Wein
-- Oxidation
-- Ungleichgewicht bei Restzucker
-
-Merksatz: Balance ist entscheidend.
-`
-    },
-    {
-      title: "Lagerfähigkeit",
-      content: `
-- Pinot Grigio:
-  - Kurz (1–3 Jahre)
-
-- Pinot Gris:
-  - Mittel (5–10 Jahre möglich)
-
-Merksatz: Gris hat deutlich mehr Lagerpotenzial.
-`
-    },
-    {
-      title: "Zusammenfassung",
-      content: `
-- Gleiche Rebsorte, unterschiedliche Stile
-- Pinot Grigio = leicht, frisch, trocken
-- Pinot Gris = voll, aromatisch, oft süßer
-
-Merksatz: Stil entsteht durch Region + Ausbau.
-`
+- **Genetisch identisch**: genetische DNA identisch
+- **Stil-Unterschied**: riesig (Körper, Säure, Süße, Aromen, Alkohol)
+- **Ursachen**: Klima, Lesezeitpunkt, Ausbau-Philosophie
+- **Name-Konvention**: Name signalisiert Stil, nicht Biologie`,
+      takeaway: "Stilkontrast entsteht durch Region + Ausbau, nicht Genetik."
     }
   ],
 
   questions: [
     {
-      question: "Was ist der Hauptunterschied zwischen Pinot Grigio und Pinot Gris?",
+      question: "Sind Pinot Grigio und Pinot Gris genetisch unterschiedliche Rebsorten?",
       options: [
-        "Unterschiedliche Rebsorten",
-        "Unterschiedlicher Stil je nach Region",
-        "Unterschiedliche Farbe",
-        "Unterschiedliche Alkoholproduktion"
+        "Ja, sehr unterschiedlich",
+        "Nein, genetisch identisch – der Unterschied ist Stil, nicht Genetik",
+        "Ja, Grigio ist eine Mutation von Gris",
+        "Nein, aber sie stammen aus unterschiedlichen Ländern"
       ],
       correct: 1,
-      explanation: "Es handelt sich um dieselbe Rebsorte, aber unterschiedliche Stilinterpretationen je nach Region."
+      explanation: "Es handelt sich um dieselbe Rebsorte, aber unterschiedliche Stilinterpretationen je nach Region und Ausbau."
     },
     {
-      question: "Welcher Stil ist typisch für Pinot Grigio aus Italien?",
+      question: "Welcher Stil ist typisch für italienischen Pinot Grigio?",
       options: [
         "Voll, süß und komplex",
         "Leicht, trocken und frisch",
@@ -368,22 +231,22 @@ Merksatz: Stil entsteht durch Region + Ausbau.
       options: [
         "Bordeaux",
         "Toskana",
-        "Elsass",
+        "Elsass (Frankreich)",
         "Rioja"
       ],
       correct: 2,
-      explanation: "Das Elsass ist die wichtigste Region für hochwertigen Pinot Gris."
+      explanation: "Das Elsass ist die wichtigste Region für hochwertigen Pinot Gris im französischen Stil."
     },
     {
       question: "Wie ist Pinot Gris häufig im Elsass?",
       options: [
         "Immer trocken",
-        "Oft leicht süßlich",
+        "Oft leicht süßlich (off-dry)",
         "Immer schäumend",
         "Sehr tanninreich"
       ],
       correct: 1,
-      explanation: "Pinot Gris aus dem Elsass ist häufig halbtrocken oder leicht süß."
+      explanation: "Pinot Gris aus dem Elsass ist häufig halbtrocken oder leicht süß – ein wichtiger Unterschied zu Grigio."
     },
     {
       question: "Welche Säurestruktur hat Pinot Grigio typischerweise?",
@@ -394,7 +257,7 @@ Merksatz: Stil entsteht durch Region + Ausbau.
         "Keine Säure"
       ],
       correct: 1,
-      explanation: "Pinot Grigio zeigt meist mittlere bis hohe Säure, was ihn frisch macht."
+      explanation: "Pinot Grigio zeigt meist mittlere bis hohe Säure, was ihn frisch und strukturiert macht."
     },
     {
       question: "Welche Aussage trifft auf Pinot Gris zu?",
@@ -422,12 +285,34 @@ Merksatz: Stil entsteht durch Region + Ausbau.
       question: "Warum kann Pinot Gris süßer wirken?",
       options: [
         "Wegen hoher Tannine",
-        "Durch Restzucker",
+        "Durch Restzucker und geringere Säure",
         "Durch Kohlensäure",
         "Durch niedrigen Alkohol"
       ],
       correct: 1,
-      explanation: "Pinot Gris enthält oft Restzucker, der den Wein süßer erscheinen lässt."
+      explanation: "Pinot Gris enthält oft Restzucker und hat niedrigere Säure, was süßer wirkt."
+    },
+    {
+      question: "Was ist das Alkohol-Niveau von Pinot Grigio vs. Pinot Gris?",
+      options: [
+        "Grigio höher",
+        "Gris höher",
+        "Identisch",
+        "Variiert nicht"
+      ],
+      correct: 1,
+      explanation: "Pinot Gris hat typischerweise höheren Alkohol (13–14,5%) als Grigio (11–12,5%) durch wärmeres Klima."
+    },
+    {
+      question: "Wie unterscheidet sich die Lagerfähigkeit?",
+      options: [
+        "Grigio lagerfähiger",
+        "Gris lagerfähiger",
+        "Identisch",
+        "Weder lagerfähig"
+      ],
+      correct: 1,
+      explanation: "Gris hat deutlich mehr Lagerpotenzial (5–10 Jahre) als Grigio (1–3 Jahre)."
     }
   ]
 });

@@ -2,362 +2,301 @@ registerChapterContent("suedamerika", {
   cards: [
     {
       title: "Überblick Südamerika",
-      content: [
-        "Wichtige Länder: Argentinien, Chile",
-        "Weitere: Uruguay, Brasilien",
-        "Starker Fokus auf Exportweine",
-        "Moderne Weinbau- und Kellertechnik",
-        "Große Höhenunterschiede prägen Stil"
-      ],
-      takeaway: "Südamerika = moderne Weinländer mit starkem Einfluss von Klima und Höhe."
+      content: `Südamerika ist moderne Neue-Welt-Region – Argentinien & Chile dominieren mit unterschiedlichen Strategien. Höhenlagen & Höhe sind zentral.
+
+- **Argentinien**: größer, Fokus Höhenlage (Anden), Malbec
+- **Chile**: längeres Land, Fokus Pazifik-Kühlung, Cabernet & Carmenère
+- **Uruguay**: klein, Tannat-Spezialist
+- **Brasilien**: Schaumwein-Fokus
+- **Gemeinsam**: moderne Technologie, Export-fokussiert, reife Frucht-Stil`,
+      takeaway: "Südamerika = Höhe (Argentinien) vs. Pazifik-Kühlung (Chile)."
     },
     {
-      title: "Klima in Südamerika",
-      content: [
-        "Überwiegend warm bis heiß",
-        "Starke Sonneneinstrahlung",
-        "Große Tag-Nacht-Temperaturunterschiede (diurnal range)",
-        "Geringe Niederschläge in vielen Regionen"
-      ],
-      takeaway: "Höhe und Kühlung sind entscheidend für Qualität."
+      title: "Höhenlage als Qualitäts-Werkzeug",
+      content: `Höhenlage ist Südamerikas Antwort auf warmes Klima – Höhe bringt Kühlung ohne geografische Kühlung.
+
+- **Physik**: jede 1000 m Höhe = 6–8°C Temperaturabfall
+- **Argentinien-Strategie**: Anbau in bis 1500 m Höhe
+  - Malbec: typischerweise 800–1500 m
+  - Folge: kühler Anbau möglich ohne Pazifik
+  - Große Tag/Nacht-Unterschiede (20–25°C) = Säure bleibt
+  - Effekt: reife Frucht (warm tagsüber) + Struktur (kalt nachts)
+- **Chile-Strategie**: auch Höhenlagen nutzen, aber maritime Kühlung ist Fokus
+- **Konsequenz**: wärmeklimatische Regionen ohne Höhe = überreif (zu niedriger Säure)
+  - Höhe = Lösung für Balance`,
+      takeaway: "Höhe = Temperaturkontrolle ohne geografische Moderation."
     },
     {
-      title: "Einfluss der Anden",
-      content: [
-        "Schützen vor Niederschlägen aus dem Osten",
-        "Ermöglichen Weinbau in großen Höhen",
-        "Große Temperaturunterschiede zwischen Tag und Nacht"
-      ],
-      takeaway: "Anden = Schlüssel für Struktur und Frische."
+      title: "Argentinien – Mendoza & Höhen",
+      content: `Argentinien ist Südamerikas größter Produzent – Mendoza ist das Herzland, Höhenlage ist die Strategie.
+
+- **Lage**: westlich, an Anden (800–1500 m möglich)
+  - Anden schützen vor Regen (Regenschatten = trocken)
+  - Höhenlagen kühlen Hitze
+- **Klima**: trocken, heiß (35–40°C Sommer), aber Nacht-Kühlung durch Höhe
+- **Bewässerung**: essentiell (Andenschmelzwasser nutzen)
+  - Kontrollierte Wasserversorgung = stabile Produktion
+- **Rebsorten**: Malbec dominiert (nicht nur, aber Identität)
+- **Stil**: reife Frucht, strukturiert, hogher Alkohol (14–15%), zugänglich
+- **Trend**: letzte 15 Jahre = großer Qualitätssprung durch Investitionen`,
+      takeaway: "Argentinien: Höhenlagen + Bewässerung = Balance in warmen Klima."
     },
     {
-      title: "Bewässerung (Irrigation)",
-      content: [
-        "Essentiell in trockenen Regionen",
-        "Schmelzwasser aus den Anden",
-        "Kontrollierte Wasserversorgung",
-        "Erhöht Ertrag und Qualität"
-      ],
-      takeaway: "Ohne Bewässerung kein Weinbau in vielen Regionen."
+      title: "Malbec – Argentiniens Flaggschiff (korrigiert)",
+      content: `Malbec ist zu Argentinien, was Tempranillo zu Spanien ist – die nationale Identität und Qualitäts-Rebsorte.
+
+- **Herkunft**: ursprünglich aus Bordeaux-Region (Cahors), aber Argentinien = Heimat geworden
+- **Stilistik**:
+  - Dunkle Farbe, hohe Intensität
+  - Aromen: Pflaume, schwarze Kirsche, Gewürze (Pfeffer, Schokolade)
+  - Weiche bis mittlere Tannine (NICHT hart wie Nebbilo oder Cabernet)
+  - Mittlere Säure
+  - Alkohol: 14–15%+
+- **Argentinischer Malbec charakteristisch**:
+  - Voller Körper (full-bodied)
+  - Reife Frucht-fokus
+  - Vanille/Röstaromen von Holz (neue Eiche häufig)
+  - Fruchtbetonter als europäischer Malbec (aus Cahors)
+- **Lagerfähigkeit**: 8–15 Jahre für gute Malbec
+- **Preis**: günstig bis mittel (€12–40) für Qualität
+- **Kontrast zu Cabernet**: Malbec = weicher & fruchtbetonter, Cabernet = strukturierter & tanninreicher`,
+      takeaway: "Argentinisch Malbec: weich bis mittlere Tannine, dunkle reife Frucht, zugänglich."
     },
     {
-      title: "Höhenlage (Altitude)",
-      content: [
-        "Bis über 1500 m möglich",
-        "Kühleres Klima trotz Nähe zum Äquator",
-        "Mehr Säure, intensivere Aromen",
-        "Dickere Traubenschalen → mehr Tannin"
-      ],
-      takeaway: "Höhe = Frische + Konzentration."
+      title: "Torrontés – aromatischer Weißwein",
+      content: `Torrontés ist Argentiniens Top-Weißwein – aromatisch intensiv, trocken (nicht süß wie der Name vermuten lässt).
+
+- **Name-Verwirrung**: "aromatisch" ≠ "süß"
+  - Torrontés = hohe Aromatik, aber trocken ausbau
+  - Nicht Süßwein trotz intensiver Nase
+- **Aromen**: Blüten (Jasmin, Rose), tropische Früchte (Mango, Passionsfrucht), Zitrus
+  - Intensiver als viele europäische Weißweine
+- **Säure**: mittlere (6–7 g/L), nicht säurebetont
+- **Alkohol**: 13–14%
+- **Trinkreife**: jung (1–3 Jahre), Primärfrucht/Aroma erhalten
+- **Preis**: günstig (€10–18)
+- **Paarungen**: leichte Speisen, Käse, nicht schwere Saucen`,
+      takeaway: "Torrontés: aromatisch aber trocken. Blüten & tropisches Obst."
     },
     {
-      title: "Argentinien – Überblick",
-      content: [
-        "Größtes Weinland Südamerikas",
-        "Schwerpunkt: Mendoza",
-        "Hohe Lagen in den Anden",
-        "Bekannt für Malbec"
-      ]
+      title: "Chile – geografische Vielfalt",
+      content: `Chile ist Südamerikas längster Land – geographische Unterschiede erzeugen riesige Stilvielfalt.
+
+- **Lage**: zwischen Anden (Osten) & Pazifik (Westen) = eng, aber vielfältig
+  - Nord: heiß (Atacama)
+  - Zentral: perfekt (Casablanca, Maipo, Rapel, Curicó, Maule)
+  - Süd: kühl (Bio-Bio)
+- **Klima-Variabilität**:
+  - Pazifik = kühlend (Humboldtstrom)
+  - Anden = Regenschutz
+  - Ergebnis: verschiedene Zonen = verschiedene Weine
+- **Bewässerung**: möglich & genutzt (Anden-Schmelzwasser)
+- **Rebsorten**: Cabernet Sauvignon dominiert (nicht Carmenère wie oft angenommen)
+- **Stil**: moderner, technisch versiert, qualitätsorientiert`,
+      takeaway: "Chile: geografisch vielfältig. Pazifik-Kühlung zentraler als Höhe."
     },
     {
-      title: "Mendoza",
-      content: [
-        "Wichtigste Region Argentiniens",
-        "Trockenes Wüstenklima",
-        "Bewässerung notwendig",
-        "Hohe Lagen (800–1500 m)"
-      ],
-      takeaway: "Mendoza = Zentrum für Qualitätsweine Argentiniens."
+      title: "Humboldtstrom – Chiles Kühlfaktor",
+      content: `Der Humboldtstrom ist kalte Pazifik-Strömung – er kühlt Chiles Westküste dramatisch.
+
+- **Effekt**: kalte Wasser erzeugt kühlende Luft-Massen
+  - Morgens: Nebel (Camanchaca lokal) bringt kalte Luft ins Land
+  - Tagsüber: teilweise verbrennt, aber kühlender Effekt bleibt
+- **Geographie**:
+  - Küsten-Regionen: sehr kühl (Sauvignon Blanc, Chardonnay)
+  - Andal-Plateau: wärmer (Cabernet Sauvignon)
+  - Föhn-Winde manchmal: trocknen Westen = Stress für Reben
+- **Konsequenz**: Pazifik-Nähe = Qualität (Frische + Balance)
+  - Kontrast zu zentralchile: wärmer = überreifer ohne Pazifik
+- **Beispiele**:
+  - Casablanca Valley: sehr kühl (maritime)
+  - San Antonio Valley: kühl (südlich, maritim)
+  - Maipo Valley: wärmer (östlich, Anden-Nähe)`,
+      takeaway: "Humboldtstrom: kalter Pazifik-Strom = kühlende Küsten-Nebel."
     },
     {
-      title: "Malbec (Argentinien)",
-      content: [
-        "Hauptrebsorte Argentiniens",
-        "Dunkle Farbe, hohe Intensität",
-        "Aromen: Pflaume, schwarze Kirsche",
-        "Weiche Tannine",
-        "Oft mit Eichenholzeinsatz"
-      ],
-      takeaway: "Malbec = fruchtig, voll, weich."
+      title: "Cabernet Sauvignon in Chile",
+      content: `Cabernet Sauvignon ist Chiles Top-Rotwein – Pazifik-Kühlung + Andal-Höhe = strukturiert & elegant.
+
+- **Anbau-Zonen**:
+  - Maipo Valley: warm, strukturiert (schwarze Johannisbeere, Zedernholz)
+  - Casablanca/Santa Cruz: kühl, eleganter, höher Säure
+  - Rapel/Colchagua: mittel, Weinberg-Vielfalt
+- **Stilistik**:
+  - Strukturiert (nicht überreif wie warme Länder)
+  - Schwarze Früchte (Johannisbeere, Pflaume)
+  - Zedernholz (Terroir-Effekt)
+  - Tannine: mittlere bis hohe, integriert
+  - Alkohol: 13–14%
+- **Lagerfähigkeit**: 10–15 Jahre
+- **Kontrast zu Argentinien**: Chile Cabernet = strukturierter & mineralischer. Argentinien Malbec = fruchtbetonter & weicher
+- **Preis**: moderat (€15–40)`,
+      takeaway: "Chile Cabernet: pazifik-gekühlt = strukturiert, nicht überreif."
     },
     {
-      title: "Stil von argentinischem Malbec",
-      content: [
-        "Vollmundig (full-bodied)",
-        "Weiche bis mittlere Tannine",
-        "Mittlere Säure",
-        "Reife Fruchtaromen",
-        "Häufig Vanille- und Röstaromen"
-      ]
+      title: "Carmenère – Chiles Spezialität",
+      content: `Carmenère ist eine in Chile wiederentdeckte Rebsorte – lange verloren geglaubt, jetzt Chiles Identität.
+
+- **Ursprung**: von Bordeaux, aber fast ausgestorben in Frankreich
+- **Chile-Wiederentdeckung**: 1990er Jahren = genetisch bestätigt als eigene Sorte
+- **Charakteristiken**:
+  - Aromen: rote Früchte (Kirsche, Himbeere), Paprika, grüne Noten (wenn nicht reif)
+  - Tannine: weich bis mittlere (ähnlich Malbec)
+  - Körper: mittlerer Körper
+  - Alkohol: 13–14%
+- **Anbau-Anforderung**: warme Zonen (nicht Pazifik-gekühlt)
+  - Cabernet/Chardonnay = maritime Zonen
+  - Carmenère = warmere Zonen (Rapel, Colchagua)
+- **Stil**: fruchtbetont, elegant, nicht kraftvoll
+- **Lagerfähigkeit**: 8–12 Jahre
+- **Preis**: günstig bis mittel (€12–30)
+- **Marketing**: "Chiles eigene Rebsorte" (Identität-Faktor)`,
+      takeaway: "Carmenère: Chile-Entdeckung. Warme Zonen, rote Frucht, paprika-Noten."
     },
     {
-      title: "Weitere Rebsorten Argentinien",
-      content: [
-        "Cabernet Sauvignon",
-        "Syrah",
-        "Torrontés (weiß)"
-      ]
+      title: "Sauvignon Blanc in Chile",
+      content: `Chiles Sauvignon Blanc ist weltklasse, weil maritime Kühlung = Säure bleibt + intensive Aromen.
+
+- **Anbau-Zonen**: Casablanca Valley (beste), San Antonio Valley
+  - Beide maritim, sehr kühl
+  - Große Tag/Nacht-Unterschiede
+- **Stilistik**:
+  - Hohe Säure (7–8 g/L)
+  - Intensiv aromatisch: Zitrus, Gras, Stachelbeere (ähnlich Loire)
+  - Körper: mittlerer bis voller
+  - Alkohol: 12–13%
+  - Mineralisch (Pazifik-Bodeneffekt)
+- **Kontrast zu anderen Ländern**:
+  - Loire: mineralischer, eleganter
+  - Neuseeland: noch intensiver aromatisch
+  - Kalifornien: fruchtbetonter, weniger grasig
+- **Trinkreife**: jung (1–3 Jahre)
+- **Preis**: moderat (€12–25)`,
+      takeaway: "Chile Sauvignon Blanc: maritime Kühlung = hohe Säure + intensive Aromen."
     },
     {
-      title: "Torrontés",
-      content: [
-        "Aromatische Weißweinsorte",
-        "Aromen: Blüten, Trauben, Zitrus",
-        "Trocken, aber intensiv duftend",
-        "Mittlere Säure"
-      ],
-      takeaway: "Aromatisch heißt nicht süß!"
+      title: "Uruguay – Tannat & Struktur",
+      content: `Uruguay ist klein aber hochwertig – Tannat ist die nationale Rebsorte, spezialis für struktur.
+
+- **Klima**: maritim (Atlantik), moderat, ähnlich Süd-Brasilien
+- **Tannat-Rebsorte**:
+  - Herkunft: Südwest-Frankreich (Cahors), aber Uruguay = Heimat
+  - Charakteristiken: sehr hohe Tannine, hohe Säure, dunkle Farbe
+  - Aromen: schwarze Früchte, Gewürze, Leder
+  - Körper: vollmundig, kraftvoll
+  - Alkohol: 13–14%
+- **Lagerfähigkeit**: 15–20 Jahre (hohe Tannine)
+- **Stil**: strukturiert, nicht fruchtbetont
+  - Kontrast zu argentinischem Malbec: Tannat = tanninreich & strukturiert
+- **Preis**: günstig (€12–25)
+- **Trend**: Uruguay-Tannat = Liebhaber-Segment`,
+      takeaway: "Uruguay: Tannat = sehr hohe Tannine + hohe Säure. Strukturiert."
     },
     {
-      title: "Chile – Überblick",
-      content: [
-        "Langgestrecktes Land zwischen Anden und Pazifik",
-        "Sehr unterschiedliche Klimazonen",
-        "Hohe Weinqualität",
-        "Gute Exportstruktur"
-      ]
+      title: "Argentinien vs. Chile Unterschiede",
+      content: `Argentinien & Chile unterscheiden sich fundamental in Strategie: Höhe vs. Maritime-Kühlung.
+
+- **Argentinien**:
+  - Strategie: Höhenlagen + Bewässerung
+  - Rebsorte: Malbec (Identität)
+  - Stil: fruchtig, voller, weicher Tannine
+  - Säure: moderate (weil Höhe)
+  - Preis: günstig
+- **Chile**:
+  - Strategie: Pazifik-Kühlung + Anden-Schutz
+  - Rebsorte: Cabernet Sauvignon (Identität)
+  - Stil: strukturierter, mineraliisch, eleganter
+  - Säure: höher (weil maritim)
+  - Preis: moderat bis teuer (Premium-Fokus)
+- **Klimatisch**: Argentinien = trockener (Regenschatten), Chile = maritim-beeinflusst
+- **Export**: Argentinien = Menge + Günstig, Chile = Qualität + Teuer`,
+      takeaway: "Argentinien = Höhe & fruchtbetont. Chile = Pazifik & strukturiert."
     },
     {
-      title: "Klimafaktoren Chile",
-      content: [
-        "Pazifischer Ozean → kühlender Einfluss",
-        "Humboldtstrom (Humboldt Current)",
-        "Morgennebel (Camanchaca)",
-        "Anden als Schutzbarriere"
-      ],
-      takeaway: "Ozean = entscheidender Kühlfaktor."
+      title: "Typische Prüfungsfalle – Torrontés Süße",
+      content: `Nicht verstehen, dass "aromatisch" nicht "süß" bedeutet.
+
+- **Falsch**: "Torrontés = süß"
+- **Richtig**: Torrontés = intensive Aromen (Blüten, tropisch), aber trocken ausbau
+- **Test**: Kosten, nicht Name lesen`,
+      takeaway: "Aroma ≠ Süße. Torrontés = intensiv aber trocken."
     },
     {
-      title: "Zentrale Regionen Chile",
-      content: [
-        "Maipo Valley",
-        "Rapel Valley",
-        "Curicó Valley",
-        "Maule Valley"
-      ]
-    },
-    {
-      title: "Maipo Valley",
-      content: [
-        "Nahe Santiago",
-        "Warme Bedingungen",
-        "Beste Region für Cabernet Sauvignon",
-        "Strukturierte, elegante Weine"
-      ]
-    },
-    {
-      title: "Cabernet Sauvignon (Chile)",
-      content: [
-        "Hauptrebsorte",
-        "Schwarze Johannisbeere, Pfeffer",
-        "Mittlere bis hohe Tannine",
-        "Gute Struktur"
-      ]
-    },
-    {
-      title: "Carmenère",
-      content: [
-        "Typische Rebsorte Chiles",
-        "Früher mit Merlot verwechselt",
-        "Aromen: rote Früchte, Paprika",
-        "Weiche Tannine"
-      ],
-      takeaway: "Carmenère = Chile-Spezialität."
-    },
-    {
-      title: "Stil Carmenère",
-      content: [
-        "Mittlerer Körper",
-        "Weiche Tannine",
-        "Mittlere Säure",
-        "Kräuterige Noten möglich"
-      ]
-    },
-    {
-      title: "Kühle Regionen Chile",
-      content: [
-        "Casablanca Valley",
-        "San Antonio Valley",
-        "Starker Einfluss des Pazifiks",
-        "Geeignet für Weißweine"
-      ]
-    },
-    {
-      title: "Sauvignon Blanc (Chile)",
-      content: [
-        "Hohe Säure",
-        "Aromen: Zitrus, Gras",
-        "Frisch und lebendig",
-        "Oft ohne Holz"
-      ]
-    },
-    {
-      title: "Chardonnay (Chile)",
-      content: [
-        "Von frisch bis vollmundig",
-        "Kühlere Regionen → schlank",
-        "Warme Regionen → reifer Stil",
-        "Teilweise Eichenholz"
-      ]
-    },
-    {
-      title: "Unterschied Argentinien vs. Chile",
-      content: [
-        "Argentinien: Höhenlage entscheidend",
-        "Chile: Ozean-Einfluss entscheidend",
-        "Argentinien: Malbec dominiert",
-        "Chile: Cabernet Sauvignon & Carmenère"
-      ],
-      takeaway: "Argentinien = Höhe, Chile = Kühlung durch Ozean."
-    },
-    {
-      title: "Uruguay",
-      content: [
-        "Kleiner Produzent",
-        "Maritimes Klima",
-        "Hauptrebsorte: Tannat",
-        "Kräftige, tanninreiche Weine"
-      ]
-    },
-    {
-      title: "Tannat",
-      content: [
-        "Sehr hohe Tannine",
-        "Dunkle Frucht",
-        "Oft Holzreifung",
-        "Kräftiger Stil"
-      ]
-    },
-    {
-      title: "Brasilien",
-      content: [
-        "Warmes, feuchtes Klima",
-        "Fokus auf Schaumwein",
-        "Einfachere Stillweine"
-      ]
-    },
-    {
-      title: "Typische Prüfungsfrage – Höhe",
-      content: [
-        "Warum wichtig?",
-        "→ Kühler trotz warmem Klima",
-        "→ Höhere Säure",
-        "→ Intensivere Aromen"
-      ]
-    },
-    {
-      title: "Typische Prüfungsfrage – Bewässerung",
-      content: [
-        "Warum notwendig?",
-        "→ Geringe Niederschläge",
-        "→ Kontrolle des Wachstums",
-        "→ Sicherstellung von Erträgen"
-      ]
-    },
-    {
-      title: "Typische Prüfungsfalle – Torrontés",
-      content: [
-        "Aromatisch ≠ süß",
-        "Kann trocken sein",
-        "Intensive Nase täuscht"
-      ],
-      takeaway: "Immer zwischen Aroma und Süße unterscheiden."
-    },
-    {
-      title: "Typische Prüfungsfalle – Chile",
-      content: [
-        "Nicht nur warm",
-        "Kühlende Einflüsse entscheidend",
-        "Regionen stark unterschiedlich"
-      ]
-    },
-    {
-      title: "Typische Prüfungsfalle – Malbec",
-      content: [
-        "Weicher als Cabernet Sauvignon",
-        "Fruchtiger, weniger herb",
-        "Nicht extrem tanninreich"
-      ]
+      title: "Typische Prüfungsfalle – Malbec-Tannine",
+      content: `Nicht verwechseln Malbec mit tanninreichen Cabernet oder Tannat.
+
+- **Falsch**: "Argentinischer Malbec = sehr tanninreich"
+- **Richtig**: Malbec = weich bis mittlere Tannine (trotz dunkler Farbe)
+- **Grund**: Rebsorte-Charakteristik, nicht Fehler`,
+      takeaway: "Malbec: weich bis mittlere Tannine, nicht extrem tanninreich."
     }
   ],
   questions: [
     {
-      question: "Welche Rebsorte ist typisch für Argentinien?",
-      options: ["Cabernet Franc", "Malbec", "Pinot Noir", "Grenache"],
-      correct: 1,
-      explanation: "Malbec ist die wichtigste und bekannteste Rebsorte Argentiniens."
-    },
-    {
-      question: "Warum ist Bewässerung in Mendoza notwendig?",
+      question: "Warum nutzt Argentinien Höhenlagen als Qualitäts-Werkzeug?",
       options: [
-        "Zu viel Regen",
-        "Trockenes Klima",
-        "Kalte Temperaturen",
-        "Starke Winde"
+        "Weil es billiger ist",
+        "Weil Höhe = 6–8°C kühler pro 1000 m = Balance möglich in warmem Klima",
+        "Weil historischer Grund",
+        "Zufällig"
       ],
       correct: 1,
-      explanation: "Mendoza ist sehr trocken, daher ist Bewässerung entscheidend."
+      explanation: "Höhe = Temperaturkontrolle ohne geografische Moderation. Argentiniens Strategie gegen Wärme."
     },
     {
-      question: "Welche Rebsorte ist typisch für Chile?",
-      options: ["Carmenère", "Tempranillo", "Nebbiolo", "Zinfandel"],
-      correct: 0,
-      explanation: "Carmenère ist eine charakteristische Rebsorte Chiles."
-    },
-    {
-      question: "Welcher Faktor kühlt chilenische Weinregionen?",
+      question: "Welcher Faktor kühlt Chiles Weine am stärksten?",
       options: [
-        "Wüstenwinde",
-        "Humboldtstrom",
-        "Hohe Luftfeuchtigkeit",
-        "Starke Sonneneinstrahlung"
+        "Die Anden",
+        "Humboldtstrom (kalter Pazifik-Strom) = maritime Kühlung & Nebel",
+        "Südlichkeit",
+        "Bewässerung"
       ],
       correct: 1,
-      explanation: "Der Humboldtstrom bringt kalte Luft vom Pazifik."
+      explanation: "Humboldtstrom = Chile's Kühlfaktor. Pazifik-maritime Einfluss zentraler als Höhe."
     },
     {
-      question: "Was bewirkt Höhenlage im Weinbau?",
+      question: "Was macht argentinischen Malbec charakteristisch?",
       options: [
-        "Mehr Zucker",
-        "Mehr Säure",
-        "Weniger Aroma",
-        "Mehr Regen"
+        "Sehr hohe Tannine (wie Nebbiolo)",
+        "Weiche bis mittlere Tannine + dunkle reife Frucht + Vanille-Noten",
+        "Hohe Säure",
+        "Süße"
       ],
       correct: 1,
-      explanation: "Höhenlagen führen zu kühleren Temperaturen und höherer Säure."
+      explanation: "Malbec = Identität Argentiniens. Weiche Tannine trotz dunkler Farbe = zugänglich."
     },
     {
-      question: "Wie ist Torrontés typischerweise?",
+      question: "Ist Torrontés süß oder trocken?",
       options: [
         "Immer süß",
-        "Aromatisch und oft trocken",
-        "Neutral",
-        "Sehr tanninreich"
-      ],
-      correct: 1,
-      explanation: "Torrontés ist aromatisch, aber meist trocken."
-    },
-    {
-      question: "Welche Region ist bekannt für Cabernet Sauvignon in Chile?",
-      options: [
-        "Maule Valley",
-        "Maipo Valley",
-        "Casablanca Valley",
-        "Salta"
-      ],
-      correct: 1,
-      explanation: "Maipo Valley ist die wichtigste Region für Cabernet Sauvignon."
-    },
-    {
-      question: "Was ist typisch für Malbec aus Argentinien?",
-      options: [
-        "Sehr hohe Säure",
-        "Leichter Körper",
-        "Weiche Tannine und dunkle Frucht",
-        "Neutraler Geschmack"
+        "Immer trocken",
+        "Meist trocken (Name ≠ Süße, sondern Aroma)",
+        "Manchmal süß"
       ],
       correct: 2,
-      explanation: "Malbec ist vollmundig mit weichen Tanninen und dunkler Frucht."
+      explanation: "Torrontés = aromatisch intensiv (Blüten, Mango), aber trocken ausbau Standard."
+    },
+    {
+      question: "Warum unterscheiden sich Carmenère & Cabernet in Chile?",
+      options: [
+        "Sie sind identisch",
+        "Cabernet = maritime Zonen (kühl). Carmenère = wärmere Zonen (Rapel/Colchagua)",
+        "Carmenère = teurer",
+        "Kein Unterschied"
+      ],
+      correct: 1,
+      explanation: "Carmenère braucht wärmere Zonen = anderer Anbau-Bereich als maritime Cabernet."
+    },
+    {
+      question: "Wie ähnelt & unterscheidet sich Argentinien Malbec von Uruguay Tannat?",
+      options: [
+        "Sie sind identisch",
+        "Malbec = weich, fruchtbetont. Tannat = sehr tanninreich, strukturiert",
+        "Malbec = teurer",
+        "Tannat = älter"
+      ],
+      correct: 1,
+      explanation: "Beide Sorten aus Frankreich, aber Argentinien = fruchtbetont Stil, Uruguay = strukturiert Stil."
     }
   ]
 });

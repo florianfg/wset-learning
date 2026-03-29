@@ -2,6 +2,7 @@ const STORAGE_PREFIX = "wsetLevel2Progress_";
 const UI_STATE_KEY = "wsetLevel2UiState";
 const USER_NAME_KEY = "wsetLevel2UserName";
 const INSTALL_DISMISSED_KEY = "wsetLevel2InstallDismissed";
+const STATS_KEY = "wset-level-2-stats";
 
 const activeSectionDefault = sections[0]?.id || null;
 let activeSectionId = activeSectionDefault;
@@ -23,6 +24,12 @@ let questionIndices = [];   // Fragen-Indizes der aktuellen Runde
 let currentRoundIdx = 0;    // Position in questionIndices
 let wrongInRound = [];      // Indizes falsch beantworteter Fragen
 let quizRound = 1;          // Aktuelle Runde (1 = erster Durchgang)
+
+// Lernzeit-Timer
+let _statsTimerStart = null;        // Date.now() wenn aktuelles Segment läuft; null = pausiert
+let _statsCurrentMode = null;       // "study" | "quiz" | null
+let _statsInactivityTimer = null;
+const INACTIVITY_TIMEOUT_MS = 5 * 60 * 1000; // 5 Minuten Inaktivität → Timer pausieren
 
 // ---------------------------------------------------------------------------
 // Hilfsfunktionen – Struktur
@@ -108,6 +115,100 @@ function loadChapterState(chapterId) {
     currentRoundIdx = Math.min(currentQuestion, totalQuestions);
   }
 }
+
+// ---------------------------------------------------------------------------
+// Persistenz – Lernstatistiken
+// ---------------------------------------------------------------------------
+
+function loadStats() {
+  try { return JSON.parse(localStorage.getItem(STATS_KEY) || "{}"); }
+  catch { return {}; }
+}
+
+function saveStats(stats) {
+  localStorage.setItem(STATS_KEY, JSON.stringify(stats));
+}
+
+function getStats() {
+  const s = loadStats();
+  return {
+    studySeconds:  s.studySeconds  || 0,
+    quizSeconds:   s.quizSeconds   || 0,
+    questionStats: s.questionStats || {}
+  };
+}
+
+// ---------------------------------------------------------------------------
+// Timer – Lernzeit-Tracking
+// ---------------------------------------------------------------------------
+
+function _clearInactivityTimer() {
+  if (_statsInactivityTimer) { clearTimeout(_statsInactivityTimer); _statsInactivityTimer = null; }
+}
+
+function _resetInactivityTimer() {
+  _clearInactivityTimer();
+  _statsInactivityTimer = setTimeout(() => {
+    // Inaktivität: akkumulieren, Timer pausieren (Mode bleibt für Wiederaufnahme)
+    if (_statsTimerStart !== null) {
+      _flushTimer();
+      _statsTimerStart = null;
+    }
+  }, INACTIVITY_TIMEOUT_MS);
+}
+
+function _flushTimer() {
+  if (_statsTimerStart === null || _statsCurrentMode === null) return;
+  const elapsed = Math.floor((Date.now() - _statsTimerStart) / 1000);
+  if (elapsed > 0) {
+    const stats = getStats();
+    if (_statsCurrentMode === "study") stats.studySeconds += elapsed;
+    else if (_statsCurrentMode === "quiz") stats.quizSeconds += elapsed;
+    saveStats(stats);
+  }
+  _statsTimerStart = null;
+}
+
+function startTimer(mode) {
+  // Bereits laufenden Segment akkumulieren (Modus-Wechsel)
+  if (_statsCurrentMode !== mode) _flushTimer();
+  _statsCurrentMode = mode;
+  if (_statsTimerStart === null) _statsTimerStart = Date.now();
+  _resetInactivityTimer();
+}
+
+function stopTimer() {
+  _flushTimer();
+  _statsCurrentMode = null;
+  _clearInactivityTimer();
+}
+
+// Aktivitätserkennung: Bei Nutzerinteraktion Inaktivitätszähler zurücksetzen
+function _handleUserActivity() {
+  if (_statsCurrentMode !== null) {
+    if (_statsTimerStart === null) {
+      // War durch Inaktivität pausiert → wieder starten
+      _statsTimerStart = Date.now();
+    }
+    _resetInactivityTimer();
+  }
+}
+["click", "keydown", "touchstart"].forEach((evt) =>
+  document.addEventListener(evt, _handleUserActivity, { passive: true })
+);
+
+// Tab-Wechsel / Bildschirmsperre
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) {
+    _flushTimer();
+    _clearInactivityTimer();
+  } else {
+    if (_statsCurrentMode !== null) {
+      _statsTimerStart = Date.now();
+      _resetInactivityTimer();
+    }
+  }
+});
 
 // ---------------------------------------------------------------------------
 // Fortschritts-Berechnung
@@ -397,6 +498,7 @@ function showCard() {
   currentMode = "study";
   questionAnswered = false;
   selectedAnswer = null;
+  if (_statsCurrentMode !== "study") { startTimer("study"); } else { _resetInactivityTimer(); }
   saveChapterProgress();
 
   const activeCards = getCardsForChapter(activeChapterId);
@@ -478,6 +580,7 @@ function showQuestion() {
   const activeQuestions = getQuestionsForChapter(activeChapterId);
 
   if (activeQuestions.length === 0) { showEmptyChapterState(); return; }
+  if (_statsCurrentMode !== "quiz") { startTimer("quiz"); } else { _resetInactivityTimer(); }
 
   // Sicherheitsnetz: questionIndices leer → initialisieren
   if (questionIndices.length === 0) {
@@ -528,12 +631,20 @@ function selectAnswer(index) {
   const q = activeQuestions[qIdx];
   selectedAnswer = index;
   questionAnswered = true;
-  if (index === q.correct) {
+  const isCorrect = (index === q.correct);
+  if (isCorrect) {
     correctAnswers += 1;
   } else {
     wrongAnswers += 1;
     wrongInRound.push(qIdx);
   }
+  // Fragenstatistik: abgefragt + Ergebnis speichern
+  const qStatsKey = `${activeChapterId}_${qIdx}`;
+  const liveStats = getStats();
+  if (!liveStats.questionStats[qStatsKey]) liveStats.questionStats[qStatsKey] = { asked: 0, correct: 0 };
+  liveStats.questionStats[qStatsKey].asked += 1;
+  if (isCorrect) liveStats.questionStats[qStatsKey].correct += 1;
+  saveStats(liveStats);
   // currentQuestion für Fortschrittsberechnung aktualisieren
   currentQuestion = Math.max(currentQuestion, currentRoundIdx + 1);
   saveChapterProgress();
@@ -619,6 +730,7 @@ function restartChapter() {
 // ---------------------------------------------------------------------------
 
 function goHome() {
+  stopTimer();
   currentView = "home";
   navSheetOpen = false;
   renderNav();
@@ -634,6 +746,23 @@ function renderDashboardScreen() {
   const stats = getOverallStats();
   const userName = getUserName();
 
+  // Lernzeitstatistiken
+  const timeStats = getStats();
+  const studyMin = Math.round(timeStats.studySeconds / 60);
+  const quizMin  = Math.round(timeStats.quizSeconds  / 60);
+  const qsVals   = Object.values(timeStats.questionStats);
+  const totalAsked   = qsVals.reduce((s, x) => s + x.asked, 0);
+  const totalCorrect = qsVals.reduce((s, x) => s + x.correct, 0);
+  const timeStatsHtml = (studyMin + quizMin + totalAsked) > 0
+    ? `<div class="dashboard-time-stats">
+        <span>📚 ${studyMin} Min. Lernen</span>
+        <span class="dts-dot">·</span>
+        <span>🎯 ${quizMin} Min. Quiz</span>
+        <span class="dts-dot">·</span>
+        <span>✓ ${totalCorrect}/${totalAsked} richtig</span>
+       </div>`
+    : "";
+
   // "Weiter lernen" – letztes aktives Kapitel oder erstes Kapitel
   const lastChapter = getChapter(activeChapterId);
   const lastSection = lastChapter ? getSection(lastChapter.sectionId) : null;
@@ -645,7 +774,7 @@ function renderDashboardScreen() {
     : "Fang beim ersten Modul an";
 
   const greetingHtml = userName
-    ? `<div class="dashboard-greeting">Willkommen zurück, <strong>${escapeHtml(userName)}</strong><button class="name-edit-btn" onclick="editUserName()" title="Namen ändern">✎</button>! 🍷</div>`
+    ? `<div class="dashboard-greeting">Willkommen zurück, <strong>${escapeHtml(userName)}</strong>! 🍷<button class="name-edit-btn" onclick="editUserName()" title="Namen ändern">✎</button></div>`
     : "";
 
   const sectionCardsHtml = sections.map((section) => {
@@ -680,6 +809,7 @@ function renderDashboardScreen() {
         ${stats.completedChapters}/${chapters.length} Kapitel abgeschlossen
         · ${stats.answeredQuestions}/${stats.totalQuestions} Quizfragen
       </div>
+      ${timeStatsHtml}
       <div class="dashboard-cta-hint">${ctaHint}</div>
       <button onclick="continueLearning()">${ctaLabel} →</button>
     </section>
