@@ -566,8 +566,7 @@ function renderDashboardScreen() {
     : "Fang beim ersten Modul an";
 
   const greetingHtml = userName
-    ? `<div class="dashboard-greeting">Willkommen zurück, <strong>${escapeHtml(userName)}</strong>! 🍷
-       <button class="name-edit-btn" onclick="editUserName()" title="Namen ändern">✎</button></div>`
+    ? `<div class="dashboard-greeting">Willkommen zurück, <strong>${escapeHtml(userName)}</strong><button class="name-edit-btn" onclick="editUserName()" title="Namen ändern">✎</button>! 🍷</div>`
     : "";
 
   const sectionCardsHtml = sections.map((section) => {

@@ -775,25 +775,27 @@ button:disabled { opacity: 0.42; cursor: default; }
    ============================================================ */
 
 .dashboard-greeting {
-  display: flex;
-  align-items: center;
-  gap: 6px;
   font-size: 15px;
   color: var(--ink);
-  margin-bottom: 4px;
+  line-height: 1.6;
+  margin-bottom: 8px;
   padding: 0 2px;
 }
 
 .name-edit-btn {
+  display: inline-block;
   background: none;
   border: none;
   color: var(--muted);
-  font-size: 14px;
-  padding: 0 4px;
+  font-size: 11px;
+  padding: 0 2px 0 3px;
   cursor: pointer;
   line-height: 1;
   box-shadow: none;
   min-width: 0;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
 }
 .name-edit-btn:hover { color: var(--wine); }
 
