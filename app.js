@@ -18,6 +18,12 @@ let selectedAnswer = null;
 let correctAnswers = 0;
 let wrongAnswers = 0;
 
+// Wiederholungs-Quiz
+let questionIndices = [];   // Fragen-Indizes der aktuellen Runde
+let currentRoundIdx = 0;    // Position in questionIndices
+let wrongInRound = [];      // Indizes falsch beantworteter Fragen
+let quizRound = 1;          // Aktuelle Runde (1 = erster Durchgang)
+
 // ---------------------------------------------------------------------------
 // Hilfsfunktionen – Struktur
 // ---------------------------------------------------------------------------
@@ -74,7 +80,8 @@ function loadChapterProgress(chapterId) {
 function saveChapterProgress() {
   if (!activeChapterId) return;
   localStorage.setItem(getProgressKey(activeChapterId), JSON.stringify({
-    currentCard, currentQuestion, currentMode, questionAnswered, selectedAnswer, correctAnswers, wrongAnswers
+    currentCard, currentQuestion, currentMode, questionAnswered, selectedAnswer,
+    correctAnswers, wrongAnswers, questionIndices, currentRoundIdx, wrongInRound, quizRound
   }));
 }
 
@@ -90,6 +97,16 @@ function loadChapterState(chapterId) {
   selectedAnswer   = p.selectedAnswer ?? null;
   correctAnswers   = p.correctAnswers ?? 0;
   wrongAnswers     = p.wrongAnswers ?? 0;
+  questionIndices  = p.questionIndices ?? [];
+  currentRoundIdx  = p.currentRoundIdx ?? 0;
+  wrongInRound     = p.wrongInRound ?? [];
+  quizRound        = p.quizRound ?? 1;
+
+  // Kompatibilität mit alten Speicherständen ohne questionIndices
+  if (currentMode === "quiz" && questionIndices.length === 0 && totalQuestions > 0) {
+    questionIndices = Array.from({ length: totalQuestions }, (_, i) => i);
+    currentRoundIdx = Math.min(currentQuestion, totalQuestions);
+  }
 }
 
 // ---------------------------------------------------------------------------
@@ -166,6 +183,19 @@ function openNavSheet() {
 function closeNavSheet() {
   navSheetOpen = false;
   renderNav();
+}
+
+// ---------------------------------------------------------------------------
+// Hilfsfunktionen – Allgemein
+// ---------------------------------------------------------------------------
+
+function shuffleArray(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
 }
 
 // ---------------------------------------------------------------------------
@@ -429,12 +459,17 @@ function nextCard() {
 // ---------------------------------------------------------------------------
 
 function startQuiz() {
+  const n = getQuestionsForChapter(activeChapterId).length;
   currentMode = "quiz";
   currentQuestion = 0;
   correctAnswers = 0;
   wrongAnswers = 0;
   questionAnswered = false;
   selectedAnswer = null;
+  quizRound = 1;
+  wrongInRound = [];
+  questionIndices = Array.from({ length: n }, (_, i) => i);
+  currentRoundIdx = 0;
   saveChapterProgress();
   showQuestion();
 }
@@ -443,11 +478,21 @@ function showQuestion() {
   const activeQuestions = getQuestionsForChapter(activeChapterId);
 
   if (activeQuestions.length === 0) { showEmptyChapterState(); return; }
-  if (currentQuestion >= activeQuestions.length) { showResults(); return; }
 
-  const question = activeQuestions[currentQuestion];
+  // Sicherheitsnetz: questionIndices leer → initialisieren
+  if (questionIndices.length === 0) {
+    questionIndices = Array.from({ length: activeQuestions.length }, (_, i) => i);
+    currentRoundIdx = 0;
+  }
+
+  if (currentRoundIdx >= questionIndices.length) { showResults(); return; }
+
+  const qIdx    = questionIndices[currentRoundIdx];
+  const question = activeQuestions[qIdx];
   const chapter  = getChapter(activeChapterId);
   const section  = getSection(activeSectionId);
+
+  const roundLabel = quizRound > 1 ? ` · Runde ${quizRound}` : "";
 
   const optionsHtml = question.options.map((option, index) => {
     let cls = "option";
@@ -459,7 +504,7 @@ function showQuestion() {
   }).join("");
 
   document.getElementById("app").innerHTML = `
-    ${renderTopbar("Quiz", currentQuestion + 1, activeQuestions.length)}
+    ${renderTopbar("Quiz" + roundLabel, currentRoundIdx + 1, questionIndices.length)}
     ${renderQuizStats()}
     <section class="card">
       <div class="eyebrow">${escapeHtml(section?.name || "")} · ${escapeHtml(chapter?.name || "")}</div>
@@ -478,17 +523,25 @@ function showQuestion() {
 
 function selectAnswer(index) {
   if (questionAnswered) return;
-  const q = getQuestionsForChapter(activeChapterId)[currentQuestion];
+  const activeQuestions = getQuestionsForChapter(activeChapterId);
+  const qIdx = questionIndices[currentRoundIdx];
+  const q = activeQuestions[qIdx];
   selectedAnswer = index;
   questionAnswered = true;
-  if (index === q.correct) correctAnswers += 1;
-  else wrongAnswers += 1;
+  if (index === q.correct) {
+    correctAnswers += 1;
+  } else {
+    wrongAnswers += 1;
+    wrongInRound.push(qIdx);
+  }
+  // currentQuestion für Fortschrittsberechnung aktualisieren
+  currentQuestion = Math.max(currentQuestion, currentRoundIdx + 1);
   saveChapterProgress();
   showQuestion();
 }
 
 function nextQuestion() {
-  currentQuestion += 1;
+  currentRoundIdx += 1;
   questionAnswered = false;
   selectedAnswer = null;
   saveChapterProgress();
@@ -496,7 +549,7 @@ function nextQuestion() {
 }
 
 function showResults() {
-  const total = getQuestionsForChapter(activeChapterId).length;
+  const total = questionIndices.length || getQuestionsForChapter(activeChapterId).length;
   const percentage = total === 0 ? 0 : Math.round((correctAnswers / total) * 100);
 
   let icon, label, scoreColor;
@@ -512,25 +565,51 @@ function showResults() {
     icon = "🔄"; label = "Nochmal versuchen"; scoreColor = "#8b2020";
   }
 
+  const roundLabel = quizRound > 1 ? `Runde ${quizRound} · ` : "";
+  const hasWrong = wrongInRound.length > 0;
+
+  const retryBtn = hasWrong
+    ? `<button onclick="retryWrongQuestions()">🔁 ${wrongInRound.length} Fehler wiederholen</button>`
+    : `<button onclick="showCard()">Zurück zu den Karten</button>`;
+
+  const secondBtn = hasWrong
+    ? `<button class="secondary" onclick="showCard()">Zurück zu den Karten</button>`
+    : `<button class="secondary" onclick="restartChapter()">Nochmal von vorne</button>`;
+
   document.getElementById("app").innerHTML = `
     <section class="card result-hero">
       <span class="result-icon">${icon}</span>
       <div class="result-score" style="color:${scoreColor}">${correctAnswers}/${total}</div>
       <div class="result-label">${label}</div>
-      <div class="result-pct">${percentage}% korrekt · Quiz abgeschlossen</div>
+      <div class="result-pct">${roundLabel}${percentage}% korrekt</div>
+      ${hasWrong ? `<div class="result-retry-hint">${wrongInRound.length} Frage${wrongInRound.length > 1 ? "n" : ""} noch nicht sicher</div>` : `<div class="result-retry-hint" style="color:#2d7a3a">Alle Fragen richtig beantwortet!</div>`}
     </section>
     <div class="button-row two-buttons">
-      <button class="secondary" onclick="restartChapter()">Nochmal</button>
-      <button onclick="showCard()">Zurück zu den Karten</button>
+      ${secondBtn}
+      ${retryBtn}
     </div>
   `;
 
   saveChapterProgress();
 }
 
+function retryWrongQuestions() {
+  questionIndices = shuffleArray([...wrongInRound]);
+  currentRoundIdx = 0;
+  wrongInRound = [];
+  quizRound += 1;
+  correctAnswers = 0;
+  wrongAnswers = 0;
+  questionAnswered = false;
+  selectedAnswer = null;
+  saveChapterProgress();
+  showQuestion();
+}
+
 function restartChapter() {
   currentCard = 0; currentQuestion = 0; currentMode = "study";
   questionAnswered = false; selectedAnswer = null; correctAnswers = 0; wrongAnswers = 0;
+  questionIndices = []; currentRoundIdx = 0; wrongInRound = []; quizRound = 1;
   saveChapterProgress();
   showCard();
 }
@@ -823,6 +902,7 @@ function dismissInstallBanner() {
 // Globale onclick-Handler
 // ---------------------------------------------------------------------------
 
+window.retryWrongQuestions  = retryWrongQuestions;
 window.setActiveSection     = setActiveSection;
 window.setActiveChapter     = setActiveChapter;
 window.openNavSheet         = openNavSheet;

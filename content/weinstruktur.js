@@ -179,6 +179,113 @@ registerChapterContent("weinstruktur", {
       examples: [
         "Systematischer Ansatz zur Weinverkostung (Systematic Approach to Tasting – SAT)"
       ]
+    },
+    {
+      title: "Farbe und Erscheinungsbild",
+      intro: "Das Erscheinungsbild eines Weins gibt erste Hinweise auf Alter, Rebsorte und Stil.",
+      points: [
+        "Weißweine: blassgelb bis tief gold bis bernstein",
+        "Rotweine: purpur/violett (jung) bis ziegel/braun (gereift)",
+        "Roséweine: blassrosa bis lachsfarben bis orange",
+        "Intensität und Klarheit werden beurteilt"
+      ],
+      exampleTitle: "Farbveränderung mit dem Alter:",
+      examples: [
+        "Rotwein: verliert Farbe, wird heller, tendiert zu Braun",
+        "Weißwein: wird dunkler, tendiert zu Gold und Bernstein"
+      ]
+    },
+    {
+      title: "Viskosität: Tränen und Beine",
+      intro: "Die sogenannten Tränen (Tears) oder Beine (Legs) am Glasrand geben Hinweise auf Alkohol und Restzucker.",
+      points: [
+        "Langsam fließende, dicke Tränen deuten auf mehr Alkohol oder Zucker hin",
+        "Ein alleiniger Qualitätshinweis sind sie nicht",
+        "Das Phänomen heißt Marangoni-Effekt"
+      ],
+      exampleTitle: "Richtige Einordnung:",
+      examples: [
+        "Mehr Tränen = nicht zwingend 'besser'",
+        "Gibt Hinweis auf Körper und Alkoholgehalt"
+      ]
+    },
+    {
+      title: "Geruch: Nase und Intensität",
+      intro: "Das Riechen (Nose) ist der wichtigste Schritt bei der Weinbeurteilung — der Mensch kann Tausende von Gerüchen unterscheiden.",
+      points: [
+        "Zuerst: Ist der Wein fehlerfrei?",
+        "Dann: Intensität beurteilen (gering, mittel, hoch)",
+        "Dann: Aromakategorien identifizieren (Frucht, Blume, Kräuter, Gewürze, Erde, Holz)"
+      ],
+      exampleTitle: "Technik:",
+      examples: [
+        "Kurz riechen, nicht zu lang",
+        "Glas leicht schwenken, um Aromen freizusetzen",
+        "Sowohl direkt als auch retronasal riechen"
+      ]
+    },
+    {
+      title: "Abgang (Finish) und Länge",
+      intro: "Der Abgang (Finish) beschreibt, wie lange der Geschmack nach dem Schlucken anhält.",
+      points: [
+        "Kurz (short): verblasst sofort",
+        "Mittel (medium): hält einige Sekunden an",
+        "Lang (long): bleibt deutlich spürbar",
+        "Länge gilt als Qualitätsmerkmal"
+      ],
+      exampleTitle: "Einfache Faustregel:",
+      examples: [
+        "Zähle innerlich die Sekunden nach dem Schlucken",
+        "< 3 Sek. = kurz, 3-5 Sek. = mittel, > 5 Sek. = lang"
+      ]
+    },
+    {
+      title: "Qualitätsstufen im SAT",
+      intro: "Der SAT endet mit einer Qualitätsbewertung in vier Stufen.",
+      points: [
+        "Fehlerhaft (Faulty): Weinfehler erkennbar",
+        "Einfach (Poor): korrekt, aber ohne Charakter",
+        "Akzeptabel (Acceptable): korrekt, einige positive Merkmale",
+        "Gut (Good): deutliche Qualität, Komplexität",
+        "Sehr gut / Ausgezeichnet (Very Good / Outstanding): Komplexität, Tiefe, Länge"
+      ],
+      exampleTitle: "Qualitätsindikatoren:",
+      examples: [
+        "Intensität der Aromen",
+        "Komplexität (viele verschiedene Aromen)",
+        "Länge des Abgangs",
+        "Balance aller Komponenten"
+      ]
+    },
+    {
+      title: "Häufige Weinfehler (Wine Faults)",
+      intro: "Weinfehler entstehen durch Fehler im Keller oder bei der Lagerung und machen Wein ungenießbar.",
+      points: [
+        "TCA (Trichloranisol / Korkschmecker): muffig, feuchter Karton, kommt vom Korken",
+        "Oxidation: Sherryartige, nussige Noten, verliert Frische — bei Weißwein oft unangenehm",
+        "Reduktion: Schwefelgeruch, Streichhölzer, Gummi — oft durch Luftkontakt lösbar",
+        "Flüchtige Säure (Volatile Acidity): stechender Essiggeruch, bei hohen Mengen ein Fehler"
+      ],
+      exampleTitle: "Was tun?",
+      examples: [
+        "TCA: Wein ist fehlerhaft, zurückgeben",
+        "Reduktion: Dekantieren oder Belüften kann helfen"
+      ]
+    },
+    {
+      title: "Weinstil und Klimazone im Überblick",
+      intro: "Das Klima ist der größte Einflussfaktor auf den Weinstil — und hängt direkt mit Struktur und Aromen zusammen.",
+      points: [
+        "Kühl: hohe Säure, leichter Körper, Zitrus- und grüne Frucht",
+        "Gemäßigt: mittlere Struktur, reife Steinfrucht",
+        "Warm: niedriger Säure, voll, reife dunkle Frucht, mehr Alkohol"
+      ],
+      exampleTitle: "Einfache Merkhilfe:",
+      examples: [
+        "Mosel-Riesling (kühl): zitrusfrisch, leicht, elegant",
+        "Barossa Shiraz (warm): dunkel, voll, schokoladig, kräftig",
+        "Burgundy Pinot Noir (gemäßigt): zwischen beiden Extremen"
+      ]
     }
   ],
 
@@ -307,6 +414,50 @@ registerChapterContent("weinstruktur", {
       options: ["Riesling", "Merlot", "Grenache", "Syrah"],
       correct: 0,
       explanation: "Riesling ist klassisch für hohe Säure und eine frische Struktur."
+    },
+    {
+      question: "Was beschreibt der Abgang (Finish) eines Weins?",
+      options: [
+        "Wie lange der Geschmack nach dem Schlucken anhält",
+        "Die Farbe des Weins",
+        "Den Alkoholgehalt",
+        "Die Intensität der Fruchtaromen"
+      ],
+      correct: 0,
+      explanation: "Der Abgang (Finish) gibt an, wie lange der Geschmack nach dem Schlucken spürbar bleibt. Ein langer Abgang gilt als Qualitätsmerkmal."
+    },
+    {
+      question: "Was ist ein typisches Zeichen von TCA (Korkschmecker)?",
+      options: [
+        "Ein muffiger, feuchter Kartongeruch",
+        "Ein starker Schwefelgeruch",
+        "Ein intensiver Vanillegeschmack",
+        "Eine sehr tiefe Farbe"
+      ],
+      correct: 0,
+      explanation: "TCA (Trichloranisol) verleiht Wein einen muffigen, nassen Kartongeruch. Der Fehler kommt meist vom Korken."
+    },
+    {
+      question: "Wie verändert sich die Farbe eines Rotweins mit dem Alter?",
+      options: [
+        "Er wird heller und tendiert zu Braun- und Ziegeltönen",
+        "Er wird immer dunkler und intensiver",
+        "Die Farbe bleibt gleich",
+        "Er verliert alle Farbe und wird farblos"
+      ],
+      correct: 0,
+      explanation: "Rotweine verlieren mit der Zeit Farbe und nehmen Braun- und Ziegeltöne an. Junge Rotweine haben oft eine dunkel-purpurne Farbe."
+    },
+    {
+      question: "Welche Aussage zu Qualitätsindikatoren im SAT-Schema ist korrekt?",
+      options: [
+        "Komplexität, Länge des Abgangs und Balance sind Qualitätsmerkmale",
+        "Nur die Farbe entscheidet über die Qualität",
+        "Je mehr Alkohol, desto höher die Qualität",
+        "Ein kurzer Abgang ist ein Zeichen von Qualität"
+      ],
+      correct: 0,
+      explanation: "Im SAT gelten Komplexität, Länge und Balance als wichtige Qualitätsindikatoren. Ein langer Abgang spricht für hohe Qualität."
     }
   ]
 });

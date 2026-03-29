@@ -770,6 +770,13 @@ button:disabled { opacity: 0.42; cursor: default; }
   color: var(--muted);
 }
 
+.result-retry-hint {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 10px;
+  font-style: italic;
+}
+
 /* ============================================================
    Dashboard-Greeting
    ============================================================ */
