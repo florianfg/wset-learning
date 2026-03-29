@@ -497,14 +497,28 @@ function showResults() {
   const total = getQuestionsForChapter(activeChapterId).length;
   const percentage = total === 0 ? 0 : Math.round((correctAnswers / total) * 100);
 
+  let icon, label, scoreColor;
+  if (percentage >= 90) {
+    icon = "🏆"; label = "Ausgezeichnet!"; scoreColor = "#2d7a3a";
+  } else if (percentage >= 75) {
+    icon = "🌟"; label = "Sehr gut!"; scoreColor = "#4a7c3f";
+  } else if (percentage >= 60) {
+    icon = "👍"; label = "Gut gemacht!"; scoreColor = "#8a6a1d";
+  } else if (percentage >= 40) {
+    icon = "📚"; label = "Weiter üben"; scoreColor = "#b07020";
+  } else {
+    icon = "🔄"; label = "Nochmal versuchen"; scoreColor = "#8b2020";
+  }
+
   document.getElementById("app").innerHTML = `
-    <section class="card">
-      <div class="eyebrow">Quiz abgeschlossen</div>
-      <h2>${correctAnswers} von ${total} richtig</h2>
-      <p>Ergebnis: ${percentage}%</p>
+    <section class="card result-hero">
+      <span class="result-icon">${icon}</span>
+      <div class="result-score" style="color:${scoreColor}">${correctAnswers}/${total}</div>
+      <div class="result-label">${label}</div>
+      <div class="result-pct">${percentage}% korrekt · Quiz abgeschlossen</div>
     </section>
     <div class="button-row two-buttons">
-      <button class="secondary" onclick="restartChapter()">Kapitel neu starten</button>
+      <button class="secondary" onclick="restartChapter()">Nochmal</button>
       <button onclick="showCard()">Zurück zu den Karten</button>
     </div>
   `;
