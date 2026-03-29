@@ -1,4 +1,4 @@
-const CACHE_NAME = 'wset-level-2-v5';
+const CACHE_NAME = 'wset-level-2-v7';
 const APP_SHELL = [
   './',
   './index.html',
@@ -9,21 +9,51 @@ const APP_SHELL = [
   './chapters.js',
   './content-registry.js',
   './app.js',
+  // 01 Grundlagen
   './content/weinstruktur.js',
-  './content/weinbau.js',
-  './content/weinbereitung.js',
-  './content/weisse_rebsorten_1.js',
-  './content/weisse_rebsorten_2.js',
-  './content/rote_rebsorten_1.js',
-  './content/rote_rebsorten_2.js',
-  './content/schaumwein.js',
-  './content/suesswein.js',
+  './content/verkostungssystematik.js',
+  './content/qualitaetsbeurteilung.js',
+  // 02 Weinbau
+  './content/klima_und_standort.js',
+  './content/lese.js',
+  './content/weinberg_management.js',
+  // 03 Weinherstellung
+  './content/weinbereitung_weisswein.js',
+  './content/weinbereitung_rotwein.js',
+  './content/weinbereitung_rose.js',
+  './content/reifung_und_ausbau.js',
+  // 04 Weiße Rebsorten
+  './content/chardonnay.js',
+  './content/sauvignon_blanc.js',
+  './content/riesling.js',
+  './content/pinot_grigio_pinot_gris.js',
+  './content/weitere_weissweine.js',
+  // 05 Rote Rebsorten
+  './content/cabernet_sauvignon.js',
+  './content/merlot.js',
+  './content/pinot_noir.js',
+  './content/syrah.js',
+  './content/rotweine_mediterran.js',
+  './content/rotweine_international.js',
+  // 06 Schaumwein
+  './content/schaumwein_grundlagen.js',
+  './content/herstellungsverfahren_schaumwein.js',
+  // 07 Süßwein
+  './content/suesswein_grundlagen.js',
+  './content/herstellungsverfahren_suesswein.js',
+  // 08 Weinregionen
   './content/frankreich.js',
-  './content/italien.js',
-  './content/spanien_portugal.js',
   './content/da_at_hu.js',
-  './content/neue_welt.js',
-  './content/lagerung_service_pairing.js'
+  './content/spanien_portugal.js',
+  './content/italien.js',
+  './content/usa.js',
+  './content/suedamerika.js',
+  './content/australien_neuseeland.js',
+  './content/suedafrika.js',
+  // 09 Service & Pairing
+  './content/lagerung.js',
+  './content/service.js',
+  './content/food_pairing.js'
 ];
 
 self.addEventListener('install', (event) => {
