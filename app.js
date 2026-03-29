@@ -6,6 +6,7 @@ let activeSectionId = activeSectionDefault;
 let activeChapterId = getChaptersForSection(activeSectionId)[0]?.id || chapters[0]?.id || null;
 
 let navSheetOpen = false;
+let currentView = "home"; // "home" | "content"
 
 let currentCard = 0;
 let currentQuestion = 0;
@@ -139,6 +140,7 @@ function setActiveSection(sectionId) {
   loadChapterState(activeChapterId);
   saveUiState();
   navSheetOpen = false;
+  currentView = "content";
   render();
 }
 
@@ -150,6 +152,7 @@ function setActiveChapter(chapterId) {
   loadChapterState(chapterId);
   saveUiState();
   navSheetOpen = false;
+  currentView = "content";
   render();
 }
 
@@ -200,6 +203,7 @@ function renderNav() {
 
 function buildSidebar() {
   const stats = getOverallStats();
+  const isHome = currentView === "home";
 
   const sectionsHtml = sections.map((section) => {
     const progress = getSectionProgressData(section.id);
@@ -244,11 +248,21 @@ function buildSidebar() {
         <span>${stats.completedChapters}/${chapters.length} Kapitel</span>
       </div>
     </div>
-    <nav class="sidebar-nav">${sectionsHtml}</nav>
+    <nav class="sidebar-nav">
+      <button class="sidebar-home-btn ${isHome ? "active" : ""}" onclick="goHome()">
+        <span class="sidebar-home-icon">⌂</span>
+        <span>Übersicht</span>
+      </button>
+      <div class="sidebar-nav-divider"></div>
+      ${sectionsHtml}
+    </nav>
   `;
 }
 
 function buildNavStrip() {
+  if (currentView === "home") {
+    return `<span class="nav-strip-home">⌂ Übersicht</span><span class="nav-strip-chevron">▾</span>`;
+  }
   const section = getSection(activeSectionId);
   const chapter = getChapter(activeChapterId);
   return `
@@ -291,7 +305,15 @@ function buildSheetContent() {
       </div>`;
   }).join("");
 
-  return `<div class="sheet-title">Navigation</div>${sectionsHtml}`;
+  const isHome = currentView === "home";
+  return `
+    <div class="sheet-title">Navigation</div>
+    <button class="sheet-section-btn ${isHome ? "active" : ""}" onclick="goHome()">
+      <span class="sheet-section-num">⌂</span>
+      <span class="sheet-section-name">Übersicht</span>
+    </button>
+    <div style="height:1px;background:var(--line);margin:4px 0 4px"></div>
+    ${sectionsHtml}`;
 }
 
 // ---------------------------------------------------------------------------
@@ -498,14 +520,86 @@ function restartChapter() {
 }
 
 // ---------------------------------------------------------------------------
+// Dashboard Home-Screen
+// ---------------------------------------------------------------------------
+
+function goHome() {
+  currentView = "home";
+  navSheetOpen = false;
+  renderNav();
+  renderDashboardScreen();
+}
+
+function continueLearning() {
+  currentView = "content";
+  render();
+}
+
+function renderDashboardScreen() {
+  const stats = getOverallStats();
+
+  // "Weiter lernen" – letztes aktives Kapitel oder erstes Kapitel
+  const lastChapter = getChapter(activeChapterId);
+  const lastSection = lastChapter ? getSection(lastChapter.sectionId) : null;
+  const hasProgress = stats.answeredQuestions > 0 || stats.progressPercentage > 0;
+
+  const ctaLabel = hasProgress ? "Weiter lernen" : "Lernen starten";
+  const ctaHint = hasProgress && lastChapter
+    ? `${escapeHtml(lastSection?.name || "")} · ${escapeHtml(lastChapter.name)}`
+    : "Fang beim ersten Modul an";
+
+  const sectionCardsHtml = sections.map((section) => {
+    const sp = getSectionProgressData(section.id);
+    const pct = sp.chapterCount === 0 ? 0 : Math.round((sp.completedCount / sp.chapterCount) * 100);
+    const stateClass = sp.state === "completed" ? "completed" : sp.state === "started" ? "started" : "";
+    const badge = sp.state === "completed" ? "✓" : sp.state === "started" ? "●" : "○";
+
+    return `
+      <button class="section-card ${stateClass}" onclick="setActiveSection('${section.id}')">
+        <div class="section-card-top">
+          <span class="section-card-num">${section.number}</span>
+          <span class="section-card-name">${escapeHtml(section.name)}</span>
+          <span class="section-card-badge ${stateClass}">${badge}</span>
+        </div>
+        <div class="section-card-meta">${sp.completedCount}/${sp.chapterCount} Kapitel</div>
+        <div class="section-card-bar">
+          <div class="section-card-fill" style="width:${pct}%"></div>
+        </div>
+      </button>`;
+  }).join("");
+
+  document.getElementById("app").innerHTML = `
+    <section class="card dashboard-hero">
+      <div class="eyebrow">Lernfortschritt</div>
+      <div class="dashboard-hero-pct">${stats.progressPercentage}%</div>
+      <div class="progress-track" style="margin-bottom:12px">
+        <div class="progress-fill" style="width:${stats.progressPercentage}%"></div>
+      </div>
+      <div class="dashboard-hero-meta">
+        ${stats.completedChapters}/${chapters.length} Kapitel abgeschlossen
+        · ${stats.answeredQuestions}/${stats.totalQuestions} Quizfragen
+      </div>
+      <div class="dashboard-cta-hint">${ctaHint}</div>
+      <button onclick="continueLearning()">${ctaLabel} →</button>
+    </section>
+    <div class="section-cards">${sectionCardsHtml}</div>
+  `;
+}
+
+// ---------------------------------------------------------------------------
 // Haupt-Render
 // ---------------------------------------------------------------------------
 
 function render() {
   saveUiState();
   renderNav();
-  if (currentMode === "quiz") showQuestion();
-  else showCard();
+  if (currentView === "home") {
+    renderDashboardScreen();
+  } else if (currentMode === "quiz") {
+    showQuestion();
+  } else {
+    showCard();
+  }
 }
 
 // ---------------------------------------------------------------------------
@@ -528,6 +622,8 @@ window.setActiveSection  = setActiveSection;
 window.setActiveChapter  = setActiveChapter;
 window.openNavSheet      = openNavSheet;
 window.closeNavSheet     = closeNavSheet;
+window.goHome            = goHome;
+window.continueLearning  = continueLearning;
 window.previousCard      = previousCard;
 window.nextCard          = nextCard;
 window.startQuiz         = startQuiz;
@@ -543,4 +639,5 @@ window.restartChapter    = restartChapter;
 loadUiState();
 loadChapterState(activeChapterId);
 registerServiceWorker();
+currentView = "home"; // immer auf Home-Screen starten
 render();

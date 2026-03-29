@@ -647,3 +647,178 @@ h1, h2, h3, p, li, button { overflow-wrap: anywhere; }
   .two-buttons   { grid-template-columns: 1fr 1fr; }
   .three-buttons { grid-template-columns: 1fr 1fr 1fr; }
 }
+
+/* ============================================================
+   Sidebar – Home-Button
+   ============================================================ */
+.sidebar-home-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 20px;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  border-radius: 0;
+  box-shadow: none;
+  transition: background 0.15s;
+}
+
+.sidebar-home-btn:hover { background: var(--soft); }
+
+.sidebar-home-btn.active {
+  color: var(--wine);
+  background: var(--wine-light);
+}
+
+.sidebar-home-icon {
+  font-size: 14px;
+  width: 22px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.sidebar-nav-divider {
+  height: 1px;
+  background: var(--line);
+  margin: 6px 0;
+}
+
+/* Nav-Strip Home-Label */
+.nav-strip-home {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--wine);
+  flex: 1;
+}
+
+/* ============================================================
+   Dashboard Home-Screen
+   ============================================================ */
+.dashboard-hero {
+  text-align: center;
+}
+
+.dashboard-hero-pct {
+  font-size: 52px;
+  font-weight: 800;
+  color: var(--wine);
+  line-height: 1;
+  margin: 6px 0 14px;
+  letter-spacing: -1px;
+}
+
+.dashboard-hero-meta {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.dashboard-cta-hint {
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 600;
+  margin-bottom: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Sektions-Karten */
+.section-cards {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.section-card {
+  width: 100%;
+  background: var(--card);
+  border: 1px solid rgba(114, 47, 55, 0.06);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  cursor: pointer;
+  text-align: left;
+  box-shadow: var(--shadow);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  color: var(--text);
+}
+
+.section-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.08);
+}
+
+.section-card:active { transform: scale(0.99); }
+
+.section-card.completed { border-color: rgba(46, 160, 67, 0.2); }
+.section-card.started   { border-color: rgba(122, 49, 58, 0.15); }
+
+.section-card-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.section-card-num {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--muted);
+  width: 22px;
+  flex-shrink: 0;
+}
+
+.section-card-name {
+  flex: 1;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.section-card-badge {
+  font-size: 12px;
+  flex-shrink: 0;
+  color: var(--muted);
+}
+
+.section-card-badge.completed { color: #2ea043; }
+.section-card-badge.started   { color: var(--wine); }
+
+.section-card-meta {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.section-card-bar {
+  height: 5px;
+  background: var(--line);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.section-card-fill {
+  height: 100%;
+  background: linear-gradient(to right, var(--wine), #9c4955);
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+.section-card.completed .section-card-fill {
+  background: linear-gradient(to right, #2ea043, #46c45a);
+}
+
+@media (min-width: 768px) {
+  .section-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .dashboard-hero {
+    text-align: left;
+  }
+}
