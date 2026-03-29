@@ -290,6 +290,55 @@ function closeNavSheet() {
 // Hilfsfunktionen – Allgemein
 // ---------------------------------------------------------------------------
 
+// ---------------------------------------------------------------------------
+// Karten-Content-Rendering (Markdown → HTML)
+// ---------------------------------------------------------------------------
+
+function renderCardContent(card) {
+  // Neue Karten: card.content (Markdown-String mit **bold** und - Listen)
+  if (card.content) {
+    const lines = card.content.trim().split("\n");
+    const parts = [];
+    let listItems = [];
+
+    function flushList() {
+      if (listItems.length > 0) {
+        parts.push(`<ul class="card-list">${listItems.join("")}</ul>`);
+        listItems = [];
+      }
+    }
+
+    function inlineMd(text) {
+      return text.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+    }
+
+    for (const line of lines) {
+      const trimmed = line.trim();
+      if (trimmed === "") { flushList(); continue; }
+      if (trimmed.startsWith("- ")) {
+        listItems.push(`<li>${inlineMd(trimmed.slice(2))}</li>`);
+      } else {
+        flushList();
+        parts.push(`<p>${inlineMd(trimmed)}</p>`);
+      }
+    }
+    flushList();
+
+    const takeaway = card.takeaway
+      ? `<div class="card-takeaway">${escapeHtml(card.takeaway)}</div>` : "";
+    return parts.join("") + takeaway;
+  }
+
+  // Legacy-Karten: intro + points + examples
+  const pointsHTML   = (card.points   || []).map((p) => `<li>${escapeHtml(p)}</li>`).join("");
+  const examplesHTML = (card.examples || []).map((e) => `<li>${escapeHtml(e)}</li>`).join("");
+  return `
+    ${card.intro ? `<p>${escapeHtml(card.intro)}</p>` : ""}
+    ${pointsHTML   ? `<ul class="card-list">${pointsHTML}</ul>` : ""}
+    ${examplesHTML ? `<p class="section-title">${escapeHtml(card.exampleTitle || "Beispiele:")}</p><ul class="card-list">${examplesHTML}</ul>` : ""}
+  `;
+}
+
 function shuffleArray(arr) {
   const a = [...arr];
   for (let i = a.length - 1; i > 0; i--) {
@@ -517,18 +566,13 @@ function showCard() {
   const sectionChapters = getChaptersForSection(activeSectionId);
   const chapterIndex = Math.max(sectionChapters.findIndex((c) => c.id === activeChapterId), 0) + 1;
 
-  const pointsHTML   = (card.points || []).map((p) => `<li>${escapeHtml(p)}</li>`).join("");
-  const examplesHTML = (card.examples || []).map((e) => `<li>${escapeHtml(e)}</li>`).join("");
-
   document.getElementById("app").innerHTML = `
     ${renderTopbar("Lernen", currentCard + 1, activeCards.length)}
     <section class="card">
       <div class="eyebrow">${escapeHtml(section?.name || "")}</div>
       <div class="subeyebrow">Kapitel ${chapterIndex} von ${sectionChapters.length} · ${escapeHtml(chapter?.name || "")}</div>
       <h2>${escapeHtml(card.title)}</h2>
-      <p>${escapeHtml(card.intro || "")}</p>
-      ${pointsHTML ? `<ul>${pointsHTML}</ul>` : ""}
-      ${examplesHTML ? `<p class="section-title">${escapeHtml(card.exampleTitle || "Beispiele:")}</p><ul>${examplesHTML}</ul>` : ""}
+      ${renderCardContent(card)}
     </section>
     <div class="button-row three-buttons">
       <button class="secondary" onclick="previousCard()" ${currentCard === 0 ? "disabled" : ""}>Zurück</button>
@@ -753,7 +797,8 @@ function renderDashboardScreen() {
   const qsVals   = Object.values(timeStats.questionStats);
   const totalAsked   = qsVals.reduce((s, x) => s + x.asked, 0);
   const totalCorrect = qsVals.reduce((s, x) => s + x.correct, 0);
-  const timeStatsHtml = (studyMin + quizMin + totalAsked) > 0
+  const hasAnyStats = (timeStats.studySeconds + timeStats.quizSeconds + totalAsked) > 0;
+  const timeStatsHtml = hasAnyStats
     ? `<div class="dashboard-time-stats">
         <span>📚 ${studyMin} Min. Lernen</span>
         <span class="dts-dot">·</span>
