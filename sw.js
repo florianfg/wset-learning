@@ -1,15 +1,29 @@
-const CACHE_NAME = 'wset-level-2-v4';
+const CACHE_NAME = 'wset-level-2-v5';
 const APP_SHELL = [
   './',
   './index.html',
   './styles.css',
+  './manifest.json',
+  './icon-512.png',
   './sections.js',
   './chapters.js',
-  './cards.js',
-  './questions.js',
+  './content-registry.js',
   './app.js',
-  './manifest.json',
-  './icon-512.png'
+  './content/weinstruktur.js',
+  './content/weinbau.js',
+  './content/weinbereitung.js',
+  './content/weisse_rebsorten_1.js',
+  './content/weisse_rebsorten_2.js',
+  './content/rote_rebsorten_1.js',
+  './content/rote_rebsorten_2.js',
+  './content/schaumwein.js',
+  './content/suesswein.js',
+  './content/frankreich.js',
+  './content/italien.js',
+  './content/spanien_portugal.js',
+  './content/da_at_hu.js',
+  './content/neue_welt.js',
+  './content/lagerung_service_pairing.js'
 ];
 
 self.addEventListener('install', (event) => {
@@ -42,4 +56,11 @@ self.addEventListener('fetch', (event) => {
       });
     })
   );
+});
+
+// Ermöglicht der App, den neuen SW sofort zu aktivieren
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
 });

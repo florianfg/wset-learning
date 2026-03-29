@@ -1,5 +1,7 @@
 const STORAGE_PREFIX = "wsetLevel2Progress_";
 const UI_STATE_KEY = "wsetLevel2UiState";
+const USER_NAME_KEY = "wsetLevel2UserName";
+const INSTALL_DISMISSED_KEY = "wsetLevel2InstallDismissed";
 
 const activeSectionDefault = sections[0]?.id || null;
 let activeSectionId = activeSectionDefault;
@@ -551,6 +553,7 @@ function continueLearning() {
 
 function renderDashboardScreen() {
   const stats = getOverallStats();
+  const userName = getUserName();
 
   // "Weiter lernen" – letztes aktives Kapitel oder erstes Kapitel
   const lastChapter = getChapter(activeChapterId);
@@ -561,6 +564,11 @@ function renderDashboardScreen() {
   const ctaHint = hasProgress && lastChapter
     ? `${escapeHtml(lastSection?.name || "")} · ${escapeHtml(lastChapter.name)}`
     : "Fang beim ersten Modul an";
+
+  const greetingHtml = userName
+    ? `<div class="dashboard-greeting">Willkommen zurück, <strong>${escapeHtml(userName)}</strong>! 🍷
+       <button class="name-edit-btn" onclick="editUserName()" title="Namen ändern">✎</button></div>`
+    : "";
 
   const sectionCardsHtml = sections.map((section) => {
     const sp = getSectionProgressData(section.id);
@@ -583,6 +591,7 @@ function renderDashboardScreen() {
   }).join("");
 
   document.getElementById("app").innerHTML = `
+    ${greetingHtml}
     <section class="card dashboard-hero">
       <div class="eyebrow">Lernfortschritt</div>
       <div class="dashboard-hero-pct">${stats.progressPercentage}%</div>
@@ -617,14 +626,197 @@ function render() {
 }
 
 // ---------------------------------------------------------------------------
-// Service Worker
+// Service Worker + Update-Erkennung
 // ---------------------------------------------------------------------------
 
 function registerServiceWorker() {
-  if ("serviceWorker" in navigator) {
-    window.addEventListener("load", () => {
-      navigator.serviceWorker.register("sw.js").catch(() => {});
+  if (!("serviceWorker" in navigator)) return;
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("sw.js").then((reg) => {
+      // Erkennt, wenn ein neuer SW bereit ist
+      reg.addEventListener("updatefound", () => {
+        const newWorker = reg.installing;
+        if (!newWorker) return;
+        newWorker.addEventListener("statechange", () => {
+          if (newWorker.state === "installed" && navigator.serviceWorker.controller) {
+            showUpdateToast();
+          }
+        });
+      });
+    }).catch(() => {});
+
+    // Wenn ein neuer SW die Kontrolle übernimmt → Seite neu laden
+    navigator.serviceWorker.addEventListener("controllerchange", () => {
+      window.location.reload();
     });
+  });
+}
+
+function showUpdateToast() {
+  const existing = document.getElementById("update-toast");
+  if (existing) return;
+
+  const toast = document.createElement("div");
+  toast.id = "update-toast";
+  toast.className = "update-toast";
+  toast.innerHTML = `
+    <span>🔄 Update verfügbar</span>
+    <button onclick="applyUpdate()">Jetzt aktualisieren</button>
+  `;
+  document.body.appendChild(toast);
+
+  // Toast nach 10 Sekunden sanft einblenden
+  requestAnimationFrame(() => toast.classList.add("visible"));
+}
+
+function applyUpdate() {
+  if (navigator.serviceWorker.controller) {
+    navigator.serviceWorker.controller.postMessage({ type: "SKIP_WAITING" });
+  }
+  window.location.reload();
+}
+
+// ---------------------------------------------------------------------------
+// Nutzername – Personalisierung
+// ---------------------------------------------------------------------------
+
+function getUserName() {
+  return localStorage.getItem(USER_NAME_KEY) || "";
+}
+
+function saveUserName(name) {
+  localStorage.setItem(USER_NAME_KEY, name.trim());
+}
+
+function showNamePrompt() {
+  const modal = document.createElement("div");
+  modal.id = "name-modal-overlay";
+  modal.className = "modal-overlay";
+  modal.innerHTML = `
+    <div class="modal-card">
+      <div class="modal-icon">🍷</div>
+      <h2>Herzlich willkommen!</h2>
+      <p>Wie darf ich dich nennen?</p>
+      <input id="name-input" class="name-input" type="text"
+             placeholder="Dein Name" maxlength="30"
+             autocomplete="off" autocapitalize="words" />
+      <button id="name-submit-btn" onclick="submitName()">Loslegen →</button>
+    </div>
+  `;
+  document.body.appendChild(modal);
+  requestAnimationFrame(() => modal.classList.add("visible"));
+
+  // Enter-Taste bestätigt
+  document.getElementById("name-input").addEventListener("keydown", (e) => {
+    if (e.key === "Enter") submitName();
+  });
+  setTimeout(() => document.getElementById("name-input")?.focus(), 300);
+}
+
+function submitName() {
+  const input = document.getElementById("name-input");
+  const name = (input?.value || "").trim();
+  if (!name) {
+    input?.classList.add("shake");
+    setTimeout(() => input?.classList.remove("shake"), 500);
+    return;
+  }
+  saveUserName(name);
+  const overlay = document.getElementById("name-modal-overlay");
+  if (overlay) {
+    overlay.classList.remove("visible");
+    setTimeout(() => overlay.remove(), 300);
+  }
+  renderDashboardScreen();
+}
+
+function editUserName() {
+  const input = prompt("Deinen Namen ändern:", getUserName());
+  if (input !== null && input.trim()) {
+    saveUserName(input.trim());
+    renderDashboardScreen();
+  }
+}
+
+// ---------------------------------------------------------------------------
+// PWA-Install-Guidance
+// ---------------------------------------------------------------------------
+
+let deferredInstallPrompt = null;
+
+window.addEventListener("beforeinstallprompt", (e) => {
+  e.preventDefault();
+  deferredInstallPrompt = e;
+  // Banner anzeigen, wenn noch nicht dismissed
+  if (!localStorage.getItem(INSTALL_DISMISSED_KEY)) {
+    showInstallBanner("android");
+  }
+});
+
+function isRunningAsPwa() {
+  return window.matchMedia("(display-mode: standalone)").matches
+    || window.navigator.standalone === true;
+}
+
+function isIos() {
+  return /iphone|ipad|ipod/i.test(navigator.userAgent);
+}
+
+function maybeShowInstallBanner() {
+  if (isRunningAsPwa()) return;
+  if (localStorage.getItem(INSTALL_DISMISSED_KEY)) return;
+  if (isIos()) showInstallBanner("ios");
+  // Android-Banner wird über beforeinstallprompt gesteuert (s.o.)
+}
+
+function showInstallBanner(platform) {
+  const existing = document.getElementById("install-banner");
+  if (existing) return;
+
+  const banner = document.createElement("div");
+  banner.id = "install-banner";
+  banner.className = "install-banner";
+
+  if (platform === "ios") {
+    banner.innerHTML = `
+      <div class="install-banner-text">
+        <strong>📲 App installieren</strong>
+        <span>Tippe auf <strong>Teilen</strong> <span class="share-icon">⎋</span> und dann „Zum Home-Bildschirm"</span>
+      </div>
+      <button class="install-banner-close" onclick="dismissInstallBanner()">✕</button>
+    `;
+  } else {
+    banner.innerHTML = `
+      <div class="install-banner-text">
+        <strong>📲 Als App installieren</strong>
+        <span>Für den besten Lernerfolg direkt auf dem Startbildschirm</span>
+      </div>
+      <div class="install-banner-actions">
+        <button class="install-btn-primary" onclick="triggerInstallPrompt()">Installieren</button>
+        <button class="install-banner-close" onclick="dismissInstallBanner()">Nicht jetzt</button>
+      </div>
+    `;
+  }
+
+  document.body.appendChild(banner);
+  requestAnimationFrame(() => banner.classList.add("visible"));
+}
+
+function triggerInstallPrompt() {
+  if (!deferredInstallPrompt) return;
+  deferredInstallPrompt.prompt();
+  deferredInstallPrompt.userChoice.then((choice) => {
+    if (choice.outcome === "accepted") dismissInstallBanner();
+    deferredInstallPrompt = null;
+  });
+}
+
+function dismissInstallBanner() {
+  localStorage.setItem(INSTALL_DISMISSED_KEY, "1");
+  const banner = document.getElementById("install-banner");
+  if (banner) {
+    banner.classList.remove("visible");
+    setTimeout(() => banner.remove(), 300);
   }
 }
 
@@ -632,19 +824,24 @@ function registerServiceWorker() {
 // Globale onclick-Handler
 // ---------------------------------------------------------------------------
 
-window.setActiveSection  = setActiveSection;
-window.setActiveChapter  = setActiveChapter;
-window.openNavSheet      = openNavSheet;
-window.closeNavSheet     = closeNavSheet;
-window.goHome            = goHome;
-window.continueLearning  = continueLearning;
-window.previousCard      = previousCard;
-window.nextCard          = nextCard;
-window.startQuiz         = startQuiz;
-window.showCard          = showCard;
-window.selectAnswer      = selectAnswer;
-window.nextQuestion      = nextQuestion;
-window.restartChapter    = restartChapter;
+window.setActiveSection     = setActiveSection;
+window.setActiveChapter     = setActiveChapter;
+window.openNavSheet         = openNavSheet;
+window.closeNavSheet        = closeNavSheet;
+window.goHome               = goHome;
+window.continueLearning     = continueLearning;
+window.previousCard         = previousCard;
+window.nextCard             = nextCard;
+window.startQuiz            = startQuiz;
+window.showCard             = showCard;
+window.selectAnswer         = selectAnswer;
+window.nextQuestion         = nextQuestion;
+window.restartChapter       = restartChapter;
+window.submitName           = submitName;
+window.editUserName         = editUserName;
+window.triggerInstallPrompt = triggerInstallPrompt;
+window.dismissInstallBanner = dismissInstallBanner;
+window.applyUpdate          = applyUpdate;
 
 // ---------------------------------------------------------------------------
 // Initialisierung
@@ -655,3 +852,10 @@ loadChapterState(activeChapterId);
 registerServiceWorker();
 currentView = "home"; // immer auf Home-Screen starten
 render();
+
+// Nutzername prüfen – ggf. Willkommens-Modal anzeigen
+if (!getUserName()) {
+  showNamePrompt();
+} else {
+  maybeShowInstallBanner();
+}
