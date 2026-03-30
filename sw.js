@@ -1,4 +1,4 @@
-const CACHE_NAME = 'wset-level-2-v13';
+const CACHE_NAME = 'wset-level-2-v14';
 const APP_SHELL = [
   './',
   './index.html',
