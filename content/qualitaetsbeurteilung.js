@@ -38,7 +38,7 @@ registerChapterContent("qualitaetsbeurteilung", {
 - **Zu viel Alkohol**: Wirkt brennend, zerstört Frische
 - **Zu viel Tannin**: Wirkt hart, ausstrocknend, dominiert
 - **Zu wenig Frucht**: Wirkt leer, strukturell korrekt aber seelenlos
-- **Balance-Prüfung**: Bei jedem Schluck: Passen alle Komponenten zusammen?```,
+- **Balance-Prüfung**: Bei jedem Schluck: Passen alle Komponenten zusammen?`,
       takeaway: "Merksatz: Balance = harmonische Komponenten-Proportion."
     },
     {
@@ -52,7 +52,7 @@ registerChapterContent("qualitaetsbeurteilung", {
 - **Korrelation mit Lagerfähigkeit**: Lange Länge oft mit Lagerpotential korreliert
 - **"Caudalie" = traditionelle Maßeinheit**: 1 Caudalie ≈ 1 Sekunde des Abgangs
 - **Länge ist nicht immer Qualität allein**: Ein einfacher aber ausgewogener Wein mit mittlerer Länge kann gut sein
-- **Prüfungsfalle**: Sehr lange Länge mit Unbalance ist nicht automatisch hochwertig```,
+- **Prüfungsfalle**: Sehr lange Länge mit Unbalance ist nicht automatisch hochwertig`,
       takeaway: "Merksatz: Länge = Konzentrations- und Qualitäts-Signal."
     },
     {
@@ -65,7 +65,7 @@ registerChapterContent("qualitaetsbeurteilung", {
 - **Intensität zeigt Qualität an – aber nicht allein**: Hohe Intensität ohne Balance ist nicht hochwertig
 - **Intensität nimmt mit Alter ab**: Junge Weine intensiver, mit Reife entwickelt sich Komplexität statt Intensität
 - **Prüfungsfalle**: Intensität ≠ Qualität – muss mit Balance und Länge kombiniert sein
-- **Niedrig-intensive ausgewogene Weine können hochwertig sein**: Z. B. elegante Burgunder```,
+- **Niedrig-intensive ausgewogene Weine können hochwertig sein**: Z. B. elegante Burgunder`,
       takeaway: "Merksatz: Intensität = Aromastärke, nicht automatisch Qualität."
     },
     {
@@ -79,7 +79,7 @@ registerChapterContent("qualitaetsbeurteilung", {
 - **Komplexität ist oft Zeichen von höherer Qualität**: Aber nicht zwingend
 - **Einfache Weine können ausgewogen und gut sein**: Komplexität ist Ergänzung, nicht Grundlage
 - **Komplexität erfordert Ausbau und/oder Reife**: Junge einfache Weine sind typischerweise unkomplex
-- **Komplexität sichtbar machen**: "Was ändert sich, wenn ich den Wein lüfte?" ist ein Test```,
+- **Komplexität sichtbar machen**: "Was ändert sich, wenn ich den Wein lüfte?" ist ein Test`,
       takeaway: "Merksatz: Komplexität = Vielschichtigkeit & zeitliche Entwicklung."
     },
     {
@@ -93,7 +93,7 @@ registerChapterContent("qualitaetsbeurteilung", {
 - **Atypizität kann positiv oder negativ sein**: Innovation ist manchmal wertvoll, manchmal Fehler
 - **Für Blindverkostung entscheidend**: Typische Profile helfen bei Herkunftserkennung
 - **Jahrgang beeinflusst Typizität**: Kühles Jahr kann dazu führen, dass Weine weniger reif sind als erwartet
-- **Prüfungsfalle**: Atypische Weine können hochwertig sein – Typizität ist ein Faktor, nicht das Urteil```,
+- **Prüfungsfalle**: Atypische Weine können hochwertig sein – Typizität ist ein Faktor, nicht das Urteil`,
       takeaway: "Merksatz: Typizität = Sorte + Herkunfts-Entsprechung."
     },
     {
@@ -107,7 +107,7 @@ registerChapterContent("qualitaetsbeurteilung", {
 - **Süße (sweetness)**: Trocken bis süß – beeinflusst Balance, Körper
 - **Intensität (flavour intensity)**: Leicht bis ausgeprägt – Aromastärke
 - **Länge (finish)**: Kurz bis lang – Qualitäts-Signal
-- **Diese Elemente wirken zusammen**: Isolierte Bewertung ist nicht ausreichend```,
+- **Diese Elemente wirken zusammen**: Isolierte Bewertung ist nicht ausreichend`,
       takeaway: "Merksatz: Struktur = Gesamtheit aller Komponenten."
     },
     {
@@ -121,7 +121,7 @@ registerChapterContent("qualitaetsbeurteilung", {
 - **Sekundäre Faktoren**: Extrakt (Trockensubstanz), Restzucker, Tannine
 - **Körper-Balance ist entscheidend**: Ein voller Körper braucht Balance (Säure/Tannin)
 - **Körper sagt über Stil aus**: Leicht = elegant & frisch, Voll = strukturiert & intensiv
-- **Körper isoliert ist nicht Qualität**: Ein vollbodied Wein mit schlechter Balance ist nicht hochwertig```,
+- **Körper isoliert ist nicht Qualität**: Ein vollbodied Wein mit schlechter Balance ist nicht hochwertig`,
       takeaway: "Merksatz: Körper = Alkohol + Extrakt + Zucker kombiniert."
     },
     {
@@ -135,7 +135,7 @@ registerChapterContent("qualitaetsbeurteilung", {
 - **Fehler disqualifizieren**: Ein fehlerhafter Wein kann nicht "Outstanding" sein
 - **Leichte Fehler = Abwertung**: Z. B. leichte Reduktion kann sich lüften
 - **Schwerwiegende Fehler = Poor-Kategorisierung**: Wein ist nicht mehr genießbar
-- **Fehlerhafte Weine in Blindverkostung**: Zeigen sich durch typische Merkmale```,
+- **Fehlerhafte Weine in Blindverkostung**: Zeigen sich durch typische Merkmale`,
       takeaway: "Merksatz: Fehler sind objektive Disqualifikations-Faktoren."
     },
     {
@@ -148,7 +148,7 @@ registerChapterContent("qualitaetsbeurteilung", {
 - **Unreife deutet auf Fehler hin**: Wein kann nicht balanciert sein, wenn Frucht unreif ist
 - **Überreife deutet auf Stil-Entscheidung hin**: Manchmal gewünscht (z. B. Süßwein), manchmal Fehler
 - **Frucht-Reife korreliert mit Zucker und Säure-Verhältnis**: Reife = ausreichend Zucker bei noch akzeptabler Säure
-- **Klima beeinflusst Reife-Chancen**: Kühles Jahr = Schwierigkeit, optimale Reife zu erreichen```,
+- **Klima beeinflusst Reife-Chancen**: Kühles Jahr = Schwierigkeit, optimale Reife zu erreichen`,
       takeaway: "Merksatz: Frucht-Reife = Ernte-Timing-Indikator."
     },
     {
@@ -161,7 +161,7 @@ registerChapterContent("qualitaetsbeurteilung", {
 - **Grüne Aromen = unreife Frucht**: Unerwünscht bei ausgereiften Stilen
 - **Reife Frucharomen = Qualitäts-Signal**: Ausreichende Reife bei Lese
 - **Sortentypische Aromen können variabel sein**: Je nach Klima, Boden, Jahrgang
-- **Primär-Dominanz bei jungen Weinen normal**: Mit Alter treten Sekundär- und Tertiär in Vordergrund```,
+- **Primär-Dominanz bei jungen Weinen normal**: Mit Alter treten Sekundär- und Tertiär in Vordergrund`,
       takeaway: "Merksatz: Primär = Sortencharakter und Reife-Zeichen."
     },
     {
@@ -175,7 +175,7 @@ registerChapterContent("qualitaetsbeurteilung", {
 - **Über-dominiertes Holz = Fehler**: Holz überlagert Frucht statt zu integrieren
 - **Sekundär-Aromen zeigen Qualität des Ausbaus**: Kontrollierte Ausbau-Entscheidung
 - **Fehlen von Sekundär kann gewünscht sein**: Z. B. frische Weißweine ohne Holz
-- **Sekundär-Integration = Handwerk-Zeichen**: Professionelle vs. amateurhafte Vinifikation```,
+- **Sekundär-Integration = Handwerk-Zeichen**: Professionelle vs. amateurhafte Vinifikation`,
       takeaway: "Merksatz: Sekundär = Ausbau-Stil und Vinifikations-Qualität."
     },
     {
@@ -189,7 +189,7 @@ registerChapterContent("qualitaetsbeurteilung", {
 - **Hohe Präsenz von Tertiär = Zeichen für Alter**: Und/oder lange Reife
 - **Qualität der Tertiär-Entwicklung**: Elegante vs. unerwünschte Oxidation
 - **Tertiär im Übermaß = Überalterung**: Aromen werden zu oxidativ und flach
-- **Tertiär-Integration = Balance der Entwicklung**: Tertiär sollte Primär ergänzen, nicht ersetzen```,
+- **Tertiär-Integration = Balance der Entwicklung**: Tertiär sollte Primär ergänzen, nicht ersetzen`,
       takeaway: "Merksatz: Tertiär = Alters- und Reife-Indikator."
     },
     {
@@ -203,7 +203,7 @@ registerChapterContent("qualitaetsbeurteilung", {
 - **Zu hoher Alkohol ohne Balance = Qualitätsverlust**: Brennendes Gefühl überlagert Frucht
 - **Niedriger Alkohol gut integriert = Eleganz-Signal**: Kühle Klimazonen-Zeichen
 - **Alkohol-Überschuss häufiger als Mangel**: "Jammy, hot wines" sind modernes Problem
-- **Alkohol und Komplexität**: Höherer Alkohol kann mit schlechterer Komplexität kombiniert sein```,
+- **Alkohol und Komplexität**: Höherer Alkohol kann mit schlechterer Komplexität kombiniert sein`,
       takeaway: "Merksatz: Alkohol = Körper-Determinant und Balance-Faktor."
     },
     {
@@ -217,7 +217,7 @@ registerChapterContent("qualitaetsbeurteilung", {
 - **Säure mit Alter**: Säure baut sich ab, daher müssen junge Weine höhere Säure haben
 - **Maltolaktische Gärung**: Reduziert Säure, erzeugt cremigere Textur – Qualitäts-Entscheidung
 - **Zu hohe Säure ohne Kompensation**: Wirkt sauer/spitz – Unbalance
-- **Zu niedrige Säure**: Wein wird schnell flach, hat kurzes Lagerpotential```,
+- **Zu niedrige Säure**: Wein wird schnell flach, hat kurzes Lagerpotential`,
       takeaway: "Merksatz: Säure = Frische, Struktur, Lagerfähigkeit."
     },
     {
@@ -231,7 +231,7 @@ registerChapterContent("qualitaetsbeurteilung", {
 - **Tannin + Zeit**: Mit Alter polymerisieren Tannine und werden weicher – lagerfähig macht Sinn
 - **Holz-Tannine**: Zusätzliche Tannine von Fass-Ausbau – müssen integriert sein
 - **Balance mit Tannin**: Hohe Tannine brauchen hohe Säure/Frucht zur Balance
-- **Tannin-Dominanz ohne Balance = Qualitätsverlust**: Wirkt hart und ungenießbar```,
+- **Tannin-Dominanz ohne Balance = Qualitätsverlust**: Wirkt hart und ungenießbar`,
       takeaway: "Merksatz: Tannin = Struktur und Lagerpotential bei Rotwein."
     },
     {
@@ -259,7 +259,7 @@ registerChapterContent("qualitaetsbeurteilung", {
 - **Poor (schlecht)**: Klare Fehler oder Ungleichgewicht, unangenehm zu trinken
 - **Diese Kategorien sind Standard für WSET-Prüfungen**: Müssen exakt benutzt werden
 - **Übergang fließend**: Es gibt Graubereiche zwischen Kategorien
-- **Begründung erforderlich**: Jede Einstufung muss durch Struktur-Analyse gerechtfertigt sein```,
+- **Begründung erforderlich**: Jede Einstufung muss durch Struktur-Analyse gerechtfertigt sein`,
       takeaway: "Merksatz: WSET-Skala = standardisierte Qualitätskriterien."
     },
     {
@@ -273,7 +273,7 @@ registerChapterContent("qualitaetsbeurteilung", {
 - **Prüfungsfalle**: "Mir gefällt dieser Wein" ist KEINE Qualitätsaussage in der WSET
 - **Beispiele**: Trockener vs. süßer Wein, Holz-betont vs. fruchtbetont – Stil-Unterschied, nicht Qualität
 - **Professionelle Objektität**: Ein Sommelier muss zwischen Geschmack und Qualität trennen können
-- **Diese Unterscheidung ist fundamental für WSET-Prüfungen**: "Geschmack" ist in Prüfungen nicht akzeptabel```,
+- **Diese Unterscheidung ist fundamental für WSET-Prüfungen**: "Geschmack" ist in Prüfungen nicht akzeptabel`,
       takeaway: "Merksatz: Qualität ≠ Geschmack – absolute Unterscheidung notwendig."
     },
     {
@@ -287,7 +287,7 @@ registerChapterContent("qualitaetsbeurteilung", {
 - **Nicht: Mir gefällt – sondern: Struktur passt/passt nicht**
 - **Logische Konsistenz**: Die Begründung für Outstanding muss logisch sein – nicht willkürlich
 - **Trainieren durch Vergleiche**: Mehrere Weine verkosten und Unterschiede identifizieren
-- **Objektivität erzwingen**: Blind Tasting hilft, Vorurteile zu vermeiden```,
+- **Objektivität erzwingen**: Blind Tasting hilft, Vorurteile zu vermeiden`,
       takeaway: "Merksatz: Merkmale → Struktur → Qualitätsstufe = logische Kausalkette."
     },
     {
@@ -302,7 +302,7 @@ registerChapterContent("qualitaetsbeurteilung", {
 - **Fehler**: Sind offensichtliche Fehler vorhanden? (Korkfehler, Oxidation, Reduktion)
 - **Abgleich mit Standards**: Wie vergleicht sich dieser Wein mit anderen der gleichen Kategorie?
 - **Finale Einstufung**: Outstanding? Very Good? Good? Acceptable? Poor?
-- **Diese Checkliste sorgt für Konsistenz** und verhindert, dass Aspekte vergessen werden```,
+- **Diese Checkliste sorgt für Konsistenz** und verhindert, dass Aspekte vergessen werden`,
       takeaway: "Merksatz: Systematische Checkliste = konsistente Bewertung."
     }
   ],

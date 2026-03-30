@@ -22,7 +22,7 @@ registerChapterContent("lese", {
 - **Aromareife (flavor ripeness)**: Aromen entwickeln sich – grüne → fruchtig/komplexe
 - **Problem**: Diese vier sind nicht immer synchron – oft unterschiedliche Reife
 - **Ziel**: Alle vier sollten gleichzeitig optimal sein – "physiologische Reife"
-- **Praxis-Herausforderung**: Muss alle vier Dimensionen überwachen```,
+- **Praxis-Herausforderung**: Muss alle vier Dimensionen überwachen`,
       takeaway: "Merksatz: Vier Reife-Typen = komplexe Gleichung."
     },
     {
@@ -35,7 +35,7 @@ registerChapterContent("lese", {
 - **Optimal gelesen**: Ausreichender Zucker für gewünschten Alkohol (z. B. 12% = ca. 215 g Zucker)
 - **Zu spät gelesen (Überreife)**: Sehr hoher Zucker, möglicherweise überreife Aromen, Phenol-Imbalance
 - **Klima-Effekt**: Warmes Klima = schneller Zuckeraufbau, kühles Klima = langsamer
-- **Lesezeitpunkt-Signal**: Der primäre Entscheidungsfaktor für viele Weingärten ist Zuckergehalt```,
+- **Lesezeitpunkt-Signal**: Der primäre Entscheidungsfaktor für viele Weingärten ist Zuckergehalt`,
       takeaway: "Merksatz: Zucker → Alkoholpotential – zentrale Messgröße."
     },
     {
@@ -49,7 +49,7 @@ registerChapterContent("lese", {
 - **Typische Säure-Werte**: Start 12-15 g/l (Wein-Säure) → Ziel 4-8 g/l bei Lese
 - **Problem bei später Lese**: Zucker steigt, aber Säure fällt → Balance-Risiko
 - **Optimale Balance**: Angemessener Zucker bei noch akzeptablem Säuregehalt
-- **Gefahr bei zu spät**: Zucker hoch aber Säure zu niedrig → flache Balance```,
+- **Gefahr bei zu spät**: Zucker hoch aber Säure zu niedrig → flache Balance`,
       takeaway: "Merksatz: Säure-Abbau ist irreversibel – Timing entscheidend."
     },
     {
@@ -63,7 +63,7 @@ registerChapterContent("lese", {
 - **Temperatur-abhängig**: Warmes Jahr → bessere phenolische Reife
 - **Schlecht-Jahr-Problem**: Kühles Jahr kann zu unreifen Tanninen führen
 - **Rotwein-kritisch**: Phenolische Reife ist für Rotwein der kritischste Faktor
-- **Nur bei Rotwein relevant**: Weißwein hat minimal Phenole (keine Schalen-Gärung)```,
+- **Nur bei Rotwein relevant**: Weißwein hat minimal Phenole (keine Schalen-Gärung)`,
       takeaway: "Merksatz: Phenolische Reife = Tannin-Eleganz & Farbe-Tiefe."
     },
     {
@@ -77,7 +77,7 @@ registerChapterContent("lese", {
 - **Rebsorte-variabel**: Jede Sorte hat andere typische Aroma-Reife-Profile
 - **Sensorische Bewertung**: Qualitative Beurteilung durch Geruch/Geschmack
 - **Jahrgangs-Variation**: Warme Jahre: schnellere Aroma-Entwicklung, kühle Jahre: langsamer
-- **Balance-Faktor**: Optimale Aromaentwicklung ist Qualitäts-Faktor```,
+- **Balance-Faktor**: Optimale Aromaentwicklung ist Qualitäts-Faktor`,
       takeaway: "Merksatz: Aroma-Reife = Grün → Reif → Überreif Spektrum."
     },
     {
@@ -90,7 +90,7 @@ registerChapterContent("lese", {
 - **Gefahr warmes Jahr**: Überreife möglich – sehr frühes Lesen nötig um Balance zu halten
 - **Strategische Anpassung**: Top-Weingärten lesen früher in warmen Jahren, später in kühlen
 - **Vorherbestimmung**: Klimatyp determiniert grobes Lesefenster – Jahrgang feinjustiert
-- **Zeitdruck**: Lesefenster ist oft kurz (2-3 Wochen) – richtig Timing ist Kunst + Wissenschaft```,
+- **Zeitdruck**: Lesefenster ist oft kurz (2-3 Wochen) – richtig Timing ist Kunst + Wissenschaft`,
       takeaway: "Merksatz: Klima → Reife-Tempo → Lesezeitpunkt."
     },
     {
@@ -104,7 +104,7 @@ registerChapterContent("lese", {
 - **Jahrgangs-Charakter**: "2015 war ein großartiges Jahr" (warm & reif), "2017 war schwierig" (cool & spät)
 - **Risiko bei Spät-Jahren**: Herbst-Regen kann Qualität zerstören
 - **Vorhersagbarkeit**: Erfahrung hilft Jahrgangs-Charaktere zu antizipieren
-- **Jährliche Spannung**: Lesezeitpunkt ist nie 100% vorherbestimmt```,
+- **Jährliche Spannung**: Lesezeitpunkt ist nie 100% vorherbestimmt`,
       takeaway: "Merksatz: Jahrgang erzeugt Lesezeitpunkt-Variation."
     },
     {
@@ -118,7 +118,7 @@ registerChapterContent("lese", {
 - **Balance-Entscheidung**: Die Weingut entscheidet bewusst für ihren Stilwunsch
 - **Konsistenz**: Top-Weingärten haben konsistente Lesezeitpunkt-Strategie
 - **Jahrgang-Anpassung**: Strategie wird an Jahrgang angepasst (früh in warmen Jahren)
-- **Qualitäts-Signal**: Der Lesezeitpunkt zeigt die Philosophie des Weinguts```,
+- **Qualitäts-Signal**: Der Lesezeitpunkt zeigt die Philosophie des Weinguts`,
       takeaway: "Merksatz: Stilziel → Lesezeitpunkt-Strategie."
     },
     {
@@ -132,7 +132,7 @@ registerChapterContent("lese", {
 - **Kleine Partien**: Können gepflückt werden, wenn optimal reif
 - **Fauler-Trauben-Entfernung**: Können während Ernte aussortiert werden
 - **Regionen-typisch**: Europa oft Handlese, große New World oft mechanisch
-- **Kosten-Kalkül**: Hochwertige Weine rechtfertigen die Kosten```,
+- **Kosten-Kalkül**: Hochwertige Weine rechtfertigen die Kosten`,
       takeaway: "Merksatz: Handlese = beste Qualität, höchste Kosten."
     },
     {
@@ -146,7 +146,7 @@ registerChapterContent("lese", {
 - **Blätter-Problem**: Oft werden Blätter mitgeerntet – müssen nachträglich sortiert werden
 - **Kosten-Kalkül**: Für große Mengen und niedrige Preise sinnvoll
 - **Regionen-Standard**: Australien, Kalifornien, Südafrika oft mechanisch
-- **Qualitäts-Limitation**: Schwieriger, hochwertige Qualität zu erreichen```,
+- **Qualitäts-Limitation**: Schwieriger, hochwertige Qualität zu erreichen`,
       takeaway: "Merksatz: Maschinen-Lese = schnell & günstig, weniger Kontrolle."
     },
     {
@@ -160,7 +160,7 @@ registerChapterContent("lese", {
 - **Qualitäts-Grenze**: Nur hochwertige Weingärten können sich Sortierung leisten
 - **Prädikat-Weine**: Besonders selektiv – nur beste Trauben pro Parzellenabschnitt
 - **Kostenfolge**: Höhere Kosten = höherer Wein-Preis
-- **Typisch bei**: Grand Cru Burgund, Top Bordeaux, Premium New World```,
+- **Typisch bei**: Grand Cru Burgund, Top Bordeaux, Premium New World`,
       takeaway: "Merksatz: Selektion = höhere Qualität durch Reduktion."
     },
     {
@@ -174,7 +174,7 @@ registerChapterContent("lese", {
 - **Qualitäts-Effekt**: Kann höchste Qualität ermöglichen
 - **Typisch bei**: Edelsüßweine, Eiswein, Top-Bordeaux, Botrytis-Weine
 - **Betrag-Weine**: Riesling-Prädikat-Weine oft mehrfach gelesen
-- **Risiko**: Wetter kann zwischen Lesedurchgängen schaden```,
+- **Risiko**: Wetter kann zwischen Lesedurchgängen schaden`,
       takeaway: "Merksatz: Mehrfache Lese = höchste Qualität & Kosten."
     },
     {
@@ -187,7 +187,7 @@ registerChapterContent("lese", {
 - **Oxidations-Risiko**: Warme Trauben oxidieren schneller = Qualitätsverlust
 - **Praxis-Standard**: Viele Weingärten lesen früh morgens oder nachts
 - **Energiekosten**: Nachts-Lese erfordert Beleuchtung und Organisation
-- **Gärung-Effekt**: Kühle Trauben ermöglichen kontrolliertere Gärung```,
+- **Gärung-Effekt**: Kühle Trauben ermöglichen kontrolliertere Gärung`,
       takeaway: "Merksatz: Morgens/nachts lesen = bessere Qualität."
     },
     {
@@ -201,7 +201,7 @@ registerChapterContent("lese", {
 - **Zeitfenster**: Transport sollte so schnell wie möglich erfolgen (< 2-4 Stunden ideal)
 - **Qualitäts-Faktor**: Schonender Transport = bessere Aromen-Erhaltung
 - **Verarbeitung-Start**: Ganz schnell nach Ernte mit Entrappen/Gärung starten ist ideal
-- **Infrastruktur**: Großer Betrieb braucht mehrere Transportfahrzeuge```,
+- **Infrastruktur**: Großer Betrieb braucht mehrere Transportfahrzeuge`,
       takeaway: "Merksatz: Schneller, kühler, schonender Transport = Qualität."
     },
     {
@@ -215,7 +215,7 @@ registerChapterContent("lese", {
 - **Versicherung**: Hagel-Versicherung ist üblich in Risiko-Gebieten
 - **Management**: Netze gegen Vögel, Fäulnis-Management durch Laubwandarbeit
 - **Extraktion**: Muss oft zwischen Sicherheit (zu früh lesen) und Qualität (zu spät) abwägen
-- **Überraschungs-Jahre**: Extreme Herbst-Regen können Jahrgänge zerstören```,
+- **Überraschungs-Jahre**: Extreme Herbst-Regen können Jahrgänge zerstören`,
       takeaway: "Merksatz: Lese-Timing = Balance zwischen Risiko & Qualität."
     },
     {
@@ -230,7 +230,7 @@ registerChapterContent("lese", {
 - **Süßwein-Standard**: Prädikatsweine (Trockenbeerenauslese) brauchen Botrytis oft
 - **Regionen**: Elsass, Ungarn, Loire ideal für Botrytis-Weine
 - **Timing**: Edelfäule-Trauben werden sehr spät geerntet, einzeln gepflückt
-- **Qualitäts-Signal**: Botrytis-Weine sind hochwertig, komplex, lagerfähig```,
+- **Qualitäts-Signal**: Botrytis-Weine sind hochwertig, komplex, lagerfähig`,
       takeaway: "Merksatz: Edelfäule = erwünschte Konzentration bei Süßwein."
     },
     {
@@ -244,7 +244,7 @@ registerChapterContent("lese", {
 - **Folge für Wein**: Unangenehme Aromen, niedrige Qualität, manchmal ungenießbar
 - **Selektion**: Faule Trauben müssen sorgfältig aussortiert werden
 - **Jahrgangs-Effekt**: Feuchte Jahre mit ungünstigen Bedingungen fördern Graurfäule
-- **Management**: Top-Weingärten haben intensives Scoutingsystem für Fäulnis```,
+- **Management**: Top-Weingärten haben intensives Scoutingsystem für Fäulnis`,
       takeaway: "Merksatz: Graurfäule = Qualitätszerstörer."
     },
     {
@@ -258,7 +258,7 @@ registerChapterContent("lese", {
 - **Balance**: Wirtschaftlich lohnt sich niedrigerer Ertrag nur für hochwertige Weine
 - **Philosophie**: Premiumweingärten intentionieren niedrig-Ertrag-Strategie
 - **Regionale Standards**: Appellations-Gesetze oft limitieren Ertrag (z. B. Grand Cru < 25 hl/ha)
-- **Lesezeitpunkt-Koordination**: Mit niedriger Ertrag kann selektiv gelesen werden```,
+- **Lesezeitpunkt-Koordination**: Mit niedriger Ertrag kann selektiv gelesen werden`,
       takeaway: "Merksatz: Niedriger Ertrag = höhere Konzentration."
     },
     {
@@ -272,7 +272,7 @@ registerChapterContent("lese", {
 - **Rosé**: Früh-mittel Lese → Frische mit etwas Reife, Balance
 - **Süßwein**: Sehr späte Lese oder Botrytis → hoher Zucker, auch Säure bleibt
 - **Prädikat-Weine**: Individuelle Lese-Strategien nach Kategorie (Auslese, Beerenauslese etc.)
-- **Regionale Vorgaben**: Oft gibt es Vorgaben für Lese-Standards per Appellation```,
+- **Regionale Vorgaben**: Oft gibt es Vorgaben für Lese-Standards per Appellation`,
       takeaway: "Merksatz: Lesezeitpunkt ist Typ-spezifisch."
     },
     {
@@ -286,7 +286,7 @@ registerChapterContent("lese", {
 - **Konsequenz**: In einem Jahrgang kann man verschiedene Sorten zu unterschiedlichen Zeiten lesen
 - **Management**: Top-Weingärten kennen ihre Sorten-Reife-Profile präzise
 - **Planung**: Lese-Planung muss Sortenunterschiede berücksichtigen
-- **Timing-Komplexität**: 20% Unterschied in Lesezeitpunkt ist normal zwischen Sorten```,
+- **Timing-Komplexität**: 20% Unterschied in Lesezeitpunkt ist normal zwischen Sorten`,
       takeaway: "Merksatz: Sorte determiniert Reife-Tempo."
     },
     {
@@ -300,7 +300,7 @@ registerChapterContent("lese", {
 - **Erfahrung-dependant**: Größe der Weingärten kennen ihre Lese-Profile
 - **Risikobalance**: Balance zwischen Sicherheit (zu früh) und Qualität (zu spät)
 - **Jahrgänge-unterschiedlich**: Jedes Jahr ist unique – keine universelle Strategie
-- **Qualitäts-Signal**: Der Lesezeitpunkt zeigt die Philosophie und Kompetenz des Weinguts```,
+- **Qualitäts-Signal**: Der Lesezeitpunkt zeigt die Philosophie und Kompetenz des Weinguts`,
       takeaway: "Merksatz: Lese = fundamentale Stilbestimmung."
     }
   ],

@@ -22,7 +22,7 @@ registerChapterContent("klima_und_standort", {
 - **Relevanz für Wein**: Klima bestimmt den Durchschnitt, Jahrgang erzeugt Variation
 - **Klimazonen sind stabil**: Bordeaux ist immer gemäßigt, Australien ist immer heiß
 - **Jahrgänge variieren**: Aber innerhalb des Klima-Rahmens
-- **Klima-Prognose**: Auf Klima kann man sich verlassen; Jahrgänge sind Variationen```,
+- **Klima-Prognose**: Auf Klima kann man sich verlassen; Jahrgänge sind Variationen`,
       takeaway: "Merksatz: Klima = langfristig, Wetter/Jahrgang = kurzfristig."
     },
     {
@@ -35,7 +35,7 @@ registerChapterContent("klima_und_standort", {
 - **Wind**: Kann Reben kühlen, Feuchtigkeit reduzieren, aber auch schaden
 - **Zusammenspiel**: Diese vier Faktoren wirken zusammen, nicht isoliert
 - **Regionale Variation**: Jede Region hat ihr spezifisches Klimaprofil
-- **Management im Weinberg**: Können einige Effekte abschwächen (z. B. Bewässerung bei Trockenheit)```,
+- **Management im Weinberg**: Können einige Effekte abschwächen (z. B. Bewässerung bei Trockenheit)`,
       takeaway: "Merksatz: Vier Klimafaktoren = Grund-Determinanten."
     },
     {
@@ -48,7 +48,7 @@ registerChapterContent("klima_und_standort", {
 - **Kühles Klima**: Langsamer Prozess, Zucker steigt langsam, Säure bleibt hoch
 - **Warmes Klima**: Schneller Prozess, Zucker schnell hoch, Säure schnell weg
 - **Phenolische Reife**: Benötigt auch Temperatur – unreife Tannine sind zu kühl
-- **Growing Season-Länge**: Wichtiger als Peak-Temperatur – kontinuierliche Wärme zählt```,
+- **Growing Season-Länge**: Wichtiger als Peak-Temperatur – kontinuierliche Wärme zählt`,
       takeaway: "Merksatz: Temperatur → Reife-Tempo & Struktur-Profil."
     },
     {
@@ -63,7 +63,7 @@ registerChapterContent("klima_und_standort", {
 - **Länger Säurestruktur**: Säure bleibt in älteren Jahrgängen länger erhalten
 - **Regionen**: Deutschland, Bordeaux in schlechten Jahren, England, Champagne
 - **Jahrgangsqualität variabel**: Warme Jahre sehr gut, kühle Jahre schwierig
-- **Beispiel-Struktur**: Hohe Säure (8-10 g/l) + niedriger Alkohol (10-11%) + grüne Aromen```,
+- **Beispiel-Struktur**: Hohe Säure (8-10 g/l) + niedriger Alkohol (10-11%) + grüne Aromen`,
       takeaway: "Merksatz: Kühl = hohe Säure, niedrig Alkohol, frisch & grün."
     },
     {
@@ -78,7 +78,7 @@ registerChapterContent("klima_und_standort", {
 - **Frühe Reife möglich**: Aber nicht zu aggressive Überreife
 - **Regionen**: Bordeaux in guten Jahren, Burgund, Barolo, viele Premium-Gebiete
 - **Jahrgangs-Konsistenz**: Jahre sind relativ zuverlässig
-- **Beispiel-Struktur**: Ausgewogene Säure (5-7 g/l) + moderater Alkohol (12-13%) + Balance```,
+- **Beispiel-Struktur**: Ausgewogene Säure (5-7 g/l) + moderater Alkohol (12-13%) + Balance`,
       takeaway: "Merksatz: Gemäßigt = ausgewogene Säure-Alkohol-Balance."
     },
     {
@@ -93,7 +93,7 @@ registerChapterContent("klima_und_standort", {
 - **Frühere Lesezeitpunkt**: Zucker ist schneller vorhanden
 - **Regionen**: Australien, Kalifornien, südliches Frankreich, Spanien
 - **Jahrgangs-Konsistenz**: Jahre sind ähnlicher, weniger Variation
-- **Beispiel-Struktur**: Niedrige Säure (4-6 g/l) + hoher Alkohol (13-14%) + reife Frucht```,
+- **Beispiel-Struktur**: Niedrige Säure (4-6 g/l) + hoher Alkohol (13-14%) + reife Frucht`,
       takeaway: "Merksatz: Warm = niedriger Säure, hoch Alkohol, reif."
     },
     {
@@ -108,7 +108,7 @@ registerChapterContent("klima_und_standort", {
 - **Risiken**: Traubenstress, Sonnenbrand, schnelle Frucht-Überreife
 - **Regionen**: Nordafrika, südliches Australien in heißen Jahren, südlicher Kalifornien
 - **Management**: Bewässerung, Schattierung, frühere Lese nötig
-- **Beispiel-Struktur**: Sehr niedrig Säure (< 4 g/l) + sehr hoch Alkohol (15%+) + marmeladig```,
+- **Beispiel-Struktur**: Sehr niedrig Säure (< 4 g/l) + sehr hoch Alkohol (15%+) + marmeladig`,
       takeaway: "Merksatz: Heiß = Unbalance-Risiko."
     },
     {
@@ -122,7 +122,7 @@ registerChapterContent("klima_und_standort", {
 - **Exposition (Hangneigung)**: Südhänge mehr Licht als Nordhänge
 - **Saisonal**: Growing Season bestimmt Gesamt-Licht-Exposition
 - **Zu viel Licht = Stress**: Kann zu Sonnenbrand und Traubenstress führen
-- **Balance nötig**: Ausreichend Licht ohne Stress```,
+- **Balance nötig**: Ausreichend Licht ohne Stress`,
       takeaway: "Merksatz: Licht = Zucker-Produktion."
     },
     {
@@ -136,7 +136,7 @@ registerChapterContent("klima_und_standort", {
 - **Düngung-Effekt**: Nährstoffe vom Regen können Pflanzenwachstum verstärken
 - **Drainage-Importance**: Gut drainierte Böden verhindern Staunässe
 - **Zeitpunkt ist entscheidend**: Regen während Blüte schlecht, Regen im Herbst hilft
-- **Regionale Niederschlag**: Kontinuierlich vs. saisonal – sehr unterschiedlich```,
+- **Regionale Niederschlag**: Kontinuierlich vs. saisonal – sehr unterschiedlich`,
       takeaway: "Merksatz: Regen → Verdünnung oder Konzentration je nach Menge."
     },
     {
@@ -150,7 +150,7 @@ registerChapterContent("klima_und_standort", {
 - **Negative Effekte**: Zu starker Wind kann Reben beschädigen, Blüten abschütteln
 - **Timing**: Wind während Blüte problematisch, später eher hilfreich
 - **Standort-Effekt**: Geschützte Lagen besser als exponierte
-- **Regionale Winde**: Mistral (Frankreich), Föhn (Alpen) haben bekannte Auswirkungen```,
+- **Regionale Winde**: Mistral (Frankreich), Föhn (Alpen) haben bekannte Auswirkungen`,
       takeaway: "Merksatz: Wind = je nach Stärke positiv oder negativ."
     },
     {
@@ -163,7 +163,7 @@ registerChapterContent("klima_und_standort", {
 - **Frost-Gefahr**: Frühjahrs-Frost ist großes Risiko – Triebe können zerstört werden
 - **Regionen**: Mitteleuropa (Deutschland, Österreich), Pannonisches Becken (Ungarn), östliches Europa
 - **Jahrgangs-Variation**: Variable – warme Jahre sehr gut, kalte Jahre schwierig
-- **Beispiel**: Bordeaux während kalter Jahre vs. warmer Jahre zeigt Kontinental-Effekt```,
+- **Beispiel**: Bordeaux während kalter Jahre vs. warmer Jahre zeigt Kontinental-Effekt`,
       takeaway: "Merksatz: Kontinental = große Jahreszeit-Unterschiede."
     },
     {
@@ -178,7 +178,7 @@ registerChapterContent("klima_und_standort", {
 - **Regen-Effekt**: Oft problematisch wegen Feuchtigkeit & Pilzkrankheiten
 - **Regionen**: England, Normandie (Champagne), Westküsten (Pazifik Kalifornien)
 - **Jahrgangs-Konsistenz**: Relativ stabil, aber Regen-Jahre können problematisch sein
-- **Beispiel**: Südküste Englands – moderat, aber Regen-Herausforderung```,
+- **Beispiel**: Südküste Englands – moderat, aber Regen-Herausforderung`,
       takeaway: "Merksatz: Maritim = temperiert, aber feuchter."
     },
     {
@@ -193,7 +193,7 @@ registerChapterContent("klima_und_standort", {
 - **Regions**: Südeuropa (Italien, Spanien, Griechenland), südliche Frankreich
 - **Management**: Oft Bewässerung nötig zur Kontrolle
 - **Jahrgangs-Konsistenz**: Relativ stabil, aber extreme Hitze-Jahre problematisch
-- **Beispiel**: Toscana, Südspanien – heißes, trockenes Profil```,
+- **Beispiel**: Toscana, Südspanien – heißes, trockenes Profil`,
       takeaway: "Merksatz: Mediterran = heiß & trocken, stabiler."
     },
     {
@@ -207,7 +207,7 @@ registerChapterContent("klima_und_standort", {
 - **Beispiele**: Bergregionen (Alpen, Anden) nutzen Höhe zur Kühlwirkung
 - **Extreme Höhen**: Zu hoch = Reife unmöglich (z. B. über 2500 m in Alpen)
 - **Balance-Punkt**: 400-1200 m typisch für hochwertige Bergweinbau
-- **Saisonale Risiken**: Frost-Gefahr größer in Höhenlagen```,
+- **Saisonale Risiken**: Frost-Gefahr größer in Höhenlagen`,
       takeaway: "Merksatz: Höhe = Kühlung & längere Reife."
     },
     {
@@ -221,7 +221,7 @@ registerChapterContent("klima_und_standort", {
 - **Unter 30°**: Zu heiß, Überreife-Risiko, Balance-Probleme
 - **Über 50°**: Zu kühl, Reife-Herausforderung (aber Champagne/England funktionieren)
 - **Klimawandel**: Verlängert anbaubare Breiten nach Norden/Süden
-- **Regionale Unterschiede**: Bordeaux (45°N) vs. Australien (40°S) zeigen ähnliche Breite```,
+- **Regionale Unterschiede**: Bordeaux (45°N) vs. Australien (40°S) zeigen ähnliche Breite`,
       takeaway: "Merksatz: Breitengrad = Basis-Temperaturzone."
     },
     {
@@ -235,7 +235,7 @@ registerChapterContent("klima_und_standort", {
 - **Flusstal-Effekt**: Flüsse wirken ähnlich, aber weniger intensiv
 - **Beispiele**: Finger Lakes (New York), Mosel-Tal (Deutschland), Lake Geneva (Schweiz)
 - **Negative Seite**: Höhere Feuchtigkeit kann Pilzkrankheiten fördern
-- **Kleine Gewässer**: Weniger Effekt – muss bedeutsam sein```,
+- **Kleine Gewässer**: Weniger Effekt – muss bedeutsam sein`,
       takeaway: "Merksatz: Gewässer = Temperatur-Moderator & Frost-Schutz."
     },
     {
@@ -249,7 +249,7 @@ registerChapterContent("klima_und_standort", {
 - **Nordhang-Vorteil**: Kühlere Bedingungen, höhere Säure – wichtig in warmen Gegenden
 - **Westhangs**: Nachmittagssonne, Temperatur-Extrem gegen Ende des Tages
 - **Beispiele**: Mosel (Südhänge bevorzugt), Rhone (West/Süd-Hänge), Burgund (komplexe Exposition)
-- **Makro-Effekt**: Kann mehr ausmachen als allgemeines Klima```,
+- **Makro-Effekt**: Kann mehr ausmachen als allgemeines Klima`,
       takeaway: "Merksatz: Exposition = lokale Reife-Determinante."
     },
     {
@@ -263,7 +263,7 @@ registerChapterContent("klima_und_standort", {
 - **Wurzel-Tiefe**: Schotter/Kies ermöglichen tiefe Wurzeln, Ton blockiert
 - **Pflanzenstress**: Moderate Wasserstress kann Qualität verbessern (konzentriertere Trauben)
 - **Boden-Typ variiert stark**: Nicht alle Böden sind gleich geeignet
-- **Historische Erkenntnis**: Große Weinlagen haben oft schlechtere Böden (Force die Rebe)```,
+- **Historische Erkenntnis**: Große Weinlagen haben oft schlechtere Böden (Force die Rebe)`,
       takeaway: "Merksatz: Boden = Wasser, Nährstoffe, Drainage, Wärme."
     },
     {
@@ -277,7 +277,7 @@ registerChapterContent("klima_und_standort", {
 - **Lehm (Loam)**: Balance zwischen Sand und Ton – flexibel
 - **Schieferböden**: Wärmetransfer, spezifische Mineralität – Mosel
 - **Bodentyp × Klima**: Interaction – sandiger Boden in kühlem Klima kann zu dünn sein
-- **Reben-Stress**: "Force the vine" – schlechte Böden können Qualität erzwingen```,
+- **Reben-Stress**: "Force the vine" – schlechte Böden können Qualität erzwingen`,
       takeaway: "Merksatz: Bodentyp → Reben-Kraft & Weinstil."
     },
     {
@@ -292,7 +292,7 @@ registerChapterContent("klima_und_standort", {
 - **Terroir-Ausdruck**: Jedes Terroir hat einen unverwechselbaren Charakter
 - **Qualitäts-Faktor**: Großes Terroir = hohe Qualität möglich
 - **Nicht veränderbar**: Klima & Boden konstant, Menschen können nur optimieren
-- **Begründet Herkunfts-Typizität**: "Taste of place"```,
+- **Begründet Herkunfts-Typizität**: "Taste of place"`,
       takeaway: "Merksatz: Terroir = Natur + Mensch = Ort-Ausdruck."
     },
     {
@@ -306,7 +306,7 @@ registerChapterContent("klima_und_standort", {
 - **Beispiel**: Mosel – zwei Ufer desselben Flusses zeigen große Unterschiede
 - **Management**: Top-Weinberge wissen ihre besten Mikroklimazonen
 - **Blindverkostung**: Mikroklimaeffekte können Herkunftsbestimmung erschweren
-- **Qualitäts-Variation**: Kann Grund für Preisunterschiede benachbarter Weinberge sein```,
+- **Qualitäts-Variation**: Kann Grund für Preisunterschiede benachbarter Weinberge sein`,
       takeaway: "Merksatz: Mikroklima = lokale Klein-Variation."
     },
     {
@@ -320,7 +320,7 @@ registerChapterContent("klima_und_standort", {
 - **Hierarchie**: Makro > Meso > Mikro
 - **Praktisch**: Makro entscheidet Grundlage, Meso verfeinert, Mikro gibt Details
 - **Kommunikation**: Verschiedene Ebenen für verschiedene Diskussionen nötig
-- **Klimawandel-Effekt**: Mehr auf Makro-Ebene sichtbar, aber auch auf Meso```,
+- **Klimawandel-Effekt**: Mehr auf Makro-Ebene sichtbar, aber auch auf Meso`,
       takeaway: "Merksatz: Klimata-Hierarchie = Makro > Meso > Mikro."
     },
     {
@@ -334,7 +334,7 @@ registerChapterContent("klima_und_standort", {
 - **Prävention**: Windmaschinen, Spritzbewässerung, Heizsysteme
 - **Regionen-Risiko**: Kontinentale und nördliche Lagen risikoreicher
 - **Jahrgangs-Effekt**: Warme Frühjahre können zu frühem Austrieb führen = Frost-Risiko
-- **Versicherung**: Wichtig in Frost-Gebieten```,
+- **Versicherung**: Wichtig in Frost-Gebieten`,
       takeaway: "Merksatz: Frühjahrs-Frost = katastrophal für Ertrag."
     },
     {
@@ -349,7 +349,7 @@ registerChapterContent("klima_und_standort", {
 - **Wasserstress + Hitze**: Rebe unter Doppel-Stress – können nicht genug trinken
 - **Zukunft**: Klimawandel verstärkt Hitze-Problem in vielen Regionen
 - **Adaptive Maßnahmen**: Höhenlage nutzen, Schattierung, Bewässerung
-- **Regionen betroffen**: Australien, südliche USA, südliche Spanien, Italien in extremen Jahren```,
+- **Regionen betroffen**: Australien, südliche USA, südliche Spanien, Italien in extremen Jahren`,
       takeaway: "Merksatz: Überhitze = Stress & Überreife."
     },
     {
@@ -364,7 +364,7 @@ registerChapterContent("klima_und_standort", {
 - **Alte Gebiete bedroht**: Traditionelle Gebiete können zu heiß werden
 - **Extreme Jahre**: Häufigere Extrem-Jahre (sehr heiß oder sehr kalt)
 - **Adaptation**: Züchtung, neue Sorten, Höhen-Migration, Bewässerung
-- **Herausforderung**: Für viele etablierte Regionen existenziell```,
+- **Herausforderung**: Für viele etablierte Regionen existenziell`,
       takeaway: "Merksatz: Klimawandel = größte langfristige Herausforderung."
     }
   ],

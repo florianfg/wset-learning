@@ -214,7 +214,7 @@ registerChapterContent("verkostungssystematik", {
 - **Wichtig: Frucht ≠ Süße**: Ein Wein kann fruchtig sein (Aroma-Profil) und trocken (kein Zucker)
 - **Zucker balanciert Säure**: Hohe Säure + Zucker = harmonisch (z. B. Riesling)
 - **Restzucker bestimmt Körper mit**: Mehr Zucker = schwererer Körper
-- **Gärstopp oder Filtrierung**: Süßweine = absichtlich gestoppte Gärung oder filterierte Hefe```,
+- **Gärstopp oder Filtrierung**: Süßweine = absichtlich gestoppte Gärung oder filterierte Hefe`,
       takeaway: "Merksatz: Süße = messbarer Restzucker, nicht Aroma."
     },
     {
@@ -257,7 +257,7 @@ registerChapterContent("verkostungssystematik", {
 - **Zu hoher Alkohol = Unbalance**: Brennendes Gefühl, überlagert Frucht
 - **Alkoholische Gärung**: Zucker → Alkohol, daher determiniert Zuckergehalt den Alkohol
 - **Warm-Klima-Signal**: Hoher Alkohol deutet auf warmes Klima oder späte Lese
-- **Alkohol + Zeit**: Verschärft sich mit Alter nicht (anders als Säure)```,
+- **Alkohol + Zeit**: Verschärft sich mit Alter nicht (anders als Säure)`,
       takeaway: "Merksatz: Alkohol = Wärmegefühl und Körper-Determinant."
     },
     {
@@ -271,7 +271,7 @@ registerChapterContent("verkostungssystematik", {
 - **Körper-Wahrnehmung**: Wie fühlt sich der Wein im Mund an – wie Wasser vs. Milch vs. Sahne
 - **Körper-Balance**: Schwerer Körper muss mit Säure oder Tannin balanciert werden
 - **Körper sagt über Stil aus**: Leicht = frisch, voll = strukturiert
-- **Körper kann nicht isoliert beurteilt werden**: Muss zu Säure/Tannin passen```,
+- **Körper kann nicht isoliert beurteilt werden**: Muss zu Säure/Tannin passen`,
       takeaway: "Merksatz: Körper = Gewicht und Fülle im Mund."
     },
     {
@@ -284,7 +284,7 @@ registerChapterContent("verkostungssystematik", {
 - **Nase-Gaumen-Konsistenz**: Die Aromen sollten ähnlich intensiv wie in der Nase sein
 - **Diskrepanz = Warnsignal**: Starke Nase, schwacher Gaumen deutet auf Fehler
 - **Höhere Intensität = höhere Qualität**, meist kombiniert mit langer Länge
-- **Aromenkomplexität**: Mehrere Aromaschichten sollten sichtbar werden```,
+- **Aromenkomplexität**: Mehrere Aromaschichten sollten sichtbar werden`,
       takeaway: "Merksatz: Gaumen-Intensität = Konsistenz mit Nase prüfen."
     },
     {
@@ -298,7 +298,7 @@ registerChapterContent("verkostungssystematik", {
 - **Tannine + Säure erzeugen längeren Abgang**: Strukturelle Elemente wirken nach
 - **Länge ist often Qualitätsindikator**: Nicht sicher, aber korreliert mit Qualität
 - **"Caudalie" = Sekunden des Abgangs**: Traditionelle Messung (1 Caudalie = ca. 1 Sekunde)
-- **Abgang sagt über Lagerpotential aus**: Lange Länge = Lagerfähigkeit```,
+- **Abgang sagt über Lagerpotential aus**: Lange Länge = Lagerfähigkeit`,
       takeaway: "Merksatz: Länge = Qualitäts- und Alts-Indikator."
     },
     {
@@ -312,7 +312,7 @@ registerChapterContent("verkostungssystematik", {
 - **Poor (schlecht)**: Klare Fehler oder Ungleichgewicht, unangenehm
 - **Diese Bewertung basiert auf Struktur-Analyse** nicht auf persönlichen Geschmack
 - **Balance ist der wichtigste Faktor**: Auch einfache Weine können ausgewogen sein
-- **Prüfungsfalle**: "Ich mag diesen Wein" ≠ "Dieser Wein ist von hoher Qualität"```,
+- **Prüfungsfalle**: "Ich mag diesen Wein" ≠ "Dieser Wein ist von hoher Qualität"`,
       takeaway: "Merksatz: WSET-Qualität = objektive Struktur-Analyse, nicht Geschmack."
     },
     {
@@ -325,7 +325,7 @@ registerChapterContent("verkostungssystematik", {
 - **Balance erfordert Proporetionalität**: Z. B. hoher Alkohol braucht höhere Säure oder Tannin zur Balance
 - **Unausgewogene Weine**: Ein dominantes Element überlagert andere
 - **Balance-Prüfung**: Alle Komponenten beim Schmecken evaluieren und auf Harmonie prüfen
-- **High Balance = High Quality meist**: Aber nicht immer – Balance ist Basis, Komplexität krönt es```,
+- **High Balance = High Quality meist**: Aber nicht immer – Balance ist Basis, Komplexität krönt es`,
       takeaway: "Merksatz: Balance = harmonische Komponentenintegration."
     },
     {
@@ -338,7 +338,7 @@ registerChapterContent("verkostungssystematik", {
 - **Länge entsteht durch Phenole**: Tannine und Säure erzeugen nachhaltigen Eindruck
 - **Komplexität durch Ausbau/Reife**: Zeit und Behandlung erzeugen Schichtung
 - **Diese Eigenschaften deuten auf Konzentration hin**: Niedriger Ertrag = intensiver & komplexer
-- **Zusammenhang mit Lagerpotential**: Lange Länge oft mit Lagerfähigkeit korreliert```,
+- **Zusammenhang mit Lagerpotential**: Lange Länge oft mit Lagerfähigkeit korreliert`,
       takeaway: "Merksatz: Länge & Komplexität = Qualitäts- und Potentialsignale."
     },
     {
@@ -351,7 +351,7 @@ registerChapterContent("verkostungssystematik", {
 - **Wichtig für**: Blindverkostung, Herkunftserkennung, Qualitätsbewertung
 - **Atypizität kann positiv oder negativ sein**: Unerwartete Ausprägung kann innovativ oder Fehler sein
 - **Typizität ist Qualitätskriterium**: Typen Weine sind verlässlicher als Atypische
-- **Wetter-Effekte**: Jahrgang beeinflusst Typizität (z. B. kühles Jahr = weniger typisch reifen Stil)```,
+- **Wetter-Effekte**: Jahrgang beeinflusst Typizität (z. B. kühles Jahr = weniger typisch reifen Stil)`,
       takeaway: "Merksatz: Typizität = Sorte + Herkunfts-Entsprechung."
     },
     {
@@ -364,7 +364,7 @@ registerChapterContent("verkostungssystematik", {
 - **Prüfungsfalle**: "Mir gefällt dieser Wein" ist keine Antwort – Struktur-Analyse ist gefordert
 - **Objektivität erzwingen**: SAT verhindert subjektive Verzerrung
 - **Blind Tasting**: Verhindert Vorurteilsbildung durch Labels/Preise
-- **Fachmann muss trennen können**: Persönliche Vorliebe ≠ objektive Qualitätsanalyse```,
+- **Fachmann muss trennen können**: Persönliche Vorliebe ≠ objektive Qualitätsanalyse`,
       takeaway: "Merksatz: SAT = objektive Analyse, nicht subjektive Meinung."
     },
     {
@@ -377,7 +377,7 @@ registerChapterContent("verkostungssystematik", {
 - **Nase überschätzen**: Aroma-Profil ist nicht Qualität-Profil
 - **Geschmack voraussetzen**: "Das muss ein Bordeaux sein" ohne strukturelle Hinweise
 - **Lösung: Strikt nach SAT vorgehen**: Sehen → Riechen → Schmecken → erst dann interpretieren
-- **Konsistenz trainieren**: Dieselben Weine mehrfach verkosten, um Konsistenz zu prüfen```,
+- **Konsistenz trainieren**: Dieselben Weine mehrfach verkosten, um Konsistenz zu prüfen`,
       takeaway: "Merksatz: Prüfungsfalle = Subjektivität – SAT ist das Gegenmittel."
     }
   ],
