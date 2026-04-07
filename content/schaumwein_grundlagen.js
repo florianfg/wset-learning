@@ -2,369 +2,370 @@ registerChapterContent("schaumwein_grundlagen", {
   cards: [
     {
       title: "Was ist Schaumwein?",
-      content: `Schaumwein ist Wein, der durch eine zweite Gärung unter geschlossenen Bedingungen CO₂ enthält, das beim Öffnen entweicht.
+      content: `Schaumwein ist Wein mit gelöstem CO₂, das durch zweite Gärung in geschlossenem System entsteht und beim Öffnen entweicht.
 
-- **Kohlendioxid**: Gelöstes CO₂ (0,6–0,8 % Gewicht) im fertigen Wein
+- **Kohlendioxid**: 0,6–0,8 % Gewicht gelöst im fertigen Wein
 - **Druck**: Typischerweise 5–6 bar (zum Vergleich: Autoreifen ca. 2–3 bar)
-- **Entstehung**: Zweite Gärung von Zucker durch Hefen → Alkohol + CO₂
-- **Ergebnis**: Perlage (Bläschen), lebendiges Mundgefühl, komplexe Aromatik bei hochwertigen Beispielen
+- **Entstehung**: Zweite Gärung von Zucker → Alkohol + CO₂ (in geschlossenem Behälter gebunden)
+- **Sensorisches Ergebnis**: Perlage (Bläschen), lebendiges Mundgefühl, komplexe Aromatik bei hochwertigen Beispielen
 - **Globale Beispiele**: Champagne (Frankreich), Prosecco (Italien), Cava (Spanien)`,
-      takeaway: "Merksatz: Schaumwein entsteht durch eine zweite Gärung, die CO₂ im Wein bindet."
+      takeaway: "Zweite Gärung in geschlossenem System bindet CO₂ – dies ist das definierende Merkmal."
     },
     {
       title: "Entstehung von Kohlendioxid (CO₂)",
-      content: `CO₂ entsteht immer bei alkoholischer Gärung; entscheidend ist, ob es im Wein bleibt.
+      content: `CO₂ entsteht immer bei alkoholischer Gärung. Entscheidend: ob es im Wein bleibt oder entweicht.
 
-- **Gärung-Chemie**: Zucker → Ethanol + CO₂ + Wärme
-- **Offenes System**: In offenen Gärbehältern entweicht CO₂ in die Atmosphäre
-- **Geschlossenes System**: In verschlossenen Behältern (Flaschen, Drucktanks) bleibt CO₂ gelöst
-- **Partielle Gärung**: Gärung wird unterbrochen oder der Zucker ist so konzentriert, dass Hefe nicht alles fermentieren kann
-- **Basis für Schaumwein**: Das Einschließen von CO₂ ist zentral und bewusst gesteuert`,
-      takeaway: "Merksatz: CO₂ entsteht immer bei Gärung – entscheidend ist, ob es im Wein bleibt."
+- **Gärung-Chemie**: Zucker → Ethanol + CO₂ + Wärme (universell bei Gärung)
+- **Offenes System**: In offenen Gärbehältern entweicht CO₂ sofort in die Atmosphäre
+- **Geschlossenes System**: In verschlossenen Behältern (Flaschen, Drucktanks) bleibt CO₂ gelöst → Druck entsteht
+- **Partielle Gärung**: Gärung wird unterbrochen oder Zucker zu konzentriert → Hefe kann nicht alles fermentieren
+- **Basis für Schaumwein**: Das bewusste Einschließen von CO₂ ist zentral und technisch gesteuert`,
+      takeaway: "CO₂ entsteht immer – entscheidend ist das geschlossene System, das es einschließt."
     },
     {
       title: "Druck im Schaumwein",
-      content: `Der Druck im Schaumwein ist messbar und bestimmt sensorische Qualität der Perlage.
+      content: `Der Druck im Schaumwein ist physikalischer Parameter und bestimmt sensorische Perlage-Qualität.
 
-- **Typischer Druck**: 5–6 bar bei Schaumweinen "Champagne-Stil"
-- **Druckvergleiche**: Autoreifen ca. 2–3 bar; Luftdruck auf Meereshöhe = 1 bar
-- **Sicherheit**: Flaschen müssen robust sein, um Druck zu halten (grünes oder braunes Glas, dicke Bodenwölbung)
-- **Perlage-Qualität**: Höherer Druck erzeugt feinere, anhaltendere Bläschen
-- **Pet Nat/Ancestral**: Oft deutlich weniger Druck (1–3 bar), weniger feste Perlage`,
-      takeaway: "Merksatz: Je höher der Druck, desto feiner und lebendiger wirkt die Perlage."
+- **Typischer Druck**: 5–6 bar bei Schaumweinen im Champagne-Stil
+- **Druckvergleiche**: Autoreifen ca. 2–3 bar; Luftdruck auf Meereshöhe = 1 bar (Schaumwein ca. 6x höher!)
+- **Sicherheit**: Flaschen müssen robust sein (grünes/braunes Glas, dicke Bodenwölbung) um Druck zu halten
+- **Perlage-Kausalität**: Höherer Druck erzeugt feinere, anhaltendere Bläschen (mehr CO₂ gelöst)
+- **Pet Nat/Ancestral**: Oft deutlich weniger Druck (1–3 bar) → weniger feste, größere Perlage`,
+      takeaway: "Höherer Druck → feinere Perlage; Flaschendesign muss Druck halten können."
     },
     {
       title: "Perlage (Bubbles)",
-      content: `Die sichtbaren Bläschen sind nicht nur visuell, sondern auch Qualitätsmerkmal.
+      content: `Die Bläschen sind visuelles und Qualitätsmerkmal zugleich.
 
 - **Definition**: CO₂-Bläschen, die aufsteigen, wenn Wein ins Glas gegossen wird
-- **Qualitätszeichen**: Fein (sehr kleine, anhaltende Bläschen) = hochwertig; Grob = oft einfacher Wein
-- **Einflussfaktoren**: Herstellungsmethode, Reifung (besonders Autolyse bei traditionellem Schaumwein), Lagerung
+- **Qualitätszeichen**: Fein (sehr kleine, anhaltende) = hochwertig; Grob (große, schnell vergangen) = einfacher Wein
+- **Ursachen-Kette**: Herstellungsmethode + Reifungsdauer (Autolyse) + Lagerung → Perlage-Charakter
 - **Sensorisch**: Trägt zu Mundgefühl, Aromaverabreitung und Trinkfreude bei
-- **Glaskunde**: Glasoberfläche (Kratzer, Staub) bestimmt auch Perlagequality im Glas`,
-      takeaway: "Merksatz: Feine, anhaltende Perlage ist ein Zeichen für Qualität."
+- **Praktischer Hinweis**: Glasoberfläche (Kratzer, Staub) beeinflusst auch im Glas sichtbare Perlage`,
+      takeaway: "Feine, anhaltende Perlage signalisiert hochwertige Herstellung und lange Reifung."
     },
     {
       title: "Stilrichtungen von Schaumwein",
-      content: `Schaumweine können in verschiedenen Farben und Jahrgangskategorien hergestellt werden.
+      content: `Schaumweine variieren in Farbe und Jahrgangsherkunft – beide beeinflussen Geschmacksprofil.
 
-- **Farbe – Weiß (White)**: Überwiegend aus Chardonnay oder ähnlich hellen Sorten
+- **Farbe – Weiß (White)**: Aus weißen Trauben oder roten Trauben ohne Schalenkontakt (Blanc de Noirs)
 - **Farbe – Rosé**: Aus roten Trauben mit kurzer Maischekontaktzeit oder Rot-Weiß-Blending
-- **Jahrgang – Vintage**: Aus Trauben nur eines Jahrgangs, meist nur in guten Jahren
-- **Jahrgang – Non-Vintage (NV)**: Mischung mehrerer Jahrgänge für Konsistenz
-- **Kombination**: All diese Kategorien können kombiniert werden`,
-      takeaway: "Merksatz: Schaumwein kann in Stil und Farbe stark variieren."
+- **Jahrgang – Vintage**: Aus Trauben nur eines Jahrgangs (meist nur in sehr guten Jahren)
+- **Jahrgang – Non-Vintage (NV)**: Mischung mehrerer Jahrgänge für Konsistenz (Hausstil)
+- **Kombination**: Alle Kategorien können kombiniert werden (z.B. Rosé-NV)`,
+      takeaway: "Farbe und Jahrgang sind unabhängige Kategorien; beide prägen Geschmack."
     },
     {
       title: "Süßegrade bei Schaumwein",
-      content: `Die Dosage-Klassifizierung ist zentral und oft eine Prüfungsfalle.
+      content: `Die Dosage-Klassifizierung ist zentral und eine häufige WSET-Prüfungsfalle.
 
 - **Brut Nature (0–3 g/L)**: Sehr trocken, minimal dosiert
 - **Extra Brut (0–6 g/L)**: Extra trocken
 - **Brut (<12 g/L)**: Trocken, am weitesten verbreitet
-- **Extra Dry (12–17 g/L)**: Leicht süß! (FALLE – nicht trocken!)
+- **Extra Dry (12–17 g/L)**: LEICHT SÜSS! (häufige Falle – nicht trocken!)
 - **Sec/Dry (17–32 g/L)**: Mittlere Süße
 - **Demi-Sec (32–50 g/L)**: Deutlich süß
-- **Doux (>50 g/L)**: Sehr süß
+- **Doux (>50 g/L)**: Sehr süß (Dessert-Kontext)
 
-Memory-Trick: Brut = trocken, Extra Dry = NICHT trocken!`,
-      takeaway: "Merksatz: Extra Dry ist süßer als Brut – typische Prüfungsfalle!"
+Memory-Trick: "Brut = trocken; Extra Dry = NICHT trocken!"`,
+      takeaway: "Extra Dry ist süßer als Brut – diese Verwechslung ist typische Prüfungsfalle."
     },
     {
       title: "Brut vs Extra Dry",
-      content: `Dieser Vergleich ist zentral für WSET Prüfungen.
+      content: `Dieser Vergleich ist zentral für WSET-Prüfungen – viele Kandidaten verwechseln diese.
 
-- **Brut**: <12 g/L Restzucker → wirkt trocken, präzise
-- **Extra Dry**: 12–17 g/L Restzucker → leicht süßlich wahrnehmbar
-- **Sensorisch**: Extra Dry ist deutlich süßer
-- **Verwirrendes Nomen**: Der Name "Extra Dry" ist kontraintuitive (könnte man meinen es ist trockner)
-- **Häufiger Fehler**: Kandidaten verwechseln diese Kategorien`,
-      takeaway: "Merksatz: Extra Dry ist süßer als Brut – nicht umgekehrt."
+- **Brut**: <12 g/L Restzucker → wirkt trocken, präzise, sauber
+- **Extra Dry**: 12–17 g/L Restzucker → deutlich wahrnehmbar leicht süßlich
+- **Sensorisch**: Extra Dry ist signifikant süßer (bis zu 50 % mehr Zucker!)
+- **Verwirrende Nomenklatur**: Der Name "Extra Dry" klingt trockener, ist aber das Gegenteil
+- **Häufiger Fehler**: Kandidaten denken, Extra Dry = noch trockener als Brut`,
+      takeaway: "Extra Dry ist süßer als Brut – nicht trockener (häufigste Verwechslung)."
     },
     {
       title: "Non-Vintage (NV) Schaumwein",
-      content: `Non-Vintage ist eine strategische Entscheidung für Konsistenz und Hausstil.
+      content: `Non-Vintage ist strategische Entscheidung für Hausstil-Konsistenz, nicht für niedrigere Qualität.
 
 - **Definition**: Mischung mehrerer Jahrgänge (oft 5–10 Jahre Variation)
-- **Ziel**: Gleichbleibender Hausstil (house style) unabhängig vom Jahrgang
-- **Häufigkeit**: Standard bei Champagne und vielen großen Häusern
-- **Qualität**: Ist nicht niedrig – große Häuser haben überzeugende NV-Cuvées
-- **Weinbauer-Vorteil**: Flexibilität bei schwierigen Jahrgängen`,
-      takeaway: "Merksatz: NV sorgt für Konsistenz – nicht für Jahrgangscharakter."
+- **Ziel**: Gleichbleibender Hausstil unabhängig vom Jahrgang (Cuvée-Konstante)
+- **Häufigkeit**: Standard bei Champagne und großen Häusern
+- **Qualität**: NICHT niedrig – große Häuser haben überzeugende NV-Cuvées (Prestige-Niveau)
+- **Praktischer Vorteil**: Flexibilität bei schwierigen Jahrgängen (Ertrag ausgleichen)`,
+      takeaway: "NV sorgt für Konsistenz – nicht für Qualitätsverlust."
     },
     {
       title: "Vintage Schaumwein",
-      content: `Vintage Schaumwein zeigt Charakter eines einzelnen Jahrgangs.
+      content: `Vintage zeigt Charakter eines einzelnen Jahrgangs – Wetter und Reife sind erkennbar.
 
 - **Definition**: Aus Trauben nur eines Jahrgangs
 - **Häufigkeit**: Meist nur in sehr guten Jahren produziert
 - **Qualität**: Oft höherwertig, da nur beste Jahrgänge verwendet
-- **Jahrgangscharakter**: Wetter, Reife, Säure des Jahrgangs sind erkennbar
-- **Lagerung**: Oft länger gelagert als NV, komplexere Aromen`,
-      takeaway: "Merksatz: Vintage = Ausdruck eines einzelnen Jahrgangs."
+- **Jahrgangscharakter**: Wetter, Reife, Säureprofil des Jahrgangs sind sensorisch erkennbar
+- **Lagerung**: Oft länger gelagert als NV → komplexere, terroirspezifische Aromen`,
+      takeaway: "Vintage = Ausdruck eines einzelnen Jahrgangs; seltener, teurer."
     },
     {
       title: "Grundwein (Base Wine)",
-      content: `Der Grundwein ist die Basis für alle Schaumweinproduktion – sein Profil prägt den finalen Stil.
+      content: `Der Grundwein prägt den finalen Schaumwein-Charakter fundamental – Qualität beginnt hier.
 
-- **Definition**: Stillwein vor zweiter Gärung, oft sehr trocken
-- **Säure**: Natürlicherweise höher als bei Stillweinen (essentiell!)
-- **Alkohol**: Moderat, oft 10–11 %
-- **Neutralität**: Oft neutral im Geschmack, um Hefenaromen nicht zu überlagern
-- **Qualität zentral**: Der beste Schaumwein braucht die beste Basis-Qualität`,
-      takeaway: "Merksatz: Der Grundwein ist die Basis für Qualität im Schaumwein."
+- **Definition**: Stillwein vor zweiter Gärung, oft sehr trocken (0–6 g/L Restzucker)
+- **Säure**: Natürlicherweise höher als bei Stillweinen (essentiell für Balance und Frische)
+- **Alkohol**: Moderat, oft 10–11 % (wird durch zweite Gärung auf 11–12 % erhöht)
+- **Profil**: Oft neutral oder dezent fruchtig (damit Hefenaromen später dominieren können)
+- **Qualität zentral**: Der beste Schaumwein braucht beste Basis-Qualität → Säure, Mineralität`,
+      takeaway: "Grundwein-Qualität bestimmt Schaumwein-Endergebnis; hohe Säure ist Basis."
     },
     {
       title: "Warum hohe Säure wichtig ist",
-      content: `Hohe Säure ist absolut zentral für Schaumwein-Qualität.
+      content: `Hohe Säure ist absolut zentral – sie erfüllt multiple Funktionen im Schaumwein.
 
-- **Funktion 1 – Balance**: Gleicht zugesetzten Zucker (Dosage) aus
-- **Funktion 2 – Frische**: Sorgt für lebendige, präzise Aromatik
+- **Funktion 1 – Balance**: Gleicht zugesetzten Zucker (Dosage) aus → verhindert "klebrig"-Eindruck
+- **Funktion 2 – Frische**: Sorgt für lebendige, präzise Aromatik und Eleganz
 - **Funktion 3 – Stabilität**: Säure ist natürliches Konservierungsmittel
 - **Fehler-Indikator**: Ohne hohe Säure wirkt Schaumwein flach, schwer, "klebrig"
-- **Klimakonsequenz**: Kühle Klimazonen produzieren natürlich höhere Säure`,
-      takeaway: "Merksatz: Ohne hohe Säure wirkt Schaumwein flach und schwer."
+- **Klima-Kausalität**: Kühle Klimazonen produzieren natürlich höhere Säure`,
+      takeaway: "Ohne hohe Säure wirkt Schaumwein flach und schwer – Säure ist zentral."
     },
     {
       title: "Alkoholgehalt im Schaumwein",
-      content: `Alkoholgehalt ist bei Schaumwein moderat und bewusst so gestaltet.
+      content: `Alkoholgehalt ist moderat – deliberates Design, nicht Zufallsprodukt.
 
 - **Typisch**: 11–12,5 % ABV
-- **Warum nicht höher**: Zweite Gärung erhöht Alkohol nur moderat; hoher Alkohol würde Frische schädigen
-- **Hefeblock**: Sehr hoher Alkohol (über 13 %) stoppt Hefen und verhindert zweite Gärung
-- **Sensorik**: Moderater Alkohol ermöglicht zarte, elegante Profile`,
-      takeaway: "Merksatz: Schaumwein hat meist moderaten Alkohol, trotz zwei Gärungen."
+- **Warum nicht höher**: Zweite Gärung erhöht Alkohol nur um ca. 1–1,5 %; hoher Alkohol würde Frische schädigen
+- **Hefe-Limit**: Sehr hoher Alkohol (über 13 %) stoppt Hefen und verhindert zweite Gärung
+- **Sensorisches Ergebnis**: Moderater Alkohol ermöglicht zarte, elegante Profile (nicht "brennend")`,
+      takeaway: "Moderater Alkohol ist bewusste Wahl für Frische und Eleganz."
     },
     {
       title: "Hauptrebsorten weltweit",
-      content: `Bestimmte Rebsorten dominieren die Schaumweinproduktion.
+      content: `Bestimmte Rebsorten dominieren Schaumweinproduktion – nicht zufällig.
 
-- **Champagne-Sorten**: Chardonnay (Eleganz), Pinot Noir (Struktur), Pinot Meunier (Frucht, Oxidationsschutz)
-- **Prosecco**: Glera
-- **Cava**: Macabeo, Xarel-lo, Parellada
-- **Andere Regionen**: Riesling (Alsace), Chenin Blanc (Loire)
-- **Charakteristik**: Hohe Säure und Aroma sind zentral`,
-      takeaway: "Merksatz: Chardonnay und Pinot Noir sind die wichtigsten internationalen Schaumweinrebsorten."
+- **Champagne-Sorten**: Chardonnay (Eleganz, Säure), Pinot Noir (Struktur, Körper), Pinot Meunier (Frucht, schnelle Reife)
+- **Prosecco**: Glera (aromatisch, fruchtig)
+- **Cava**: Macabeo, Xarel-lo, Parellada (traditionelle Blends)
+- **Andere Regionen**: Riesling (Alsace - Crémant), Chenin Blanc (Loire)
+- **Gemeinsames Merkmal**: Hohe Säure und Aroma-Potenzial sind zentral`,
+      takeaway: "Säure und Aroma-Potenzial sind die entscheidenden Sorten-Kriterien."
     },
     {
       title: "Chardonnay im Schaumwein",
-      content: `Chardonnay ist die klassische Wahl für eleganten Schaumwein.
+      content: `Chardonnay ist die klassische Wahl für eleganten Schaumwein – seine Eigenschaften ermöglichen Qualität.
 
-- **Säure**: Natürlicherweise höher
-- **Aromatik**: Zitrus, grüner Apfel, manchmal Nuss bei Ausbau
-- **Struktur**: Gute Grundstruktur für Hochalterung
-- **Eleganz**: Wurde als "Blanc de Blancs" (nur Chardonnay) berühmt
+- **Säure**: Natürlicherweise höher → ideal für Schaumwein-Balance
+- **Aromatik**: Zitrus, grüner Apfel, manchmal Nuss (bei Ausbau)
+- **Struktur**: Gute Grundstruktur für längere Hochalterung
+- **Prestige-Stil**: Als "Blanc de Blancs" (100 % Chardonnay) berühmt
 - **Lagerfähigkeit**: Altert gut und wird komplexer mit Jahren`,
-      takeaway: "Merksatz: Chardonnay bringt Frische und Eleganz."
+      takeaway: "Chardonnay bringt Frische, Eleganz und Lagerpotenzial."
     },
     {
       title: "Pinot Noir im Schaumwein",
-      content: `Pinot Noir gibt Struktur und Tiefe, wird nicht zur Färbung verwendet.
+      content: `Pinot Noir gibt Struktur und Tiefe – wird NICHT wegen Farbe verwendet.
 
-- **Profil**: Struktur und Körper (nicht Farbe)
-- **Frucht**: Rote Fruchtaromen
-- **Komplexität**: Mehr Tiefe als nur Chardonnay
-- **Blend-Rolle**: Oft verwendet in Assemblages für Balance
+- **Profil**: Struktur und Körper (nicht Farbe, trotz roter Traube)
+- **Frucht**: Rote Fruchtaromen (Erdbeere, Kirsche) integrieren sich elegant
+- **Komplexität**: Mehr Tiefe als nur Chardonnay allein
+- **Blend-Rolle**: Oft verwendet in Assemblages für Balance und Mund-Fülle
 - **Qualität**: Hochwertige Pinot Noir für Schaumwein essentiell`,
-      takeaway: "Merksatz: Pinot Noir sorgt für Struktur im Blend."
+      takeaway: "Pinot Noir sorgt für Struktur und Körper im Blend."
     },
     {
       title: "Blanc de Blancs",
-      content: `Ein prestigeträchtiger Schaumwein-Stil nur aus Weißtrauben (vor allem Chardonnay).
+      content: `Ein prestigeträchtiger Stil – nur aus weißen Trauben, typischerweise 100 % Chardonnay.
 
 - **Definition**: 100 % weiße Trauben (fast ausschließlich Chardonnay)
-- **Charakter**: Elegant, frisch, präzise
-- **Aromatik**: Zitrus, grüner Apfel, Brioche (bei Reife)
-- **Preis**: Oft höher als Standard-Champagne
-- **Lagerfähigkeit**: Sehr gut, altert elegant`,
-      takeaway: "Merksatz: Blanc de Blancs = nur weiße Trauben."
+- **Charakter**: Elegant, frisch, präzise, mineralisch
+- **Aromatik**: Zitrus, grüner Apfel, Brioche (bei älteren Jahrgängen)
+- **Preis**: Oft höher als Standard-Champagne (Sorte ist hochwertig)
+- **Lagerfähigkeit**: Sehr gut, altert elegant und wird komplexer`,
+      takeaway: "Blanc de Blancs = nur weiße Trauben; elegant und lagerfähig."
     },
     {
       title: "Blanc de Noirs",
-      content: `Schaumwein aus roten Trauben ohne Schalenkontakt – ungewöhnlich, aber elegant.
+      content: `Schaumwein aus roten Trauben OHNE Schalenkontakt – ungewöhnlich, aber strukturiert elegant.
 
-- **Definition**: Aus roten Trauben (Pinot Noir, Pinot Meunier) ohne Schalenkontakt
-- **Farbe**: Weiß, da keine Schalen-Extraktion
+- **Definition**: Aus roten Trauben (Pinot Noir, Pinot Meunier) aber OHNE Schalenkontakt
+- **Farbe**: Weiß bis hellgold, da keine Anthocyan-Extraktion
 - **Charakter**: Kraftvoller, strukturierter als Blanc de Blancs
-- **Körper**: Größeres Volumen, mehr Extraktion
-- **Seltenheit**: Weniger häufig, aber von prestige Häusern geschätzt`,
-      takeaway: "Merksatz: Blanc de Noirs = weiße Schaumweine aus roten Trauben."
+- **Körper**: Größeres Volumen, mehr Extraktion, komplexere Struktur
+- **Seltenheit**: Weniger häufig, von Prestige-Häusern gezielt produziert`,
+      takeaway: "Blanc de Noirs = weiße Schaumweine aus roten Trauben; kraftvoll."
     },
     {
       title: "Rosé-Schaumwein",
-      content: `Rosé-Schaumwein entsteht durch kurze Maischekontaktzeit oder gezieltes Blending.
+      content: `Rosé-Schaumwein entsteht durch gezielt kurze Maischekontaktzeit oder Blending.
 
-- **Methode 1**: Kurze Maischekontaktzeit (wie stiller Rosé)
-- **Methode 2**: Verschnitt mit etwas Rotwein (in EU teilweise erlaubt)
+- **Methode 1**: Kurze Maischekontaktzeit (wie bei stillem Rosé) – 2–6 Stunden Schalenkontakt
+- **Methode 2**: Verschnitt mit Rotwein (in EU teilweise erlaubt) – gezieltes Farbmanagement
 - **Charakter**: Fruchtig, elegant, leicht
-- **Aromen**: Erdbeere, Himbeere, Kirsche
-- **Trend**: Wachsender Markt, oft höherwertig`,
-      takeaway: "Merksatz: Rosé-Schaumwein bringt Frucht und Farbe ins Spiel."
+- **Aromen**: Erdbeere, Himbeere, Kirsche, subtile Mineralität
+- **Trend**: Wachsender Markt, oft höherwertig positioniert`,
+      takeaway: "Rosé-Schaumwein bringt Frucht und Farbe; zwei Herstellungswege."
     },
     {
       title: "Autolyse (Autolysis)",
-      content: `Autolyse ist der Zerfall abgestorbener Hefezellen und zentral für Schaumwein-Komplexität.
+      content: `Autolyse ist der Zerfall abgestorbener Hefezellen – zentral für Schaumwein-Komplexität und Textur.
 
-- **Definition**: Zellwand-Zersetzung von toten Hefezellen während Reifung
-- **Zeitrahmen**: Entwickelt sich über Monate oder Jahre
+- **Biochemie**: Hefezellwand-Zersetzung während Reifung → Proteine, Mannoproteins, Lipide werden freigesetzt
+- **Zeitrahmen**: Entwickelt sich über Monate oder Jahre exponentiell
 - **Sensorik**: Erzeugt Brot-, Brioche-, Butter-, Nussaromen
-- **Wichtigkeit**: Besonders zentral bei traditionellem Schaumwein (lange Reifung)
+- **Textur-Effekt**: Mannoproteins stabilisieren Perlage-Bläschen → cremigere Mousse
 - **Qualitätszeichen**: Intensive Autolyse = längere Reifung = höhere Qualität`,
-      takeaway: "Merksatz: Autolyse sorgt für komplexe, hefige Aromen."
+      takeaway: "Autolyse = Hefezell-Abbau → komplexe Aromen + feinere Perlage."
     },
     {
       title: "Einfluss der Autolyse",
       content: `Die Dauer und Intensität der Autolyse prägt Schaumwein-Qualität entscheidend.
 
-- **Längere Reifung**: Mehr Autolyse = komplexere Aromen
-- **Textur**: Wird cremiger, voller mit Zeit
-- **Perlage**: Wird feiner mit längerer Reifung (Hefezellen-Proteine beeinflussen Schaumstruktur)
-- **Minimum Standard**: Minimum 18 Monate für "Champagne" (Klassisch), oft 3+ Jahre für Premium
-- **Trend zu Länge**: Viele Premium-Häuser lagern 5–8 Jahre`,
-      takeaway: "Merksatz: Je länger die Autolyse, desto komplexer der Wein."
+- **Länger reift = mehr Autolyse**: 18 Monate → Keks/Brot; 5+ Jahre → Brioche/Nuss; 10+ Jahre → cremig/komplex
+- **Textur-Evolution**: Wird cremiger, voller mit Zeit (cremige Sahnigkeit bei sehr langer Reifung)
+- **Perlage-Verbesserung**: Wird feiner mit längerer Reifung (Hefezell-Proteine beeinflussen Schaumstruktur)
+- **Standard-Minima**: Minimum 18 Monate für Champagne (klassisch), oft 3+ Jahre für Premium
+- **Premium-Trend**: Viele Premium-Häuser lagern 5–8 Jahre oder mehr`,
+      takeaway: "Je länger Autolyse, desto komplexer und cremiger der Wein."
     },
     {
       title: "Dosage",
-      content: `Dosage ist Zuckerzugabe nach dem Degorgieren (Hefesatz-Entfernung).
+      content: `Dosage ist Zuckerzugabe nach Degorgieren – präzises Werkzeug zur Stilgebung.
 
-- **Definition**: Zugabe einer Wein-Zuckermischung (liqueur d'expédition)
-- **Timing**: Nach Hefesatz wird entfernt, aber Flasche noch geöffnet
-- **Funktion**: Bestimmt Süßegrad des finalen Weins
-- **Komponenten**: Meist Wein + Zucker, manchmal mit Konjak
-- **Kontrolle**: Präzise Dosage bestimmt Qualitätsstandards und Konsistenz`,
-      takeaway: "Merksatz: Dosage entscheidet über die Süße des Schaumweins."
+- **Definition**: Zugabe einer Wein-Zuckermischung (liqueur d'expédition) nach Hefesatz-Entfernung
+- **Timing**: Nach Degorgieren wird Flasche kurz geöffnet, Dosage zugegeben, sofort erneut verschlossen
+- **Funktion**: Bestimmt den Restzucker-Gehalt und damit den Süßegrad des finalen Weins
+- **Komponenten**: Meist Wein + Zucker, manchmal mit Konjak (verdickend)
+- **Kontrolle**: Präzise Dosage bestimmt Qualitätsstandards und Marken-Konsistenz`,
+      takeaway: "Dosage entscheidet über Süße des Schaumweins – wird nach Degorgieren zugegeben."
     },
     {
       title: "Warum Dosage wichtig ist",
-      content: `Dosage ist nicht nur Süßung, sondern Balancierwerkzeug.
+      content: `Dosage ist nicht nur Süßung – es ist ein Balancierwerkzeug und Qualitätsmerkmal.
 
-- **Säure-Ausgleich**: Dosage gleicht hohe Säure aus (wurde für hohe Säure des Grundweins ausgewählt)
-- **Stil-Definition**: Dosage bestimmt Kategorie (Brut vs. Extra Dry etc.)
-- **Komplexität**: Auch der Zucker kann Komplexität bringen
-- **Markenhaustiering**: Jedes Haus hat charakteristische Dosage-Philosophie
-- **Transparenz**: Modernes Labeling zeigt oft Dosage an`,
-      takeaway: "Merksatz: Dosage balanciert den Wein sensorisch aus."
+- **Säure-Ausgleich**: Dosage gleicht hohe Säure des Grundweins aus (wurden zusammen komponiert)
+- **Stil-Definition**: Dosage-Niveau bestimmt offizielle Kategorie (Brut vs. Extra Dry etc.)
+- **Komplexität**: Der Zucker selbst trägt zu Mundgefühl und Komplexität bei
+- **Hausstil**: Jedes Haus hat charakteristische Dosage-Philosophie (Markenidentität)
+- **Transparenz**: Modernes Labeling zeigt oft Dosage-Gehalt an (Kundenloyalität)`,
+      takeaway: "Dosage balanciert den Wein sensorisch aus – nicht nur süßen."
     },
     {
       title: "Flaschengrößen",
-      content: `Flaschengrößen beeinflussen Reifung und haben traditionelle Bedeutung.
+      content: `Flaschengrößen beeinflussen Reifungsgeschwindigkeit und haben traditionelle Bedeutung.
 
-- **Standard**: 0,75 L (normale Trinkflasche)
-- **Magnum**: 1,5 L (entspricht zwei Standard-Flaschen)
-- **Größere Formate**: Jeroboam (3 L), Mathusalem (6 L) etc.
-- **Reifungs-Effekt**: Größere Flaschen → langsamere Reifung, oft bessere Qualität
+- **Standard**: 0,75 L (normale Trinkflasche, Referenzgröße)
+- **Magnum**: 1,5 L (entspricht zwei Standard-Flaschen; slowere Oxidation)
+- **Größere Formate**: Jeroboam (3 L), Mathusalem (6 L), Balthazar (12 L)
+- **Reifungs-Effekt**: Größere Flaschen → langsamere Reifung → oft bessere Integrationqualität
 - **Praktische Bedeutung**: Magnum wird oft für spezielle Vintage-Qualitäten verwendet`,
-      takeaway: "Merksatz: Größere Flaschen = bessere Reifungsbedingungen."
+      takeaway: "Größere Flaschen = bessere Reifungsbedingungen."
     },
     {
       title: "Schaumwein vs Stillwein",
-      content: `Die zentralen Unterschiede zwischen Schaumwein und Stillwein sind mehrfach.
+      content: `Die zentralen Unterschiede sind strukturell und sensorisch fundamental.
 
-- **CO₂**: Schaumwein hat gelöstes CO₂; Stillwein hat minimal
-- **Säure**: Schaumwein braucht höhere Säure (für Balance, Frische)
-- **Alkohol**: Schaumwein oft etwas niedriger
-- **Herstellung**: Schaumwein erfordert zweite Gärung
-- **Komplexität**: Guter Schaumwein hat Multi-Layer-Komplexität durch Reifung`,
-      takeaway: "Merksatz: CO₂ ist der zentrale Unterschied zu Stillwein."
+- **CO₂**: Schaumwein hat 5–8 bar Druck gelöstes CO₂; Stillwein hat minimal (ca. 0,5 bar natürlich)
+- **Säure**: Schaumwein braucht höhere Säure (für Balance mit Dosage und Frische)
+- **Alkohol**: Schaumwein oft etwas niedriger (11–12 % vs. 12–15 % bei Stillwein)
+- **Herstellung**: Schaumwein erfordert zweite Gärung in geschlossenem System
+- **Komplexität**: Guter Schaumwein hat Multi-Layer durch Reifung; Stillwein oft direkter`,
+      takeaway: "CO₂-Einschluss durch zweite Gärung ist zentral unterschiedlich."
     },
     {
       title: "Einfluss von Klima auf Schaumwein",
-      content: `Klimazone ist zentral für Schaumwein-Produktion.
+      content: `Klimazone ist entscheidend – Säure und Reife müssen in Balance sein.
 
-- **Kühles Klima bevorzugt**: Für hohe Säure und moderate Zucker-Reife
-- **Säure-Erhalt**: Nicht zu heiß, damit Säure nicht zu sehr abgebaut wird
-- **Zucker-Punkt**: Gerade richtig reif, nicht überreif
+- **Kühles Klima bevorzugt**: Für hohe Säure und moderate Zucker-Reife (nicht überreif)
+- **Säure-Erhalt**: Nicht zu heiß, damit Säure nicht zu sehr abgebaut wird (Frische bleibt)
+- **Zucker-Punkt**: Gerade richtig reif, nicht überreif (sonst flach und schwer)
 - **Traditionelle Regionen**: Champagne, Cava, Prosecco liegen in kühlen bis gemäßigten Zonen
-- **Neuentwicklung**: Auch kühlere Regionen (Australien, Neuseeland) zeigen Potenzial`,
-      takeaway: "Merksatz: Schaumwein braucht kühle Klimazonen für Frische."
+- **Neuentwicklung**: Kühlere Regionen (Australien, Neuseeland) zeigen neues Potenzial`,
+      takeaway: "Schaumwein braucht kühle Klimazonen – Säure und Balance sind zentral."
     },
     {
       title: "Typische Aromen – Jung",
       content: `Junge Schaumweine haben primäre, frische Aromenprofile.
 
-- **Klassische Note**: Zitrus (Zitrone, Limette)
-- **Obstaromen**: Grüner Apfel, Birne
-- **Blütenaromen**: Subtile Blütenkelch-Noten
-- **Mineralität**: Oft steinig, salty, direkt
-- **Fehlen von**: Keine Brioche, Nuss, Karamell – die kommen mit Alter`,
-      takeaway: "Merksatz: Junge Schaumweine sind frisch und fruchtbetont."
+- **Klassische Note**: Zitrus (Zitrone, Limette) – dominant und lebhaft
+- **Obstaromen**: Grüner Apfel, Birne, Quitte
+- **Blütenaromen**: Subtile Blütekelch-Noten, Steinfrucht
+- **Mineralität**: Oft stenig, salzbar, direkt (von Säure-Profil)
+- **Fehlen von**: Keine Brioche, Nuss, Karamell – diese kommen mit Alter (Autolyse)`,
+      takeaway: "Junge Schaumweine sind frisch und fruchtbetont – keine hefigen Noten."
     },
     {
       title: "Typische Aromen – Gereift",
-      content: `Gereifte Schaumweine entwickeln komplexe sekundäre Aromen.
+      content: `Gereifte Schaumweine entwickeln komplexe sekundäre und tertäre Aromen.
 
-- **Autolysis-Aromen**: Brioche, Toast, Brot
-- **Nussaromen**: Haselnuss, Mandel
-- **Weitere Reife**: Karamell, Trockenfrüchte, Honig
-- **Komplexität**: Layer von Aromen, weniger primär-fruchtig
-- **Qualitätssignal**: Viele dieser Aromen = gute Reife`,
-      takeaway: "Merksatz: Reifung bringt sekundäre Aromen hervor."
+- **Autolysis-Aromen**: Brioche, Toast, Brot, Keks (von Hefezell-Abbau)
+- **Nussaromen**: Haselnuss, Mandel, Walnuss (nach 5+ Jahren)
+- **Weitere Reife**: Karamell, Trockenfrüchte, Honig, Wachs (längere Oxidation)
+- **Komplexität**: Viele Aromen-Layer, weniger primär-fruchtig und lebhaft
+- **Qualitätssignal**: Viele differenzierte Autolyse-Aromen = sorgfältige, lange Reifung`,
+      takeaway: "Reifung bringt sekundäre/tertiäre Aromen – Brioche, Nuss, Karamell."
     },
     {
       title: "Textur im Schaumwein",
-      content: `Das Mundgefühl ist bei Schaumwein zentral und wird durch mehrere Faktoren bestimmt.
+      content: `Das Mundgefühl ist Qualitätsmerkmal und wird durch mehrere Faktoren bestimmt.
 
-- **CO₂-Einfluss**: Perlage erzeugt lebendiges Mundgefühl, leichte Stiche
-- **Autolyse-Einfluss**: Mit Zeit wird Textur cremiger, voller
-- **Spektrum**: Von leicht und lebhaft bis cremig und voll
-- **Qualitäts-Zeichen**: Cremige Textur = längere Reifung = höhere Qualität`,
-      takeaway: "Merksatz: Textur ist ein wichtiges Qualitätsmerkmal."
+- **CO₂-Einfluss**: Perlage erzeugt lebendiges Mundgefühl, leichte Stiche, Tingeln
+- **Autolyse-Einfluss**: Mit Zeit wird Textur cremiger, voller (Mannoproteins, Glycerol)
+- **Spektrum**: Von leicht und lebhaft (jung) bis cremig und voll (gereift)
+- **Qualitäts-Zeichen**: Cremige, persistente Textur = längere Reifung = höhere Qualität`,
+      takeaway: "Textur ist wichtiges Qualitätsmerkmal; cremig = gereift."
     },
     {
       title: "Qualitätsfaktoren",
-      content: `Mehrere Faktoren bestimmen Schaumwein-Qualität, nicht nur die Herstellungsmethode.
+      content: `Mehrere Faktoren bestimmen Schaumwein-Qualität – Methode ist nur einer davon.
 
-- **Traubenqualität**: Die Basis muss hochwertig sein
-- **Methode**: Traditionelle Methode erzeugt meist höhere Qualität als Tank-Verfahren
-- **Reifung**: Längere Reifung = komplexer (kostspieliger)
-- **Lagerung**: Korrekte Bedingungen während Transport und Lagerung`,
-      takeaway: "Merksatz: Qualität entsteht durch mehrere Faktoren – nicht nur die Methode."
+- **Traubenqualität**: Basis muss hochwertig sein (Säure, Mineralität)
+- **Methode**: Traditionelle Methode erzeugt meist höhere Qualität als Tank oder Karbonisierung
+- **Reifung**: Längere Reifung = komplexer, teurer (Zeit bindet Kapital)
+- **Lagerung**: Korrekte Bedingungen während Transport und Lagerung entscheidend
+- **Aging-Potenzial**: Nicht alle Schaumweine profitieren von Lagerung`,
+      takeaway: "Qualität entsteht durch mehrere Faktoren – nicht nur Methode."
     },
     {
       title: "Preisunterschiede bei Schaumwein",
-      content: `Schaumwein-Preise variieren enorm, determiniert durch mehrere Faktoren.
+      content: `Schaumwein-Preise variieren enorm – mehrere Faktoren spielen Rolle.
 
-- **Methode**: Traditionelle >> Tank >> Karbonisierung
-- **Reifedauer**: Längere Reifung = höherer Preis
-- **Region**: Champagne > andere Regionen (auch qualitätsabhängig)
-- **Hausstil**: Große Häuser mit Prestige können höhere Preise erzielen
-- **Vintage vs. NV**: Vintage oft höher preis`,
-      takeaway: "Merksatz: Aufwendigere Methoden führen meist zu höheren Preisen."
+- **Methode**: Traditionelle >> Tank >> Karbonisierung (Aufwand und Komplexität)
+- **Reifedauer**: Längere Reifung = höherer Preis (Kapital, Lagerfläche, Komplexität)
+- **Region**: Champagne > andere Regionen (auch wegen Prestige und Marke)
+- **Hausstil**: Große Häuser mit etablierter Reputation können höhere Preise erzielen
+- **Vintage vs. NV**: Vintage oft teurer (seltener, nur in guten Jahren)`,
+      takeaway: "Methode, Reifung und Marke treiben Preise – Komplexität hat Wert."
     },
     {
       title: "Lagerfähigkeit",
-      content: `Lagerpotenzial ist bei Schaumwein unterschiedlich je nach Qualität.
+      content: `Lagerpotenzial ist unterschiedlich – nicht alle Schaumweine profitieren von Reifung.
 
-- **Einfache Schaumweine**: 1–2 Jahre trinken für Frische
-- **Hochwertige**: 5–10+ Jahre lagerfähig
-- **Ältere Jahrgänge**: Können über 20+ Jahre reifen, werden komplexer
-- **Bedingung**: Korrekte Lagerung (liegend, kühl, dunkel)
-- **Trendsetzend**: Vintage-Champagner von 10+ Jahren sind hochbegehrt`,
-      takeaway: "Merksatz: Nicht jeder Schaumwein profitiert von Reifung."
+- **Einfache Schaumweine**: 1–2 Jahre trinken für Frische (Primäraromen wichtig)
+- **Hochwertige**: 5–10+ Jahre lagerfähig (Reifung bringt Komplexität)
+- **Ältere Jahrgänge**: Können über 20+ Jahre reifen, werden komplexer und integrierter
+- **Bedingung**: Korrekte Lagerung (liegend, kühl 8–12°C, dunkel, ohne Vibration)
+- **Trendsetzend**: Vintage-Champagner von 10+ Jahren sind hochbegehrt und teuer`,
+      takeaway: "Nicht jeder Schaumwein profitiert von Reifung – einfache besser jung."
     },
     {
       title: "Serviertemperatur",
-      content: `Die richtige Temperatur ist zentral für Schaumwein-Genuss.
+      content: `Die richtige Temperatur ist zentral für Schaumwein-Genuss und Aroma-Entwicklung.
 
-- **Ideal**: 6–10 °C (deutlich kälter als Stillwein)
+- **Ideal**: 6–10 °C (deutlich kälter als Stillwein 12–18°C)
 - **Zu kalt (unter 5 °C)**: Aromen werden unterdrückt, Perlage wirkt weniger lebhaft
-- **Zu warm (über 12 °C)**: CO₂ entweicht schneller, die Perlage wird grob und kurz
-- **Balance**: Kühl genug für Frische, warm genug für Aromendevelopment`,
-      takeaway: "Merksatz: Kühl servieren, aber nicht eiskalt."
+- **Zu warm (über 12 °C)**: CO₂ entweicht schneller, Perlage wird grob und schnell vergangen
+- **Balance**: Kühl genug für Frische und Haltbarkeit, warm genug für Aromendevelopment`,
+      takeaway: "6–10°C ist ideal – kühl servieren, aber nicht eiskalt."
     },
     {
       title: "Glaswahl",
-      content: `Die Glaswahl beeinflusst sowohl die Ästhetik als auch die sensorische Wahrnehmung.
+      content: `Die Glaswahl beeinflusst Ästhetik und sensorische Wahrnehmung.
 
-- **Flöte**: Hoch und schmal, hält CO₂ lange
-- **Coupe**: Klassisches breites Glas (historisch), CO₂ entweicht schneller
-- **Tulpe**: Manchmal verwendet, bietet beste Balance von Perlage und Aromaverabreitung
-- **Modern**: Tulpe wird von Sommeliers bevorzugt für komplexe Schaumweine`,
-      takeaway: "Merksatz: Tulpenförmige Gläser bieten bessere Aromatik als Flöten."
+- **Flöte**: Hoch und schmal, hält CO₂ lange, zeigt Perlage gut
+- **Coupe**: Klassisches breites Glas (historisch), CO₂ entweicht schneller, breitere Aromaverabreitung
+- **Tulpe**: Beste Balance von Perlage-Sichtbarkeit und Aromafokus
+- **Sommelierperspektive**: Tulpe wird bevorzugt für komplexe Schaumweine`,
+      takeaway: "Tulpenförmige Gläser bieten beste Balance von Perlage und Aromen."
     },
     {
       title: "Typische Prüfungsfalle: Süßegrade",
-      content: `Die Dosage-Kategorien sind oft verwechselt.
+      content: `Die Dosage-Kategorien sind extrem verwechslungsanfällig – eine häufigste Falle.
 
 Merken Sie sich diese Reihenfolge (trocken → süß):
 - Brut Nature (0–3 g/L)
@@ -375,30 +376,30 @@ Merken Sie sich diese Reihenfolge (trocken → süß):
 - Demi-Sec (32–50 g/L)
 - Doux (>50 g/L)
 
-Faustregel: "Extra Dry" klingt trocken, ist aber NICHT trocken!`,
-      takeaway: "Merksatz: Extra Dry ist NICHT trocken – sondern süßer als Brut!"
+Faustregel: "Extra Dry" klingt trocken, ist aber SÜSSER als Brut!`,
+      takeaway: "Extra Dry ist NICHT trocken – sondern süßer als Brut!"
     },
     {
       title: "Typische Prüfungsfalle: CO₂-Entstehung",
-      content: `Eine häufige Verwechslung bei Schaumwein-Basis.
+      content: `Eine häufige Verwechslung bei Schaumwein-Grundverständnis.
 
 - **Falsch**: "CO₂ wird zugesetzt" (stimmt nur bei Karbonisierung)
-- **Richtig**: CO₂ entsteht bei alkoholischer Gärung
-- **Entscheidung**: Das System bestimmt, ob CO₂ im Wein bleibt
-- **Wichtig**: Zweite Gärung in geschlossenem Behälter = CO₂ bleibt im Wein
+- **Richtig**: CO₂ entsteht bei alkoholischer Gärung (zweite Gärung)
+- **Entscheidung**: Das System bestimmt, ob CO₂ im Wein bleibt oder entweicht
+- **Wichtig**: Zweite Gärung in geschlossenem Behälter = CO₂ bleibt im Wein eingeschlossen
 
-Merken Sie: Gärung in offener Flasche → CO₂ entweicht; in geschlossener Flasche → CO₂ bleibt`,
-      takeaway: "Merksatz: Entscheidend ist nicht die Gärung, sondern das System (offen vs. geschlossen)."
+Merken: Gärung erzeugt CO₂; geschlossenes System bindet es.`,
+      takeaway: "Entscheidend ist nicht die Gärung, sondern das geschlossene System."
     },
     {
       title: "Typische Prüfungsfalle: Qualität",
-      content: `Eine subtile, aber wichtige Distinktion.
+      content: `Eine subtile, aber wichtige Distinktion bei Qualitätsbeurteilung.
 
 - **Falsch**: "Alle Schaumweine sind hochwertig"
-- **Richtig**: Qualität hängt von Methode und Reifung ab
+- **Richtig**: Qualität hängt von Methode und Reifung ab (nicht vom Namen)
 - **Differenzierung**: Traditionelle Methode mit langer Reifung = höher; Karbonisierung = niedrig
-- **Märchen**: Nicht alle teuren Schaumweine sind großartig; Qualität muss durch Merkmale erklärt werden`,
-      takeaway: "Merksatz: Qualität hängt von Herstellung und Reife ab – nicht nur vom Namen."
+- **Märchen**: Nicht alle teuren Schaumweine sind großartig; Qualität muss durch sensorische Merkmale erklärt werden`,
+      takeaway: "Qualität hängt von Herstellung und Reife ab – nicht nur vom Namen."
     }
   ],
 
@@ -406,90 +407,90 @@ Merken Sie: Gärung in offener Flasche → CO₂ entweicht; in geschlossener Fla
     {
       question: "Wie entsteht CO₂ im Schaumwein?",
       options: [
-        "Durch Destillation",
-        "Durch Gärung in geschlossener Flasche, bei der CO₂ eingeschlossen wird",
-        "Durch Filtration",
-        "Durch Lagerung"
+        "Durch künstliches Einblasen (Karbonisierung)",
+        "Durch Gärung in geschlossenem System, das CO₂ einschließt",
+        "Durch chemische Reaktion mit Säure",
+        "Durch physikalische Verdünnung in der Flasche"
       ],
       correct: 1,
-      explanation: "CO₂ entsteht bei alkoholischer Gärung – entscheidend ist, dass es in geschlossenem System im Wein bleibt."
+      explanation: "CO₂ entsteht durch alkoholische Gärung – entscheidend ist das geschlossene System, das es im Wein einschließt und Druck aufbaut."
     },
     {
       question: "Welche Aussage zu Extra Dry ist korrekt?",
       options: [
-        "Sehr trocken",
-        "Trockener als Brut",
-        "Süßer als Brut (12–17 g/L Restzucker)",
-        "Ohne Zucker"
+        "Extra Dry ist trockener als Brut",
+        "Extra Dry hat gar keinen Zucker",
+        "Extra Dry ist eine andere Bezeichnung für Brut Nature",
+        "Extra Dry hat 12–17 g/L Restzucker und ist süßer als Brut"
       ],
-      correct: 2,
-      explanation: "Extra Dry ist süßer als Brut – eine typische Prüfungsfalle aufgrund des verwirrenden Namens."
+      correct: 3,
+      explanation: "Extra Dry hat 12–17 g/L und ist süßer als Brut (<12 g/L) – eine typische Prüfungsfalle aufgrund des verwirrenden Namens."
     },
     {
       question: "Was beschreibt Autolyse?",
       options: [
-        "Zuckerabbau während Gärung",
-        "Hefezellabbau, der komplexe Aromen freisetzt",
-        "Oxidation des Weins",
-        "Filtration zur Klarheit"
+        "Hefezellabbau, der komplexe Brioche- und Toast-Aromen freisetzt",
+        "Zuckerabbau während Gärung (Fermentation)",
+        "Oxidation des Weins durch Luftkontakt",
+        "Filtration zur Klarifizierung des Weins"
       ],
-      correct: 1,
-      explanation: "Autolyse ist der Abbau abgestorbener Hefezellen und sorgt für komplexe Aromen wie Brioche und Toast."
+      correct: 0,
+      explanation: "Autolyse ist der Abbau abgestorbener Hefezellen und sorgt für komplexe Aromen wie Brioche, Toast, Nuss und cremigere Textur."
     },
     {
       question: "Was ist ein Blanc de Blancs?",
       options: [
-        "Rosé-Schaumwein",
-        "Nur aus roten Trauben hergestellt",
-        "Nur aus weißen Trauben hergestellt (meist Chardonnay)",
-        "Mit Zusatz von Zucker"
+        "Rosé-Schaumwein mit hohem Zuckergehalt",
+        "Schaumwein nur aus roten Trauben ohne Schalenkontakt",
+        "Schaumwein nur aus weißen Trauben, typisch 100 % Chardonnay",
+        "Mit künstlichem Zucker aufgespritzter Schaumwein"
       ],
       correct: 2,
-      explanation: "Blanc de Blancs wird ausschließlich aus weißen Trauben hergestellt, typischerweise Chardonnay."
+      explanation: "Blanc de Blancs wird ausschließlich aus weißen Trauben hergestellt, typischerweise Chardonnay – elegant und lagerfähig."
     },
     {
       question: "Welche Eigenschaft ist typisch für Grundwein?",
       options: [
-        "Hoher Alkohol",
-        "Hohe Säure",
-        "Niedrige Säure",
-        "Süß"
+        "Hohe Säure und relative Trockenheit",
+        "Hoher Alkoholgehalt (über 13 %)",
+        "Niedrige Säure und hoher Zuckergehalt",
+        "Sehr süß (über 50 g/L Restzucker)"
       ],
-      correct: 1,
-      explanation: "Grundwein hat hohe Säure, um Frische im fertigen Schaumwein zu gewährleisten und mit Dosage balanciert zu werden."
+      correct: 0,
+      explanation: "Grundwein hat hohe Säure und ist trocken, um später mit Dosage balanciert zu werden – die Basis für Schaumwein-Qualität."
     },
     {
       question: "Was beeinflusst die Perlage (Mousse)?",
       options: [
-        "Nur die Rebsorte",
-        "Nur die Farbe des Glases",
-        "Herstellung, Reifung und Lagerung",
-        "Nur die Temperatur beim Servieren"
+        "Nur die Traubensorte und Alkoholgehalt",
+        "Nur die Farbe und Form des Glases",
+        "Herstellungsmethode, Reifungsdauer und Lagerungsbedingungen",
+        "Nur die Temperatur beim unmittelbaren Servieren"
       ],
       correct: 2,
-      explanation: "Perlage hängt stark von Herstellungsmethode, Reifungsdauer und Lagerbedingungen ab."
+      explanation: "Perlage hängt stark von Herstellungsmethode, Reifungsdauer (Autolyse) und Lagerbedingungen ab – nicht nur vom Glas."
     },
     {
       question: "Warum ist hohe Säure im Grundwein wichtig?",
       options: [
-        "Für Farbe",
-        "Für Alkohol",
-        "Für Balance mit Dosage und Frische im Schaumwein",
-        "Für Süße"
+        "Für intensive Rotweinaromen",
+        "Für Süße und hohen Alkoholgehalt",
+        "Für rote Farbe und Tannin-Struktur",
+        "Für Balance mit Dosage und Frische im finalen Schaumwein"
       ],
-      correct: 2,
-      explanation: "Hohe Säure balanciert Dosage und sorgt für Frische und Stabilität im Schaumwein."
+      correct: 3,
+      explanation: "Hohe Säure balanciert Dosage aus, sorgt für Frische und ist natürliches Konservierungsmittel."
     },
     {
-      question: "Warum wird Dosage NACH dem Degorgieren zugegeben – warum nicht vorher?",
+      question: "Warum wird Dosage NACH dem Degorgieren zugegeben – nicht vorher oder während Gärung?",
       options: [
         "Weil Dosage den Wein vor Oxidation schützt",
-        "Weil beim Degorgieren Volumen verloren geht und die Dosage das Volumen auffüllt – gleichzeitig wird der Süßegrad des finalen Weins präzise eingestellt",
-        "Weil die Hefe zuerst entfernt werden muss bevor Zucker zugegeben wird, da Hefe sonst weiter vergärt",
+        "Weil die Hefe zuerst entfernt werden muss, da sonst Dosage-Zucker weiter vergären würde",
+        "Weil beim Degorgieren Volumen verloren geht und Dosage präzise Süße eingestellt wird – NACH Hefesatz-Entfernung",
         "Weil Dosage die zweite Gärung startet"
       ],
-      correct: 2,
-      explanation: "Dosage-Timing hat zwei Gründe: 1) Hefe muss zuerst weg (Degorgierung) – sonst würde Dosage-Zucker weiter vergären statt als Restzucker bleiben. 2) Volumenausgleich nach Degorgierung. Die Reihenfolge ist chemisch notwendig."
+      correct: 1,
+      explanation: "Dosage-Timing hat zwei Gründe: 1) Hefe muss zuerst entfernt werden (Degorgieren) – sonst würde Zucker weiter vergären. 2) Volumenausgleich nach Hebersatz-Verlust. Die Reihenfolge ist chemisch notwendig."
     }
   ]
 });

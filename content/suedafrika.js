@@ -156,7 +156,7 @@ registerChapterContent("suedafrika", {
     },
     {
       title: "Breede River Valley & Klein Karoo – Mengen & Einfachheit",
-      content: `Breede River Valley (viel Produktion) & Klein Karoo (halbwüst) sind Südafrikas Volumen-Zonen.
+      content: `Breede River Valley (viel Produktion) & Klein Karoo (halbwüsst) sind Südafrikas Volumen-Zonen.
 
 - **Breede River Valley**:
   - Große Flachflächen, hohe Produktionsmenge
@@ -217,23 +217,23 @@ registerChapterContent("suedafrika", {
     {
       question: "Welcher Faktor kühlt Südafrikas Weinregionen am stärksten?",
       options: [
-        "Die Höhenlagen",
         "Benguela-Strom (kalter Pazifik-ähnlicher Strom) = maritime Kühlung & Nebel",
+        "Die Höhenlagen",
         "Der Druck-Tiefgebiet",
         "Atlantik-Regen"
       ],
-      correct: 1,
+      correct: 0,
       explanation: "Benguela = kalter Strom mit extremem Kühl-Effekt. Südafrikas Qualitäts-Werkzeug."
     },
     {
       question: "Was ist Pinotage?",
       options: [
-        "Südafrikanischer Pinot Noir",
         "Kreuzung aus Pinot Noir & Cinsault (1925), südafrikanisch entwickelt",
+        "Südafrikanischer Pinot Noir",
         "Französische Rebsorte",
         "Synonym für Cabernet"
       ],
-      correct: 1,
+      correct: 0,
       explanation: "Pinotage = südafrikanische Kreuzung mit eigenem Charakter (Rauch, Früchte)."
     },
     {
@@ -250,23 +250,23 @@ registerChapterContent("suedafrika", {
     {
       question: "Warum ist Constantia heute weniger bekannt als historisch?",
       options: [
-        "Weil die Region geschlossen wurde",
         "Weil historischer Fokus auf Süßweine war (18.–19. Jhdt), modern = trockene Weine",
+        "Weil die Region geschlossen wurde",
         "Weil andere Regionen besser sind",
-        "Zufällig"
+        "Zufällig durch Marktwechsel"
       ],
-      correct: 1,
+      correct: 0,
       explanation: "Constantia: historisch edelsüß weltberühmt, modern = trockene Weine + Cabernet."
     },
     {
       question: "Welche Aussage zu südafrikanischer Stilistik ist wahr?",
       options: [
         "Südafrika = nur Neue-Welt",
-        "Südafrika = Alte-Welt-Struktur (Säure, Tannine) + Neue-Welt-Frucht (Balance)",
         "Südafrika = nur europäisch",
-        "Südafrika = überreif & kraftvoll"
+        "Südafrika = überreif & kraftvoll",
+        "Südafrika = Alte-Welt-Struktur (Säure, Tannine) + Neue-Welt-Frucht (Balance)"
       ],
-      correct: 1,
+      correct: 3,
       explanation: "Südafrika = bewusster Mix. Benguela = Säure. Technologie = Frische. Balance-Fokus."
     },
     {
@@ -275,10 +275,54 @@ registerChapterContent("suedafrika", {
         "Weil es schlecht ist",
         "Weil historisch als 'bulk wine' genutzt, aber Premium-Potential erkennt (alte Reben, Komplexität)",
         "Weil andere Sorten besser sind",
-        "Zufällig"
+        "Zufällig durch Tradition"
       ],
       correct: 1,
       explanation: "Chenin-Renaissance: alte Reben (30–50 Jahre) = Konzentration = Premium-Potenzial."
+    },
+    {
+      question: "Wie unterscheidet sich Stellenbosch Cabernet von Constantia?",
+      options: [
+        "Sie sind identisch",
+        "Constantia = teurer",
+        "Stellenbosch wärmer = strukturierter & kraftvoller. Constantia kühler = eleganter & mineralischer",
+        "Stellenbosch = älter"
+      ],
+      correct: 2,
+      explanation: "Klima-Unterschied (Benguela-Effekt variiert) = unterschiedliche Reife-Profile = unterschiedliche Stilrichtungen."
+    },
+    {
+      question: "Warum kombiniert Südafrika Alte-Welt & Neue-Welt Charakteristiken?",
+      options: [
+        "Südafrika = nur Neue-Welt",
+        "Südafrika = nur Alte-Welt",
+        "Zufällig durch geografische Position",
+        "Benguela = Säure bleibt (Alte-Welt). Moderne Technologie = Frucht-Fokus (Neue-Welt)"
+      ],
+      correct: 3,
+      explanation: "Südafrika: maritime Kühlung (wie Frankreich) + modernes Management (wie USA) = eigener Stil."
+    },
+    {
+      question: "Was unterscheidet WO-System (Südafrika) von AOC-System (Frankreich)?",
+      options: [
+        "Sie sind identisch",
+        "WO = Herkunft nur, weniger Regeln. AOC = Rebsorte + Ertrag + Ausbau definiert",
+        "WO = älter",
+        "AOC = weniger streng"
+      ],
+      correct: 1,
+      explanation: "WO = geografische Flexibilität (modern). AOC = strenge Regeln (traditionell)."
+    },
+    {
+      question: "Warum ist Benguela-Strom südafrikas Qualitätsgeheimnis?",
+      options: [
+        "Weil Pazifik nahe ist",
+        "Kaltes Meereswasser = Kühlung + Nebel = Säure bleibt = Balance möglich in warmem Klima",
+        "Weil genetische Vielfalt fördert",
+        "Zufällig durch Bodentyp"
+      ],
+      correct: 1,
+      explanation: "Benguela: externe Moderator für Hitze = natürliches Kühlfaktor = Qualitäts-Werkzeug kostenfrei."
     }
   ]
 });

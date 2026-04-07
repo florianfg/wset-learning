@@ -313,9 +313,9 @@ registerChapterContent("frankreich", {
     {
       question: "Warum konzentriert sich Frankreich auf Herkunft statt Rebsorte?",
       options: [
-        "Weil Rebsorten unwichtig sind",
-        "Weil Klima & Boden der Lage den Weincharakter entscheidend prägen",
         "Weil französische Winzer faul sind",
+        "Weil Klima & Boden der Lage den Weincharakter entscheidend prägen",
+        "Weil Rebsorten unwichtig sind",
         "Aus historischen Gründen ohne praktischen Grund"
       ],
       correct: 1,
@@ -325,22 +325,22 @@ registerChapterContent("frankreich", {
       question: "Warum dominiert Cabernet Sauvignon am linken Bordeaux-Ufer, aber Merlot am rechten?",
       options: [
         "Weil Cabernet Sauvignon am linken Ufer gesetzlich vorgeschrieben ist",
-        "Weil sandige, gut-drainierte Böden am linken Ufer (Médoc) Cabernet bevorzugen, während tonige, feuchte Böden am rechten Ufer (Pomerol/St-Émilion) für Merlot besser geeignet sind",
         "Weil das linke Ufer wärmer ist und Cabernet mehr Wärme benötigt",
-        "Weil Merlot am linken Ufer von Schädlingen befallen wird"
+        "Weil Merlot am linken Ufer von Schädlingen befallen wird",
+        "Weil sandige, gut-drainierte Böden am linken Ufer (Médoc) Cabernet bevorzugen, während tonige, feuchte Böden am rechten Ufer (Pomerol/St-Émilion) für Merlot besser geeignet sind"
       ],
-      correct: 1,
+      correct: 3,
       explanation: "Geologie erklärt Rebsorte: Linkes Ufer (Médoc) = Kies/Sand = gut drainiert, warm = Cabernet Sauvignon reift. Rechtes Ufer (Saint-Émilion/Pomerol) = Lehm/Ton = hält Feuchtigkeit = Merlot bevorzugt."
     },
     {
       question: "Warum bleibt Champagne-Basis-Trauben in hoher Säure?",
       options: [
         "Weil Champagne schlecht schmeckt",
-        "Weil das nördlichste französische Klima = mühsame Reife = Zucker niedrig + Säure bleibt",
+        "Zufällig",
         "Weil Winzer wollen, dass es sauer schmeckt",
-        "Zufällig"
+        "Weil das nördlichste französische Klima = mühsame Reife = Zucker niedrig + Säure bleibt"
       ],
-      correct: 1,
+      correct: 3,
       explanation: "Kühles Klima = lange Reifezeit = Zucker reift, aber Säure bleibt. Dies ist perfekt für Schaumwein-Gärung."
     },
     {
@@ -358,44 +358,44 @@ registerChapterContent("frankreich", {
       question: "Welche Faktoren trennen Nordrhône-Syrah von Südrhône-Blends klimatisch?",
       options: [
         "Nur die Rebsorte unterscheidet sich",
-        "Nord = kühler (→ Säure, Tannin) vs. Süd = warm (→ Alkohol, braucht Blends zur Balance)",
         "Sie sind klimatisch identisch",
+        "Nord = kühler (→ Säure, Tannin) vs. Süd = warm (→ Alkohol, braucht Blends zur Balance)",
         "Der Boden macht den kompletten Unterschied"
       ],
-      correct: 1,
+      correct: 2,
       explanation: "Nordrhône: kühl + Syrah = strukturiert & elegant. Südrhône: warm + Grenache = fruchtbetont + muss mit Syrah/Mourvèdre gemixt werden."
     },
     {
       question: "Warum balanciert Burgund-Pinot Noir besser als andere Gebiete?",
       options: [
-        "Weil Pinot Noir nicht anderswo wächst",
         "Weil kühles Klima = mühsame Reife = Säure bleibt + komplexe Sekundäraromen entstehen",
+        "Weil Pinot Noir nicht anderswo wächst",
         "Weil Burgunder Winzer besser sind",
         "Weil es keine andere Erklärung gibt"
       ],
-      correct: 1,
+      correct: 0,
       explanation: "Nur in Burgund reift Pinot Noir grade eben – anderswo zu schnell (zu fruchtbetont) oder zu langsam (grün)."
     },
     {
       question: "Welche Aussage zu Burgund-Hierarchie ist wahr?",
       options: [
-        "Premier Cru Lagen liegen immer unterhalb von Dorflagen in der Qualitätshierarchie",
         "Lage-Spezifität = Komplexität: Grand Cru = beste Lagen = beste Möglichkeit für Qualität",
-        "Hierarchie ist willkürlich",
-        "Preis bestimmt die Hierarchie"
+        "Premier Cru Lagen liegen immer unterhalb von Dorflagen in der Qualitätshierarchie",
+        "Preis bestimmt die Hierarchie",
+        "Hierarchie ist willkürlich"
       ],
-      correct: 1,
+      correct: 0,
       explanation: "Grand Cru Lagen haben konsistentere Mikroklimate → Trauben reifen optimal → Potential für Komplexität ist höher."
     },
     {
       question: "Was unterscheidet Loire-Chenin Blanc von Loire-Sauvignon Blanc stilistisch?",
       options: [
         "Nichts, es sind Synonyme",
-        "Chenin bleibt säurereich + kann trocken, süß oder Schaumwein sein; Sauvignon = nur trocken & mineralisch",
         "Sauvignon ist älter",
+        "Chenin bleibt säurereich + kann trocken, süß oder Schaumwein sein; Sauvignon = nur trocken & mineralisch",
         "Chenin ist teurer"
       ],
-      correct: 1,
+      correct: 2,
       explanation: "Chenin Blanc: natürlich hohe Säure → vielseitig (trocken bis süß). Sauvignon: Säure + grasig = nur trocken macht Sinn."
     },
     {
@@ -407,17 +407,17 @@ registerChapterContent("frankreich", {
         "Zufälliger Wunsch der Winzer"
       ],
       correct: 1,
-      explanation: "Trockenes Klima + volle Reife = keine Botrytis nötig → Winzer können trocken ausbauén = intensiv statt süß."
+      explanation: "Trockenes Klima + volle Reife = keine Botrytis nötig → Winzer können trocken ausbaun = intensiv statt süß."
     },
     {
       question: "Warum erfordert südlicher Languedoc höhere Alkoholwerte als nördliches Burgund?",
       options: [
-        "Weil südliche Winzer mehr Alkohol hinzufügen",
         "Weil warmes Mittelmeerklima = längere Vegetationsperiode = mehr Zuckeraufbau = natürlich höherer Alkohol",
+        "Weil südliche Winzer mehr Alkohol hinzufügen",
         "Weil südliche Rebsorten alkoholreicher sind",
         "Regelwerk erzwingt es"
       ],
-      correct: 1,
+      correct: 0,
       explanation: "Warme Regionen = höhere Zuckerreife → höherer Alkohol. Kühl Regionen = schwierige Reife → niedrigerer Alkohol."
     }
   ]

@@ -235,45 +235,45 @@ registerChapterContent("suedamerika", {
     {
       question: "Warum nutzt Argentinien Höhenlagen als Qualitäts-Werkzeug?",
       options: [
-        "Weil es billiger ist",
         "Weil Höhe = 6–8°C kühler pro 1000 m = Balance möglich in warmem Klima",
+        "Weil es billiger ist",
         "Weil historischer Grund",
-        "Zufällig"
+        "Zufällig durch Anden-Geologie"
       ],
-      correct: 1,
+      correct: 0,
       explanation: "Höhe = Temperaturkontrolle ohne geografische Moderation. Argentiniens Strategie gegen Wärme."
     },
     {
       question: "Welcher Faktor kühlt Chiles Weine am stärksten?",
       options: [
         "Die Anden",
-        "Humboldtstrom (kalter Pazifik-Strom) = maritime Kühlung & Nebel",
         "Südlichkeit",
+        "Humboldtstrom (kalter Pazifik-Strom) = maritime Kühlung & Nebel",
         "Bewässerung"
       ],
-      correct: 1,
+      correct: 2,
       explanation: "Humboldtstrom = Chile's Kühlfaktor. Pazifik-maritime Einfluss zentraler als Höhe."
     },
     {
       question: "Was macht argentinischen Malbec charakteristisch?",
       options: [
-        "Sehr hohe Tannine (wie Nebbiolo)",
         "Weiche bis mittlere Tannine + dunkle reife Frucht + Vanille-Noten",
+        "Sehr hohe Tannine (wie Nebbiolo)",
         "Hohe Säure",
-        "Süße"
+        "Süße-Komponente"
       ],
-      correct: 1,
+      correct: 0,
       explanation: "Malbec = Identität Argentiniens. Weiche Tannine trotz dunkler Farbe = zugänglich."
     },
     {
       question: "Ist Torrontés süß oder trocken?",
       options: [
         "Immer süß",
-        "Immer trocken",
         "Meist trocken (Name ≠ Süße, sondern Aroma)",
+        "Immer trocken",
         "Manchmal süß"
       ],
-      correct: 2,
+      correct: 1,
       explanation: "Torrontés = aromatisch intensiv (Blüten, Mango), aber trocken ausbau Standard."
     },
     {
@@ -282,7 +282,7 @@ registerChapterContent("suedamerika", {
         "Sie sind identisch",
         "Cabernet = maritime Zonen (kühl). Carmenère = wärmere Zonen (Rapel/Colchagua)",
         "Carmenère = teurer",
-        "Kein Unterschied"
+        "Kein praktischer Unterschied"
       ],
       correct: 1,
       explanation: "Carmenère braucht wärmere Zonen = anderer Anbau-Bereich als maritime Cabernet."
@@ -290,13 +290,57 @@ registerChapterContent("suedamerika", {
     {
       question: "Wie ähnelt & unterscheidet sich Argentinien Malbec von Uruguay Tannat?",
       options: [
-        "Sie sind identisch",
         "Malbec = weich, fruchtbetont. Tannat = sehr tanninreich, strukturiert",
+        "Sie sind identisch",
         "Malbec = teurer",
         "Tannat = älter"
       ],
-      correct: 1,
+      correct: 0,
       explanation: "Beide Sorten aus Frankreich, aber Argentinien = fruchtbetont Stil, Uruguay = strukturiert Stil."
+    },
+    {
+      question: "Warum ist Chiles Sauvignon Blanc weltklasse?",
+      options: [
+        "Weil Pazifik nahe ist",
+        "Weil modernstes Klima",
+        "Maritime Kühlung + Pazifik-Nähe = hohe Säure bleibt + intensive Aromen",
+        "Zufällig durch Terroir"
+      ],
+      correct: 2,
+      explanation: "Humboldtstrom = Balance zwischen Wärme & Kühlung = intensive Aromen + Säure-Struktur."
+    },
+    {
+      question: "Welcher klimatischer Unterschied macht Chile strukturierter als Argentinien?",
+      options: [
+        "Argentinien wärmer",
+        "Chile älter",
+        "Keine systematischen Unterschiede",
+        "Pazifik-maritime Kühlung (Chile) vs. Höhen-Moderation (Argentinien) = Chile höhere Säure"
+      ],
+      correct: 3,
+      explanation: "Chile: Pazifik-Nähe = höhere Säure = strukturierter. Argentinien: Höhe moderiert Hitze = fruchtbetonter."
+    },
+    {
+      question: "Warum ist Casablanca Valley ideal für Weißweine?",
+      options: [
+        "Weil wärmste Zone Chiles",
+        "Weil höchste Höhenlage",
+        "Zufällig durch Ertrag",
+        "Sehr kühl (maritime Humboldtstrom) + große Tag/Nacht-Unterschiede = Säure bleibt"
+      ],
+      correct: 3,
+      explanation: "Casablanca: direkt Pazifik-exponiert = kühl = ideal für Säure-fokussierte Weißweine (Sauvignon, Chardonnay)."
+    },
+    {
+      question: "Was separiert argentinischen Stil grundsätzlich von europäischem?",
+      options: [
+        "Argentinier bessere Winzer",
+        "Höhe + Bewässerung = Balance zwischen reifer Frucht & Säure = moderne Qualität",
+        "Höhere Technologie",
+        "Kein systematischer Unterschied"
+      ],
+      correct: 1,
+      explanation: "Argentinien: moderner Neuer-Welt-Stil (Frucht-Focus) + europäische Struktur (Höhe = Säure) = Balance."
     }
   ]
 });

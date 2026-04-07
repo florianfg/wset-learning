@@ -5,7 +5,7 @@ registerChapterContent("da_at_hu", {
       content: `Diese drei zentraleuropäischen Länder definieren sich durch kühles Klima und Weißwein-Dominanz. Aber Österreich und Ungarn unterscheiden sich dramatisch in Stil und Fokus.
 
 - **Deutschland**: Riesling-Spezialist, hohe Säure, oft Restzucker (süß bis halbtrocken)
-- **Österreich**: trockene Weißweine (Grüner Veltliner), strukturiert, mineraliisch
+- **Österreich**: trockene Weißweine (Grüner Veltliner), strukturiert, mineralisch
 - **Ungarn**: berühmt für edelsüße Tokaj (Botrytis-Weine)
 - **Gemeinsam**: kühles Klima → hohe Säure = Grundlage für Lagerfähigkeit`,
       takeaway: "Zentraleuropa = kühle Säure + Weißwein-Fokus, aber drei unterschiedliche Philosophien."
@@ -150,7 +150,7 @@ registerChapterContent("da_at_hu", {
       title: "Österreich – Trockenheit & Struktur",
       content: `Österreich unterscheidet sich von Deutschland fundamental: Fokus auf trockene, strukturierte Weißweine statt süße.
 
-- **Philosophie**: "Österreich = Burgund des Ostens" (trockene, mineraliische Weine)
+- **Philosophie**: "Österreich = Burgund des Ostens" (trockene, mineralische Weine)
 - **Klima**: kontinental + pannonischer Einfluss (südlich) = wärmer als Deutschland
   - Folge: höhere Zuckerreife möglich → trockene Ausbauweise Standard
 - **Rebsorten**: Grüner Veltliner dominiert (nicht Riesling wie D)
@@ -166,7 +166,7 @@ registerChapterContent("da_at_hu", {
   - Hohe Säure (7–8 g/L natürlich)
   - Grüne/grasige Aromen (grüner Apfel, Brennnessel, Petersilie)
   - Mineralisch, pepprig (daher "Veltliner")
-- **Klima-Logik**: österreichische Böden (Granit, Schiefer, Sandstein) prägen Mineraliität
+- **Klima-Logik**: österreichische Böden (Granit, Schiefer, Sandstein) prägen Mineralität
 - **Stilistik**: immer trocken (Restzucker <2 g/L), 11–13% Alkohol
 - **Reife**: jung trinken (1–3 Jahre) für maximale Frische, aber 10+ Jahre möglich (VDP-Lagen)
 - **Preis**: günstig (€8–15) bis teuer (€30+ für Wachau/Kamptal Top-Lagen)`,
@@ -331,9 +331,9 @@ registerChapterContent("da_at_hu", {
     {
       question: "Warum führt kontinentales Klima zu großen Jahrgangsunterschieden?",
       options: [
-        "Weil die Winzer unterschiedliche Techniken nutzen",
-        "Weil kalte Winter & warme Sommer = variable Fruchtreife (gute Jahre = viel Sonne, schlechte = zu kühl)",
-        "Weil es zufällig so ist",
+        "Weil französische Winzer andere Techniken nutzen",
+        "Kalte Winter & warme Sommer = variable Fruchtreife (gute Jahre = viel Sonne, schlechte = zu kühl)",
+        "Weil größere geologische Vielfalt existiert",
         "Weil unterschiedliche Böden jedes Jahr variieren"
       ],
       correct: 1,
@@ -343,88 +343,88 @@ registerChapterContent("da_at_hu", {
       question: "Welche Funktion hat hohe Säure in deutschen Weißweinen?",
       options: [
         "Sie macht Wein bitter",
-        "Sie balanciert Restzucker & schafft Lagerfähigkeit",
+        "Sie verlängert die Fermentationsdauer unnötig",
         "Sie ist ein Fehler, der korrigiert werden sollte",
-        "Sie hat keine Funktion"
+        "Sie balanciert Restzucker & schafft Lagerfähigkeit"
       ],
-      correct: 1,
+      correct: 3,
       explanation: "Säure = die Geheimwaffe. Sie balanciert Süße & ermöglicht 30+ Jahre Reife."
     },
     {
       question: "Warum produziert die Mosel besonders säurebetonte Weine?",
       options: [
         "Weil Winzer Säure hinzufügen",
-        "Weil das kälteste Mikroklima = schwierige Reife = Zucker niedrig + Säure bleibt (Schieferboden speichert wenig Wärme)",
-        "Weil Mosel-Rebsorten natürlich sauer sind",
-        "Weil es eine regionale Regel ist"
+        "Weil traditionelle Herstellungsmethoden Säure generieren",
+        "Das kälteste Mikroklima = schwierige Reife = Zucker niedrig + Säure bleibt (Schieferboden speichert wenig Wärme)",
+        "Weil Mosel-Rebsorten natürlich sauer sind"
       ],
-      correct: 1,
+      correct: 2,
       explanation: "Mosel ist das kälteste deutsche Gebiet → mühsame Reife → Säure bleibt strukturell."
     },
     {
       question: "Was bedeutet Prädikat im deutschen System?",
       options: [
+        "Mostgewicht (Zuckergehalt der Trauben bei Lese)",
         "Geschmack (süß vs. trocken)",
         "Qualitätsstufe (besser Wein)",
-        "Mostgewicht (Zuckergehalt der Trauben bei Lese)",
         "Region"
       ],
-      correct: 2,
+      correct: 0,
       explanation: "Prädikat = Reifegrad, nicht Geschmack. Das ist die häufigste Verwirrung."
     },
     {
       question: "Warum kann ein Kabinett trocken sein, obwohl es eine niedrige Prädikats-Stufe ist?",
       options: [
-        "Das ist unmöglich",
         "Weil Prädikat = Reifegrad, nicht Restzucker. Ein Kabinett (wenig Zucker bei Lese) kann vollständig gären = trocken",
+        "Das ist unmöglich",
         "Weil Winzer Säure hinzufügen",
-        "Weil es eine Regel ist"
+        "Weil es eine alte deutsche Regel ist"
       ],
-      correct: 1,
+      correct: 0,
       explanation: "Prädikat = Input (Traubenzucker), nicht Output (Endzucker). Das ist der Kern."
     },
     {
       question: "Warum unterscheiden sich Österreich & Deutschland fundamental?",
       options: [
         "Weil sie verschiedene Rebsorten haben",
-        "Weil Österreich ein Grad wärmer = trockene Ausbauweise Standard (vs. Deutschland Vielfalt)",
         "Weil es willkürlich ist",
-        "Weil unterschiedliche Gesetze"
+        "Weil unterschiedliche historische Handelsbeziehungen",
+        "Österreich ein Grad wärmer = trockene Ausbauweise Standard (vs. Deutschland Vielfalt)"
       ],
-      correct: 1,
+      correct: 3,
       explanation: "Temperatur-Unterschied = verschiedene Philosophien. Österreich warm genug für trocken, Deutschland noch kühl für Süße-Optionen."
     },
     {
       question: "Welche Rebsorte ist zu Österreich, was Riesling zu Deutschland ist?",
       options: [
         "Merlot",
-        "Chardonnay",
         "Grüner Veltliner",
+        "Chardonnay",
         "Sauvignon Blanc"
       ],
-      correct: 2,
+      correct: 1,
       explanation: "Grüner Veltliner = Österreichs Identität. Mineralisch, trocken, grasig."
     },
     {
       question: "Warum ist Tokaj ideal für Botrytis?",
       options: [
         "Weil es sehr heiß ist",
-        "Weil Flüsse + Morgen-Nebel + Mittags-Sonne = perfekter Botrytis-Zyklus (Feuchte wechselt mit Trockenheit)",
         "Weil Furmint natürlich Botrytis anzieht",
-        "Zufällig"
+        "Flüsse + Morgen-Nebel + Mittags-Sonne = perfekter Botrytis-Zyklus (Feuchte wechselt mit Trockenheit)",
+        "Weil kontinentale Brisen Botrytis fördern"
       ],
-      correct: 1,
+      correct: 2,
       explanation: "Feuchtes Morgen-Klima (Nebel) + trockener Mittag = perfekt für Botrytis ohne Schimmel."
     },
     {
       question: "Wie wirkt hohe Säure in einem edelsüßen Tokaji?",
       options: [
-        "Sie macht ihn bitter",
-        "Sie ist zu kalt",
         "Sie balanciert die Süße (150+ g/L Zucker) → Wein wirkt frisch statt schwer",
-        "Sie hat keine Funktion"
+        "Sie macht ihn bitter",
+        "Sie verdünnert die Süße",
+        "Sie hat minimalalen Einfluss auf Geschmacksprofil"
       ],
-      correct: 2,
+      correct: 0,
       explanation: "Botrytis + Säure = die magische Balance. Tokaji schmeckt nicht schwer, weil Säure Süße balanciert."
     },
     {

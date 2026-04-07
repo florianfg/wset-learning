@@ -16,7 +16,7 @@ Typische Vertreter:
 - Nebbiolo
 - Zinfandel / Primitivo
       `,
-      merksatz: "Merksatz: Regionale Rebsorten sind oft der Schlüssel zur Herkunftsidentifikation."
+      merksatz: "Regionale Rebsorten sind oft der Schlüssel zur Herkunftsidentifikation."
     },
     {
       title: "Grenache (Garnacha) – Überblick",
@@ -34,7 +34,7 @@ Aromen:
 - rote Früchte (Erdbeere, Himbeere)
 - Gewürze
       `,
-      merksatz: "Merksatz: Grenache = viel Alkohol, wenig Tannin, rote Frucht."
+      merksatz: "Grenache = viel Alkohol, wenig Tannin, rote Frucht."
     },
     {
       title: "Grenache – Struktur",
@@ -68,7 +68,7 @@ Spanien:
 Neue Welt:
 - Australien (GSM-Blends)
       `,
-      merksatz: "Merksatz: Grenache liebt Hitze – Rhône Süd & Spanien sind ideal."
+      merksatz: "Grenache liebt Hitze – Rhône Süd & Spanien sind ideal."
     },
     {
       title: "Tempranillo – Überblick",
@@ -87,7 +87,7 @@ Aromen:
 
 Wichtigste spanische Rebsorte
       `,
-      merksatz: "Merksatz: Tempranillo = Spaniens wichtigste Qualitätsrebsorte."
+      merksatz: "Tempranillo = Spaniens wichtigste Qualitätsrebsorte."
     },
     {
       title: "Tempranillo – Struktur",
@@ -118,7 +118,7 @@ Klassifikation:
 - Reserva
 - Gran Reserva
       `,
-      merksatz: "Merksatz: Rioja = Tempranillo + Eiche."
+      merksatz: "Rioja = Tempranillo + Eiche."
     },
     {
       title: "Sangiovese – Überblick",
@@ -136,7 +136,7 @@ Aromen:
 
 sehr terroirabhängig
       `,
-      merksatz: "Merksatz: Sangiovese = hohe Säure + Kirscharomen."
+      merksatz: "Sangiovese = hohe Säure + Kirscharomen."
     },
     {
       title: "Sangiovese – Struktur",
@@ -180,7 +180,7 @@ Aromen:
 
 sehr komplex
       `,
-      merksatz: "Merksatz: Nebbiolo = hell in der Farbe, stark in Struktur."
+      merksatz: "Nebbiolo = hell in der Farbe, stark in Struktur."
     },
     {
       title: "Nebbiolo – Struktur",
@@ -221,7 +221,7 @@ Aromen:
 - Gewürze
 - oft marmeladig
       `,
-      merksatz: "Merksatz: Zinfandel = reif, alkoholreich, oft süßlich wirkend."
+      merksatz: "Zinfandel = reif, alkoholreich, oft süßlich wirkend."
     },
     {
       title: "Zinfandel – Struktur",
@@ -262,7 +262,7 @@ Aromen:
 
 tiefdunkle Farbe
       `,
-      merksatz: "Merksatz: Malbec = dunkle Farbe + weiche Tannine."
+      merksatz: "Malbec = dunkle Farbe + weiche Tannine."
     },
     {
       title: "Malbec – Struktur",
@@ -290,7 +290,7 @@ Aromen:
 
 leicht pflanzliche Note
       `,
-      merksatz: "Merksatz: Carmenère = Frucht + grüne Paprika."
+      merksatz: "Carmenère = Frucht + grüne Paprika."
     },
     {
       title: "Carmenère – Besonderheiten",
@@ -315,7 +315,7 @@ Aromen:
 
 leicht und fruchtig
       `,
-      merksatz: "Merksatz: Gamay = leicht, fruchtig, wenig Tannin."
+      merksatz: "Gamay = leicht, fruchtig, wenig Tannin."
     },
     {
       title: "Gamay – Stil",
@@ -342,7 +342,7 @@ Effekte:
 
 typisch für Beaujolais
       `,
-      merksatz: "Merksatz: Carbonic Maceration = fruchtig + weich + wenig Tannin."
+      merksatz: "Carbonic Maceration = fruchtig + weich + wenig Tannin."
     },
     {
       title: "Barbera – Überblick",
@@ -356,7 +356,7 @@ Aromen:
 
 sehr säurebetont
       `,
-      merksatz: "Merksatz: Barbera = hohe Säure, wenig Tannin."
+      merksatz: "Barbera = hohe Säure, wenig Tannin."
     },
     {
       title: "Barbera – Struktur",
@@ -382,7 +382,7 @@ Nebbiolo:
 
 Nebbiolo strukturstärker
       `,
-      merksatz: "Merksatz: Nebbiolo hat deutlich mehr Tannin als Sangiovese."
+      merksatz: "Nebbiolo hat deutlich mehr Tannin als Sangiovese."
     },
     {
       title: "Vergleich: Grenache vs. Syrah",
@@ -407,7 +407,7 @@ Hinweise:
 - Rosen + Tannin → Nebbiolo
 - hoher Alkohol + rote Frucht → Grenache
       `,
-      merksatz: "Merksatz: Struktur + Aroma = Rebsorte erkennen."
+      merksatz: "Struktur + Aroma = Rebsorte erkennen."
     },
     {
       title: "Holzeinsatz bei roten Rebsorten",
@@ -444,63 +444,63 @@ Fehler:
 - Grenache zu kräftig einschätzen
 - Gamay mit Pinot Noir verwechseln
       `,
-      merksatz: "Merksatz: Strukturmerkmale sind entscheidend, nicht nur Farbe."
+      merksatz: "Strukturmerkmale sind entscheidend, nicht nur Farbe."
     }
   ],
   questions: [
     {
       question: "Welche Rebsorte hat typischerweise sehr hohe Tannine?",
       options: [
-        "Grenache",
         "Nebbiolo",
+        "Grenache",
         "Gamay",
         "Barbera"
       ],
-      correct: 1,
+      correct: 0,
       explanation: "Nebbiolo ist bekannt für sehr hohe Tannine und hohe Säure."
     },
     {
       question: "Welche Rebsorte hat typischerweise niedrige Tannine und hohen Alkohol?",
       options: [
-        "Nebbiolo",
         "Grenache",
+        "Nebbiolo",
         "Sangiovese",
         "Barbera"
       ],
-      correct: 1,
+      correct: 0,
       explanation: "Grenache hat wenig Tannin, aber hohen Alkohol."
     },
     {
       question: "Welche Rebsorte ist typisch für Rioja?",
       options: [
         "Sangiovese",
-        "Tempranillo",
         "Nebbiolo",
-        "Malbec"
+        "Malbec",
+        "Tempranillo"
       ],
-      correct: 1,
+      correct: 3,
       explanation: "Tempranillo ist die Hauptrebsorte in Rioja."
     },
     {
       question: "Welche Rebsorte zeigt oft Rosen- und Teeraromen?",
       options: [
-        "Nebbiolo",
         "Gamay",
+        "Nebbiolo",
         "Grenache",
         "Zinfandel"
       ],
-      correct: 0,
+      correct: 1,
       explanation: "Nebbiolo ist bekannt für florale und teerige Noten."
     },
     {
       question: "Welche Rebsorte hat sehr hohe Säure und niedrige Tannine?",
       options: [
-        "Barbera",
         "Nebbiolo",
         "Syrah",
+        "Barbera",
         "Malbec"
       ],
-      correct: 0,
+      correct: 2,
       explanation: "Barbera hat hohe Säure und niedrige Tannine."
     },
     {
@@ -517,12 +517,12 @@ Fehler:
     {
       question: "Welche Rebsorte ist bekannt für grüne Paprikanoten?",
       options: [
-        "Carmenère",
         "Grenache",
         "Gamay",
+        "Carmenère",
         "Zinfandel"
       ],
-      correct: 0,
+      correct: 2,
       explanation: "Carmenère zeigt häufig grüne Paprika-Aromen."
     }
   ]

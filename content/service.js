@@ -5,9 +5,9 @@ registerChapterContent("service", {
       content: `Guter Weinservice hat ein klares Ziel: den Wein in optimalem Zustand präsentieren.
 
 - **Serviertemperatur**: beeinflusst Wahrnehmung von Säure, Tannine, Alkohol dramatisch
-- **Glaswahl**: Forn steuert Aroma-Konzentration + Luftkontakt
+- **Glaswahl**: Form steuert Aroma-Konzentration + Luftkontakt
 - **Dekantieren**: wenn ja, warum (Belüftung vs. Sediment-Trennung?)
-- **Öffnen**: Präsentation, Kontrolle (fehler?)
+- **Öffnen**: Präsentation, Kontrolle (Fehler?)
 - **Reihenfolge**: von leicht zu intensiv = Gaumen wird "angewärmt"
 - **Konsequenz**: falsche Temperatur/Glas = Wein schmeckt falsch, obwohl Qualität gut`,
       takeaway: "Service ist nicht Optional. Temperatur + Glas + Dekantieren ändern Geschmack."
@@ -27,7 +27,7 @@ registerChapterContent("service", {
   - Tannine wirken "aufdringlich" = hart
   - Primäraromen verflüchtigen sich = Wein wirkt "flach"
   - Beispiel: Cabernet bei 25°C schmeckt "hot" + unbalanciert
-- **Mechanik**: Molkulare Bewegung variiert mit Temperatur
+- **Mechanik**: Molekulare Bewegung variiert mit Temperatur
   - Warm = schneller Volatilisierung = Aromen verfliehen schneller (nicht immer gut)
   - Kalt = Aromen konzentrieren, Säure-Wahrnehmung ändert sich
 - **Ideal**: "kalt genug für Frische, warm genug für Aromatik"`,
@@ -86,7 +86,7 @@ registerChapterContent("service", {
     },
     {
       title: "Dekantieren – Wann & Warum (alt vs. jung)",
-      content: `Dekantieren ist nicht Optional – aber wann & warum sind entscheidend.
+      content: `Dekantieren ist nicht optional – aber wann & warum sind entscheidend.
 
 - **Dekantieren = zwei Funktionen**:
   - Sediment-Trennung (alte Weine)
@@ -116,8 +116,8 @@ registerChapterContent("service", {
   - Grund: saubere Präsentation zum Gast
   - Etikett sichtbar machen = Qualität zeigen
 - **Korkzieher-Wahl**: Hebeltypen oder Flügeltyp
-  - Hebeltyp = sanft (weniger Bruch-Risiko)
-  - Flügeltyp = einfach (für schwere Korken)
+  - Hebeltyp = sanft, kontrolliert (weniger Bruch-Risiko, eleganter)
+  - Flügeltyp = einfach, kraft-basiert (für schwere/alte Korken geeignet)
 - **Korken herausziehen**: langsam, nicht schockierend
   - Grund: Luft-Eindring sollte kontrolliert sein, nicht explosiv
   - Zu schnell = Wein "Blase-Effekt" = CO2 freisetz
@@ -136,7 +136,7 @@ registerChapterContent("service", {
 - **Drahtkorb lösen**: langsam, halb drehen
   - Grund: Druck liegt auf Korken = lösen muss schrittweise sein
 - **Flasche schräg halten** (~45°):
-  - Grund: schräge Position = reduzeiert Druck auf Korken = weniger explosiv
+  - Grund: schräge Position = reduziert Druck auf Korken = weniger explosiv
   - Senkrecht = Druck maximal = höhere Verletzungs-Risiko
 - **Korken langsam herausdrehen**:
   - NICHT herauspoppen lassen
@@ -144,7 +144,7 @@ registerChapterContent("service", {
   - Ziehen, nicht reißen = kontrolliert
   - Resultat: leises "Zischen" (nicht "Knall")
   - Grund: Kohlensäure verfliehen langsamer = Perlage bleibt länger
-- **Fehler**: lauter "Knall" = unprofessional + Kohlensäure-Verlust
+- **Fehler**: lauter "Knall" = unprofessionell + Kohlensäure-Verlust
   - Nach Knall = weniger Perlage für nächste 30 Minuten
 - **Servierung sofort**: in Gläser (Schaumwein = flüchtig)
   - Grund: CO2 verfliehen schnell = Perlage sinkt exponentiell`,
@@ -202,12 +202,12 @@ registerChapterContent("service", {
     {
       question: "Warum beeinflusst Serviertemperatur die Geschmacks-Wahrnehmung?",
       options: [
-        "Es ändert nicht den Geschmack",
         "Temperatur steuert Aroma-Volatilisierung + Säure-Wahrnehmung + Alkohol-Eindruck = chemisch & sensorisch",
+        "Es ändert nicht den Geschmack",
         "Nur psychologischer Effekt",
         "Zufällig"
       ],
-      correct: 1,
+      correct: 0,
       explanation: "Temperatur = chemische Geschwindigkeit. Warm = Aromen verfliehen. Kalt = Säure maskiert."
     },
     {
@@ -226,8 +226,8 @@ registerChapterContent("service", {
       options: [
         "Identische Methode",
         "Alt = vorsichtig (minimal Luft, nur Sediment trennen). Jung = mutig (maximal Luft, Tannine öffnen)",
-        "Alt braucht nicht dekantieren",
-        "Kein Unterschied"
+        "Kein Unterschied",
+        "Alt braucht nicht dekantieren"
       ],
       correct: 1,
       explanation: "Alte Weine: empfindlich gegen Oxidation. Junge: brauchen Luft zum Reifen. Gegensätzlich!"
@@ -236,22 +236,22 @@ registerChapterContent("service", {
       question: "Warum ist Schaumwein-Öffnung kontrolliert (nicht laut)?",
       options: [
         "Nur Ästhetik",
-        "Lautes Knallen = unkontrollierte Druckfreisetzung = CO2 verfliehen = weniger Perlage für 30+ Minuten",
         "Sicherheit nur",
+        "Lautes Knallen = unkontrollierte Druckfreisetzung = CO2 verfliehen = weniger Perlage für 30+ Minuten",
         "Zufällig"
       ],
-      correct: 1,
+      correct: 2,
       explanation: "Kontrolle erhält CO2. Knall = chemischer Verlust der Kohlensäure."
     },
     {
       question: "Warum ist Reihenfolge Schaumwein → Weiß → Rot?",
       options: [
-        "Willkürlich",
         "Säure (Schaumwein) bereit Gaumen vor. Tannine (Rot) blockieren folgende = minimal am Ende. Süße zuletzt",
+        "Willkürlich",
         "Nur Tradition",
         "Kein Grund"
       ],
-      correct: 1,
+      correct: 0,
       explanation: "Chemisch-sensorische Blockade: Tannine maskieren feine Noten. Reihenfolge formt Gaumen."
     },
     {

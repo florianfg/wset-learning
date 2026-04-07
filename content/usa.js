@@ -139,7 +139,7 @@ registerChapterContent("usa", {
   - Vanille, Toast, Gewürze
   - Trend: weniger Eiche heute als 1990er
 - **Stilistik**: voller Körper, hochAlkohol (13–14%), tropisch (Ananas, Mango), Butter, Toast
-  - Kontrast: Burgund Chardonnay = Säure + Mineraliität, nicht Butter
+  - Kontrast: Burgund Chardonnay = Säure + Mineralität, nicht Butter
 - **Trinkreife**: jung (sofort) bis 5–10 Jahre
 - **Paar**: Fett-Speisen (Pilze, Sahne-Saucen)`,
       takeaway: "Kalifornien Chardonnay: butterig, eichenbetont, tropisch (Malolaktische Gärung + neue Eiche)."
@@ -239,61 +239,6 @@ registerChapterContent("usa", {
       takeaway: "USA = reife Frucht, voller Körper, Eiche, höher Alkohol, zugänglich."
     },
     {
-      question: "Warum dominiert Kalifornien 85–90% der USA-Produktion?",
-      options: [
-        "Weil andere Staaten schlechter sind",
-        "Weil Kalifornien konsistentes mediterranes Klima + Pazifik-Kühlung = ideale Bedingungen hat",
-        "Weil es historischer Grund ist",
-        "Zufällig"
-      ],
-      correct: 1,
-      explanation: "Kalifornien = Klima-Glücksspiel. Warme Tage + Pazifik-Nebel = Säure bleibt. Perfekt für Qualität & Menge."
-    },
-    {
-      question: "Warum ist AVA anders als Frankreich AOC?",
-      options: [
-        "Sie sind identisch",
-        "AVA = nur geografisch. AOC = Rebsorten + Ertrag + Ausbau + Qualität definiert",
-        "AVA = teurer",
-        "Frankreich = älter"
-      ],
-      correct: 1,
-      explanation: "AVA = Herkunfts-Garantie nur. AOC = umfassende Regel-Definition."
-    },
-    {
-      question: "Warum bringt Pazifik-Nebel Säure zu Kalifornien-Weinen?",
-      options: [
-        "Weil Nebel sauer ist",
-        "Weil Kalt-Luft + Nacht-Kühlung = Säure-Abbau verlangsamt = Säure bleibt erhalten",
-        "Weil kalifornische Winzer Säure hinzufügen",
-        "Zufällig"
-      ],
-      correct: 1,
-      explanation: "Nacht-Kühlung durch Nebel = Säure nicht abgebaut bei warmen Trauben = Balance."
-    },
-    {
-      question: "Warum ist Oregon kühler als Kalifornien?",
-      options: [
-        "Weil Oregon nördlich ist",
-        "Weil Pazifik-Kühlung stärker ist + Kaskaden-Einfluss = gesamtes Klima kühler",
-        "Weil weniger Sonne",
-        "Zufällig"
-      ],
-      correct: 1,
-      explanation: "Oregon: geografisch gekühlt = ideale Bedingungen für Pinot Noir."
-    },
-    {
-      question: "Warum macht Washington State gute Weine trotz Trockenheit?",
-      options: [
-        "Weil Winzer übermenschlich sind",
-        "Weil Bewässerung kontrollierbar ist + große Tag/Nacht-Unterschiede = Säure bleibt",
-        "Weil andere Regionen schlechter sind",
-        "Zufällig"
-      ],
-      correct: 1,
-      explanation: "Washington = Wasserkontrolle + kontinental-Klima = Qualität möglich trotz Trockenheit."
-    },
-    {
       title: "Neue Welt Vergleich – USA, Australien, Chile, Neuseeland",
       content: `Vier Länder, vier Stile – die Neue Welt ist klimatisch und stilistisch vielfältig. Dieser Vergleich ist prüfungsrelevant.
 
@@ -326,7 +271,119 @@ registerChapterContent("usa", {
 - Stil: aromatisch, frisch, hohe Säure, kein Holz, jung trinken
 
 **Prüfungs-Kernregel:** Klima → Alkohol → Körper → Aromentyp. Jedes Land hat einen klimatischen Signature-Stil.`,
-      takeaway: "Merksatz: USA = Eiche + Struktur. Australien = Opulenz + Reife. Chile = frisch + Preis-Leistung. Neuseeland = aromatisch + frisch. Klima ist die Ursache aller Stilunterschiede."
+      takeaway: "USA = Eiche + Struktur. Australien = Opulenz + Reife. Chile = frisch + Preis-Leistung. Neuseeland = aromatisch + frisch. Klima ist die Ursache aller Stilunterschiede."
+    }
+  ],
+  questions: [
+    {
+      question: "Warum dominiert Kalifornien 85–90% der USA-Produktion?",
+      options: [
+        "Weil andere Staaten schlechter sind",
+        "Weil Kalifornien konsistentes mediterranes Klima + Pazifik-Kühlung = ideale Bedingungen hat",
+        "Weil es historischer Grund ist",
+        "Zufällig durch geografische Position"
+      ],
+      correct: 1,
+      explanation: "Kalifornien = Klima-Glücksspiel. Warme Tage + Pazifik-Nebel = Säure bleibt. Perfekt für Qualität & Menge."
+    },
+    {
+      question: "Warum ist AVA anders als Frankreich AOC?",
+      options: [
+        "AVA = nur geografisch. AOC = Rebsorten + Ertrag + Ausbau + Qualität definiert",
+        "Sie sind identisch",
+        "AVA = teurer",
+        "Frankreich = älter"
+      ],
+      correct: 0,
+      explanation: "AVA = Herkunfts-Garantie nur. AOC = umfassende Regel-Definition."
+    },
+    {
+      question: "Warum bringt Pazifik-Nebel Säure zu Kalifornien-Weinen?",
+      options: [
+        "Weil Kalt-Luft + Nacht-Kühlung = Säure-Abbau verlangsamt = Säure bleibt erhalten",
+        "Weil Nebel sauer ist",
+        "Zufällig",
+        "Weil kalifornische Winzer Säure hinzufügen"
+      ],
+      correct: 0,
+      explanation: "Nacht-Kühlung durch Nebel = Säure nicht abgebaut bei warmen Trauben = Balance."
+    },
+    {
+      question: "Warum ist Oregon kühler als Kalifornien?",
+      options: [
+        "Weil Oregon nördlich ist",
+        "Weil weniger Sonne",
+        "Weil Pazifik-Kühlung stärker ist + Kaskaden-Einfluss = gesamtes Klima kühler",
+        "Zufällig durch geografische Position"
+      ],
+      correct: 2,
+      explanation: "Oregon: geografisch gekühlt = ideale Bedingungen für Pinot Noir."
+    },
+    {
+      question: "Warum macht Washington State gute Weine trotz Trockenheit?",
+      options: [
+        "Weil Winzer übermenschlich sind",
+        "Weil andere Regionen schlechter sind",
+        "Weil Bewässerung kontrollierbar ist + große Tag/Nacht-Unterschiede = Säure bleibt",
+        "Zufällig durch geologische Vielfalt"
+      ],
+      correct: 2,
+      explanation: "Washington = Wasserkontrolle + kontinental-Klima = Qualität möglich trotz Trockenheit."
+    },
+    {
+      question: "Warum unterscheidet sich Napa Cabernet von Oregon Pinot Noir fundamental?",
+      options: [
+        "Rebsorte-Unterschied",
+        "Klima-Unterschied (warm vs. kühl) = unterschiedliche Reifeprofile = unterschiedliche Aromen & Struktur",
+        "Winzer-Unterschied",
+        "Boden-Unterschied"
+      ],
+      correct: 1,
+      explanation: "Klima ist Primärer-Faktor. Napa warm = reife schwarze Frucht. Oregon kühl = elegante rote Frucht & Säure."
+    },
+    {
+      question: "Warum ist Chardonnay in Kalifornien butterig?",
+      options: [
+        "Weil warmes Klima Butter-Stoffe generiert",
+        "Malolaktische Gärung 100% + neue Eiche = Butter + Vanille-Aromen",
+        "Weil kalifornische Winzer Butter hinzufügen",
+        "Zufällig durch Rebsorte"
+      ],
+      correct: 1,
+      explanation: "MLG = Apfel-Säure wird zu Milch-Säure = Diacetyl = Butter-Aromen. Kalifornien macht es oft zu 100%."
+    },
+    {
+      question: "Was unterscheidet Sonoma von Napa grundsätzlich?",
+      options: [
+        "Sonoma = teurer",
+        "Napa = älter",
+        "Sonoma = weniger bekannt",
+        "Sonoma = größer + vielfältiger Klima (kühl zu warm). Napa = enger + wärmer (Cabernet-Focus)"
+      ],
+      correct: 3,
+      explanation: "Sonoma: breite geografische Vielfalt = verschiedene Rebsorten möglich (Pinot, Chardonnay, Zinfandel). Napa: wärmer, schmalere Region = Cabernet Focus."
+    },
+    {
+      question: "Warum ist Finger Lakes ideal für Riesling?",
+      options: [
+        "Seen moderieren Extremtemperaturen + hohe Säure bleibt (wie Deutschland)",
+        "Weil Riesling nur dort gedeiht",
+        "Weil kontinentales Klima Riesling generiert",
+        "Zufällig durch Breitengrad"
+      ],
+      correct: 0,
+      explanation: "Seen = Temperatur-Ausgleich = stabiles Klima = kühles Klima möglich = Riesling-ideal (wie Deutschland)."
+    },
+    {
+      question: "Welche Charakteristik macht amerikanische Weine anders als europäische?",
+      options: [
+        "Europäische Weine sind süßer",
+        "Amerikanische Weine sind älter",
+        "Keine grundlegenden Unterschiede",
+        "Reife Frucht + voller Körper + höherer Alkohol + neue Eiche (moderne Technologie + warm Klima)"
+      ],
+      correct: 3,
+      explanation: "USA-Philosophie: Frucht-Focus, Eichen-Einfluss, Technik. Europa: Struktur-Focus, Terroir, Tradition."
     }
   ]
 });

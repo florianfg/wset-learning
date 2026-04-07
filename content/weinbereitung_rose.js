@@ -1,528 +1,555 @@
 registerChapterContent("weinbereitung_rose", {
   cards: [
     {
-      title: "Definition Roséwein",
-      content: `Roséwein wird aus roten Traubensorten hergestellt, verfügt aber nur über kurze Schalenkontaktzeit während der Gärung. Dies erzeugt eine charakteristische Farbe zwischen Weiß und Rotwein.
+      title: "Roséwein: Definition und Kern-Unterscheidung",
+      content: `Roséwein wird aus roten Traubensorten hergestellt, verfügt aber nur über kurze Schalenkontaktzeit. Definition und Warum:
 
-- **Schalenkontaktzeit entscheidend**: Typisch 6–48 Stunden (sehr viel kürzer als Rotwein)
-- **Farbspektrum**: Von blassrosa bis lebendiges Pink, abhängig von Dauer und Rebsorte
-- **Tannin-Gehalt**: Deutlich niedriger als Rotwein wegen kurzer Kontaktzeit
-- **Früchte und Aromen**: Beeren (Erdbeere, Himbeere), frische, betonte Säure`,
-      takeaway: "Merksatz: Roséwein = kurze Schalenkontaktzeit mit roten Trauben für zartes Geschmacksprofil."
+- **Essenz**: Rote Trauben mit KURZER Schalenkontaktzeit (6-48 Stunden) statt lange (Rotwein) oder keine (Weißwein)
+- **MECHANISMUS**: Anthocyane aus Schalen → Saft wird leicht gefärbt (rosa/lachsfarben)
+- **Tannine minimal**: Kurze Kontaktzeit = geringe Tanninextraktion
+- **Charakteristische Aromen**: Beeren (Erdbeere, Himbeere), frische, betonte Säure
+- **Farb-Range**: Von blassrosa (minimal Kontakt) bis kräftig pink (längerer Kontakt)
+- **PRÜFUNGSFALLE**: "Rosé ist verdünnter Rotwein" = FALSCH. Es ist bewusste Stilentscheidung mit Schalenkontakt-Kontrolle.`,
+      takeaway: "Roséwein = rote Trauben + kurze Schalenkontaktzeit (6-48 Stunden) für Farbe ohne Struktur."
     },
     {
-      title: "Grundprinzip der Roséherstellung",
-      content: `Die Färbung von Rosé entsteht allein durch die Kontaktdauer zwischen Most und Traubenschalen.
+      title: "Das Kontinuum: Weiß - Rosé - Rot",
+      content: `Alle drei unterscheiden sich nur durch Schalenkontakt-Dauer. Kontinuierliche Achse:
 
-- **Kurze Kontaktzeit**: Wenige Stunden bis Tage → blasse bis mittlere Farbe
-- **Je länger der Kontakt, desto**:
-  - intensiver die Farbe (von blassrosa zu kräftig pink)
-  - höher die Tanninextraktion
-  - komplexer der Geschmack
-- **Stilauswirkung**: Längerer Kontakt nähert sich dem Rotwein-Stil an`,
-      takeaway: "Merksatz: Schalenkontaktdauer steuert Roséfarbe und -charakter."
+- **Weißwein**: 0 Stunden Kontakt → keine Farbextraktion
+- **Roséwein**: 6-48 Stunden Kontakt → leichte Farbextraktion
+- **Rotwein**: 14-42 Tage Kontakt → intensive Farbextraktion
+- **WIRKUNG-KASKADE**:
+  - Längerer Kontakt = intensivere Farbe + höhere Tannine + komplexer
+  - Kurzer Kontakt = blasse Farbe + minimale Tannine + frisch und leicht
+- **Stilauswirkung**: Längerer Rosé-Kontakt nähert sich Rotwein-Charakter an
+- **Winzer-Entscheidung**: Schalenkontakt-Dauer wählen, um Stil zu prägen
+- **PRÜFUNGSFALLE**: "Roséfarbe ist zufällig" = FALSCH. Farbe ist bewusst gesteuerte Komponente.`,
+      takeaway: "Schalenkontakt-Dauer (0h = Weiß, 6-48h = Rosé, 14+ Tage = Rot) steuert Farbe, Tannine, Komplexität."
     },
     {
-      title: "Unterschied zu Rotwein",
-      content: `Rotwein und Rosé werden unterschiedlich verarbeitet, obwohl beide aus roten Trauben stammen.
+      title: "Vier Hauptmethoden der Roséherstellung",
+      content: `Etablierte Verfahren zur Roséproduktion mit unterschiedlichen Charakteristiken:
 
-- **Rotwein**:
-  - Lange Maischegärung (2–4 Wochen oder länger)
-  - Intensive Farb- und Tanninextraktion
-  - Strukturiert, lagerfähig
-- **Rosé**:
-  - Kurze Maischestandzeit (6–48 Stunden)
-  - Gering Tanninextraktion
-  - Frisch, leicht, für frühen Konsum`,
-      takeaway: "Merksatz: Rotwein = lange Extraktion; Rosé = kurze Extraktion."
+- **1. Direktpressung (Direct Pressing)**:
+  - ABLAUF: Rote Trauben werden nach leichtem Quetschen sofort gepresst
+  - Kontaktzeit: Minimal (nur während Pressung, wenige Minuten)
+  - Resultat: Sehr blasse, helle Farbe (fast Weißwein-ähnlich)
+  - Aroma: Neutral, einfach, sehr fruchtbetont, zart
+  - Stil: Äußerst leicht und frisch
+- **2. Kurze Maischestandzeit (Short Maceration)**:
+  - ABLAUF: Gequetschte Trauben bleiben 6-48 Stunden in Kontakt mit Saft
+  - Kontaktzeit: Gezielt 6-48 Stunden
+  - Resultat: Helleres bis mittleres Pink
+  - Kontrolle: Häufiges Farbprobe-Testen bestimmt Abbruchpunkt
+  - Aroma: Fruchtbetonter, strukturierter als Direktpressung
+- **3. Saignée-Methode (Blutung)**:
+  - ABLAUF: Eine Rotweinmaische wird teilweise abgezogen (5-30% des Volumens)
+  - Dual-Vorteil: Verbleibender Rotwein wird konzentrierter; der abgezogene Saft wird zu Rosé
+  - Resultat-Rosé: Deutlich strukturierter und komplexer
+  - Resultat-Rotwein: Konzentrierter, intensiver (Fraktionierung-Effekt)
+- **4. Verschnitt (Blending)** (reguliert):
+  - ABLAUF: Rot- und Weißwein werden vermischt
+  - Legal in EU: Nur für Schaumweine erlaubt (Champagne, Crémant)
+  - Für Stillweine: Meist nicht erlaubt (mit Ausnahmen)
+  - Charakter: Kann zu weniger authentischem Geschmacksprofil führen (nicht bevorzugt)
+- **KULTUR-UNTERSCHIED**: Provence bevorzugt Saignée/Kurze Maische; andere Regionen experimentieren`,
+      takeaway: "Vier Hauptmethoden ermöglichen unterschiedliche Rosé-Stile mit verschiedenen Charakteristiken."
     },
     {
-      title: "Unterschied zu Weißwein",
-      content: `Weißwein hat keinen Schalenkontakt; Rosé hat kurzen Kontakt.
+      title: "Direktpressung: Hellste Rosé mit minimalem Charakter",
+      content: `Schnellste und mildeste Methode für Roséwein:
 
-- **Weißwein**:
-  - Meist sofort von Schalen getrennt
-  - Keine Tannine oder Farbextraktion
-  - Neutral bis hell gefärbt
-- **Rosé**:
-  - Kurzer Schalenkontakt
-  - Leichte Farb- und Tanninextraktion
-  - Charakteristische Rosé-Färbung`,
-      takeaway: "Merksatz: Rosé = leichte Extraktion zwischen Weiß und Rot."
+- **ABLAUF**: Rote Trauben werden nach leichtem Quetschen sofort gepresst
+- **Kontaktzeit**: Minimal (nur während Pressung = wenige Minuten)
+- **Resultat**:
+  - Sehr blasse, helle Farbe (fast wasserfarben/champagnerfarbig)
+  - Neutral, einfach, sehr fruchtbetont
+  - Äußerst leicht und frisch
+  - Minimal Tannin (kaum messbar)
+  - Zarte Beeren (Himbeere, Erdbeere), aber subtil
+- **Trinkstil**: Früh trinken, perfekt für heiße Sommertage
+- **Lagerpotenzial**: Minimal (1-2 Jahre maximal)
+- **KULTUR-Beispiel**: Provence "Paler Styles"
+- **PRÜFUNGSFALLE**: "Direktpressung = beste Rosé-Methode" = FALSCH. Ist eine Stilentscheidung, nicht objektiv besser.`,
+      takeaway: "Direktpressung = hellste Rosé mit minimalem Geschmackscharakter."
     },
     {
-      title: "Hauptmethoden der Roséherstellung",
-      content: `Es gibt mehrere etablierte Verfahren zur Roséproduktion, jede mit unterschiedlichen Charakteristika.
+      title: "Kurze Maischestandzeit: Ausgeprägter Rosé mit Kontrolle",
+      content: `Gezielte, begrenzte Kontaktzeit zwischen Most und Schalen:
 
-- **Direktpressung (Direct Pressing)**: Trauben sofort gepresst
-- **Kurze Maischestandzeit (Short Maceration)**: 6–48 Stunden Kontakt
-- **Saignée-Methode**: Saft aus einer Rotweinmaische abgezogen
-- **Verschnitt (Blending)**: Rot- und Weißwein gemischt (nur selten erlaubt)`,
-      takeaway: "Merksatz: Vier Hauptmethoden ermöglichen unterschiedliche Rosé-Stile."
-    },
-    {
-      title: "Direktpressung (Direct Pressing)",
-      content: `Die schnellste und mildeste Methode mit sehr minimalem Schalenkontakt.
-
-- **Ablauf**: Rote Trauben werden nach dem Quetschen sofort gepresst
-- **Kontaktzeit**: Minimal (nur während Pressung)
-- **Resultat**: Sehr blasse, helle Farbe
-- **Aroma**: Neutral, einfach, sehr fruchtbetont
-- **Stil**: Äußerst leicht und frisch`,
-      takeaway: "Merksatz: Direktpressung = hellste Rosé mit minimalem Geschmack."
-    },
-    {
-      title: "Charakteristik Direktpressung",
-      content: `Weine aus Direktpressung haben spezifische sensorische Merkmale.
-
-- **Farbe**: Blassrosa, fast wasserfarben
-- **Säure**: Hoch (acidity) – wichtig für Frische
-- **Fruchtaromen**: Zarte Beeren (Himbeere, Erdbeere), aber subtil
-- **Körper**: Sehr leicht, zart
-- **Tannine**: Kaum messbar
-- **Trinkstil**: Früh trinken, perfekt für heiße Sommertage`,
-      takeaway: "Merksatz: Direktpressung = zart, blassrosa, höchst frisch."
-    },
-    {
-      title: "Kurze Maischestandzeit",
-      content: `Gezielte, begrenzte Kontaktzeit zwischen Most und Schalen führt zu ausgeprägteren Rosé-Merkmalen.
-
-- **Dauer**: Typisch 6–48 Stunden (deutlich kürzer als Rotwein)
-- **Kontrolle**: Häufiges Testen der Farbe bestimmt Abbruchpunkt
+- **Dauer**: Typisch 6-48 Stunden (deutlich kürzer als Rotwein)
+- **KONTROLLE-Prozess**: Häufiges Testen der Farbe bestimmt Abbruchpunkt
+  - Tester misst visuelle Farbe gegen Referenzmuster
+  - ZIEL: Gewünschte Farbintensität erreicht, dann Saft ablaufen
 - **Resultat**: Mehr Farbe als Direktpressung, aber immer noch sehr frisch
-- **Stil**: Fruchtbetonter, strukturierter als Direktpressung`,
-      takeaway: "Merksatz: Kurze Maischestandzeit = ausgeprägter Rosé mit mehr Charakter."
+- **Stil**: Fruchtbetonter, strukturierter als Direktpressung
+- **Tannin-Level**: Leicht höher, aber immer noch gering
+- **Aroma-Komplexität**: Mehr Tiefe durch längeren Kontakt
+- **Lagerpotenzial**: 2-4 Jahre ideal
+- **KULTUR**: Standard in modernen, qualitätsorientierten Winzereien
+- **PRÜFUNGSFALLE**: "Längere Maische = immer besser" = FALSCH. Überextraktion erzeugt grüne Noten bei Rosé.`,
+      takeaway: "Kurze Maischestandzeit = ausgeprägter Rosé mit mehr Charakter als Direktpressung."
     },
     {
-      title: "Einfluss der Maischestandzeit",
-      content: `Die Dauer des Schalenkontakts prägt Farbe und Geschmack gezielt.
+      title: "Saignée-Methode: Strukturierte Rosé aus Rotwein-Maische",
+      content: `Eine Methode, die Rosé als Nebenprodukt bei der Rotweinherstellung erzeugt. Duale Strategie:
 
-- **Sehr kurz (6–12 Stunden)**: Hell, leicht, zart
-- **Kurz bis mittel (12–24 Stunden)**: Mittleres Pink, mehr Frucht
-- **Länger (24–48 Stunden)**: Kräftiges Pink, mehr Tannin, strukturierter
-- **Viel länger (über 48 Stunden)**: Nähert sich Rotwein an`,
-      takeaway: "Merksatz: Längere Kontaktzeit = intensivere Farbe, mehr Struktur."
-    },
-    {
-      title: "Saignée-Methode (Blutung)",
-      content: `Eine Methode, die Rosé als Nebenprodukt bei der Rotweinherstellung erzeugt.
-
-- **Prozess**: Eine Rotweinmaische wird teilweise abgezogen (5–30 % des Volumens)
-- **Zweck dual**: Der verbleibende Rotwein wird konzentrierter; der abgezogene Saft wird zu Rosé
+- **PROZESS**:
+  - Eine Rotweinmaische wird teilweise abgezogen (5-30% des Volumens)
+  - Timing: Früh in der Gärung, wenn noch Kontakt nötig
+- **Zweck dual**:
+  - Der verbleibende Rotwein wird konzentrierter (weniger Saft, intensive Extraktion)
+  - Der abgezogene Saft wird zu Rosé (längerer Kontakt als normal = strukturierter)
 - **Resultat-Rosé**: Deutlich strukturierter und komplexer als andere Methoden
-- **Resultat-Rotwein**: Konzentrierter, intensiver`,
-      takeaway: "Merksatz: Saignée-Rosé = Nebenprodukt mit kräftigerem Charakter."
+  - Farbe: Intensiv Pink bis Korallentöne
+  - Struktur: Merklich höhere Tannine als andere Rosé-Methoden
+  - Körper: Voller, weniger zart
+  - Aromen: Komplexer, würziger
+  - Trinkstil: Kann länger reifen (3-5 Jahre), weniger für unmittelbare Genuss gedacht
+- **Resultat-Rotwein**: Konzentrierter, intensiver (Volumen-Reduktion = Konzentration)
+- **WIRTSCHAFTLICH**: Clever für Premium-Rosé bei gleichzeitiger Rotwein-Verbesserung
+- **KULTUR**: Provence, Rhône verwenden diese oft
+- **PRÜFUNGSFALLE**: "Saignée = immer die beste Roséqualität" = FALSCH. Ist komplexer, aber nicht objektiv besser.`,
+      takeaway: "Saignée-Rosé = Nebenprodukt mit kräftigem, strukturiertem Charakter."
     },
     {
-      title: "Charakteristik Saignée-Rosé",
-      content: `Saignée-Roséweine haben charakteristische Merkmale.
+      title: "Rebsorten für Rosé: Hautdicke steuert Färbung",
+      content: `Bestimmte Rebsorten sind ideal für Roséproduktion. Biochemische Basis:
 
-- **Farbe**: Intensiv Pink bis Korallentöne
-- **Struktur**: Merklich höhere Tannine als andere Rosé-Methoden
-- **Körper**: Voller, weniger zart
-- **Aromen**: Komplexer, würziger
-- **Trinkstil**: Kann länger reifungsrelevant sein, weniger für unmittelbare Genuss gedacht`,
-      takeaway: "Merksatz: Saignée-Rosé = strukturiert, komplex, weniger zart."
+- **Dünnschalige Sorten** (hellere Färbung natürlicherweise):
+  - **Grenache**: Häufig in Provence, delicate Frucht, mittlere Tannine → blasses Rosé
+  - **Pinot Noir**: Elegant, feinere Struktur → blasses bis mittleres Rosé
+- **Dickschalige Sorten** (intensivere Färbung):
+  - **Syrah**: Intensivere Frucht, würzig → tieferes Rosé
+  - **Sangiovese**: Herzhaft, strukturiert → kräftiges Rosé
+  - **Tempranillo**: Ausgeprägte Frucht → intensiv Pink
+- **Einfluss auf Stil**: Jede Sorte beeinflusst:
+  - Farbintensität: Dünnschalig = hell; Dickschalig = intensiv
+  - Aroma: Grenache = delikat; Syrah = würzig; Pinot = elegant
+  - Struktur: Natürliche Tannine beeinflussen Körper
+- **Blends**: Mehrere Sorten kombiniert für Balance
+- **PRÜFUNGSFALLE**: "Dickschalige Sorten = bessere Roséweine" = FALSCH. Unterschiedliche Charaktere.`,
+      takeaway: "Rebsorte prägt Rosécharakter: Hautdicke = Färbung, Aroma = Sorten-spezifisch."
     },
     {
-      title: "Verschnitt-Methode (Blending)",
-      content: `Mischung von Rot- und Weißwein ist eine kontroverse Methode in der EU.
+      title: "Pressung bei Rosé: Sanfte Kontrolle",
+      content: `Sanfte Pressung ist entscheidend für Roséstil. Mechanisches Warum:
 
-- **In der EU**: Für Stillweine meist nicht erlaubt (Ausnahmen existieren)
-- **Schaumweinproduktion**: Für Champagne und andere Schaumweine erlaubt
-- **Recht reguliert**: Strenge Gesetze verhindern Missbrauch
-- **Sensorik**: Kann zu weniger authentischem Geschmacksprofil führen`,
-      takeaway: "Merksatz: Blending ist in der EU reguliert, meist nur bei Schaumwein erlaubt."
+- **Weiches Pressen** (Standard für Rosé):
+  - Minimaler Druck, um Bitterkeit und Überextraktion zu vermeiden
+  - ZIEL: Freilaufwein (best quality) wird größerer Anteil
+  - RESULTAT: Aromatische Sauberheit, nicht zu viel Tannin
+- **Fraktionierung**:
+  - Freilaufwein wird separat gepresst (feinster Anteil)
+  - Presswein (mit Druck) wird separat behandelt
+  - Ermöglicht Qualitätskontrolle: feine Fraktionen = Rosé; grobe = ggf. verworfen
+- **Technik**: Oft werden spezielle sanfte Pressen verwendet
+  - Membrane-Pressen: Sanfteste Variante
+  - Bladder-Pressen: Moderat sanft
+  - Tradtionelle Spindel-Pressen: Weniger sanft
+- **PRÜFUNGSFALLE**: "Höhere Pressung = mehr Saft = wirtschaftlich besser" = FALSCH. Qualitätsverlust durch Bitterkeit.`,
+      takeaway: "Sanfte Pressung bewahrt Fruchtaromen und verhindert Bitterkeit bei Rosé."
     },
     {
-      title: "Rebsorten für Rosé",
-      content: `Bestimmte Rebsorten sind ideal für Roséproduktion.
+      title: "Gärung bei Rosé: Kühl und kontrolliert wie Weißwein",
+      content: `Roséweine werden ähnlich wie Weißweine vergoren – kalt und kontrolliert. Strategisches Warum:
 
-- **Grenache**: Häufig in Provence, delicate Frucht, mittlere Tannine
-- **Syrah**: Intensivere Frucht, würzig
-- **Pinot Noir**: Elegant, feinere Struktur
-- **Sangiovese**: Herzhaft, strukturiert
-- **Tempranillo**: Ausgeprägte Frucht
-
-Einfluss auf Stil: Jede Sorte beeinflusst Farbintensität, Aroma und Struktur`,
-      takeaway: "Merksatz: Rebsorte prägt Rosécharakter ebenso wie Verarbeitung."
-    },
-    {
-      title: "Einfluss der Rebsorte",
-      content: `Die Hautdicke und Pigmentierung der Rebsorte bestimmen natürliche Färbungskraft.
-
-- **Dünnschalige Sorten (Grenache, Pinot Noir)**:
-  - Hellere Färbung natürlicherweise
-  - Weniger natürliche Tannine
-- **Dickschalige Sorten (Syrah, Tempranillo)**:
-  - Intensivere Färbung
-  - Mehr natürliche Tannine
-  - Kräftiger Geschmack`,
-      takeaway: "Merksatz: Hautdicke steuert Färbung und natürliche Struktur."
-    },
-    {
-      title: "Pressung bei Rosé",
-      content: `Sanfte Pressung ist entscheidend für den Roséstil.
-
-- **Weiches Pressen**: Minimaler Druck, um Bitterkeit und Überextraktion zu vermeiden
-- **Fraktionierung**: Freilauf wird getrennt gepresst, um Qualitätskontrolle zu ermöglichen
-- **Ziel**: Aromatische Sauberkeit, nicht zu viel Tannin
-- **Technik**: Oft werden spezielle sanfte Pressen verwendet`,
-      takeaway: "Merksatz: Sanfte Pressung bewahrt Fruchtaromen und verhindert Bitterkeit."
-    },
-    {
-      title: "Gärung bei Rosé",
-      content: `Roséweine werden ähnlich wie Weißweine vergoren – kalt und kontrolliert.
-
-- **Temperatur**: Typisch 12–18 °C (manchmal bis 20 °C)
-- **Hebhefen**: Oft Reinzuchthefen für Frische und Kontrolle
+- **Temperatur-Bereich**: Typisch 12-18 °C (manchmal bis 20 °C)
+  - URSACHE: Rosé ist frischbetonter Stil wie Weißwein
+  - WIRKUNG: Langsame Gärung schützt Primäraromen vor Abbau
+  - KONSEQUENZ: Fruchtbetonter, lebendiger Wein
+- **Hefen**: Oft Reinzuchthefen für Frische und Kontrolle
+  - Verschiedene Stämme betonen unterschiedliche Aromen
+  - Wildhefen = höheres Fehlerrisiko
 - **Gärgeschwindigkeit**: Langsam und kontrolliert für Aromenentwicklung
-- **Ziel**: Primäraromen bewahren, keine schweren Nebenprodukte`,
-      takeaway: "Merksatz: Roséweine brauchen kühle, kontrollierte Gärung wie Weißwein."
+- **SO₂-Einsatz**: Schwefeleinsatz für Oxidationsschutz (wie bei Weißwein)
+- **ZIEL**: Primäraromen bewahren, keine schweren Nebenprodukte entwickeln
+- **PRÜFUNGSFALLE**: "Wärmere Gärung = bessere Rosé" = FALSCH. Würde Frische zerstören.`,
+      takeaway: "Roséweine brauchen kühle, kontrollierte Gärung (12-18 °C) wie Weißwein."
     },
     {
-      title: "Temperaturkontrolle",
-      content: `Temperatur ist zentral für den frischen Charakter von Rosé.
-
-- **Niedrig (10–14 °C)**: Maximum Frische und Frucht, minimaler Aromaverlust
-- **Moderat (14–18 °C)**: Balanciert zwischen Frische und Komplexität
-- **Hoch (über 20 °C)**: Risiko von Aromaverlust, schwerere Noten entwickeln sich`,
-      takeaway: "Merksatz: Kühle Gärung (12–18 °C) ist zentral für frische Roséweine."
-    },
-    {
-      title: "Aromaprofil Rosé",
-      content: `Roséweine haben ein charakteristisches Aromaprofil, das von Rebsorte und Verarbeitung abhängt.
-
-- **Primäraromen**:
-  - Erdbeere, Himbeere, Kirsche
-  - Zitrus (Zitrone, Grapefruit)
-  - Grüne Äpfel
-- **Je nach Stil auch**:
-  - Kräuteraromen (Minze, Thymian)
-  - Blütenaromen (Blütenkelch, Blütenstaub)
-- **Reife**: Mit Zeit können Honig-, Mandel- oder Ziegelaromen entstehen`,
-      takeaway: "Merksatz: Roséaromen sind fruchtig-blumig und subtil."
-    },
-    {
-      title: "Farbe von Rosé",
-      content: `Die Farbe von Rosé ist eine Visitenkarte des Stils und der Verarbeitung.
-
-- **Blassrosa**: Direktpressung oder sehr kurze Maischekontaktzeit
-- **Lachsfarben**: Kurze bis moderate Maischestandzeit (Standard)
-- **Kräftig Pink/Orange-Pink**: Längere Maischestandzeit oder Saignée-Methode
-- **Farbveränderung**: Mit Zeit oxidiert die Farbe zu Ziegelrot/Hellbraun`,
-      takeaway: "Merksatz: Roséfarbe signalisiert Verarbeitungsmethode und Kontaktdauer."
-    },
-    {
-      title: "Tannin in Rosé",
-      content: `Rosé enthält deutlich weniger Tannine als Rotwein wegen der kurzen Schalenkontaktzeit.
-
-- **Typisches Tannin-Niveau**: Gering bis sehr gering
-- **Ausnahme - Saignée**: Kann etwas mehr Tannine haben, ist aber noch im Rosé-Bereich
-- **Sensorik**: Kaum Adstringenz (zusammenziehend), zarte Mundgefühle
-- **Struktur**: Kommt von Säure statt Tannine`,
-      takeaway: "Merksatz: Rosé-Tannine sind minimal; Säure prägt die Struktur."
-    },
-    {
-      title: "Säure in Rosé",
-      content: `Hohe Säure ist zentral für Rosécharakter und Frische.
-
-- **Typisches Niveau**: Mittlere bis hohe Säure (acidity)
-- **Funktion**: Gibt Frische, verhindert breiten/schweren Eindruck
-- **Balance**: Säure, Obstvl und Alkohol müssen in Balance sein
-- **Qualitätszeichen**: Zu niedrige Säure = breiter, weniger frisch wirkender Wein`,
-      takeaway: "Merksatz: Hohe Säure ist Qualitätsmerkmal bei Rosé für Frische."
-    },
-    {
-      title: "Alkoholgehalt Rosé",
-      content: `Alkoholgehalt ist bei Rosé typisch moderat bis niedrig.
-
-- **Typisches Niveau**: 11–13 % ABV (meist am unteren Ende)
-- **Klimaabhängig**: Warme Regionen können 13–14 % erreichen
-- **Stileffekt**: Höherer Alkohol = reiferer, körperreicherer Eindruck
-- **Balance**: Mäßiger Alkohol ermöglicht zarten, frischen Stil`,
-      takeaway: "Merksatz: Niedriger Alkohol ist typisch und unterstützt den frischen Stil."
-    },
-    {
-      title: "Stilrichtungen Rosé",
-      content: `Es gibt mehrere etablierte Rosé-Stilkategorien, abhängig von Verarbeitung und Rebsorten.
-
-- **Leicht & Frisch**: Direktpressung, sehr niedrig Alkohol, blassrosa
-- **Fruchtbetont**: Kurze Maischekontaktzeit, intensive Frucht, Standard-Pink
-- **Strukturierter Rosé**: Längere Maischekontaktzeit, mehr Tannin, kräftiger
-- **Saignée-Stil**: Komplex, körperreich, strukturiert`,
-      takeaway: "Merksatz: Vier Grundstile prägen das Roséspektrum."
-    },
-    {
-      title: "Leichter Rosé-Stil",
-      content: `Leichte Roséweine sind Ausdruck maximaler Frische und Zartheit.
-
-- **Alkohol**: Niedrig (10,5–11,5 %)
-- **Säure**: Hoch für Lebendigkeit
-- **Farbe**: Blassrosa bis hellrosa
-- **Aromen**: Einfache Beere, primär, zart
-- **Körper**: Leichtflüssig, elegant
-- **Trinkreife**: Unmittelbar, jung am besten`,
-      takeaway: "Merksatz: Leichte Roséweine = minimal, frisch, für sofortige Genuss."
-    },
-    {
-      title: "Kräftiger Rosé-Stil",
-      content: `Kräftigere Roséweine haben mehr Charakter und Struktur.
-
-- **Alkohol**: Höher (12–13 %)
-- **Säure**: Moderat, weniger Schärfe
-- **Farbe**: Intensives Pink bis Koralle
-- **Aromen**: Komplexer, würzig, fruchtbetont
-- **Körper**: Voller, strukturierter
-- **Trinkreife**: Kann länger reifen, weniger an sofortige Genuss gebunden`,
-      takeaway: "Merksatz: Kräftige Roséweine haben Strukturcharakter."
-    },
-    {
-      title: "Holzeinsatz bei Rosé",
-      content: `Holzausbau ist bei Rosé selten, kann aber gezielt eingesetzt werden.
-
-- **Häufigkeit**: Meist nicht verwendet
-- **Wenn eingesetzt**: Premium-Segmente, um Komplexität zu erhöhen
-- **Effekt**: Mehr Struktur, Gewürznoten, aber Risiko des Frischeverlusts
-- **Stil-Risiko**: Holz kann den charakteristischen Rosécharakter überlagern`,
-      takeaway: "Merksatz: Holz bei Rosé ist Ausnahme, kann aber Struktur geben."
-    },
-    {
-      title: "Edelstahl vs. Holz",
-      content: `Bei Rosé ist die Ausbauwahl zwischen Neutralität und zusätzlichem Charakter.
-
-- **Edelstahl**:
-  - Reine Frucht, primäre Aromen
-  - Maximale Frische
-  - Standard für qualitätsorientierte Roséweine
-- **Holz** (wenn verwendet):
-  - Komplexere Aromen
-  - Mehr Textur
-  - Risiko: Verlust von Frische und Charakteristik`,
-      takeaway: "Merksatz: Edelstahl ist Standard für Roséqualität; Holz ist selten."
-    },
-    {
-      title: "Reduktiver Ausbau",
-      content: `Minimaler Sauerstoffkontakt schützt Roséfrische.
+      title: "Reduktiver Ausbau: Frische schützen",
+      content: `Minimaler Sauerstoffkontakt schützt Roséfrische. Praktische Mechanik:
 
 - **Methode**: Schnelle Abfüllung, minimales Racking, SO₂-Einsatz
+  - Minimaler Luftkontakt während aller Verarbeitungsschritte
+  - SO₂ bindet Sauerstoff → schützt vor enzymatischer Browning
+  - Inertgas-Einsatz (Stickstoff/CO₂) verdrängt Sauerstoff
 - **Effekt**: Erhalt der Fruchtaromen und der Frische
-- **Standard**: Dies ist die Norm bei Roséweinbereitung
-- **Resultat**: Lebendige, präzise Weine`,
-      takeaway: "Merksatz: Reduktiver Ausbau = Schutz der Roséfrische."
+- **Standard**: Dies ist die Norm bei hochwertiger Roséweinbereitung
+- **Resultat**: Lebendige, präzise Weine mit Primärfrucht
+- **Lagerfähigkeit**: Verkürzt Haltbarkeit (3-4 Jahre maximal)
+- **PRÜFUNGSFALLE**: "Reduktiver Ausbau = minderwertige Weine" = FALSCH. Standard für Qualitäts-Rosé.`,
+      takeaway: "Reduktiver Ausbau = Schutz der Roséfrische durch Minimierung von Sauerstoff."
     },
     {
-      title: "Oxidativer Ausbau",
-      content: `Höherer Sauerstoffkontakt ist bei Rosé untypisch und wird vermieden.
+      title: "Roséfarbe: Visueller Indikator für Stil und Reife",
+      content: `Die Farbe von Rosé ist eine Visitenkarte des Verarbeitungsstils. Praktische Bedeutung:
 
-- **Seltenheit**: Sehr selten bei Rosé
-- **Wenn geschieht**: Kann zu nussigen, alten Noten führen
-- **Verlust**: Frische und Jungendlichkeit gehen verloren
-- **Stilentscheidung**: Weit entfernt vom Rosécharakter`,
-      takeaway: "Merksatz: Oxidativer Ausbau widerspricht dem Roséstil."
+- **Blassrosa**: Direktpressung oder sehr kurze Maischekontaktzeit (< 12 Stunden)
+  - BEDEUTUNG: Minimale Extraktion, extrem fruchtbetont und zart
+  - KULTUR: Provence "pale styles" sind Trend
+- **Lachsfarben**: Kurze bis moderate Maischestandzeit (12-24 Stunden) - STANDARD
+  - BEDEUTUNG: Balance zwischen Farbe und Struktur
+  - KULTUR: Die klassische Roséfarbe für die meisten Konsumenten
+- **Kräftig Pink/Orange-Pink**: Längere Maischestandzeit (24-48 Stunden) oder Saignée
+  - BEDEUTUNG: Mehr Struktur, mehr Komplexität, kein "einfaches" Rosé mehr
+  - KULTUR: Rhône, südliche Rosés können dieses Profil haben
+- **Alterung – Farbveränderung**: Mit Zeit oxidiert die Farbe
+  - Zu Ziegelrot/Hellbraun (nach mehreren Jahren)
+  - BEDEUTUNG: Alter oder unsachgemäße Lagerung
+- **PRÜFUNGSFALLE**: "Blassrosa = bessere Qualität" = FALSCH. Sind unterschiedliche Stile.`,
+      takeaway: "Roséfarbe signalisiert Verarbeitungsmethode und Kontaktdauer – visueller Stil-Indikator."
     },
     {
-      title: "Reifepotenzial Rosé",
-      content: `Die meisten Roséweine sind für frühen Konsum gedacht, nicht für lange Lagerung.
+      title: "Säure in Rosé: Strukturelement statt Tannine",
+      content: `Hohe Säure ist zentral für Rosécharakter und Frische. Biochemische Rolle:
 
-- **Grundregel**: Rosé für Jugendlichkeit gemacht
-- **Ausnahmen**: Strukturierte Roséweine (Saignée, längere Maischekontaktzeit) können 2–4 Jahre reifen
-- **Holzgereifte**: Können manchmal länger lagern
-- **Trend**: Immer mehr Premium-Roséweine haben Lagerpotenzial`,
-      takeaway: "Merksatz: Rosé ist meist für frühen Konsum, wenige haben Lagerpotenzial."
+- **Typisches Niveau**: Mittlere bis hohe Säure (acidity) ist Standard
+  - URSACHE: Früher Lesezeitpunkt wird oft bevorzugt
+  - WIRKUNG: Säure gibt Spannungskraft und Lebendigkeit
+- **Funktion**:
+  - Gibt Frische und Lebendigkeit
+  - Verhindert breiten/schweren Eindruck (würde ohne Säure entstehen)
+  - Struktur-Ersatz: Ersetzt fehlende Tannine als strukturierendes Element
+- **Balance**: Säure, Frucht und Alkohol müssen in Balance sein
+  - Zu niedrige Säure = breiter, weniger frisch wirkender Wein (Fehler)
+  - Richtige Säure = präzise, lebendiger Wein
+- **Qualitäts-Zeichen**: Zu niedrige Säure ist Qualitätsmerkmal-Fehler
+- **PRÜFUNGSFALLE**: "Säure = unangenehm" = FALSCH. Strukturelle Notwendigkeit bei Rosé.`,
+      takeaway: "Hohe Säure ist Qualitätsmerkmal bei Rosé für Frische und Struktur."
     },
     {
-      title: "Optimale Trinkzeit",
-      content: `Roséweine sollten jung getrunken werden, um maximum Frische zu bewahren.
+      title: "Alkoholgehalt Rosé: Typisch moderat bis niedrig",
+      content: `Alkoholgehalt ist bei Rosé typisch moderat bis niedrig. Stilistische Bedeutung:
 
-- **Standard**: 1–2 Jahre nach Vintage ideal
+- **Typisches Niveau**: 11-13% ABV (meist am unteren Ende des Spektrums)
+- **Klimaabhängig**: Warme Regionen können 13-14% erreichen
+  - Warmes Klima (südlich) = höhere Zucker = höherer Alkohol möglich
+  - Kühles Klima (nördlich) = niedrigere Zucker = niedrigerer Alkohol
+- **Stileffekt**:
+  - Höherer Alkohol (13-14%) = reiferer, körperreicherer Eindruck
+  - Niedrigerer Alkohol (11-12%) = leichterer, frischer Eindruck
+- **Balance**: Mäßiger Alkohol ermöglicht zarten, frischen Stil (das Rosé-Ziel)
+  - Zu hoher Alkohol würde Rosé zu "schwer" machen
+- **Kultur-Unterschied**: Provence typisch 12-13%; warme Regionen können 13-14% sein
+- **PRÜFUNGSFALLE**: "Höherer Alkohol = besserer Rosé" = FALSCH. Zu hoch = verliert Frische.`,
+      takeaway: "Niedriger bis moderater Alkohol (11-13%) ist typisch und unterstützt frischen Stil."
+    },
+    {
+      title: "Stilrichtungen Rosé: Vier Grundstile",
+      content: `Es gibt mehrere etablierte Rosé-Stilkategorien. Kontinuum und Charaktere:
+
+- **Leicht & Frisch** (Extrem-Pols):
+  - Direktpressung, sehr niedriger Alkohol (10-11%), blassrosa
+  - Ultra-leicht, ultra-frisch, minimal Struktur
+  - Ideal: Heißes Wetter trinken
+- **Fruchtbetont** (Standard):
+  - Kurze Maischekontaktzeit, intensive Frucht, Standard-Pink
+  - Balance zwischen Frische und Geschmack
+  - Ideal: Universal trinkenbar
+- **Strukturierter Rosé** (Komplexer-Pols):
+  - Längere Maischekontaktzeit, mehr Tannin, kräftiger Farbe
+  - Reifere Charaktere, komplexer
+  - Ideal: Mit Essen pairen, Lagerpotenzial
+- **Saignée-Stil** (Speziell):
+  - Komplex, körperreich, strukturiert, komplexe Noten
+  - Kraftvoller als Standard-Rosé
+  - Ideal: Längere Lagerung möglich (nicht nur trinken)
+- **PRÜFUNGSFALLE**: "Ein Rosé-Stil ist objektiv besser" = FALSCH. Sind Geschmacks-Präferenzen.`,
+      takeaway: "Vier Grundstile prägen das Roséspektrum: leicht-frisch bis strukturiert-komplex."
+    },
+    {
+      title: "Edelstahl vs. Holz: Unterschiedliche Ausbauziele",
+      content: `Bei Rosé ist die Ausbauwahl zwischen Neutralität und zusätzlichem Charakter:
+
+- **Edelstahl** (Standard für Qualitäts-Rosé):
+  - Reine Frucht, primäre Aromen dominant
+  - Maximale Frische, keine Überlag erung
+  - Neutral → Rebsorten-Charakter und Herkunft sprechen
+  - Standard für hochwertige Roséweine
+  - RESULTAT: "Clean" Rosé mit ungetrübter Frucht
+- **Holz** (wenn überhaupt eingesetzt):
+  - Komplexere Aromen: Vanille, Toast, Gewürze
+  - Mehr Textur, aber auch Risiko
+  - RISIKO: Verlust von Frische und charakteristischer Roséfarbe/Charakter
+  - Selten verwendet (nur Premium-Experimente)
+  - RESULTAT: Weniger Rosé-typisch, mehr Weiß-ähnlich
+- **Moderne Trend**: Edelstahl-Dominanz für Qualität
+- **Betontank**: Kommt zurück (neutral + Mikrooxidation möglich)
+- **PRÜFUNGSFALLE**: "Holz-Rosé = besser" = FALSCH. Meist Qualitätsverlust des Rosécharakters.`,
+      takeaway: "Edelstahl ist Standard für Roséqualität; Holz ist selten und riskant."
+    },
+    {
+      title: "Reifepotenzial Rosé: Meist für frühen Konsum",
+      content: `Die meisten Roséweine sind für frühen Konsum gedacht, nicht für lange Lagerung. Praktische Realität:
+
+- **Grundregel**: Rosé für Jugendlichkeit und Frische gemacht
+  - URSACHE: Minimale Tannine und Säurebalance
+  - WIRKUNG: Mit Zeit oxidieren Aromen und Farbe
+  - KONSEQUENZ: Lagerpotenzial gering
+- **Standard**: 1-2 Jahre nach Vintage ideal (oft schon im nächsten Jahr genießbar)
+- **Ausnahmen**: Strukturierte Roséweine können länger reifen
+  - Saignée-Rosé: 3-5 Jahre möglich
+  - Längere Maischekontaktzeit-Rosé: 2-4 Jahre
+  - Holzgereifte: Können manchmal länger lagern (selten)
+- **Trend**: Immer mehr Premium-Roséweine haben Lagerpotenzial (Ausnahme zur Regel)
+- **Farbentwicklung**: Mit Zeit oxidiert Farbe zu Ziegelrot/Hellbraun
+- **Aroma-Entwicklung**: Früchte werden flach, komplexe Noten entstehen (aber nicht gewünscht bei Rosé)
+- **PRÜFUNGSFALLE**: "Rosé-Lagerung = ähnlich Rotwein" = FALSCH. Viel kürzere Lagerfähigkeit.`,
+      takeaway: "Rosé ist meist für frühen Konsum, wenige haben Lagerpotenzial."
+    },
+    {
+      title: "Optimale Trinkzeit: Jugendlichkeit ist Ziel",
+      content: `Roséweine sollten jung getrunken werden, um maximum Frische zu bewahren. Praktische Richtlinien:
+
+- **Ideal**: 1-2 Jahre nach Vintage
+  - Früh im nächsten Jahr nach Vintage oft schon optimal
+  - ZIEL: Maximum Frucht, Frische und Lebendigkeit
 - **Ausnahmen**: Strukturierte Roséweine können länger
-- **Ziel**: Maximum Frucht, Frische und Lebendigkeit
-- **Nach längerer Lagerung**: Farbe oxidiert, Aromen werden flach`,
-      takeaway: "Merksatz: Rosé = junge Weine, innerhalb 1–2 Jahren trinken."
+  - Saignée: Bis 4-5 Jahre möglich
+  - Premium-Rosés: 3-5 Jahre möglich
+- **Nach längerer Lagerung**: Qualitätsverlust
+  - Farbe oxidiert zu Ziegelrot/Hellbraun
+  - Aromen werden flach, primäre Frucht verschwindet
+  - Säure verliert Schärfe (nicht gewünscht)
+- **Lagerungsbedingungen**: Wenn gelagert, dann kühl, dunkel, liegend
+- **PRÜFUNGSFALLE**: "Rosé kann wie Rotwein lange lagern" = FALSCH. Viel kürzerer Trinkfenster.`,
+      takeaway: "Rosé = junge Weine, innerhalb 1-2 Jahren trinken für maximale Frische."
     },
     {
-      title: "Fehler bei Roséproduktion",
-      content: `Typische Risiken können durch Kontrolle und Sorgfalt vermieden werden.
+      title: "Fehler bei Roséproduktion vermeiden",
+      content: `Typische Risiken können durch Kontrolle und Sorgfalt vermieden werden:
 
-- **Zu viel Tannin**: Resultat von zu langer Maischestandzeit → verliert Rosécharakter
-- **Oxidierte Aromen**: Zu viel Luftkontakt → Braunverfärbung und Frischeverlust
-- **Mangelnde Frische**: Zu warme Gärung oder SO₂-Mangel → breiter, stumpfer Eindruck
-- **Farblosigkeit**: Zu kurze Kontaktzeit → wirkt wie verdünnter Wein`,
-      takeaway: "Merksatz: Ausreichende Kontaktzeit und Frischeschutz sind zentral."
+- **Zu viel Tannin**:
+  - URSACHE: Resultat von zu langer Maischestandzeit
+  - WIRKUNG: Wein verliert Rosécharakter → wirkt wie "schwacher Rotwein"
+  - FEHLER: Irreversibel
+- **Oxidierte Aromen**:
+  - URSACHE: Zu viel Luftkontakt während Verarbeitung
+  - WIRKUNG: Braunverfärbung und Frischeverlust → Apfelbraun
+  - FEHLER: Irreversibel
+- **Mangelnde Frische**:
+  - URSACHE: Zu warme Gärung oder unzureichender SO₂-Schutz
+  - WIRKUNG: Wein wirkt breiter, stumpfer, flach
+  - FEHLER: Irreversibel
+- **Farblosigkeit**:
+  - URSACHE: Zu kurze Kontaktzeit oder fehlerhafte Ernte
+  - WIRKUNG: Wirkt wie verdünnter Wein, nicht authentisch
+  - FEHLER: Irreversibel
+- **Kontamination/Essigstich**:
+  - URSACHE: Schlechte Hygiene, unzureichend SO₂
+  - WIRKUNG: Essiggeschmack, Nasenlöcher-Reizung
+  - FEHLER: Irreversibel
+- **PRÜFUNGSFALLE**: "Ein Fehler kann ausgeglichen werden" = FALSCH. Alle Fehler sind irreversibel.`,
+      takeaway: "Ausreichende Kontaktzeit, Frischeschutz und Hygiene sind zentral."
     },
     {
-      title: "Einfluss des Klimas",
-      content: `Klima prägt den Roséstil fundamental.
+      title: "Einfluss des Klimas: Zwischen elegant-frisch und reif",
+      content: `Klima prägt den Roséstil fundamental. Deterministische Unterschiede:
 
 - **Kühles Klima**:
-  - Höhere Säure erhalten
-  - Leichtere Weine
-  - Präzisere Fruchtaromen
+  - Höhere Säure erhalten (natürlich)
+  - Leichtere, frischere Weine
+  - Präzisere Fruchtaromen (Zitrus, Beere, Blume)
+  - RESULTAT: Elegante, mineralische Rosés
+  - Beispiele: Loire, Deutschland, nördlicher Provence
 - **Warmes Klima**:
-  - Reifere Frucht
-  - Höherer Alkohol
-  - Vollmundigere Weine`,
-      takeaway: "Merksatz: Klima steuert zwischen elegant-frisch und vollmundig-reif."
+  - Reifere Frucht (Pflaume, Aprikose)
+  - Höherer Alkohol (natürlich)
+  - Vollmundigere Weine, weniger Säure-Schärfe
+  - RESULTAT: Reife, vollmundige Rosés
+  - Beispiele: Südlicher Rhône, Süditalien, Spanien, Australien
+- **KULTUR-Unterschied**: Provence (mix) vs. Loire (elegant) vs. Süd (reif)
+- **PRÜFUNGSFALLE**: "Warmer Klima = bessere Rosés" = FALSCH. Unterschiedliche Stile, beide wertvoll.`,
+      takeaway: "Klima steuert zwischen elegant-frisch und reif-vollmundig."
     },
     {
-      title: "Erntezeitpunkt",
-      content: `Der Lesezeitpunkt bei Rosétrauben ist wichtig für Balance.
+      title: "Erntezeitpunkt: Balance zwischen Frische und Reife",
+      content: `Der Lesezeitpunkt bei Rosétrauben ist wichtig für Balance. Praktische Entscheidung:
 
-- **Frühere Lese**:
-  - Höhere Säure
+- **Frühere Lese** (< 22° Oechsle):
+  - Höhere Säure (natürlich)
   - Geringerer Alkohol
   - Leichtere, frischere Weine
-- **Späte Lese**:
-  - Mehr Frucht und Süße
+  - RESULTAT: Maximum Frische und Lebendigkeit
+- **Normale Lese** (22-23° Oechsle):
+  - Ausgewogenes Verhältnis
+  - Balance zwischen Frische und Reife
+- **Späte Lese** (> 23° Oechsle):
+  - Mehr Frucht und Süße (natürlich)
   - Höherer Alkohol
-  - Vollmundigere Weine`,
-      takeaway: "Merksatz: Lesezeitpunkt steuert Balance zwischen Frische und Reife."
+  - Vollmundigere Weine
+  - RESULTAT: Reifere Charaktere
+- **STRATEGISCH**: Frühe Lese = elegante Provence-Stile; Normale = Standard; Späte = reife Süd-Stile
+- **PRÜFUNGSFALLE**: "Späte Lese = immer besser" = FALSCH. Würde Rosécharakter (Frische) zerstören.`,
+      takeaway: "Lesezeitpunkt steuert Balance zwischen Frische und Reife."
     },
     {
-      title: "Rosé im Markt",
-      content: `Rosé ist eine der am schnellsten wachsenden Weinkategorien weltweit.
+      title: "Rosé im Markt: Aufstrebende Kategorie",
+      content: `Rosé ist eine der am schnellsten wachsenden Weinkategorien weltweit. Markt-Realität:
 
-- **Wachsendes Segment**: In den letzten Jahrzehnten Explosion bei Verbrauch und Qualität
+- **Wachsendes Segment**:
+  - In den letzten zwei Jahrzehnten Explosion bei Verbrauch
+  - Qualitativ massive Verbesserung (von simple hin zu komplexe)
 - **Stiltrend**: Immer häufiger trocken statt süß
+  - Süße Rosés sind heute Ausnahme
+  - Trockene dominieren absolut
 - **Qualitätselevation**: Premium-Roséweine erobern den Markt
-- **Regionale Dominanz**: Provence ist Qualitätsführer, aber globale Expansion
-- **Verbraucher**: Jüngere Zielgruppe, Sommerkategorie dominant`,
-      takeaway: "Merksatz: Rosé ist im Aufwind, trocken und qualitätsorientiert."
+  - Top-Bottiglie aus Provence
+  - Napa Valley experimentiert mit Pinot Noir-Rosé
+- **Regionale Dominanz**: Provence ist Qualitätsführer (Marktstandard)
+  - Aber globale Expansion: Kalifornien, Australien, Spanien folgen
+- **Verbraucher-Profil**: Jüngere Zielgruppe, Sommerkategorie dominant, lebensstil-orientiert
+- **Food-Pairing**: Vielseitig – passt zu mehr als Rotwein für Sommergerichte
+- **PRÜFUNGSFALLE**: "Rosé ist ein neuer Trend" = FALSCH. Ist Standardkategorie nun mit Premium-Auswahl.`,
+      takeaway: "Rosé ist im Aufwind, trocken und qualitätsorientiert – etablierte Kategorie."
     }
   ],
   questions: [
     {
       question: "Wie entsteht die Farbe von Roséwein?",
       options: [
-        "Durch lange Maischestandzeit wie Rotwein",
-        "Durch kurzen Schalenkontakt zwischen Most und Traubenschalen",
-        "Durch Holzreifung",
-        "Durch Zugabe von Farbstoffen"
-      ],
-      correct: 1,
-      explanation: "Die kurze Kontaktzeit (6–48 Stunden) zwischen Most und Schalen extrahiert ausreichend Anthocyane für die charakteristische Roséfarbe."
-    },
-    {
-      question: "Welche Methode ergibt den hellsten Rosé?",
-      options: [
-        "Saignée",
-        "Blending",
-        "Direktpressung",
-        "Lange Maischestandzeit"
+        "Durch lange Maischestandzeit wie Rotwein (2-4 Wochen)",
+        "Durch Holzreifung und Oxidation",
+        "Durch kurzen Schalenkontakt zwischen Most und Traubenschalen (6-48 Stunden)",
+        "Durch Zugabe von Farbstoffen oder künstliche Färbung"
       ],
       correct: 2,
-      explanation: "Bei Direktpressung ist der Schalenkontakt minimal (nur während des Pressens) → sehr blasse Farbe und minimale Komplexität."
+      explanation: "Die kurze Kontaktzeit (6-48 Stunden) zwischen Most und Schalen extrahiert ausreichend Anthocyane für die charakteristische Roséfarbe – viel weniger als Rotwein (2-4 Wochen), mehr als Weißwein (0 Stunden)."
+    },
+    {
+      question: "Welche Methode ergibt den hellsten, blassesten Rosé?",
+      options: [
+        "Saignée-Methode mit langer Maischekontaktzeit",
+        "Kurze Maischestandzeit (24-48 Stunden)",
+        "Direktpressung (minimale Kontaktzeit, wenige Minuten)",
+        "Lange Maischegärung wie Rotwein"
+      ],
+      correct: 2,
+      explanation: "Bei Direktpressung ist der Schalenkontakt minimal (nur während des Pressens) → sehr blasse Farbe, minimal Komplexität – hellster möglicher Rosé."
     },
     {
       question: "Was ist typisch für Saignée-Rosé im Vergleich zu anderen Methoden?",
       options: [
-        "Sehr niedriger Alkohol",
-        "Keine erkennbare Farbe",
-        "Mehr Struktur, Tannine und Komplexität wegen längerer Maischestandzeit",
-        "Keine Fruchtaromen"
+        "Mehr Struktur, Tannine und Komplexität wegen längerer Maischekontaktzeit aus Rotweinmaische",
+        "Sehr niedriger Alkohol und extreme Leichtheit",
+        "Keine erkennbare Farbe, wirkt wie Weißwein",
+        "Keine Fruchtaromen, nur Wein-Fehlern"
       ],
-      correct: 2,
-      explanation: "Saignée-Rosé stammt aus einer Rotweinmaische und hat länger Schalenkontakt → strukturierter und komplexer."
+      correct: 0,
+      explanation: "Saignée-Rosé stammt aus einer Rotweinmaische und hat länger Schalenkontakt als Standard-Rosé → strukturierter, komplexer, mehr Tannine – nicht der typische leichte Rosé."
     },
     {
       question: "Wie wird Rosé typischerweise vergoren?",
       options: [
-        "Wie Rotwein bei hohen Temperaturen (20–32 °C)",
-        "Wie Weißwein bei kühlen Temperaturen (12–18 °C) für Frischeschutz",
-        "Gar nicht vergoren",
-        "Im Holzfass bei hoher Temperatur"
+        "Wie Rotwein bei hohen Temperaturen (25-32 °C) für intensive Aromen",
+        "Gar nicht vergoren, sondern gemixt",
+        "Im Holzfass bei hoher Temperatur für Komplexität",
+        "Wie Weißwein bei kühlen Temperaturen (12-18 °C) für Frischeschutz"
       ],
-      correct: 1,
-      explanation: "Rosé braucht kühle Gärung (12–18 °C) zur Bewahrung von Fruchtaromen und Frische, ähnlich wie Weißwein."
+      correct: 3,
+      explanation: "Rosé braucht kühle Gärung (12-18 °C) zur Bewahrung von Fruchtaromen und Frische, identisch wie Weißwein – nicht warm wie Rotwein."
     },
     {
       question: "Warum ist Temperaturkontrolle bei der Roséherstellung entscheidend?",
       options: [
-        "Um mehr Tannine zu extrahieren",
+        "Um mehr Tannine zu extrahieren und Struktur zu geben",
         "Um Fruchtaromen zu bewahren und Frische zu erhalten",
-        "Um Alkohol zu reduzieren",
-        "Um Farbe zu intensivieren"
+        "Um Alkohol zu reduzieren automatisch",
+        "Um Farbe zu intensivieren und dunkler zu machen"
       ],
       correct: 1,
-      explanation: "Kühle Temperaturen schützen volatile Fruchtaromen vor Oxidation und Abbau – zentral für frische Roséweine."
+      explanation: "Kühle Temperaturen schützen volatile Fruchtaromen vor Oxidation und Abbau – zentral für frische Roséweine. Wärmere Gärung würde Frische zerstören."
     },
     {
       question: "Warum wird Holz selten bei Rosé eingesetzt?",
       options: [
-        "Es ist zu teuer",
-        "Holz würde die gewünschte Frische und Leichtigkeit überlagern",
-        "Es verhindert Gärung",
-        "Es macht den Wein zu süß"
+        "Es ist zu teuer und wirtschaftlich unrentabel",
+        "Holz würde die gewünschte Frische und Leichtigkeit überlagern mit Vanille/Toast-Noten",
+        "Es verhindert Gärung und schädigt die Hefen",
+        "Es macht den Wein automatisch zu süß"
       ],
       correct: 1,
-      explanation: "Der charakteristische Roséstil beruht auf Frische und Frucht. Holz würde diese überlagern."
+      explanation: "Der charakteristische Roséstil beruht auf Frische und Frucht. Holz würde diese überlagern – würde Rosé zu „nicht-Rosé“ machen. Standard-Edelstahl ist richtig."
     },
     {
-      question: "Welche Eigenschaft hat Rosé typischerweise?",
+      question: "Welche Eigenschaft hat Rosé typischerweise bezüglich Struktur?",
       options: [
-        "Hohe Tannine wie Rotwein",
-        "Keine Säure",
-        "Mittlere bis hohe Säure mit geringen Tanninen",
-        "Sehr dunkle Farbe"
+        "Hohe Tannine wie Rotwein, strukturiert und lagerfähig",
+        "Keine Säure und keine Struktur, sehr flach",
+        "Sehr dunkle Farbe und grobe Tannine",
+        "Mittlere bis hohe Säure mit geringen Tanninen – Säure steuert Struktur, nicht Tannin"
       ],
-      correct: 2,
-      explanation: "Rosé zeichnet sich durch geringe Tannine (wegen kurzer Maischekontaktzeit) und höhere Säure (für Frische) aus."
+      correct: 3,
+      explanation: "Rosé zeichnet sich durch geringe Tannine (wegen kurzer Maischekontaktzeit) und höhere Säure (für Frische) aus. Säure ersetzt Tannine als strukturierendes Element."
     },
     {
       question: "Welche Methode ist in der EU für Stillweine meist nicht erlaubt?",
       options: [
-        "Direktpressung",
-        "Maischestandzeit",
-        "Blending von Rot- und Weißwein",
-        "Saignée"
+        "Direktpressung (normal und verbreitet)",
+        "Kurze Maischestandzeit (Standard)",
+        "Blending/Verschnitt von Rot- und Weißwein als Rosé",
+        "Saignée-Methode (legal und verbreitet)"
       ],
       correct: 2,
-      explanation: "Blending (Mischung von Rot- und Weißwein) ist in der EU für Stillweine meist nicht erlaubt, nur bei Schaumwein."
+      explanation: "Blending (Mischung von Rot- und Weißwein als Rosé) ist in der EU für Stillweine meist nicht erlaubt, nur bei Schaumwein (Champagne). Die anderen Methoden sind Standard."
     },
     {
       question: "Wann sollte Rosé idealerweise getrunken werden?",
       options: [
-        "Nach 10 Jahren Lagerung",
-        "Nach 20 Jahren Lagerung",
-        "Innerhalb von 1–2 Jahren für maximale Frische",
-        "Erst nach Holzreifung"
+        "Innerhalb von 1-2 Jahren für maximale Frische und Frucht",
+        "Nach 10 Jahren Lagerung für volle Komplexität",
+        "Nach 20 Jahren Lagerung wie große Rotweine",
+        "Erst nach 5 Jahren Holzreifung"
       ],
-      correct: 2,
-      explanation: "Rosé wird für Jugendlichkeit und Frische gemacht. Längere Lagerung führt zu Oxidation und Aromaverlust."
+      correct: 0,
+      explanation: "Rosé wird für Jugendlichkeit und Frische gemacht. Längere Lagerung führt zu Oxidation und Aromaverlust. 1-2 Jahre ist ideal; Ausnahmen strukturierte Rosés: bis 4-5 Jahre."
     },
     {
       question: "Was beeinflusst die Intensität der Roséfarbe am stärksten?",
       options: [
-        "Flaschengröße",
-        "Maischestandzeit (Dauer des Schalenkontakts)",
-        "Korkart",
-        "Etikett"
+        "Maischestandzeit (Dauer des Schalenkontakts) und Rebsorte",
+        "Flaschengröße und Dunkelheit des Glases",
+        "Korkart und Verschlussqualität",
+        "Etikett-Farbe und Verpackung"
       ],
-      correct: 1,
-      explanation: "Je länger die Maischestandzeit, desto intensiver die Farbextraktion aus den Schalen."
+      correct: 0,
+      explanation: "Je länger die Maischestandzeit, desto intensiver die Farbextraktion aus den Schalen. Rebsorte (Hautdicke) beeinflusst natürliche Färbungskraft ebenfalls."
     },
     {
       question: "Wie unterscheidet sich eine dünnschalige Rebsorte von einer dickschaligen bei Roséproduktion?",
       options: [
-        "Keine Unterschiede",
-        "Dünnschalige ergibt hellere Farbe und weniger Tannine; dickschalige ergibt intensivere Farbe und Struktur",
-        "Dickschalige ist immer besser",
-        "Nur dickschalige werden für Rosé verwendet"
+        "Dünnschalige ergibt hellere Farbe und weniger Tannine; dickschalige ergibt intensivere Farbe und mehr Struktur",
+        "Keine Unterschiede – alle Rebsorten produzieren gleich farbigen Rosé",
+        "Dickschalige ist immer besser und wird bevorzugt",
+        "Nur dickschalige Rebsorten werden für Rosé verwendet"
       ],
-      correct: 1,
-      explanation: "Hautdicke determiniert natürliche Färbung und Tannin-Potenzial – zentral für Rosécharakteristik."
+      correct: 0,
+      explanation: "Hautdicke determiniert natürliche Färbung und Tannin-Potenzial – zentral für Rosécharakteristik. Grenache (dünn) = blasses Rosé; Syrah (dick) = intensives Pink."
     },
     {
       question: "Welcher Ausbau ist Standard für hochwertige Roséweine?",
       options: [
-        "Intensiver Holzausbau",
-        "Reduktiver Ausbau im Edelstahl für Frischeschutz",
-        "Lange oxidative Reifung",
-        "Temperaturlose Lagerung"
+        "Intensiver Holzausbau für Vanille und Toast-Komplexität",
+        "Lange oxidative Reifung über Jahre in offenen Behältern",
+        "Temperaturlose Lagerung ohne Kontrolle",
+        "Reduktiver Ausbau im Edelstahl für Frischeschutz"
+      ],
+      correct: 3,
+      explanation: "Reduktiver Edelstahl-Ausbau (minimaler Sauerstoff) ist Standard für Roséweine, um Frische zu bewahren. Holz würde Charakter überlagern und Qualität senken."
+    },
+    {
+      question: "Was ist eine zentrale Prüfungsfalle bei Rosé-Qualitätseinschätzung?",
+      options: [
+        "Dunkleres Pink = mehr Komplexität und bessere Qualität",
+        "Hellere Farbe = automatisch bessere Qualität (FALSCH! Sind unterschiedliche Stile)",
+        "Rosé kann wie Rotwein 20+ Jahre lagern",
+        "Holzausbau ist Standard für Premium-Rosé"
       ],
       correct: 1,
-      explanation: "Reduktiver Edelstahl-Ausbau (minimaler Sauerstoff) ist Standard für Roséweine, um Frische zu bewahren."
+      explanation: "Blassrosa und intensives Pink sind unterschiedliche bewusste Stilentscheidungen – nicht unterschiedliche Qualitätslevels. Beide können großartig oder durchschnittlich sein."
     }
   ]
 });

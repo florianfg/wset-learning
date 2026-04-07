@@ -95,7 +95,7 @@ registerChapterContent("spanien_portugal", {
 - **Rebsorten**: Grenache (80%) + Cariñena (20%) = Blend aus zwei Sorten
   - Grenache: fruchtig, Alkohol, Süße
   - Cariñena: Struktur, Säure, Bitterkeit
-- **Stil**: intensiv, konzentriert, vollmundig (15%+), dunkel, Mineraliität, 15–25 Jahre lagerfähig
+- **Stil**: intensiv, konzentriert, vollmundig (15%+), dunkel, Mineralität, 15–25 Jahre lagerfähig
 - **Preis**: teuerste Spaniens (€30–100+) = niedrige Erträge + Mineralität + Komplexität`,
       takeaway: "Priorat: steile Schiefer + niedriger Ertrag = intensiv, mineralisch, teuer."
     },
@@ -112,7 +112,7 @@ registerChapterContent("spanien_portugal", {
 - **Temperaturkontrolle**: moderne Bodegas nutzen Kühlung um Frucht zu bewahren
 - **Stil**: frisch, aromatisch, 12–13% Alkohol, jung trinken (1–3 Jahre)
 - **Preis**: günstig (€10–20) für Qualität, gutes Preis-Leistungs-Verhältnis
-- **Trennd**: alternative zu Loire Sauvignon Blanc (wärmer, fruchtiger)`,
+- **Trend**: alternative zu Loire Sauvignon Blanc (wärmer, fruchtiger)`,
       takeaway: "Rueda: Höhe + Verdejo = frischer, aromatischer Weißwein."
     },
     {
@@ -206,7 +206,7 @@ registerChapterContent("spanien_portugal", {
 - **Stil**: leichter als Douro, eleganter, 11–13% Alkohol, 10–15 Jahre lagerfähig
   - Kontrast zu Douro: Douro = kraftvoll (15% Alkohol), Dão = elegant (12%)
   - Grund: Dão kühler (Höhe) = schwierigere Reife = leichter Wein
-- **Bodenvielfalt**: Schiefer, Granit, Sandstein = verschiedene Mineraliität
+- **Bodenvielfalt**: Schiefer, Granit, Sandstein = verschiedene Mineralität
 - **Preis**: mittel (€15–30), nicht massiv, aber respected`,
       takeaway: "Dão: Höhe + kontinental = eleganter Touriga Nacional."
     },
@@ -257,36 +257,47 @@ registerChapterContent("spanien_portugal", {
       takeaway: "Spanien hat unterschiedliche Klimazonen. Höhe & Maritimität ändern alles."
     },
     {
+      title: "Typische Prüfungsfalle: Portwein vs. andere Süßweine",
+      content: `Nicht verwechseln Portwein (gestoppte Gärung) mit Botrytis-Weinen (Konzentration).
+
+- **Portwein**: Alkohol während Gärung hinzugefügt = Gärung gestoppt = natürlicher Zucker
+- **Botrytis-Weine** (z.B. Tokaji): Gärung komplett = Zucker durch Botrytis konzentriert = natürliche Gärung
+- **Unterschied**: Portwein = Intervention (stoppen), Botrytis = natürlicher Prozess (konzentrieren)`,
+      takeaway: "Portwein = Gärung gestoppt. Botrytis-Wein = natürliche Konzentration."
+    }
+  ],
+  questions: [
+    {
       question: "Warum ist Höhe in Spanien entscheidend?",
       options: [
-        "Weil es Tradition ist",
         "Weil Höhe = kühler (6°C pro 1000 m) = Säure bleibt trotz Wärmeklima",
+        "Weil Tradition es vorschreibt",
         "Weil es rechtlich vorgeschrieben ist",
-        "Zufällig"
+        "Weil höhere Erträge möglich sind"
       ],
-      correct: 1,
+      correct: 0,
       explanation: "Höhe ist Spaniens Strategie gegen Hitze. Rioja & Ribera del Duero nutzen Höhe um Balance zu halten."
     },
     {
       question: "Warum dominiert Tempranillo in Spanien Rottweinen?",
       options: [
         "Weil es die einzige Rebsorte ist",
-        "Weil Tempranillo in den meisten spanischen Höhenlagen vollständig reift, aber Säure erhalten bleibt",
         "Weil es billiger ist",
+        "Weil Tempranillo in den meisten spanischen Höhenlagen vollständig reift, aber Säure erhalten bleibt",
         "Weil es am süßesten ist"
       ],
-      correct: 1,
+      correct: 2,
       explanation: "Tempranillo = die lokale Antwort auf Spaniens Klima. In Höhenlagen: Säure + Struktur + Frucht."
     },
     {
       question: "Was ist der Unterschied zwischen Crianza & Reserva?",
       options: [
-        "Crianza = süß, Reserva = trocken",
         "Crianza = weniger Holz (12 Mo), Reserva = mehr Holz (18+ Mo) & längere Gesamtreifung",
+        "Crianza = süß, Reserva = trocken",
         "Crianza = rot, Reserva = weiß",
-        "Es gibt keinen Unterschied"
+        "Es gibt keinen praktischen Unterschied"
       ],
-      correct: 1,
+      correct: 0,
       explanation: "Mehr Holz & Zeit = mehr Tannin-Integration & Komplexität. Crianza = Einstieg, Reserva = Premium."
     },
     {
@@ -295,7 +306,7 @@ registerChapterContent("spanien_portugal", {
         "Weil Zucker später hinzugefügt wird",
         "Weil Gärung während hohem Zucker gestoppt wird (Alkohol-Zusatz) → Restzucker bleibt",
         "Weil Portugiesen Zucker lieben",
-        "Zufällig"
+        "Weil längere Oxidation Süße erzeugt"
       ],
       correct: 1,
       explanation: "Portwein: Gärung gestoppt = Zucker nicht fermentiert = Süße von Trauben bleibt."
@@ -317,7 +328,7 @@ registerChapterContent("spanien_portugal", {
         "Nichts, es sind dieselben Trauben",
         "Douro Still = normale Gärung (trockener Rotwein). Portwein = Gärung gestoppt (süß, alkoholreich)",
         "Douro = kühler, Portwein = wärmer",
-        "Keine Unterschied in Klima, nur in Stil"
+        "Keine klimatischen Unterschiede, nur Vinifikation"
       ],
       correct: 1,
       explanation: "Beide aus Douro-Trauben, aber unterschiedliche Vinifikation. Still = trocken, Portwein = süß & fortified."
@@ -326,12 +337,45 @@ registerChapterContent("spanien_portugal", {
       question: "Warum ist Vinho Verde so leicht & säurebetont?",
       options: [
         "Weil es minderwertig ist",
-        "Weil maritimes Klima + unterbrochene Gärung = hohe Säure + niedrig Alkohol",
         "Weil Portugesen kein Potenzial haben",
-        "Zufällig"
+        "Weil älter-technische Herstellungsmethoden",
+        "Weil maritimes Klima + unterbrochene Gärung = hohe Säure + niedrig Alkohol"
+      ],
+      correct: 3,
+      explanation: "Atlantik + Kühle = lange Reifezeit + hohe Säure. Unterbrochene Gärung = wenig Alkohol. Perfekt für leicht & frisch."
+    },
+    {
+      question: "Warum wird Rioja als eleganter angesehen als Ribera del Duero?",
+      options: [
+        "Weil Atlantik-Nähe + Höhe = mehr Balance zwischen Reife & Säure = eleganter",
+        "Weil kontinentaleres Klima weniger Eleganz bringt",
+        "Weil es älter ist",
+        "Weil westlicher liegt"
+      ],
+      correct: 0,
+      explanation: "Rioja: gemäßigteres Klima (Atlantik) = bessere Balance = Eleganz. Ribera: heißer = mehr Kraft."
+    },
+    {
+      question: "Welche Funktion hat die Höhe in Rioja?",
+      options: [
+        "Steilheit erzwingt Handarbeit + niedrige Erträge",
+        "Höhe ermöglicht höhere Erträge",
+        "Höhe hat keine Funktion",
+        "Höhe moderiert Hitze durch 6–8°C Temperaturabfall = Säure bleibt"
+      ],
+      correct: 3,
+      explanation: "Höhe ist das Qualitätswerkzeug Riojas. Ohne Höhe würde zu viel Hitze entstehen."
+    },
+    {
+      question: "Warum ist Priorat so teuer?",
+      options: [
+        "Weil es das älteste Weingebiet ist",
+        "Steile Schiefer + niedriger Ertrag + hohe Mineralität = Konzentration",
+        "Weil es am meisten produziert",
+        "Weil Marketing es teuer macht"
       ],
       correct: 1,
-      explanation: "Atlantik + Kühle = lange Reifezeit + hohe Säure. Unterbrochene Gärung = wenig Alkohol. Perfekt für leicht & frisch."
+      explanation: "Priorat: extreme Steilheit + Handarbeit + niedrige Mengen = natürlich teuer + intensiv."
     }
   ]
 });

@@ -31,7 +31,7 @@ registerChapterContent("food_pairing", {
 - Beispiel: Falscher Match = Cab + zartem Fischfilet → Wein tötet Speise
 
 **System-Regel**: Zuerst Intensität angleichen, dann Säure/Tannin/Süße optimieren.`,
-      takeaway: "Merksatz: Säure schneidet Fett. Tannin bindet Protein. Süße balanciert Salz. Körper muss passen. Das ist das komplette Pairing-System."
+      takeaway: "Säure schneidet Fett. Tannin bindet Protein. Süße balanciert Salz. Körper muss passen. Das ist das komplette Pairing-System."
     },
     {
       title: "Grundprinzip Food Pairing",
@@ -84,7 +84,7 @@ registerChapterContent("food_pairing", {
 - **Beispiele**:
   - Sauvignon Blanc (7–8 g/L Säure) + Gänseleber (sehr fett) = Säure zerlegt Fett = harmonisch
   - Loire Riesling (8–9 g/L) + cremige Sauce = Säure "wäscht" Gaumen = nächster Bissen frisch
-  - Champagne (hohe Säure) + fatty Fische (Lachs mit Butter) = Säure balanciert Fett
+  - Champagne (hohe Säure) + fettiger Fisch (Lachs mit Butter) = Säure balanciert Fett
 - **Gegensatz**: trockener Wein (niedrig Säure) + fette Speise = schwer, unangenehm
   - Grund: ohne Säure = Gaumen "blockiert" = nächster Bissen fühlt sich schwerer
 - **Praxis-Regel**: wenn Speise fettig = suche Wein mit Säure (nicht Körper/Alkohol)
@@ -171,7 +171,7 @@ registerChapterContent("food_pairing", {
   - Grasige Aromen (Sauvignon) + cremiger Käse = Kontrast funktioniert
 - **Champagne + Austern**:
   - Mechanik: hohe Säure (Champagne) + salzige Austern = Balance
-  - Perlage + mineraliicher Geschmack = perfekt
+  - Perlage + mineralischer Geschmack = perfekt
 - **Spätburgunder (süß) + Blauschimmelkäse (salzig)**:
   - Mechanik: Süße (Wein) + Salz (Käse) = klassischer Kontrast
 - **Sherry + spanischer Jamon**:
@@ -214,7 +214,7 @@ registerChapterContent("food_pairing", {
   - Capsaicin (Chili-Molekül) + Alkohol = additive Effekt (nicht subtraktiv)
   - Alkohol erhöht Temperatur-Wahrnehmung = Schärfe-Receptoren sensibler
   - Resultat: gemeinsam = stärker als einzeln
-- **Beispiele schecht**:
+- **Beispiele schlecht**:
   - 15% Alkohol Kalifornien Chardonnay + Thai-Grün-Curry = zu intensiv, brennt
   - Hoher Alkohol Shiraz + Chili-Fleisch = unangenehm
 - **Lösungs-Strategien**:
@@ -289,7 +289,7 @@ registerChapterContent("food_pairing", {
 **Blauschimmelkäse (Roquefort, Gorgonzola):**
 - → Süßwein (Sauternes, Tokaj, Portwein)
 - Warum: Salzigkeit des Käses + Süße des Weins = klassischer Kontrast-Mechanismus`,
-      takeaway: "Merksatz: Fisch + Säure, Fleisch + Tannin, Scharf + niedrig Alkohol + Süße, Süßes + Süßwein. Mechanik, nicht Farbe."
+      takeaway: "Fisch + Säure, Fleisch + Tannin, Scharf + niedrig Alkohol + Süße, Süßes + Süßwein. Mechanik, nicht Farbe."
     }
   ],
   questions: [
@@ -297,11 +297,11 @@ registerChapterContent("food_pairing", {
       question: "Warum funktioniert Sauvignon Blanc so gut mit fettigem Ziegenkäse?",
       options: [
         "Weil beide aus Frankreich stammen und regionale Harmonie entsteht",
-        "Weil die Säure des Weins die Fett-Moleküle emulgiert und den Gaumen erfrischt",
+        "Weil Ziegenkäse die Tannine des Weins weich macht",
         "Weil Sauvignon Blanc immer trocken ist und daher neutral wirkt",
-        "Weil Ziegenkäse die Tannine des Weins weich macht"
+        "Weil die Säure des Weins die Fett-Moleküle emulgiert und den Gaumen erfrischt"
       ],
-      correct: 1,
+      correct: 3,
       explanation: "Säure-Fett-Mechanik: Die hohe Säure von Sauvignon Blanc (7–8 g/L) emulgiert die Fette im Käse. Der Gaumen wird nach jedem Bissen erfrischt statt fett-gesättigt."
     },
     {
@@ -309,8 +309,8 @@ registerChapterContent("food_pairing", {
       options: [
         "Weil Rotwein die Farbe des Fleisches verstärkt",
         "Weil Tannine an Fleisch-Proteine binden und dadurch weicher werden – beim Fisch fehlt dieses Protein und Tannine schmecken metallisch mit Jod",
-        "Weil Weißwein zu wenig Alkohol hat für kräftige Speisen",
-        "Weil Fisch zu wenig Fett enthält für Rotwein"
+        "Weil Fisch zu wenig Fett enthält für Rotwein",
+        "Weil Weißwein zu wenig Alkohol hat für kräftige Speisen"
       ],
       correct: 1,
       explanation: "Tannin-Protein-Bindung: Fleisch enthält viel Protein → Tannine binden → werden weich. Fisch enthält Jod-Verbindungen + wenig Protein → Tannine + Jod = metallischer Beigeschmack."
@@ -318,45 +318,45 @@ registerChapterContent("food_pairing", {
     {
       question: "Du servierst einen trockenen Barolo (tanninreich, trocken) zu Schokoladen-Mousse. Was passiert?",
       options: [
-        "Die Süße der Schokolade mildert die Tannine des Weins",
         "Der Barolo wirkt durch die Süße der Schokolade noch trockener, saurer und bitterer – das Pairing scheitert",
-        "Dunkle Schokolade passt immer zu Rotweinen",
-        "Der Alkohol des Barolos balanciert die Süße"
+        "Die Süße der Schokolade mildert die Tannine des Weins",
+        "Der Alkohol des Barolos balanciert die Süße",
+        "Dunkle Schokolade passt immer zu Rotweinen"
       ],
-      correct: 1,
+      correct: 0,
       explanation: "Süße in der Speise blockiert Süße-Rezeptoren → Wein wirkt 'relativ trocken'. Tannine + Kakao-Bitterkeit addieren sich. Barolo braucht einen Süßwein als Begleiter für Dessert."
     },
     {
       question: "Welcher Wein wäre eine schlechte Wahl zu einem scharfen Thai Green Curry?",
       options: [
-        "Halbtrockener Mosel Riesling (10% Alkohol, 15 g/L Restzucker)",
         "Vollmundiger Napa Valley Cabernet Sauvignon (15% Alkohol, trocken)",
+        "Halbtrockener Mosel Riesling (10% Alkohol, 15 g/L Restzucker)",
         "Gewürztraminer Spätlese (12% Alkohol, halbtrocken)",
         "Gruner Veltliner (12,5% Alkohol, trocken, kräftige Säure)"
       ],
-      correct: 1,
+      correct: 0,
       explanation: "Capsaicin (Schärfe) + Alkohol = additiver Effekt – beide aktivieren Wärme-Rezeptoren. 15% Alkohol + Thai-Scharf = brennt intensiv. Besser: niedriger Alkohol + leichte Süße moderiert die Schärfe."
     },
     {
       question: "Champagne gilt als klassischer Begleiter zu Austern. Was ist der chemische Mechanismus?",
       options: [
         "Beide kommen aus Frankreich und harmonieren regional",
-        "Die Perlage des Champagnes reinigt den Gaumen mechanisch",
         "Die hohe Säure des Champagnes balanciert den salzigen, jodhaltigen Charakter der Austern und die Perlage erfrischt",
+        "Die Perlage des Champagnes reinigt den Gaumen mechanisch",
         "Champagne enthält Mineralien, die zur Meeres-Mineralität der Auster passen"
       ],
-      correct: 2,
+      correct: 1,
       explanation: "Säure + Salz = klassischer Kontrast-Mechanismus. Champagne hat sehr hohe Säure (9–11 g/L) + CO₂-Perlage → erfrischt den Gaumen nach dem salzigen Austern-Bissen."
     },
     {
-      question: "Warum sollte man Umami-reiche Gerichte (z.B. Trüffel-Risotto) eher mit Sauvignon Blanc als mit einem tannin- reichen Barolo begleiten?",
+      question: "Warum sollte man Umami-reiche Gerichte (z.B. Trüffel-Risotto) eher mit Sauvignon Blanc als mit einem tannin-reichen Barolo begleiten?",
       options: [
         "Weil Sauvignon Blanc keine Tannine hat und daher neutral bleibt",
+        "Weil Barolo zu teuer für Risotto ist",
         "Weil Umami die Frucht des Weins reduziert und Bitterkeit verstärkt – hohe Tannine + Umami addieren sich zum Bitter-Effekt, während Säure den Umami-Effekt überwindet",
-        "Weil Risotto kein Fleisch ist und daher keinen Rotwein verträgt",
-        "Weil Barolo zu teuer für Risotto ist"
+        "Weil Risotto kein Fleisch ist und daher keinen Rotwein verträgt"
       ],
-      correct: 1,
+      correct: 2,
       explanation: "Umami + Tannin = doppelte Herbheit (beide sind 'herb'). Umami + Säure = Säure überwältigt Umami-Bitterkeit. Sauvignon Blanc mit hoher Säure ist daher ideal."
     }
   ]

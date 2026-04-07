@@ -83,7 +83,7 @@ registerChapterContent("australien_neuseeland", {
       takeaway: "Australien Weißwein: Chardonnay voller (warm) oder frisch (kühl). Riesling trocken & alt."
     },
     {
-      title: "Barossa Valley – Shirazen Mekka",
+      title: "Barossa Valley – Shiraz Mekka",
       content: `Barossa Valley ist Australiens wärmste qualitative Region – Shiraz ist Spezialist, alt-Reben charakteristisch.
 
 - **Lage**: South Australia, nordlich, sehr warm (30–35°C möglich)
@@ -205,7 +205,7 @@ registerChapterContent("australien_neuseeland", {
 
 - **Australien**:
   - Klima: warm bis heiß
-  - Shirazen Identität, kraftvoll
+  - Shiraz Identität, kraftvoll
   - Stil: reif, fruchtig, zugänglich
   - Alkohol: höher (14–15%+)
   - Säure: moderate
@@ -247,53 +247,53 @@ registerChapterContent("australien_neuseeland", {
       question: "Was ist der Hauptunterschied zwischen Australien & Neuseeland Weinen?",
       options: [
         "Sie sind identisch",
-        "Australien = warm & kraftvoll (Shiraz). Neuseeland = kühl & frisch (Sauvignon Blanc)",
         "Neuseeland = teurer",
-        "Australien = älter"
+        "Australien = älter",
+        "Australien = warm & kraftvoll (Shiraz). Neuseeland = kühl & frisch (Sauvignon Blanc)"
       ],
-      correct: 1,
+      correct: 3,
       explanation: "Gegensätzliche Klimata = gegensätzliche Stilrichtungen."
     },
     {
       question: "Warum ist Australischer Shiraz anders als Loire Syrah?",
       options: [
         "Sie sind identisch",
-        "Warm-Klima Shiraz = reif, fruchtbetont, wenig Pfeffer. Kühl-Syrah = Pfeffer, säurebetont, elegant",
         "Australisch = teurer",
-        "Kein Unterschied"
+        "Kein Unterschied",
+        "Warm-Klima Shiraz = reif, fruchtbetont, wenig Pfeffer. Kühl-Syrah = Pfeffer, säurebetont, elegant"
       ],
-      correct: 1,
+      correct: 3,
       explanation: "Klima, nicht Sorte, definiert Stil. Warm vs. kühl = fundamental unterschiedlich."
     },
     {
       question: "Warum ist Neuseeland Sauvignon Blanc weltberühmt?",
       options: [
         "Weil es süß ist",
-        "Weil kühles Klima + lange Tage = intensive Aromatik + hohe Säure = Benchmark",
         "Weil es teuer ist",
-        "Zufällig"
+        "Kühles Klima + lange Tage = intensive Aromatik + hohe Säure = Benchmark",
+        "Zufällig durch Marketing"
       ],
-      correct: 1,
+      correct: 2,
       explanation: "Neuseeland = perfekte Balance zwischen Säure (Kühle) & Aroma (Sonne)."
     },
     {
       question: "Was unterscheidet Barossa Valley (warm) von Margaret River (kühl) in Australien?",
       options: [
-        "Nichts, sie sind identisch",
         "Barossa = sehr warm, Shiraz kraftvoll & marmeladig. Margaret River = maritim, Cabernet elegant",
+        "Nichts, sie sind identisch",
         "Margaret River = teurer",
         "Barossa = älter"
       ],
-      correct: 1,
+      correct: 0,
       explanation: "Klima-Unterschied innerhalb Australiens = Stil-Unterschied."
     },
     {
       question: "Warum ist Hunter Valley Semillon extrem lagerfähig?",
       options: [
-        "Weil neu Eiche verwendet",
-        "Weil früh gelesen = hohe Säure bleibt = 20–30 Jahre möglich (oxidativ Entwicklung)",
+        "Weil neue Eiche verwendet",
+        "Früh gelesen = hohe Säure bleibt = 20–30 Jahre möglich (oxidativ Entwicklung)",
         "Weil süß",
-        "Zufällig"
+        "Zufällig durch Rebsorte"
       ],
       correct: 1,
       explanation: "Frühe Lese = Säure bleibt = Stabilität. Entwickelt sich in Flasche wie Sherr."
@@ -301,13 +301,57 @@ registerChapterContent("australien_neuseeland", {
     {
       question: "Warum kann Neuseeland kühler sein als man erwarten würde?",
       options: [
-        "Weil südlich (41–46°S) + maritim = Inselklima moderiert",
         "Weil Bergkette kühlend wirkt",
         "Weil wenig Sonnenschein",
-        "Zufällig"
+        "Weil südlich (41–46°S) + maritim = Inselklima moderiert",
+        "Zufällig durch Ozean"
+      ],
+      correct: 2,
+      explanation: "Südlichkeit + maritime Isolation = konsistent kühles Klima."
+    },
+    {
+      question: "Wie ähnelt Neuseeland Pinot Noir dem Burgund-Stil?",
+      options: [
+        "Sie sind identisch",
+        "Kühles Klima + hohe Säure + feine Tannine = elegant (aber neuseeländisch fruchtig)",
+        "Neuseeland = fruchtbetonter",
+        "Burgund = frischer"
+      ],
+      correct: 1,
+      explanation: "Klima-Match: Kühle ermöglicht elegante Balance wie Burgund, aber Neuseeland hat eigene AromaSignatur."
+    },
+    {
+      question: "Warum ist Barossa Valley berühmt für Shiraz?",
+      options: [
+        "Sehr warm + alte Reben = genetisch pure Clons = intensive, marmeladig-reife Aromen",
+        "Weil beste Winzer dort sind",
+        "Weil teuerste Region",
+        "Zufällig historisch"
       ],
       correct: 0,
-      explanation: "Südlichkeit + maritime Isolation = konsistent kühles Klima."
+      explanation: "Barossa: Heat + Phylloxera-Freiheit = alte ungepfropfte Reben = Intensität + Prestige."
+    },
+    {
+      question: "Was unterscheidet Australien Chardonnay von Burgund Chardonnay?",
+      options: [
+        "Australien warm = vollmundig/butterig (MLG + neue Eiche). Burgund kühl = mineralisch/strukturiert",
+        "Sie sind identisch",
+        "Australien = immer süß",
+        "Burgund = immer eichenbetont"
+      ],
+      correct: 0,
+      explanation: "Klima bestimmt Ausbau-Philosophie: Australien modern/frucht-fokussiert, Burgund traditionell/terroir-fokussiert."
+    },
+    {
+      question: "Wie unterscheiden sich Riesling-Stile Australiens & Deutschlands?",
+      options: [
+        "Sie sind identisch",
+        "Australien = trocken & strukturiert (kühle Zonen nur). Deutschland = vielfältig (süß bis trocken)",
+        "Deutschland = immer süß",
+        "Australien = immer süß"
+      ],
+      correct: 1,
+      explanation: "Australien: moderne Trockenheit (Fokus auf Struktur). Deutschland: Vielfalt & Süße-Option (Kontinentalklima)."
     }
   ]
 });

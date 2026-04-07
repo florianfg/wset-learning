@@ -36,7 +36,7 @@ registerChapterContent("lagerung", {
     },
     {
       title: "Temperatur – konstant ist wichtiger als Grad",
-      content: `Temperatur ist kritischstem Faktor – aber nicht die exakte Zahl, sondern KONSTANZ.
+      content: `Temperatur ist kritischster Faktor – aber nicht die exakte Zahl, sondern KONSTANZ.
 
 - **Ideal: 10–15°C** (aber konstant!)
   - Warum diese Spanne? = langsame, kontrollierte Reifung
@@ -74,7 +74,7 @@ registerChapterContent("lagerung", {
   - Effekt ist kumulativ & nicht reversibel
 - **Dunkelheit warum**: Dunkelheit stoppt Photo-Katalyse = Aromen erhalten
   - Grund: UV-Wellenlänge (300–400 nm) nicht vorhanden = Reaktion nicht getriggert
-- **Glasfarbe hilft**: Grünglas absorbeiert etwas UV, aber nur 50% Schutz
+- **Glasfarbe hilft**: Grünglas absorbiert etwas UV, aber nur 50% Schutz
   - Beste: dunkle Boxen + kein Licht`,
       takeaway: "Dunkelheit ist nicht Optional. Licht = chemische Zerstörung."
     },
@@ -83,7 +83,7 @@ registerChapterContent("lagerung", {
       content: `Luftfeuchtigkeit muss balanciert sein – zu trocken = Kork schrumpft, zu feucht = Schimmel.
 
 - **Ideal: 60–80%**
-  - Kork bleibt feucht + flexible
+  - Kork bleibt feucht & flexible
   - Keine Schimmelbildung
 - **Zu trocken (<50%)**:
   - Kork trocknet aus = schrumpft
@@ -114,7 +114,7 @@ registerChapterContent("lagerung", {
 - **Schraubverschluss**: Position egal
   - Dicht unabhängig von Orientation
   - Kann stehend gelagert werden
-- **Grund für Unterschied**: Naturkork ist poröser Material
+- **Grund für Unterschied**: Naturkork ist poröses Material
   - Trocknung = nicht reversibel (schrumpf ist permanent)
   - Kunststoff-Kork: weniger empfindlich (aber älter weniger sicher)
 
@@ -157,7 +157,7 @@ registerChapterContent("lagerung", {
 - **Phase 3 (15+ Jahre)**: Tertiäraromen dominieren
   - Primäraromen fast weg (Frucht-Aromen verflüchtigt)
   - Tannine sehr weich (manche fast weg)
-  - Noten: Leder, Tabak, Pil, Honig (wie Alter)
+  - Noten: Leder, Tabak, Pilz, Honig (wie Alter)
 - **Mechanik der Polymerisierung**:
   - Kleine Tannin-Moleküle verbinden sich zu großen Ketten
   - Große Moleküle sind "weicher" chemisch (weniger astringent am Gaumen)
@@ -177,7 +177,7 @@ registerChapterContent("lagerung", {
   - Säure merklich, oft bitter-möglich
   - Körper leicht bis mittel
 - **Phase 2 (3–10 Jahre)**: Sekundäraromen entstehen
-  - Zitrus wird Honig (oxidativ Veränderung)
+  - Zitrus wird Honig (oxidative Veränderung)
   - Komplexität wächst (Nuss, Toast, Mineralisch)
   - Säure wirkt integrativer (nicht mehr so "sauer")
 - **Phase 3 (10+ Jahre)**: Tertiäraromen (braune Aromen)
@@ -185,7 +185,7 @@ registerChapterContent("lagerung", {
   - Aromen: Honig, Nuss, Getreide, getrocknete Früchte
 - **Unterschied zu Rotwein**:
   - Keine Tannine = andere Mechanik
-  - Oxidation ist Haup-Effekt (nicht Polymerisierung)
+  - Oxidation ist Haupteffekt (nicht Polymerisierung)
   - Älter = immer "oxidativer" (aber nicht negativ bis zu Punkt)
 - **Lagerfähigkeit**:
   - Einfache Weißweine (z. B. Sauvignon Blanc): jung trinken (1–3 Jahre), älter = flach
@@ -242,7 +242,7 @@ registerChapterContent("lagerung", {
   - Abhängig: Struktur, Lagerung, Klasse
   - Erfahrung zählt
 - **Faustregel**: wenn farbe braun + Geschmack flach = verdorben. Wenn komplex + Struktur = gereift`,
-      takeaway: "Reifung = Komplexität + Integratier. Verderb = flach + brüchig."
+      takeaway: "Reifung = Komplexität + Integration. Verderb = flach + brüchig."
     },
     {
       title: "Typische Prüfungsfalle: Temperatur-Dogma",
@@ -270,12 +270,12 @@ registerChapterContent("lagerung", {
     {
       question: "Warum ist Temperatur-KONSTANZ wichtiger als exakte Temperatur-Grad?",
       options: [
+        "Temperaturwechsel = Glas-Ausdehnung + Flüssigkeits-Stress = Kork rein/raus = Oxidation",
         "Weil es Regel ist",
-        "Weil Temperaturwechsel = Glas-Ausdehnung + Flüssigkeits-Stress = Kork rein/raus = Oxidation",
         "Weil Kultura-Grund",
         "Zufällig"
       ],
-      correct: 1,
+      correct: 0,
       explanation: "Schwankung erzeugt physischen Stress auf Flasche & Kork = schlimmer als konstante höhere Temperatur."
     },
     {
@@ -303,23 +303,23 @@ registerChapterContent("lagerung", {
     {
       question: "Wie wirkt UV-Licht auf Wein?",
       options: [
-        "Keine Wirkung",
         "Triggert Photo-Katalyse = Moleküle brechen auf = Aromen zerfallen, Farbe wird braun",
+        "Keine Wirkung",
         "Macht Wein besser",
         "Nur Superficial"
       ],
-      correct: 1,
+      correct: 0,
       explanation: "Photo-Katalyse ist Licht-induzierte chemische Zerfalls. Dunkelheit stoppt diese."
     },
     {
       question: "Was ist der Unterschied zwischen Oxidation & Reduktion?",
       options: [
-        "Synonyme",
         "Oxidation = zu viel Sauerstoff = flach. Reduktion = zu wenig = schwefelnd. Beide schlecht in Extremen",
+        "Synonyme",
         "Reduktion = besser",
         "Kein praktischer Unterschied"
       ],
-      correct: 1,
+      correct: 0,
       explanation: "Balance ist Ziel. Zu viel O2 = Qualitätsverlust. Zu wenig = Reduktions-Fehler."
     },
     {

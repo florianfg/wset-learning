@@ -248,11 +248,11 @@ registerChapterContent("italien", {
       question: "Warum ist Italien vielfältiger als Frankreich im Weinbau?",
       options: [
         "Weil Italien mehr Land hat",
-        "Weil Klima-Unterschiede extremer sind (Alpen bis Mittelmeer) + >2000 native Rebsorten existieren",
         "Weil Italiener bessere Winzer sind",
-        "Zufällig"
+        "Weil Klima-Unterschiede extremer sind (Alpen bis Mittelmeer) + >2000 native Rebsorten existieren",
+        "Zufällig durch geografische Position"
       ],
-      correct: 1,
+      correct: 2,
       explanation: "20°C Klima-Unterschied + enormer Rebsorten-Reichtum = globale Vielfalt."
     },
     {
@@ -260,7 +260,7 @@ registerChapterContent("italien", {
       options: [
         "DOCG = leichter reguliert",
         "DOCG = strengere Regeln + VERKOSTUNG obligatorisch (sensorische Kontrolle)",
-        "DOCG = teurer",
+        "DOCG = teurer (keine Qualitäts-Rolle)",
         "Kein praktischer Unterschied"
       ],
       correct: 1,
@@ -269,34 +269,34 @@ registerChapterContent("italien", {
     {
       question: "Warum ist Nebbiolo nur in Piemont weltklasse?",
       options: [
-        "Weil es natürlich die beste Rebsorte ist",
         "Weil kühles Klima = lange Reifezeit = hohe Säure/Tannine bleiben = Struktur entsteht nur im Kühlen",
-        "Weil Italiener bessere Rebsorte-Clone haben",
-        "Zufällig"
+        "Weil es natürlich die beste Rebsorte ist",
+        "Zufällig",
+        "Weil Italiener bessere Rebsorte-Clone haben"
       ],
-      correct: 1,
+      correct: 0,
       explanation: "Nebbiolo = spät-reifend = braucht kühles Klima. In wärmeren Regionen wird es zu weich/alkoholreich."
     },
     {
       question: "Welcher Unterschied zwischen Barolo & Barbaresco ist klimatisch?",
       options: [
         "Beide identisch, nur unterschiedliche Weingüter",
-        "Barolo = südlich exponiert + tonreicher Boden = wärmer = kräftiger. Barbaresco = nördlich + sandig = eleganter",
         "Barolo = teurer, daher besser",
+        "Barolo = südlich exponiert + tonreicher Boden = wärmer = kräftiger. Barbaresco = nördlich + sandig = eleganter",
         "Barbaresco = älter"
       ],
-      correct: 1,
+      correct: 2,
       explanation: "Mikro-Klima & Boden-Unterschied = verschiedene Reife-Profiles = unterschiedliche Stilrichtungen."
     },
     {
       question: "Was macht Sangiovese Italiens Rebsorte?",
       options: [
         "Weil es am süßesten ist",
-        "Weil hohe Säure + mittlere Tannine + Kräuter-Aromen = perfekt für toskanischen Hügel-Terroir",
         "Weil es international bekannt ist",
-        "Zufällig"
+        "Zufällig durch römische Tradition",
+        "Weil hohe Säure + mittlere Tannine + Kräuter-Aromen = perfekt für toskanischen Hügel-Terroir"
       ],
-      correct: 1,
+      correct: 3,
       explanation: "Sangiovese = Toskana's Antwort auf Klimageometrie. Hohe Säure + Struktur ohne Brutalität."
     },
     {
@@ -305,7 +305,7 @@ registerChapterContent("italien", {
         "Weil Winzer rebellisch sind",
         "Weil DOCG-Regeln zu eng waren (100% Rebsorte erlaubt, keine internationalen Sorten)",
         "Weil Super Tuscans müssen teurer sein",
-        "Zufällig"
+        "Zufällig durch Marktwunsch"
       ],
       correct: 1,
       explanation: "Winzer wollten Cabernet/Merlot = nicht Chianti-Regeln-gerecht = als IGT verkaufen = Super Tuscan."
@@ -313,24 +313,46 @@ registerChapterContent("italien", {
     {
       question: "Warum ist Amarone trocken, obwohl Zucker konzentriert ist?",
       options: [
-        "Weil kein Zucker hinzugefügt",
         "Weil Appassimento = Zucker konzentriert, aber Gärung fermentiert alles (kein Gärung-Stopp wie Portwein)",
-        "Weil Italiener es so machen",
-        "Zufällig"
+        "Weil kein Zucker hinzugefügt",
+        "Zufällig",
+        "Weil Italiener es so machen"
       ],
-      correct: 1,
+      correct: 0,
       explanation: "Amarone = getrocknete Trauben + komplette Gärung = trocken. Portwein = Gärung gestoppt = süß."
     },
     {
       question: "Was ist der Unterschied Prosecco & Champagne?",
       options: [
         "Nichts, es sind Synonyme",
-        "Prosecco = Charmat (Tankgärung) = leicht & fruchtbetont. Champagne = Flaschengärung = komplex & hefe-mineraliisch",
+        "Prosecco = Charmat (Tankgärung) = leicht & fruchtbetont. Champagne = Flaschengärung = komplex & hefe-mineralisch",
         "Prosecco = süß, Champagne = trocken",
-        "Champagne = immer teurer"
+        "Champagne = immer teurer (keine andere Unterschied)"
       ],
       correct: 1,
       explanation: "Gärmethode ≠ Geschmack & Komplexität. Prosecco = schnell & leicht, Champagne = langwierig & komplex."
+    },
+    {
+      question: "Warum ist Barolo strukturierter als Barbaresco trotz selber Rebsorte?",
+      options: [
+        "Südliche Exposition + toniger Boden = wärmere Reife = kräftigere Tannine",
+        "Barolo Winzer verwenden bessere Techniken",
+        "Barolo ist älter",
+        "Barolo liegt höher"
+      ],
+      correct: 0,
+      explanation: "Mikroklima & Bodentyp (nicht Rebsorte) bestimmen Struktur. Barolo: wärmer = kraftvoller."
+    },
+    {
+      question: "Welche Charakteristik trennt Chianti von Brunello am meisten?",
+      options: [
+        "Brunello = älter",
+        "Chianti = immer süß",
+        "Brunello = immer aus besseren Trauben",
+        "Chianti = Blend + weniger Holz = zugänglich. Brunello = 100% + 24 Monate Holz = strukturiert"
+      ],
+      correct: 3,
+      explanation: "Weinmachung: Chianti modern & flexibel, Brunello traditionell & streng = unterschiedliche Stilrichtungen."
     }
   ]
 });
