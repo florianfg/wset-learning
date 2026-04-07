@@ -174,7 +174,7 @@ registerChapterContent("klima_und_standort", {
 - **Regionen**: Mitteleuropa (Deutschland, Österreich, Mitteleuropa generell), Pannonisches Becken (Ungarn), östliches Europa, Kanada
 - **Jahrgangs-Variation hoch**: Warme Jahre sehr erfolgreich (endlich kontinentale Wärme!), kalte Jahre sehr schwierig (Frost-Risiko, geringe Reife)
 - **Management-Anpassung nötig**: Frost-Schutz-Systeme oft notwendig, späte Lese-Strategien
-- **Beispiel-Variation**: Bordeaux bei 45°N zeigt kontinentale Tendenzen in kalten Jahren → später reif, mehr Risiko```,
+- **Beispiel-Variation**: Bordeaux bei 45°N zeigt kontinentale Tendenzen in kalten Jahren → später reif, mehr Risiko`,
       takeaway: "Kontinental = große Jahreszeit-Unterschiede & Frost-Risiko."
     },
     {
@@ -189,7 +189,7 @@ registerChapterContent("klima_und_standort", {
 - **Regen-Effekt problematisch**: Oft höheres Feuchtigkeit → Pilzkrankheitsrisiko erhöht, Botrytis-Risiko
 - **Regionen**: England, Champagne-Region, Normandie (nordfranzösische Küste), westliche Küsten-Regionen (z.B. Pazifik-Kalifornien)
 - **Jahrgangs-Konsistenz relativ stabil**: Weniger extreme Jahre, aber Regen-Jahre können problematisch sein
-- **Beispiel-Profil**: Südküste Englands – temperiert, aber Regen-Herausforderung = schwierig hohe Reife zu erreichen```,
+- **Beispiel-Profil**: Südküste Englands – temperiert, aber Regen-Herausforderung = schwierig hohe Reife zu erreichen`,
       takeaway: "Maritim = temperiert & stabil, aber feuchter & weniger Reife-Potential."
     },
     {
@@ -205,7 +205,7 @@ registerChapterContent("klima_und_standort", {
 - **Regionen**: Südeuropa (Italien, Spanien, Griechenland), südliches Frankreich (Provence, Languedoc), südliche Australien, südliche Südafrika
 - **Jahrgangs-Konsistenz relativ stabil**: Jahre sind ähnlich, weniger Variation als kontinentalklima – "großartige Jahre" sind Standard
 - **Extreme Hitze-Jahre möglich**: Sehr heiße Jahre können zu Überreife-Problemen führen
-- **Beispiel-Profil**: Toscana, Südspanien – heißes, trockenes Profil mit stabilen Jahren```,
+- **Beispiel-Profil**: Toscana, Südspanien – heißes, trockenes Profil mit stabilen Jahren`,
       takeaway: "Mediterran = heiß & trocken, stabiler, aber Wasserstress-Management nötig."
     },
     {
@@ -221,7 +221,7 @@ registerChapterContent("klima_und_standort", {
 - **Optimale Höhen-Range**: 400-1200 m typisch für hochwertige Bergweinbau (z.B. nördliche Rhone, Süd-Tirol)
 - **Saisonale Risiken erhöht**: Frost-Gefahr ist größer in Höhenlagen wegen tieferer Winter-Temperaturen
 - **Management-Strategie**: In sehr warmen Regionen gezielt höher bauen um Reife zu kontrollieren (z.B. Argentinische Anden)
-- **Balance-Punkt**: Nicht zu hoch (Reife impossible), nicht zu niedrig (zu warm)```,
+- **Balance-Punkt**: Nicht zu hoch (Reife impossible), nicht zu niedrig (zu warm)`,
       takeaway: "Höhe = natürliche Kühlung & längere Reife-Periode."
     },
     {
@@ -237,7 +237,7 @@ registerChapterContent("klima_und_standort", {
 - **Klimawandel-Effekt**: Wärmere Erde verschiebt anbaubare Breiten nach Norden/Süden → neue Regionen werden möglich
 - **Regionale Längen-Unterschiede ignorieren**: Bordeaux (45°N, gemäßigt) vs. Australien (40°S, warm) = ähnliche Breite aber ANDERE Klimazone wegen Kontinentalität
 - **Praktische Implikation**: Breitengrad ist Basis-Temperaturzone, aber nicht alleiniging (Wasser-Nähe, Höhe, Kontinentalität modifizieren)
-- **Prüfungsfalle**: "Höhere Breitengrad = automatisch kühleres Profil" = zu simpel. Breitengrad ist Basis, andere Faktoren modifizieren```,
+- **Prüfungsfalle**: "Höhere Breitengrad = automatisch kühleres Profil" = zu simpel. Breitengrad ist Basis, andere Faktoren modifizieren`,
       takeaway: "Breitengrad = determiniert Basis-Temperaturzone."
     },
     {
@@ -253,7 +253,7 @@ registerChapterContent("klima_und_standort", {
 - **Flusstal-Effekt schwächer**: Flüsse wirken ähnlich aber weniger intensiv als Seen
 - **Beispiele klassisch**: Finger Lakes (New York, USA), Mosel-Tal (Deutschland, Fluss), Lake Geneva (Schweiz) alle nutzen Gewässer-Moderation
 - **Negative Seite**: Höhere Feuchtigkeit kann Pilzkrankheiten fördern → Trade-off (Frost-Schutz vs. Feuchtigkeit)
-- **Kleine Gewässer**: Weniger Effekt – muss größer und relevant sein um Klima zu modifizieren```,
+- **Kleine Gewässer**: Weniger Effekt – muss größer und relevant sein um Klima zu modifizieren`,
       takeaway: "Gewässer = Temperatur-Moderator & Frost-Schutz-Effekt."
     },
     {
@@ -269,7 +269,7 @@ registerChapterContent("klima_und_standort", {
 - **Osthang-Profil**: Morgensonne, gemäßigtere Profile, weniger Hitze-Stress
 - **Praktische Beispiele**: Mosel – Südhänge bevorzugt (zu kühl sonst), Rhone – West/Süd-Hänge bevorzugt, Burgund – komplexe Exposition mit Mikrovariationen
 - **Makro-Effekt größer als Klima**: Exposition kann mehr Unterschied machen als allgemeines Klima der Region – "Grand Cru der Hänge"
-- **Management-Option begrenzt**: Kann Weinberg-Position nicht ändern, aber kann Weinberg-Management (Laubwerk) adjustieren```,
+- **Management-Option begrenzt**: Kann Weinberg-Position nicht ändern, aber kann Weinberg-Management (Laubwerk) adjustieren`,
       takeaway: "Exposition = lokale Reife-Determinante, manchmal größer als regional-Klima."
     },
     {
@@ -283,7 +283,7 @@ registerChapterContent("klima_und_standort", {
 - **Wurzel-Tiefe-Möglichkeit**: Schotter/Kies ermöglichen tiefe Wurzeln (tiefe Wasser-Quellen), dichter Ton blockiert (flache Wurzeln)
 - **Reben-Stress & Qualität-Paradoxon**: Moderate Wasserstress kann Qualität verbessern (konzentriertere Trauben), extremer Stress zerstört
 - **Bodentyp variiert massiv**: Nicht alle Böden gleich geeignet – Böden in gleicher Region können sehr unterschiedlich sein
-- **Historische Erkenntnis**: Große Weinlagen haben oft "schlechtere" Böden (sand/schotter/kalk) – diese zwingen Rebe zu konzentrieren = Qualität```,
+- **Historische Erkenntnis**: Große Weinlagen haben oft "schlechtere" Böden (sand/schotter/kalk) – diese zwingen Rebe zu konzentrieren = Qualität`,
       takeaway: "Boden = Wasser, Nährstoffe, Drainage, Wärme – fundamentale Terroir-Komponente."
     },
     {
@@ -299,7 +299,7 @@ registerChapterContent("klima_und_standort", {
 - **Bodentyp × Klima Interaction**: Sand in kühlem Klima kann zu dünnen Weinen führen, Ton in warmem Klima kann zu schwachen Strukturen führen
 - **"Force the Vine"-Konzept**: Schlechtere Böden können Qualität erzwingen – Rebe kämpft, konzentriert sich, höhere Qualität
 - **Regionale Bodenbindung**: Top-Weinbau-Gegenden haben charakteristische Böden (Grand Cru Burgund: Kalk, Bordeaux Left Bank: Kies, Mosel: Schiefer)
-- **Boden-Charakter in Wein**: Sensorische Qualität "Mineralität" wird oft mit Bodentyp korreliert (wissenschaftlich umstritten)```,
+- **Boden-Charakter in Wein**: Sensorische Qualität "Mineralität" wird oft mit Bodentyp korreliert (wissenschaftlich umstritten)`,
       takeaway: "Bodentyp → Reben-Kraft & Weinstil-Charakter."
     },
     {
@@ -316,7 +316,7 @@ registerChapterContent("klima_und_standort", {
 - **Nicht veränderbar (Natur-Teil)**: Klima & Boden & Topografie konstant/langfristig – können nicht geändert werden
 - **Mensch kann optimieren**: Menschen können Rebsorte wählen, Management-Stil anpassen, Mensch-Komponente ist variabel
 - **Prüfungsfalle**: "Terroir = nur Boden" = FALSCH. "Terroir = unveränderbar" = zu simpel (Mensch-Teil veränderbar)
-- **Begründet Herkunfts-Typizität**: "Taste of Place" = Terroir sensorisch ausgedrückt → Winemaker nutzt Terroir um Stil zu schaffen```,
+- **Begründet Herkunfts-Typizität**: "Taste of Place" = Terroir sensorisch ausgedrückt → Winemaker nutzt Terroir um Stil zu schaffen`,
       takeaway: "Terroir = Klima + Boden + Topografie + Mensch = Ort-Ausdruck."
     },
     {
@@ -331,7 +331,7 @@ registerChapterContent("klima_und_standort", {
 - **Management-Know-How**: Top-Weinbau-Regionen (Burgund, Bordeaux) kennen ihre Mikroklimazonen präzise
 - **Grand Cru-Basis oft**: Große Lagen sind oft definiert durch optimales Mikroklima statt nur Boden
 - **Blindverkostung-Effekt**: Mikroklimaeffekte können Herkunftsbestimmung erschweren (zwei "gleiche" Lagen unterschiedlich reif)
-- **Qualitäts-Preisunterschiede**: Kann ein großer Grund für Preisunterschiede benachbarter Weinberge sein```,
+- **Qualitäts-Preisunterschiede**: Kann ein großer Grund für Preisunterschiede benachbarter Weinberge sein`,
       takeaway: "Mikroklima = lokale Klein-Variation mit großem Effekt."
     },
     {
@@ -347,7 +347,7 @@ registerChapterContent("klima_und_standort", {
 - **Makro entscheidet Grundlage**: Makroklima limitiert alles andere (z.B. Australien warm = keine Mikroklima kann zu kühl sein)
 - **Meso verfeinert Verständnis**: Innerhalb Australien gibt es Mesoklima-Unterschiede (Marginal Regions vs. hot Interior)
 - **Mikro gibt Details**: Bergseite vs. Flussseite = Mikro-Unterschiede innerhalb Mesoklima
-- **Klimawandel-Effekt sichtbar**: Mehr auf Makro-Ebene (globale Erwärmung), aber auch auf Meso (Regen-Muster-Shift)```,
+- **Klimawandel-Effekt sichtbar**: Mehr auf Makro-Ebene (globale Erwärmung), aber auch auf Meso (Regen-Muster-Shift)`,
       takeaway: "Klimata-Hierarchie = Makro (limitiert) > Meso (verfeinert) > Mikro (Details)."
     },
     {
@@ -365,7 +365,7 @@ registerChapterContent("klima_und_standort", {
 - **Heisysteme teuer**: Heizkerzen, Öl-Heizer – effektiv aber kostspielig
 - **Regionen-Risiko unterschiedlich**: Kontinentale & nördliche Lagen risikoreicher, Seen-Nähe schützt
 - **Jahrgangs-Effekt**: Warme, frühe Frühjahre können zu frühem Austrieb führen = höheres Frost-Risiko
-- **Versicherung Standard**: In Frost-Gegenden ist Hagel-/Frost-Versicherung Standard – wirtschaftliche Absicherung```,
+- **Versicherung Standard**: In Frost-Gegenden ist Hagel-/Frost-Versicherung Standard – wirtschaftliche Absicherung`,
       takeaway: "Frühjahrs-Frost = existenzielle Bedrohung für Ertrag."
     },
     {
@@ -381,7 +381,7 @@ registerChapterContent("klima_und_standort", {
 - **Zukunfts-Herausforderung**: Klimawandel verstärkt Hitze-Problem in vielen Regionen (Australien, Kalifornien, südliche Europa)
 - **Adaptive Maßnahmen nötig**: Höhenlage nutzen (Migration in Bergregionen), Schattierung (Laubwerk-Management), Bewässerung
 - **Regionen betroffen aktuell**: Australien (Interior), südliche USA, südliche Spanien, südliche Italien in extremen Jahren
-- **Prüfungsfalle**: "Wärmere = bessere Reife" = zu simpel. Zu heiß = Stress & Probleme statt Reife```,
+- **Prüfungsfalle**: "Wärmere = bessere Reife" = zu simpel. Zu heiß = Stress & Probleme statt Reife`,
       takeaway: "Überhitze = Stress & Überreife, nicht bessere Reife."
     },
     {
@@ -399,7 +399,7 @@ registerChapterContent("klima_und_standort", {
 - **Existenzielle Herausforderung**: Für viele etablierte, hochwertige Regionen ist dies existenzielle Bedrohung
 - **Versuchung/Druck**: Manche Gegenden versuchen nicht-native Sorten (warme-tolerant) → Tradition verlieren
 - **Optimismus**: Neue Gebiete werden Wein-Potenzial bekommen (England macht schon gute Schaumweine)
-- **Prognose**: Nächste 50 Jahre werden Weinbau-Landkarte massiv verändern```,
+- **Prognose**: Nächste 50 Jahre werden Weinbau-Landkarte massiv verändern`,
       takeaway: "Klimawandel = größte langfristige Herausforderung für Weinbau-Industrie."
     }
   ],

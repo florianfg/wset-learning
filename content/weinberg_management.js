@@ -26,7 +26,7 @@ registerChapterContent("weinberg_management", {
 - **Winter-Physiologie**: Winter-Schnitt erzeugt Frühjahrs-Notfall-Trieb-Bildung (kompensierende Reaktion)
 - **Frost-Timing-Vorsicht**: Zu früh geschnittene Reben (Dezember) sind Frost-gefährdet, später schneiden (Januar-März) ist sicherer
 - **Praktische Erkenntnis**: Keine universelle Schnitt-Formel – erfordert Erfahrung & Beobachtung der Rebe
-- **Top-Weingärter-Know-How**: Große Weingärten haben genau Schnitt-Daten pro Parzelle/Sorte/Jahr```,
+- **Top-Weingärter-Know-How**: Große Weingärten haben genau Schnitt-Daten pro Parzelle/Sorte/Jahr`,
       takeaway: "Rebschnitt = Primäre Ertrag- & Struktur-Kontrolle-Methode."
     },
     {
@@ -43,7 +43,7 @@ registerChapterContent("weinberg_management", {
 - **Mechanisierungs-Potential**: Kordon ermöglicht Maschinen-Schnitt, Guyot benötigt manuelle Arbeit & Erfahrung
 - **Kosten-Implikation**: Guyot teuer (Handarbeit), Kordon kostengünstig
 - **Regionen-Tradition**: Deutschland/Frankreich/Italien nutzen oft Guyot (Qualität), Australien/USA oft Kordon (Effizienz)
-- **Konversion-Schwierigkeit**: Umstieg von Kordon auf Guyot ist langfristig & kostspielig```,
+- **Konversion-Schwierigkeit**: Umstieg von Kordon auf Guyot ist langfristig & kostspielig`,
       takeaway: "Guyot = Qualität & Flexibilität, Kordon = Effizienz & Mechanisierung."
     },
     {
@@ -59,7 +59,7 @@ registerChapterContent("weinberg_management", {
 - **Kosten-Trade-off-Problem**: Niedriger Ertrag wirtschaftlich nur bei Premium-Preisen rentabel (hohes Volumen = billige Weine)
 - **Appellations-Standards reguliert**: Oft gibt es gesetzliche Ertrag-Limits (z.B. Grand Cru Burgund max. 25 hl/ha, Dorf-Appellation max. 45 hl/ha)
 - **Jahrgangs-Variation**: Ertragsvorhersage ist schwierig – Frost, schlechte Blüte, Hagel können radikal ändern
-- **Management-Entscheidung**: Top-Weingärten intentionieren bewusst niedriger-Ertrag-Strategie zur Qualitätserhöhung```,
+- **Management-Entscheidung**: Top-Weingärten intentionieren bewusst niedriger-Ertrag-Strategie zur Qualitätserhöhung`,
       takeaway: "Niedriger Ertrag = höhere Konzentration = höheres Qualitäts-Potential."
     },
     {
@@ -75,7 +75,7 @@ registerChapterContent("weinberg_management", {
 - **Balance-Kunst**: Zu aggressiv = zu wenig Ertrag (wirtschaftlich schlecht), zu schwach = kein Effekt auf Qualität
 - **Premium-Standard**: Bei hochqualitativen Weinen Standard-Praxis, bei günstigen Weinen selten (Kosten-Nutzen negativ)
 - **Jahrgangs-Abhängig**: In Problem-Jahren (zu viel Ertrag) notwendig, in normalen Jahren optional
-- **Frühe-Entfernung-Vorteile**: Noch unreife Trauben zu entfernen ist leichter & trifft nicht den Preis-Verlust bei späterem Entfernen```,
+- **Frühe-Entfernung-Vorteile**: Noch unreife Trauben zu entfernen ist leichter & trifft nicht den Preis-Verlust bei späterem Entfernen`,
       takeaway: "Grünernte = direkter Qualitäts-Investment durch Ertrag-Reduktion."
     },
     {
@@ -90,7 +90,7 @@ registerChapterContent("weinberg_management", {
 - **Timing-Kritikalität extrem**: Zu früh (Frühjahr) = Frühlings-Frost-Risiko erhöht, zu spät (Sommer) = Reife-Impact minimal
 - **Arbeitsintensiv stark**: Bei hochqualitativen Weinen ist Handarbeit Standard – Kosten-relevant
 - **Klima-Abhängigkeit**: In warmen, trockenen Klimaten weniger nötig, in feuchten Regionen absolut essentiell
-- **Top-Weingärter-Know-How**: Erfahrung bestimmt optimales Timing & Intensität pro Jahr```,
+- **Top-Weingärter-Know-How**: Erfahrung bestimmt optimales Timing & Intensität pro Jahr`,
       takeaway: "Laubwand-Management = Reife & Krankheits-Kontrolle integriert."
     },
     {
@@ -105,7 +105,7 @@ registerChapterContent("weinberg_management", {
 - **Sonnenbrand-Risiko Trade-off**: Zu aggressive Entblätterung = Traubenhaut direkter Sonneneinstrahlung → Sonnenbrand-Flecken möglich
 - **Methode variiert**: Manuell (präzise, teuer) oder mechanisch (schneller, aber weniger Präzision)
 - **Precision-Anforderung**: Handarbeit ist präziser – kann genau um beste Trauben herum entblättern
-- **Praxis-Standard bei Premium**: Bei hochqualitativen Weinen Standard, Timing ist kritisch für erfolg/Schaden-Balance```,
+- **Praxis-Standard bei Premium**: Bei hochqualitativen Weinen Standard, Timing ist kritisch für erfolg/Schaden-Balance`,
       takeaway: "Entblätterung = direkte Licht + Luft → Reife & Gesundheit."
     },
     {
@@ -119,7 +119,7 @@ registerChapterContent("weinberg_management", {
 - **Mechanisierungs-Limit**: Nur begrenzt mechanisierbar – manuelle Anpassungen & Feinarbeit oft essentiell
 - **Saisonale Wiederholung**: Mehrfach während Growing Season nötig während kontinuierlicher Trieb-Entwicklung (wöchentlich oft)
 - **System-Integration**: Muss zu bestehendem Draht-System passen (Hochdraht-System, Spalier-System variiert)
-- **Kosten-Signifikant**: Großer Kostenblock bei Premium-Handarbeit-Weinen – kann 10-20% der Produktionskosten sein```,
+- **Kosten-Signifikant**: Großer Kostenblock bei Premium-Handarbeit-Weinen – kann 10-20% der Produktionskosten sein`,
       takeaway: "Heften = Laubwerk-Architektur & Licht-Optimierung."
     },
     {
@@ -134,7 +134,7 @@ registerChapterContent("weinberg_management", {
 - **Precision Irrigation-Technologie**: Tröpfchenbewässerung ermöglicht präzise, individuelle Wasserkontrolle pro Rebe
 - **Timing-Strategie**: Bewässerung meist vor Blüte (Blüten-Sicherung) und während Frucht-Entwicklung (Frühjahr-Sommer)
 - **Kosten-Infrastruktur**: Hohe Infrastruktur-Kosten (Rohre, Systeme, Pumpen), lohnt sich nur bei Mehrwert-Kulturen (Premium-Weine)
-- **Nachhaltigkeit-Thema**: Wasser-Ressourcen-Knappheit wird global wichtiger – effiziente Bewässerung wird essentiell```,
+- **Nachhaltigkeit-Thema**: Wasser-Ressourcen-Knappheit wird global wichtiger – effiziente Bewässerung wird essentiell`,
       takeaway: "Bewässerung = Balance zwischen Stress & Nährstoff-Verfügbarkeit."
     },
     {
@@ -150,7 +150,7 @@ registerChapterContent("weinberg_management", {
 - **Untergrund-Bewässerung**: Wasser direkt zu Wurzeln unter Boden – sehr effizient aber sehr teuer Infrastruktur
 - **Wahl-Kriterien entscheidend**: Landtopografie (Hänge vs. flach), Wasserverfügbarkeit (lokal limitiert?), Kosten (Anfangsinvestment)
 - **Moderner Trend**: Tröpfchenbewässerung wird Standard in modernem Weinbau (Effizienz-Vorteile zu stark)
-- **Automatisierung-Zukunft**: Sensor-basierte Bewässerung (Boden-Feuchte-Sensoren steuern) wird zunehmend verbreitet```,
+- **Automatisierung-Zukunft**: Sensor-basierte Bewässerung (Boden-Feuchte-Sensoren steuern) wird zunehmend verbreitet`,
       takeaway: "Tröpfchen = effizient, Flut = alt & verschwenderisch."
     },
     {
@@ -166,7 +166,7 @@ registerChapterContent("weinberg_management", {
 - **Qualitäts-Signal deutlich**: Kontrollierter Wasserstress → konzentriertere hochwertige Trauben ist erkennbar
 - **Risiko-in-Trockenperioden**: In natürlichen Trockenperioden kann Stress zu extrem werden → Rebe leidet wirklich → Qualitätsverlust
 - **Unterschiedlich je Sorte**: Manche Sorten sind wasserstress-tolerant (z.B. Cabernet), andere sind empfindlich (z.B. Pinot Noir)
-- **Prüfungsfalle**: "Mehr Wasser = bessere Qualität" = FALSCH. Optimales Wassermanagement ist nuanciert```,
+- **Prüfungsfalle**: "Mehr Wasser = bessere Qualität" = FALSCH. Optimales Wassermanagement ist nuanciert`,
       takeaway: "Moderater Wasserstress = Konzentration & Qualität-Vorteil."
     },
     {
@@ -181,7 +181,7 @@ registerChapterContent("weinberg_management", {
 - **Bio-Anbau-Alternative**: Natürliche Dünger (Kompost, Tierdung, Leguminosen-Begrünung) statt synthetische Chemikalien
 - **Blatt-Analyse-Kontrolle**: Kann Nährstoff-Status mittels Blattproben kontrollieren & empirisch anpassen
 - **Kosten vs. Qualität-Trade-off**: Bio-Düngung teurer aber höherer Qualitäts-Potential, synthetisch billiger aber möglicherweise Unbalance-Risiko
-- **Regionale Boden-Unterschiede**: Reiche Böden brauchen weniger Düngung, arme Böden mehr – muss Basis-Status wissen```,
+- **Regionale Boden-Unterschiede**: Reiche Böden brauchen weniger Düngung, arme Böden mehr – muss Basis-Status wissen`,
       takeaway: "Balance bei Düngung = Nährstoffe ohne Überfluss-Unbalance."
     },
     {
@@ -196,7 +196,7 @@ registerChapterContent("weinberg_management", {
 - **Pilz-Netzwerk-Förderung**: Lebendiger Boden fördert Mykorrhiza (symbiontische Pilze) – Reben-Nährstoff-Aufnahme verbessert
 - **Nachhaltigkeit-Langfristig**: Bodenorientierte Bewirtschaftung sichert langfristige Qualität & Reben-Lebensdauer
 - **Kosten-Paradoxe**: Investition ohne direkt sichtbare jährliche Rückgabe – erfordert Langfrist-Denken & Vertrauen
-- **Bio-Anbau-Requirement**: Bio-zertifizierte Betriebe müssen Bodenpflege-Maßnahmen durchführen```,
+- **Bio-Anbau-Requirement**: Bio-zertifizierte Betriebe müssen Bodenpflege-Maßnahmen durchführen`,
       takeaway: "Bodenpflege = langfristige Qualitäts- & Nachhaltigkeits-Investition."
     },
     {
@@ -212,7 +212,7 @@ registerChapterContent("weinberg_management", {
 - **Nährstoff-Timing**: Leguminosen-Nährstoffe sind nicht sofort verfügbar (langsame Freisetzung)
 - **Bio-Anbau-Standard**: Oft in bio-Betrieben Standard statt chemischen Unkraut-Mitteln (Herbizide-Verzicht)
 - **Kosten-Nutzen-Abwägung**: Zeitaufwand für Mulchen vs. Chemie-Kostenersparnis + Nachhaltigkeits-Gewinn
-- **Trend-wachsend**: Mehr Betriebe nutzen Begrünung wegen Nachhaltigkeit & Bio-Anforderungen```,
+- **Trend-wachsend**: Mehr Betriebe nutzen Begrünung wegen Nachhaltigkeit & Bio-Anforderungen`,
       takeaway: "Begrünung = Nachhaltigkeit & natürliche Düngung, aber Management-Aufwand."
     },
     {
@@ -227,7 +227,7 @@ registerChapterContent("weinberg_management", {
 - **Timing-kritikalst**: Früh in Saison ist meist entscheidend – Prävention statt Rettung später ist Strategie
 - **Widerstand-Management**: Zu häufige gleiche Mittel-Nutzung erzeugt Resistenz-Entwicklung → rotieren nötig
 - **Bio-Anbau-Limits**: Bio-zertifiziert begrenzte Mittel-Auswahl (nur bestimmte natürliche) → Management-Anforderungen höher
-- **Kosten-Versuch**: Jedes Jahr Spritz-Kostenbudget nötig – kann 5-10% der Produktionskosten sein```,
+- **Kosten-Versuch**: Jedes Jahr Spritz-Kostenbudget nötig – kann 5-10% der Produktionskosten sein`,
       takeaway: "Krankheitsmanagement = Vorbeugung + gezielter Einsatz + Monitoring."
     },
     {
@@ -245,7 +245,7 @@ registerChapterContent("weinberg_management", {
 - **Timing-kritikalst**: Prävention früh in Saison ist kostengünstig & effektiv, später ist schwierig
 - **Regionale Druckunterschiede**: Feuchte Regionen (Frankreich, Deutschland, Pacific Northwest USA) höheres Druck, trocken (Australien) minimal
 - **Jahrgangs-Variation**: Feuchte Jahre = hoher Druck, trockene Jahre = minimal Probleme
-- **Prüfungsfalle**: "Mehr Pestizide = automatisch besserer Schutz" = FALSCH. Integriert-Management + Prävention ist Strategie```,
+- **Prüfungsfalle**: "Mehr Pestizide = automatisch besserer Schutz" = FALSCH. Integriert-Management + Prävention ist Strategie`,
       takeaway: "Drei Pilze = permanente Threat, aber Management-Strategien existieren."
     },
     {
@@ -262,7 +262,7 @@ registerChapterContent("weinberg_management", {
 - **Ernte-Praxis unterschiedlich**: Edelfäule-Trauben werden spät geerntet, oft einzeln gepflückt, nicht Cluster
 - **Timing-entscheidend**: Frühes Botrytis-Auftreten (vor optimal Reife) = schlecht, später (nach Zucker-Reife) = erwünscht
 - **Qualitäts-Ausdruck-ekstrem**: Botrytis-Weine sind hochwertig, komplex, lagerfähig, teuer – oder ungenießbar je nach Art
-- **Prüfungsfalle**: "Botrytis = immer schlecht" = FALSCH. Kontext & Bedingungen bestimmen```,
+- **Prüfungsfalle**: "Botrytis = immer schlecht" = FALSCH. Kontext & Bedingungen bestimmen`,
       takeaway: "Botrytis = giftig oder Elixier je nach Feuchtigkeit-Muster & Ziel."
     },
     {
@@ -278,7 +278,7 @@ registerChapterContent("weinberg_management", {
 - **Standort-Effekt**: Frosttaschen in Senken höchstrisikiert, erhöhte Lagen sicherer, See-Nähe puffert (warmes Wasser gibt Wärme ab)
 - **Versicherung-Absicherung**: In Frost-Gegenden ist Frost-Versicherung Standard – wirtschaftliche Absicherung gegen Worst-Case
 - **Klima-Veränderung-Trend**: Frühere Austriebe durch Klimawandel = Frost-Risiko-Fenster wird länger
-- **Management-Integriert**: Top-Betriebe in Frost-Gegenden haben Frost-Schutz-Systems permanent installiert```,
+- **Management-Integriert**: Top-Betriebe in Frost-Gegenden haben Frost-Schutz-Systems permanent installiert`,
       takeaway: "Frühjahrs-Frost = existenzielle Bedrohung, Prävention-System nötig."
     },
     {
@@ -295,7 +295,7 @@ registerChapterContent("weinberg_management", {
 - **Netz-Abdeckung-teuer**: Praktisch für kleine Parzellen, für große zu kostspielig
 - **Timing-kritisch**: Spät Saison (August-September) ist kritischste Zeit – Vögel suchen reife Früchte
 - **Management-Realität**: Meistens Kombination aus Deterrents, manchmal akzeptiert man Verluste
-- **Versicherung-Abwägung**: Kosten Schutz-Systeme vs. Versicherung vs. Risikoakzeptanz```,
+- **Versicherung-Abwägung**: Kosten Schutz-Systeme vs. Versicherung vs. Risikoakzeptanz`,
       takeaway: "Hagel & Vögel = Ertragsverlust-Risiken, Management-Maßnahmen existieren."
     },
     {
@@ -311,7 +311,7 @@ registerChapterContent("weinberg_management", {
 - **Regionale Kultur**: USA, Australien, südliche Spanien vielmehr mechanisiert, Frankreich, Deutschland, Italien mehr handwork
 - **Premiumsegment-Trend**: Premium-Betriebe bleiben bei Handarbeit wegen Qualitäts-Differenz, Mass-Market nutzt Maschinen
 - **Robotik-Zukunft**: Robotik & KI-gesteuerte Automation entwickelt sich – könnte Präzision von Handarbeit mit Kosten-Vorteil kombinieren
-- **Hybrid-Lösungen-emerging**: Hybride Systeme (manche manuell, manche mechanisch) entstehen```,
+- **Hybrid-Lösungen-emerging**: Hybride Systeme (manche manuell, manche mechanisch) entstehen`,
       takeaway: "Mechanisierung = Kosten-Effizienz, aber signifikantes Qualitäts-Risiko."
     },
     {
@@ -328,7 +328,7 @@ registerChapterContent("weinberg_management", {
 - **Markt-Trend-stark**: Wachsendes Konsumenten-Interesse in Bio & nachhaltigen Weinen besonders in Deutschland, Skandinavien, Schweiz
 - **Herausforderung-Krankheitsmanagement**: Begrenzte Mittel-Palette = höhere Krankheits-Risiko in feuchten Jahren
 - **Zukunfts-Prognose**: Wahrscheinlich wird Bio Standard statt Ausnahme in Premium-Segment über nächste 20 Jahre
-- **Prüfungsfalle**: "Bio = immer bessere Qualität" = FALSCH. Bio = andere Qualitäts-Philosophie, höhere Kosten, größer Risiken```,
+- **Prüfungsfalle**: "Bio = immer bessere Qualität" = FALSCH. Bio = andere Qualitäts-Philosophie, höhere Kosten, größer Risiken`,
       takeaway: "Bio-Anbau = Nachhaltigkeit & höhere Kosten, aber auch Potential."
     },
     {
@@ -344,7 +344,7 @@ registerChapterContent("weinberg_management", {
 - **Resistenz-Management-wichtig**: Verschiedene Mittel-Klassen nutzen um Resistenz-Entwicklung zu vermeiden (Rotation nötig)
 - **Kosten-Paradox**: IPM kostet mehr in Arbeit & Monitoring, aber weniger in Chemikalien → wirtschaftlich kann ausgleichen
 - **Effektivität-zuverlässig**: Wissenschaftlich bewiesen als effektiv wie konventionelle Chemie-Last-Ansätze
-- **EU-Requirement**: IPM wird in EU zunehmen reguliert & verlangt (Green Deal)```,
+- **EU-Requirement**: IPM wird in EU zunehmen reguliert & verlangt (Green Deal)`,
       takeaway: "IPM = Balance zwischen Effektivität & Nachhaltigkeit."
     },
     {
@@ -360,7 +360,7 @@ registerChapterContent("weinberg_management", {
 - **Management-Philosophie sensorisch**: Top-Weingärten haben charakteristische Management-Profile → erkennbar in Wein-Profil
 - **Konsistenz-Effekt**: Jährlich gleiche Strategie über Jahre → konsistenten Wein-Stil etablieren (Marken-Charakter)
 - **Kontrastiv-Beispiel**: Bio-Betrieb vs. Konventionell werden oft sensorisch erkennbar (andere Aroma-Profile, andere Struktur)
-- **Prüfungsfalle**: "Management hat minimalen Einfluss auf Wein" = FALSCH. Management ist fundamental, nur hinter Klima & Sorte```,
+- **Prüfungsfalle**: "Management hat minimalen Einfluss auf Wein" = FALSCH. Management ist fundamental, nur hinter Klima & Sorte`,
       takeaway: "Weinberg-Management → direkt Wein-Struktur & Stil bestimmend."
     }
   ],
