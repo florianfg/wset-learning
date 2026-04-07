@@ -9,7 +9,8 @@ const QUIZ_PASSED_PREFIX      = "wsetLevel2Passed_";
 const QUIZ_GATE_MIN_QUESTIONS = 5;    // Kapitel mit <5 Fragen: kein Gate
 const QUIZ_PASS_THRESHOLD     = 80;   // Prozent (80 %)
 
-// S3.2 – Modul-Quiz (kein persistenter State nötig)
+// S3.2 – Modul-Quiz
+const MQ_RESULT_PREFIX = "wsetLevel2MQResult_";
 
 // S3.3 – WSET Exam Mode
 const SM2_KEY          = "wset-level-2-sm2";
@@ -447,6 +448,10 @@ function buildSidebar() {
     const progress = getSectionProgressData(section.id);
     const isActive = section.id === activeSectionId;
 
+    const mqStatus   = getModuleQuizStatus(section.id);
+    const mqSymbol   = mqStatusSymbol(mqStatus);
+    const mqSymbolClass = "sidebar-chapter-status mq-status mq-status--" + mqStatus;
+
     const chaptersHtml = isActive
       ? `<div class="sidebar-chapters">
           ${getChaptersForSection(section.id).map((chapter) => {
@@ -459,21 +464,22 @@ function buildSidebar() {
                 <span>${escapeHtml(chapter.name)}</span>
               </button>`;
           }).join("")}
+          <button class="sidebar-chapter-btn sidebar-chapter-btn--mq"
+                  onclick="startModuleQuiz('${section.id}')">
+            <span class="${mqSymbolClass}">${mqSymbol}</span>
+            <span>Modul-Quiz</span>
+          </button>
         </div>`
       : "";
 
     return `
       <div class="sidebar-section">
-        <div class="sidebar-section-row">
-          <button class="sidebar-section-btn ${isActive ? "active" : ""}"
-                  onclick="setActiveSection('${section.id}')">
-            <span class="sidebar-section-num">${section.number}</span>
-            <span class="sidebar-section-name">${escapeHtml(section.name)}</span>
-            <span class="sidebar-section-progress">${progress.completedCount}/${progress.chapterCount}</span>
-          </button>
-          <button class="sidebar-mq-btn" title="Modul-Quiz starten"
-                  onclick="startModuleQuiz('${section.id}')">&#x1F4DD;</button>
-        </div>
+        <button class="sidebar-section-btn ${isActive ? "active" : ""}"
+                onclick="setActiveSection('${section.id}')">
+          <span class="sidebar-section-num">${section.number}</span>
+          <span class="sidebar-section-name">${escapeHtml(section.name)}</span>
+          <span class="sidebar-section-progress">${progress.completedCount}/${progress.chapterCount}</span>
+        </button>
         ${chaptersHtml}
       </div>`;
   }).join("");
@@ -520,6 +526,10 @@ function buildSheetContent() {
     const progress = getSectionProgressData(section.id);
     const isActive = section.id === activeSectionId;
 
+    const mqStatus2    = getModuleQuizStatus(section.id);
+    const mqSymbol2    = mqStatusSymbol(mqStatus2);
+    const mqSymbolCls2 = "sheet-chapter-status mq-status mq-status--" + mqStatus2;
+
     const chaptersHtml = isActive
       ? `<div class="sheet-chapters">
           ${getChaptersForSection(section.id).map((chapter) => {
@@ -532,21 +542,22 @@ function buildSheetContent() {
                 <span>${escapeHtml(chapter.name)}</span>
               </button>`;
           }).join("")}
+          <button class="sheet-chapter-btn sheet-chapter-btn--mq"
+                  onclick="startModuleQuiz('${section.id}')">
+            <span class="${mqSymbolCls2}">${mqSymbol2}</span>
+            <span>Modul-Quiz</span>
+          </button>
         </div>`
       : "";
 
     return `
       <div class="sheet-section">
-        <div class="sheet-section-row">
-          <button class="sheet-section-btn ${isActive ? "active" : ""}"
-                  onclick="setActiveSection('${section.id}')">
-            <span class="sheet-section-num">${section.number}</span>
-            <span class="sheet-section-name">${escapeHtml(section.name)}</span>
-            <span class="sheet-section-progress">${progress.completedCount}/${progress.chapterCount}</span>
-          </button>
-          <button class="sheet-mq-btn" title="Modul-Quiz starten"
-                  onclick="startModuleQuiz('${section.id}')">&#x1F4DD;</button>
-        </div>
+        <button class="sheet-section-btn ${isActive ? "active" : ""}"
+                onclick="setActiveSection('${section.id}')">
+          <span class="sheet-section-num">${section.number}</span>
+          <span class="sheet-section-name">${escapeHtml(section.name)}</span>
+          <span class="sheet-section-progress">${progress.completedCount}/${progress.chapterCount}</span>
+        </button>
         ${chaptersHtml}
       </div>`;
   }).join("");
@@ -1220,6 +1231,33 @@ function dismissInstallBanner() {
 // S3.1 – Kapitel-Quiz Gate Helpers
 // ---------------------------------------------------------------------------
 
+function saveModuleQuizResult(sectionId, pct) {
+  var key = MQ_RESULT_PREFIX + sectionId;
+  var existing = {};
+  try { existing = JSON.parse(localStorage.getItem(key) || "{}"); } catch (e) {}
+  var best = Math.max(existing.bestPct || 0, pct);
+  localStorage.setItem(key, JSON.stringify({ bestPct: best }));
+}
+
+function getModuleQuizStatus(sectionId) {
+  try {
+    var raw = localStorage.getItem(MQ_RESULT_PREFIX + sectionId);
+    if (!raw) return "not-started";
+    var data = JSON.parse(raw);
+    var pct  = data.bestPct || 0;
+    if (pct >= 90) return "distinction";
+    if (pct >= 80) return "passed";
+    return "attempted";
+  } catch (e) { return "not-started"; }
+}
+
+function mqStatusSymbol(status) {
+  if (status === "distinction") return "\u2605"; // ★
+  if (status === "passed")      return "\u2713"; // ✓
+  if (status === "attempted")   return "\u25CF"; // ●
+  return "\u25CB";                               // ○
+}
+
 function markChapterQuizPassed(chapterId) {
   localStorage.setItem(QUIZ_PASSED_PREFIX + chapterId, "1");
 }
@@ -1336,19 +1374,31 @@ function showModuleResults() {
            "</div>";
   }).join("");
 
-  var section = getSection(mqSectionId);
+  // Ergebnis speichern + Nav mit neuem Status aktualisieren
+  saveModuleQuizResult(mqSectionId, pct);
+  renderNav();
+
+  var section     = getSection(mqSectionId);
+  var mqSt        = getModuleQuizStatus(mqSectionId);
+  var statusLabel = mqSt === "distinction" ? "\u2605 Distinction (\u226590%)"
+                  : mqSt === "passed"      ? "\u2713 Bestanden (\u226580%)"
+                  : "\u25CF Noch nicht bestanden";
+  var statusColor = mqSt === "distinction" ? "#b8860b"
+                  : mqSt === "passed"      ? "#2d7a3a"
+                  : "#8b2020";
 
   document.getElementById("app").innerHTML =
     '<section class="card result-hero">' +
     '  <span class="result-icon">' + icon + "</span>" +
     '  <div class="result-score">' + mqCorrect + "/" + total + "</div>" +
     '  <div class="result-label">' + label + "</div>" +
-    '  <div class="result-pct">' + pct + "% korrekt &ndash; " + escapeHtml(section ? section.name : "") + "</div>" +
+    '  <div class="result-pct">' + pct + "% korrekt \u2013 " + escapeHtml(section ? section.name : "") + "</div>" +
+    '  <div class="mq-result-status" style="color:' + statusColor + '">' + statusLabel + "</div>" +
     "</section>" +
-    (breakdownHtml ? '<section class="card mq-breakdown"><div class="mq-breakdown-title">Kapitel-&#xDC;bersicht</div>' + breakdownHtml + "</section>" : "") +
+    (breakdownHtml ? '<section class="card mq-breakdown"><div class="mq-breakdown-title">Kapitel-\u00DCbersicht</div>' + breakdownHtml + "</section>" : "") +
     '<div class="button-row result-actions">' +
     '  <button onclick="startModuleQuiz(\'' + mqSectionId + '\')">&#x1F501; Nochmal</button>' +
-    '  <button class="secondary" onclick="goHome()">Zur &#xDC;bersicht</button>' +
+    '  <button class="secondary" onclick="goHome()">Zur \u00DCbersicht</button>' +
     "</div>";
 
   triggerViewTransition();
