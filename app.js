@@ -4,6 +4,18 @@ const USER_NAME_KEY = "wsetLevel2UserName";
 const INSTALL_DISMISSED_KEY = "wsetLevel2InstallDismissed";
 const STATS_KEY = "wset-level-2-stats";
 
+// S3.1 – Kapitel-Quiz Gate
+const QUIZ_PASSED_PREFIX      = "wsetLevel2Passed_";
+const QUIZ_GATE_MIN_QUESTIONS = 5;    // Kapitel mit <5 Fragen: kein Gate
+const QUIZ_PASS_THRESHOLD     = 80;   // Prozent (80 %)
+
+// S3.2 – Modul-Quiz (kein persistenter State nötig)
+
+// S3.3 – WSET Exam Mode
+const SM2_KEY          = "wset-level-2-sm2";
+const EXAM_TIME_LIMIT  = 90;   // Sekunden pro Frage
+const EXAM_SESSION_SIZE = 50;  // Fragen pro Exam-Session
+
 const activeSectionDefault = sections[0]?.id || null;
 let activeSectionId = activeSectionDefault;
 let activeChapterId = getChaptersForSection(activeSectionId)[0]?.id || chapters[0]?.id || null;
@@ -24,6 +36,25 @@ let questionIndices = [];   // Fragen-Indizes der aktuellen Runde
 let currentRoundIdx = 0;    // Position in questionIndices
 let wrongInRound = [];      // Indizes falsch beantworteter Fragen
 let quizRound = 1;          // Aktuelle Runde (1 = erster Durchgang)
+
+// S3.2 – Modul-Quiz State
+let mqSectionId = null;
+let mqQuestions = [];   // [{question, chapterId, chapterName, wasCorrect}]
+let mqIdx       = 0;
+let mqCorrect   = 0;
+let mqWrong     = 0;
+let mqAnswered  = false;
+let mqSelected  = null;
+
+// S3.3 – Exam Mode State
+let examQueue        = [];  // [{question, chapterId, chapterName, sectionName, sm2Key}]
+let examIdx          = 0;
+let examCorrect      = 0;
+let examWrong        = 0;
+let examAnswered     = false;
+let examSelected     = null;
+let examTimerInterval = null;
+let examTimeLeft     = EXAM_TIME_LIMIT;
 
 // Lernzeit-Timer
 let _statsTimerStart = null;        // Date.now() wenn aktuelles Segment läuft; null = pausiert
@@ -739,6 +770,11 @@ function showResults() {
   const total = questionIndices.length || getQuestionsForChapter(activeChapterId).length;
   const percentage = total === 0 ? 0 : Math.round((correctAnswers / total) * 100);
 
+  // S3.1: Pass-Gate (nur aktiv wenn >= QUIZ_GATE_MIN_QUESTIONS Fragen)
+  const gateActive = total >= QUIZ_GATE_MIN_QUESTIONS;
+  const passed     = !gateActive || percentage >= QUIZ_PASS_THRESHOLD;
+  if (passed) markChapterQuizPassed(activeChapterId);
+
   let icon, label, scoreColor;
   if (percentage >= 90) {
     icon = "🏆"; label = "Ausgezeichnet!"; scoreColor = "#2d7a3a";
@@ -752,7 +788,7 @@ function showResults() {
     icon = "🔄"; label = "Nochmal versuchen"; scoreColor = "#8b2020";
   }
 
-  const roundLabel = quizRound > 1 ? `Runde ${quizRound} · ` : "";
+  const roundLabel = quizRound > 1 ? "Runde " + quizRound + " · " : "";
   const hasWrong = wrongInRound.length > 0;
 
   // Nächstes Kapitel ermitteln für Button-Label
@@ -762,33 +798,47 @@ function showResults() {
     ? sectionChapters[currentChapterIdx + 1]
     : null;
   const nextChapterLabel = nextChapter
-    ? `✅ Weiter: ${escapeHtml(nextChapter.name)}`
-    : "✅ Zur Übersicht";
+    ? "Weiter: " + escapeHtml(nextChapter.name)
+    : "Zur Übersicht";
 
-  // Optionale "Fehler wiederholen"-Sektion (nur bei Fehlern sichtbar)
-  const retryWrongHtml = hasWrong
-    ? `<button class="result-retry-btn" onclick="retryWrongQuestions()">🔁 ${wrongInRound.length} Fehler wiederholen</button>`
+  // Gate-Banner
+  const gateBanner = gateActive
+    ? '<div class="quiz-gate-banner ' + (passed ? "gate-passed" : "gate-failed") + '">' +
+      (passed
+        ? '<span class="gate-icon">&#x2705;</span> Bestanden – du kannst weitermachen!'
+        : '<span class="gate-icon">&#x274C;</span> Noch nicht bestanden (mind. 80 % erforderlich)') +
+      "</div>"
     : "";
 
-  document.getElementById("app").innerHTML = `
-    <section class="card result-hero">
-      <span class="result-icon">${icon}</span>
-      <div class="result-score" style="color:${scoreColor}">${correctAnswers}/${total}</div>
-      <div class="result-label">${label}</div>
-      <div class="result-pct">${roundLabel}${percentage}% korrekt</div>
-      ${hasWrong
-        ? `<div class="result-retry-hint">${wrongInRound.length} Frage${wrongInRound.length > 1 ? "n" : ""} noch nicht sicher</div>`
-        : `<div class="result-retry-hint" style="color:#2d7a3a">Alle Fragen richtig beantwortet! 🎉</div>`}
-    </section>
-    ${retryWrongHtml}
-    <div class="button-row result-actions">
-      <button class="result-primary-btn" onclick="goToNextChapter()">${nextChapterLabel}</button>
-      <button class="secondary" onclick="startQuiz()">🔁 Quiz wiederholen</button>
-      <button class="secondary" onclick="restartChapter()">📖 Kapitel neu starten</button>
-    </div>
-  `;
-  triggerViewTransition();
+  // "Fehler wiederholen"-Button
+  const retryWrongHtml = hasWrong
+    ? '<button class="result-retry-btn" onclick="retryWrongQuestions()">&#x1F501; ' + wrongInRound.length + " Fehler wiederholen</button>"
+    : "";
 
+  // Weiter-Button: gesperrt wenn nicht bestanden
+  const nextBtn = passed
+    ? '<button class="result-primary-btn" onclick="goToNextChapter()">&#x2705; ' + nextChapterLabel + "</button>"
+    : '<button class="result-primary-btn result-primary-btn--locked" disabled>&#x1F512; ' + nextChapterLabel + "</button>";
+
+  document.getElementById("app").innerHTML =
+    '<section class="card result-hero">' +
+    '  <span class="result-icon">' + icon + "</span>" +
+    '  <div class="result-score" style="color:' + scoreColor + '">' + correctAnswers + "/" + total + "</div>" +
+    '  <div class="result-label">' + label + "</div>" +
+    '  <div class="result-pct">' + roundLabel + percentage + "% korrekt</div>" +
+    (hasWrong
+      ? '  <div class="result-retry-hint">' + wrongInRound.length + " Frage" + (wrongInRound.length > 1 ? "n" : "") + " noch nicht sicher</div>"
+      : '  <div class="result-retry-hint" style="color:#2d7a3a">Alle Fragen richtig beantwortet! &#x1F389;</div>') +
+    gateBanner +
+    "</section>" +
+    retryWrongHtml +
+    '<div class="button-row result-actions">' +
+    nextBtn +
+    '  <button class="secondary" onclick="startQuiz()">&#x1F501; Quiz wiederholen</button>' +
+    '  <button class="secondary" onclick="restartChapter()">&#x1F4D6; Kapitel neu starten</button>' +
+    "</div>";
+
+  triggerViewTransition();
   saveChapterProgress();
 }
 
@@ -898,38 +948,49 @@ function renderDashboardScreen() {
     const stateClass = sp.state === "completed" ? "completed" : sp.state === "started" ? "started" : "";
     const badge = sp.state === "completed" ? "✓" : sp.state === "started" ? "●" : "○";
 
-    return `
-      <button class="section-card ${stateClass}" onclick="setActiveSection('${section.id}')">
-        <div class="section-card-top">
-          <span class="section-card-num">${section.number}</span>
-          <span class="section-card-name">${escapeHtml(section.name)}</span>
-          <span class="section-card-badge ${stateClass}">${badge}</span>
-        </div>
-        <div class="section-card-meta">${sp.completedCount}/${sp.chapterCount} Kapitel</div>
-        <div class="section-card-bar">
-          <div class="section-card-fill" style="width:${pct}%"></div>
-        </div>
-      </button>`;
+    return (
+      '<div class="section-card ' + stateClass + '" role="button" tabindex="0"' +
+      ' onclick="setActiveSection(\'' + section.id + '\')"' +
+      ' onkeydown="if(event.key===\'Enter\')setActiveSection(\'' + section.id + '\')">' +
+      '  <div class="section-card-top">' +
+      '    <span class="section-card-num">' + section.number + "</span>" +
+      '    <span class="section-card-name">' + escapeHtml(section.name) + "</span>" +
+      '    <span class="section-card-badge ' + stateClass + '">' + badge + "</span>" +
+      "  </div>" +
+      '  <div class="section-card-meta">' + sp.completedCount + "/" + sp.chapterCount + " Kapitel</div>" +
+      '  <div class="section-card-bar"><div class="section-card-fill" style="width:' + pct + '%"></div></div>' +
+      '  <div class="section-card-actions" onclick="event.stopPropagation()">' +
+      '    <button class="mq-start-btn" onclick="startModuleQuiz(\'' + section.id + '\')">&#x1F4DD; Modul-Quiz</button>' +
+      "  </div>" +
+      "</div>"
+    );
   }).join("");
 
-  document.getElementById("app").innerHTML = `
-    ${greetingHtml}
-    <section class="card dashboard-hero">
-      <div class="eyebrow">Lernfortschritt</div>
-      <div class="dashboard-hero-pct">${stats.progressPercentage}%</div>
-      <div class="progress-track" style="margin-bottom:12px">
-        <div class="progress-fill" style="width:${stats.progressPercentage}%"></div>
-      </div>
-      <div class="dashboard-hero-meta">
-        ${stats.completedChapters}/${chapters.length} Kapitel abgeschlossen
-        · ${stats.answeredQuestions}/${stats.totalQuestions} Quizfragen
-      </div>
-      ${timeStatsHtml}
-      <div class="dashboard-cta-hint">${ctaHint}</div>
-      <button onclick="continueLearning()">${ctaLabel} →</button>
-    </section>
-    <div class="section-cards">${sectionCardsHtml}</div>
-  `;
+  document.getElementById("app").innerHTML =
+    greetingHtml +
+    '<section class="card dashboard-hero">' +
+    '  <div class="eyebrow">Lernfortschritt</div>' +
+    '  <div class="dashboard-hero-pct">' + stats.progressPercentage + "%</div>" +
+    '  <div class="progress-track" style="margin-bottom:12px">' +
+    '    <div class="progress-fill" style="width:' + stats.progressPercentage + '%"></div>' +
+    "  </div>" +
+    '  <div class="dashboard-hero-meta">' +
+    stats.completedChapters + "/" + chapters.length + " Kapitel abgeschlossen" +
+    " &middot; " + stats.answeredQuestions + "/" + stats.totalQuestions + " Quizfragen" +
+    "  </div>" +
+    timeStatsHtml +
+    '  <div class="dashboard-cta-hint">' + ctaHint + "</div>" +
+    '  <button onclick="continueLearning()">' + ctaLabel + " &#x2192;</button>" +
+    "</section>" +
+    '<div class="section-cards">' + sectionCardsHtml + "</div>" +
+    '<div class="exam-mode-card" onclick="startExamMode()">' +
+    '  <div class="exam-mode-icon">&#x1F393;</div>' +
+    '  <div class="exam-mode-body">' +
+    '    <div class="exam-mode-title">Pr&#xFC;fungssimulation</div>' +
+    '    <div class="exam-mode-sub">SM-2 Spaced Repetition &middot; ' + EXAM_SESSION_SIZE + ' Fragen &middot; 90 Sek./Frage</div>' +
+    "  </div>" +
+    '  <div class="exam-mode-arrow">&#x276F;</div>' +
+    "</div>";
 }
 
 // ---------------------------------------------------------------------------
@@ -1147,6 +1208,415 @@ function dismissInstallBanner() {
 // Globale onclick-Handler
 // ---------------------------------------------------------------------------
 
+// ---------------------------------------------------------------------------
+// S3.1 – Kapitel-Quiz Gate Helpers
+// ---------------------------------------------------------------------------
+
+function markChapterQuizPassed(chapterId) {
+  localStorage.setItem(QUIZ_PASSED_PREFIX + chapterId, "1");
+}
+
+function hasChapterQuizPassed(chapterId) {
+  return localStorage.getItem(QUIZ_PASSED_PREFIX + chapterId) === "1";
+}
+
+// ---------------------------------------------------------------------------
+// S3.2 – Modul-Quiz
+// ---------------------------------------------------------------------------
+
+function startModuleQuiz(sectionId) {
+  mqSectionId = sectionId;
+  const sectionChapters = getChaptersForSection(sectionId);
+  const all = [];
+  sectionChapters.forEach(function(ch) {
+    getQuestionsForChapter(ch.id).forEach(function(q) {
+      all.push({ question: q, chapterId: ch.id, chapterName: ch.name, wasCorrect: null });
+    });
+  });
+  mqQuestions = shuffleArray(all);
+  mqIdx      = 0;
+  mqCorrect  = 0;
+  mqWrong    = 0;
+  mqAnswered = false;
+  mqSelected = null;
+  currentView  = "content";
+  navSheetOpen = false;
+  renderNav();
+  showModuleQuestion();
+}
+
+function showModuleQuestion() {
+  if (mqQuestions.length === 0) { goHome(); return; }
+  if (mqIdx >= mqQuestions.length) { showModuleResults(); return; }
+  scrollToTop();
+
+  var entry   = mqQuestions[mqIdx];
+  var q       = entry.question;
+  var section = getSection(getChapter(entry.chapterId) ? getChapter(entry.chapterId).sectionId : null);
+
+  var optionsHtml = q.options.map(function(opt, i) {
+    var cls = "option";
+    if (mqAnswered) {
+      if (i === q.correct)   cls += " correct";
+      else if (i === mqSelected) cls += " wrong";
+    }
+    return '<button class="' + cls + '" onclick="selectModuleAnswer(' + i + ')" ' +
+           (mqAnswered ? "disabled" : "") + ">" + escapeHtml(opt) + "</button>";
+  }).join("");
+
+  document.getElementById("app").innerHTML =
+    renderTopbar("Modul-Quiz", mqIdx + 1, mqQuestions.length) +
+    '<section class="card">' +
+    '  <div class="eyebrow">' + escapeHtml(section ? section.name : "") + " &rsaquo; " + escapeHtml(entry.chapterName) + "</div>" +
+    '  <div class="mq-stats">&#x2713; ' + mqCorrect + " &nbsp; &#x2717; " + mqWrong + "</div>" +
+    "  <h2>" + escapeHtml(q.question) + "</h2>" +
+    '  <div class="options-list">' + optionsHtml + "</div>" +
+    (mqAnswered ? '<div class="explanation">' + escapeHtml(q.explanation) + "</div>" : "") +
+    "</section>" +
+    '<div class="button-row two-buttons">' +
+    '  <button class="secondary" onclick="goHome()">&#x2B05; Abbrechen</button>' +
+    (mqAnswered ? '  <button onclick="nextModuleQuestion()">Weiter</button>' : "") +
+    "</div>";
+
+  triggerViewTransition();
+}
+
+function selectModuleAnswer(index) {
+  if (mqAnswered) return;
+  var q = mqQuestions[mqIdx].question;
+  mqSelected = index;
+  mqAnswered = true;
+  var isCorrect = (index === q.correct);
+  mqQuestions[mqIdx].wasCorrect = isCorrect;
+  if (isCorrect) mqCorrect++;
+  else mqWrong++;
+  showModuleQuestion();
+}
+
+function nextModuleQuestion() {
+  mqIdx++;
+  mqAnswered = false;
+  mqSelected = null;
+  showModuleQuestion();
+}
+
+function showModuleResults() {
+  scrollToTop();
+  var total = mqQuestions.length;
+  var pct   = total === 0 ? 0 : Math.round((mqCorrect / total) * 100);
+
+  var icon, label;
+  if (pct >= 90)      { icon = "&#x1F3C6;"; label = "Ausgezeichnet!"; }
+  else if (pct >= 75) { icon = "&#x1F31F;"; label = "Sehr gut!"; }
+  else if (pct >= 60) { icon = "&#x1F44D;"; label = "Gut gemacht!"; }
+  else                { icon = "&#x1F4DA;"; label = "Weiter &#xFC;ben"; }
+
+  // Kapitel-Aufschlüsselung
+  var chapterMap = {};
+  mqQuestions.forEach(function(entry) {
+    var cid = entry.chapterId;
+    if (!chapterMap[cid]) chapterMap[cid] = { name: entry.chapterName, correct: 0, total: 0 };
+    chapterMap[cid].total++;
+    if (entry.wasCorrect) chapterMap[cid].correct++;
+  });
+  var breakdownHtml = Object.values(chapterMap).map(function(c) {
+    var cpct = Math.round((c.correct / c.total) * 100);
+    var color = cpct >= 80 ? "#2d7a3a" : cpct >= 60 ? "#8a6a1d" : "#8b2020";
+    return '<div class="mq-chapter-row">' +
+           '  <span class="mq-chapter-name">' + escapeHtml(c.name) + "</span>" +
+           '  <span class="mq-chapter-score" style="color:' + color + '">' + c.correct + "/" + c.total + "</span>" +
+           "</div>";
+  }).join("");
+
+  var section = getSection(mqSectionId);
+
+  document.getElementById("app").innerHTML =
+    '<section class="card result-hero">' +
+    '  <span class="result-icon">' + icon + "</span>" +
+    '  <div class="result-score">' + mqCorrect + "/" + total + "</div>" +
+    '  <div class="result-label">' + label + "</div>" +
+    '  <div class="result-pct">' + pct + "% korrekt &ndash; " + escapeHtml(section ? section.name : "") + "</div>" +
+    "</section>" +
+    (breakdownHtml ? '<section class="card mq-breakdown"><div class="mq-breakdown-title">Kapitel-&#xDC;bersicht</div>' + breakdownHtml + "</section>" : "") +
+    '<div class="button-row result-actions">' +
+    '  <button onclick="startModuleQuiz(\'' + mqSectionId + '\')">&#x1F501; Nochmal</button>' +
+    '  <button class="secondary" onclick="goHome()">Zur &#xDC;bersicht</button>' +
+    "</div>";
+
+  triggerViewTransition();
+}
+
+// ---------------------------------------------------------------------------
+// S3.3 – SM-2 Spaced Repetition Helpers
+// ---------------------------------------------------------------------------
+
+function loadSm2State() {
+  try { return JSON.parse(localStorage.getItem(SM2_KEY) || "{}"); }
+  catch (e) { return {}; }
+}
+
+function saveSm2State(state) {
+  localStorage.setItem(SM2_KEY, JSON.stringify(state));
+}
+
+function getSm2Data(state, key) {
+  return state[key] || { n: 0, ef: 2.5, interval: 1, nextDue: null };
+}
+
+function updateSm2(state, key, correct) {
+  var d = getSm2Data(state, key);
+  var q = correct ? 5 : 2;  // quality: 5=correct, 2=incorrect
+
+  if (q < 3) {
+    d.n        = 0;
+    d.interval = 1;
+  } else {
+    if (d.n === 0)      d.interval = 1;
+    else if (d.n === 1) d.interval = 6;
+    else                d.interval = Math.round(d.interval * d.ef);
+    d.ef = d.ef + (0.1 - (5 - q) * (0.08 + (5 - q) * 0.02));
+    d.ef = Math.max(1.3, d.ef);
+    d.n  += 1;
+  }
+  var due = new Date();
+  due.setDate(due.getDate() + d.interval);
+  d.nextDue  = due.toISOString().split("T")[0];
+  state[key] = d;
+  return state;
+}
+
+function buildExamQueue() {
+  var sm2State = loadSm2State();
+  var all = [];
+  chapters.forEach(function(ch) {
+    getQuestionsForChapter(ch.id).forEach(function(q, idx) {
+      var sm2Key = ch.id + "_" + idx;
+      var sm2    = getSm2Data(sm2State, sm2Key);
+      all.push({
+        question:    q,
+        chapterId:   ch.id,
+        chapterName: ch.name,
+        sectionName: (getSection(ch.sectionId) || {}).name || "",
+        sm2Key:      sm2Key,
+        nextDue:     sm2.nextDue || "2000-01-01",
+        n:           sm2.n
+      });
+    });
+  });
+
+  // Sortierung: nie gelernt → älteste Fälligkeit → zufällig bei Gleichstand
+  all.sort(function(a, b) {
+    if (a.n === 0 && b.n > 0) return -1;
+    if (a.n > 0 && b.n === 0) return  1;
+    if (a.nextDue < b.nextDue) return -1;
+    if (a.nextDue > b.nextDue) return  1;
+    return Math.random() - 0.5;
+  });
+
+  return all.slice(0, EXAM_SESSION_SIZE);
+}
+
+// ---------------------------------------------------------------------------
+// S3.3 – Exam Mode Screens
+// ---------------------------------------------------------------------------
+
+function startExamMode() {
+  examQueue    = buildExamQueue();
+  examIdx      = 0;
+  examCorrect  = 0;
+  examWrong    = 0;
+  examAnswered = false;
+  examSelected = null;
+  clearExamTimer();
+  currentView  = "content";
+  navSheetOpen = false;
+  renderNav();
+  showExamQuestion();
+}
+
+function showExamQuestion() {
+  clearExamTimer();
+  if (examQueue.length === 0) { goHome(); return; }
+  if (examIdx >= examQueue.length) { showExamResults(); return; }
+  scrollToTop();
+
+  examAnswered = false;
+  examSelected = null;
+  examTimeLeft = EXAM_TIME_LIMIT;
+
+  var entry = examQueue[examIdx];
+  var q     = entry.question;
+
+  var optionsHtml = q.options.map(function(opt, i) {
+    return '<button class="option exam-option" id="exam-opt-' + i + '" onclick="selectExamAnswer(' + i + ')">' +
+           escapeHtml(opt) + "</button>";
+  }).join("");
+
+  var timerPct = 100;
+
+  document.getElementById("app").innerHTML =
+    renderTopbar("Pr&#xFC;fungssimulation", examIdx + 1, examQueue.length) +
+    '<div class="exam-timer-wrap">' +
+    '  <div class="exam-timer-bar" id="exam-timer-bar" style="width:' + timerPct + '%"></div>' +
+    '  <span class="exam-timer-label" id="exam-timer-label">' + examTimeLeft + "s</span>" +
+    "</div>" +
+    '<section class="card">' +
+    '  <div class="eyebrow">' + escapeHtml(entry.sectionName) + " &rsaquo; " + escapeHtml(entry.chapterName) + "</div>" +
+    '  <div class="exam-progress-stats">&#x2713; ' + examCorrect + " &nbsp; &#x2717; " + examWrong + "</div>" +
+    "  <h2>" + escapeHtml(q.question) + "</h2>" +
+    '  <div class="options-list" id="exam-options">' + optionsHtml + "</div>" +
+    '  <div class="explanation" id="exam-explanation" style="display:none"></div>' +
+    "</section>" +
+    '<div class="button-row two-buttons" id="exam-nav">' +
+    '  <button class="secondary" onclick="confirmAbortExam()">Abbrechen</button>' +
+    "</div>";
+
+  triggerViewTransition();
+  startExamTimer();
+}
+
+function startExamTimer() {
+  clearExamTimer();
+  examTimerInterval = setInterval(function() {
+    examTimeLeft--;
+    if (examTimeLeft <= 0) {
+      clearExamTimer();
+      selectExamAnswer(-1); // Timeout = falsch gewertet
+    } else {
+      var bar   = document.getElementById("exam-timer-bar");
+      var label = document.getElementById("exam-timer-label");
+      if (bar) {
+        var pct = (examTimeLeft / EXAM_TIME_LIMIT) * 100;
+        bar.style.width = pct + "%";
+        bar.style.background = pct > 40 ? "#4a7c3f" : pct > 20 ? "#c4870a" : "#c0392b";
+      }
+      if (label) label.textContent = examTimeLeft + "s";
+    }
+  }, 1000);
+}
+
+function clearExamTimer() {
+  if (examTimerInterval) {
+    clearInterval(examTimerInterval);
+    examTimerInterval = null;
+  }
+}
+
+function selectExamAnswer(index) {
+  if (examAnswered) return;
+  clearExamTimer();
+  examAnswered = true;
+  examSelected = index;
+
+  var entry    = examQueue[examIdx];
+  var q        = entry.question;
+  var isCorrect = (index === q.correct);
+  if (isCorrect) examCorrect++;
+  else           examWrong++;
+
+  // SM-2 aktualisieren
+  var sm2State = loadSm2State();
+  updateSm2(sm2State, entry.sm2Key, isCorrect);
+  saveSm2State(sm2State);
+
+  // UI: Optionen einfärben
+  var optList = document.getElementById("exam-options");
+  if (optList) {
+    q.options.forEach(function(_opt, i) {
+      var btn = document.getElementById("exam-opt-" + i);
+      if (!btn) return;
+      btn.disabled = true;
+      if (i === q.correct) btn.classList.add("correct");
+      else if (i === index) btn.classList.add("wrong");
+    });
+  }
+  // Timeout-Hinweis
+  if (index === -1) {
+    var optListEl = document.getElementById("exam-options");
+    if (optListEl) {
+      var timeoutMsg = document.createElement("div");
+      timeoutMsg.className = "exam-timeout-msg";
+      timeoutMsg.textContent = "Zeit abgelaufen!";
+      optListEl.appendChild(timeoutMsg);
+    }
+  }
+  // Erklärung einblenden
+  var expEl = document.getElementById("exam-explanation");
+  if (expEl) {
+    expEl.textContent = q.explanation;
+    expEl.style.display = "block";
+  }
+  // Weiter-Button
+  var navEl = document.getElementById("exam-nav");
+  if (navEl) {
+    navEl.innerHTML =
+      '<button class="secondary" onclick="confirmAbortExam()">Abbrechen</button>' +
+      '<button onclick="nextExamQuestion()">Weiter</button>';
+  }
+  // Timer-Bar auf Rot setzen bei Fehler / Grün bei Richtig
+  var bar = document.getElementById("exam-timer-bar");
+  if (bar) {
+    bar.style.width = "100%";
+    bar.style.background = isCorrect ? "#2d7a3a" : "#c0392b";
+  }
+}
+
+function nextExamQuestion() {
+  examIdx++;
+  showExamQuestion();
+}
+
+function confirmAbortExam() {
+  clearExamTimer();
+  goHome();
+}
+
+function showExamResults() {
+  clearExamTimer();
+  scrollToTop();
+  var total = examQueue.length;
+  var pct   = total === 0 ? 0 : Math.round((examCorrect / total) * 100);
+
+  var icon, label;
+  if (pct >= 90)      { icon = "&#x1F3C6;"; label = "Ausgezeichnet!"; }
+  else if (pct >= 75) { icon = "&#x1F31F;"; label = "Sehr gut!"; }
+  else if (pct >= 60) { icon = "&#x1F44D;"; label = "Gut gemacht!"; }
+  else if (pct >= 40) { icon = "&#x1F4DA;"; label = "Weiter &#xFC;ben"; }
+  else                { icon = "&#x1F504;"; label = "Nochmal versuchen"; }
+
+  var scoreColor = pct >= 80 ? "#2d7a3a" : pct >= 60 ? "#8a6a1d" : "#8b2020";
+
+  // Schwächste Themen (Kapitel mit den meisten Fehlern)
+  var chapterMap = {};
+  examQueue.forEach(function(entry, i) {
+    var cid = entry.chapterId;
+    if (!chapterMap[cid]) chapterMap[cid] = { name: entry.chapterName, correct: 0, total: 0 };
+    chapterMap[cid].total++;
+    // We track per-question correctness via SM-2 state changes; use the score delta
+  });
+  // Rebuild from SM-2 state changes this session
+  var sm2Now = loadSm2State();
+  // Actually, let's just show overall session stats without per-chapter for simplicity
+  // The SM-2 state already encodes the data for future sessions
+
+  document.getElementById("app").innerHTML =
+    '<section class="card result-hero">' +
+    '  <span class="result-icon">' + icon + "</span>" +
+    '  <div class="result-score" style="color:' + scoreColor + '">' + examCorrect + "/" + total + "</div>" +
+    '  <div class="result-label">' + label + "</div>" +
+    '  <div class="result-pct">' + pct + "% korrekt</div>" +
+    '  <div class="result-retry-hint">' +
+    "Alle Fragen wurden ins Wiederholungs-System eingetragen." +
+    "  </div>" +
+    "</section>" +
+    '<div class="button-row result-actions">' +
+    '  <button onclick="startExamMode()">&#x1F501; Neue Session</button>' +
+    '  <button class="secondary" onclick="goHome()">Zur &#xDC;bersicht</button>' +
+    "</div>";
+
+  triggerViewTransition();
+}
+
 window.retryWrongQuestions  = retryWrongQuestions;
 window.setActiveSection     = setActiveSection;
 window.setActiveChapter     = setActiveChapter;
@@ -1166,6 +1636,17 @@ window.editUserName         = editUserName;
 window.triggerInstallPrompt = triggerInstallPrompt;
 window.dismissInstallBanner = dismissInstallBanner;
 window.applyUpdate          = applyUpdate;
+
+// S3.2 – Modul-Quiz
+window.startModuleQuiz      = startModuleQuiz;
+window.selectModuleAnswer   = selectModuleAnswer;
+window.nextModuleQuestion   = nextModuleQuestion;
+
+// S3.3 – Exam Mode
+window.startExamMode        = startExamMode;
+window.selectExamAnswer     = selectExamAnswer;
+window.nextExamQuestion     = nextExamQuestion;
+window.confirmAbortExam     = confirmAbortExam;
 
 // ---------------------------------------------------------------------------
 // Initialisierung

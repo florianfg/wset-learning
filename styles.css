@@ -1112,6 +1112,179 @@ button:disabled { opacity: 0.42; cursor: default; }
 }
 
 /* ============================================================
+   S3.1 – Quiz Gate Banner
+   ============================================================ */
+.quiz-gate-banner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.quiz-gate-banner.gate-passed {
+  background: var(--correct);
+  border: 1px solid var(--correct-bdr);
+  color: #2d7a3a;
+}
+.quiz-gate-banner.gate-failed {
+  background: var(--wrong);
+  border: 1px solid var(--wrong-bdr);
+  color: #8b2020;
+}
+.gate-icon { font-size: 18px; flex-shrink: 0; }
+
+.result-primary-btn--locked {
+  opacity: 0.45;
+  cursor: not-allowed;
+  background: var(--muted) !important;
+}
+
+/* ============================================================
+   S3.2 – Modul-Quiz Button on Section Cards
+   ============================================================ */
+.section-card {
+  cursor: pointer;
+  outline: none;
+}
+.section-card:focus-visible {
+  box-shadow: 0 0 0 3px rgba(122,49,58,0.35);
+}
+.section-card-actions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-start;
+}
+.mq-start-btn {
+  background: transparent;
+  border: 1.5px solid var(--wine);
+  color: var(--wine);
+  border-radius: 20px;
+  padding: 5px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: none;
+  transition: background 0.15s, color 0.15s;
+  line-height: 1.4;
+}
+.mq-start-btn:hover,
+.mq-start-btn:active {
+  background: var(--wine);
+  color: #fff;
+}
+.mq-stats {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.mq-breakdown { margin-top: 0; }
+.mq-breakdown-title {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+.mq-chapter-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 14px;
+}
+.mq-chapter-row:last-child { border-bottom: none; }
+.mq-chapter-name { color: var(--text-soft); }
+.mq-chapter-score { font-weight: 700; }
+
+/* ============================================================
+   S3.3 – Exam Mode Card on Dashboard
+   ============================================================ */
+.exam-mode-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: linear-gradient(135deg, var(--wine-dark) 0%, var(--wine-mid) 100%);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  margin-top: 4px;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: var(--shadow);
+  user-select: none;
+}
+.exam-mode-card:hover  { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+.exam-mode-card:active { transform: translateY(0);    box-shadow: var(--shadow-sm); }
+.exam-mode-icon { font-size: 28px; flex-shrink: 0; }
+.exam-mode-body { flex: 1; }
+.exam-mode-title {
+  font-family: var(--serif);
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+.exam-mode-sub {
+  font-size: 12px;
+  opacity: 0.82;
+}
+.exam-mode-arrow {
+  font-size: 18px;
+  opacity: 0.7;
+  flex-shrink: 0;
+}
+
+/* S3.3 – Exam Timer Bar */
+.exam-timer-wrap {
+  position: relative;
+  height: 6px;
+  background: var(--line);
+  border-radius: 3px;
+  margin-bottom: 2px;
+  overflow: hidden;
+}
+.exam-timer-bar {
+  height: 100%;
+  background: #4a7c3f;
+  border-radius: 3px;
+  transition: width 0.9s linear, background 0.3s;
+}
+.exam-timer-label {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--muted);
+  line-height: 1;
+}
+.exam-progress-stats {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.exam-option { /* inherits .option */ }
+.exam-timeout-msg {
+  margin-top: 8px;
+  padding: 8px 12px;
+  background: var(--wrong);
+  border: 1px solid var(--wrong-bdr);
+  border-radius: var(--radius-sm);
+  color: #8b2020;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* ============================================================
    Responsive
    ============================================================ */
 img, svg, video, canvas { max-width: 100%; height: auto; display: block; }
