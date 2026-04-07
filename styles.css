@@ -1115,6 +1115,21 @@ button:disabled { opacity: 0.42; cursor: default; }
    S3.2 – Modul-Quiz als Kapiteleintrag in Sidebar & Sheet
    ============================================================ */
 
+/* Chevron für Auf-/Zuklappen */
+.sidebar-section-chevron,
+.sheet-section-chevron {
+  font-size: 10px;
+  margin-left: auto;
+  margin-right: 4px;
+  opacity: 0.55;
+  flex-shrink: 0;
+}
+.sidebar-section-btn.expanded .sidebar-section-chevron,
+.sheet-section-btn.expanded .sheet-section-chevron {
+  opacity: 0.85;
+  color: var(--wine);
+}
+
 /* Modul-Quiz Eintrag visuell vom Rest absetzen */
 .sidebar-chapter-btn--mq,
 .sheet-chapter-btn--mq {

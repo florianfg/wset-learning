@@ -18,7 +18,8 @@ const EXAM_TIME_LIMIT  = 90;   // Sekunden pro Frage
 const EXAM_SESSION_SIZE = 50;  // Fragen pro Exam-Session
 
 const activeSectionDefault = sections[0]?.id || null;
-let activeSectionId = activeSectionDefault;
+let activeSectionId    = activeSectionDefault;
+let expandedSectionId  = activeSectionDefault; // welches Modul im Nav aufgeklappt ist
 let activeChapterId = getChaptersForSection(activeSectionId)[0]?.id || chapters[0]?.id || null;
 
 let navSheetOpen = false;
@@ -284,9 +285,17 @@ function getOverallStats() {
 // Navigation – Zustandswechsel
 // ---------------------------------------------------------------------------
 
+function toggleSectionExpand(sectionId) {
+  // Klappt das Modul im Nav auf oder zu – ohne zu navigieren
+  expandedSectionId = (expandedSectionId === sectionId) ? null : sectionId;
+  renderNav();
+}
+
 function setActiveSection(sectionId) {
+  // Direktsprung (z. B. von Dashboard-Kachel) – klappt Modul auf + navigiert
   if (!getSection(sectionId)) return;
-  activeSectionId = sectionId;
+  activeSectionId   = sectionId;
+  expandedSectionId = sectionId;
   const sc = getChaptersForSection(sectionId);
   if (!sc.some((c) => c.id === activeChapterId)) activeChapterId = sc[0]?.id || null;
   loadChapterState(activeChapterId);
@@ -299,8 +308,9 @@ function setActiveSection(sectionId) {
 function setActiveChapter(chapterId) {
   const chapter = getChapter(chapterId);
   if (!chapter) return;
-  activeSectionId = chapter.sectionId;
-  activeChapterId = chapterId;
+  activeSectionId   = chapter.sectionId;
+  expandedSectionId = chapter.sectionId; // Modul bleibt aufgeklappt
+  activeChapterId   = chapterId;
   loadChapterState(chapterId);
   saveUiState();
   navSheetOpen = false;
@@ -445,14 +455,15 @@ function buildSidebar() {
   const isHome = currentView === "home";
 
   const sectionsHtml = sections.map((section) => {
-    const progress = getSectionProgressData(section.id);
-    const isActive = section.id === activeSectionId;
+    const progress   = getSectionProgressData(section.id);
+    const isActive   = section.id === activeSectionId;
+    const isExpanded = section.id === expandedSectionId;
 
-    const mqStatus   = getModuleQuizStatus(section.id);
-    const mqSymbol   = mqStatusSymbol(mqStatus);
+    const mqStatus      = getModuleQuizStatus(section.id);
+    const mqSymbol      = mqStatusSymbol(mqStatus);
     const mqSymbolClass = "sidebar-chapter-status mq-status mq-status--" + mqStatus;
 
-    const chaptersHtml = isActive
+    const chaptersHtml = isExpanded
       ? `<div class="sidebar-chapters">
           ${getChaptersForSection(section.id).map((chapter) => {
             const cp = getChapterProgressData(chapter.id);
@@ -474,10 +485,11 @@ function buildSidebar() {
 
     return `
       <div class="sidebar-section">
-        <button class="sidebar-section-btn ${isActive ? "active" : ""}"
-                onclick="setActiveSection('${section.id}')">
+        <button class="sidebar-section-btn ${isActive ? "active" : ""} ${isExpanded ? "expanded" : ""}"
+                onclick="toggleSectionExpand('${section.id}')">
           <span class="sidebar-section-num">${section.number}</span>
           <span class="sidebar-section-name">${escapeHtml(section.name)}</span>
+          <span class="sidebar-section-chevron">${isExpanded ? "▾" : "▸"}</span>
           <span class="sidebar-section-progress">${progress.completedCount}/${progress.chapterCount}</span>
         </button>
         ${chaptersHtml}
@@ -526,11 +538,12 @@ function buildSheetContent() {
     const progress = getSectionProgressData(section.id);
     const isActive = section.id === activeSectionId;
 
-    const mqStatus2    = getModuleQuizStatus(section.id);
-    const mqSymbol2    = mqStatusSymbol(mqStatus2);
-    const mqSymbolCls2 = "sheet-chapter-status mq-status mq-status--" + mqStatus2;
+    const isExpanded2   = section.id === expandedSectionId;
+    const mqStatus2     = getModuleQuizStatus(section.id);
+    const mqSymbol2     = mqStatusSymbol(mqStatus2);
+    const mqSymbolCls2  = "sheet-chapter-status mq-status mq-status--" + mqStatus2;
 
-    const chaptersHtml = isActive
+    const chaptersHtml = isExpanded2
       ? `<div class="sheet-chapters">
           ${getChaptersForSection(section.id).map((chapter) => {
             const cp = getChapterProgressData(chapter.id);
@@ -552,10 +565,11 @@ function buildSheetContent() {
 
     return `
       <div class="sheet-section">
-        <button class="sheet-section-btn ${isActive ? "active" : ""}"
-                onclick="setActiveSection('${section.id}')">
+        <button class="sheet-section-btn ${isActive ? "active" : ""} ${isExpanded2 ? "expanded" : ""}"
+                onclick="toggleSectionExpand('${section.id}')">
           <span class="sheet-section-num">${section.number}</span>
           <span class="sheet-section-name">${escapeHtml(section.name)}</span>
+          <span class="sheet-section-chevron">${isExpanded2 ? "▾" : "▸"}</span>
           <span class="sheet-section-progress">${progress.completedCount}/${progress.chapterCount}</span>
         </button>
         ${chaptersHtml}
@@ -1676,6 +1690,7 @@ function showExamResults() {
 }
 
 window.retryWrongQuestions  = retryWrongQuestions;
+window.toggleSectionExpand  = toggleSectionExpand;
 window.setActiveSection     = setActiveSection;
 window.setActiveChapter     = setActiveChapter;
 window.openNavSheet         = openNavSheet;
