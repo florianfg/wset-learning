@@ -464,12 +464,16 @@ function buildSidebar() {
 
     return `
       <div class="sidebar-section">
-        <button class="sidebar-section-btn ${isActive ? "active" : ""}"
-                onclick="setActiveSection('${section.id}')">
-          <span class="sidebar-section-num">${section.number}</span>
-          <span class="sidebar-section-name">${escapeHtml(section.name)}</span>
-          <span class="sidebar-section-progress">${progress.completedCount}/${progress.chapterCount}</span>
-        </button>
+        <div class="sidebar-section-row">
+          <button class="sidebar-section-btn ${isActive ? "active" : ""}"
+                  onclick="setActiveSection('${section.id}')">
+            <span class="sidebar-section-num">${section.number}</span>
+            <span class="sidebar-section-name">${escapeHtml(section.name)}</span>
+            <span class="sidebar-section-progress">${progress.completedCount}/${progress.chapterCount}</span>
+          </button>
+          <button class="sidebar-mq-btn" title="Modul-Quiz starten"
+                  onclick="startModuleQuiz('${section.id}')">&#x1F4DD;</button>
+        </div>
         ${chaptersHtml}
       </div>`;
   }).join("");
@@ -533,12 +537,16 @@ function buildSheetContent() {
 
     return `
       <div class="sheet-section">
-        <button class="sheet-section-btn ${isActive ? "active" : ""}"
-                onclick="setActiveSection('${section.id}')">
-          <span class="sheet-section-num">${section.number}</span>
-          <span class="sheet-section-name">${escapeHtml(section.name)}</span>
-          <span class="sheet-section-progress">${progress.completedCount}/${progress.chapterCount}</span>
-        </button>
+        <div class="sheet-section-row">
+          <button class="sheet-section-btn ${isActive ? "active" : ""}"
+                  onclick="setActiveSection('${section.id}')">
+            <span class="sheet-section-num">${section.number}</span>
+            <span class="sheet-section-name">${escapeHtml(section.name)}</span>
+            <span class="sheet-section-progress">${progress.completedCount}/${progress.chapterCount}</span>
+          </button>
+          <button class="sheet-mq-btn" title="Modul-Quiz starten"
+                  onclick="startModuleQuiz('${section.id}')">&#x1F4DD;</button>
+        </div>
         ${chaptersHtml}
       </div>`;
   }).join("");

@@ -1112,6 +1112,72 @@ button:disabled { opacity: 0.42; cursor: default; }
 }
 
 /* ============================================================
+   S3.2 – Modul-Quiz Button in Sidebar & Bottom Sheet
+   ============================================================ */
+
+/* Sidebar */
+.sidebar-section-row {
+  display: flex;
+  align-items: stretch;
+}
+.sidebar-section-row .sidebar-section-btn {
+  flex: 1;
+  min-width: 0;
+}
+.sidebar-mq-btn {
+  flex-shrink: 0;
+  width: 32px;
+  background: transparent;
+  border: none;
+  border-left: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0;
+  box-shadow: none;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  transition: background 0.15s, color 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sidebar-mq-btn:hover {
+  background: var(--wine-light);
+  color: var(--wine);
+}
+
+/* Bottom Sheet */
+.sheet-section-row {
+  display: flex;
+  align-items: stretch;
+}
+.sheet-section-row .sheet-section-btn {
+  flex: 1;
+  min-width: 0;
+}
+.sheet-mq-btn {
+  flex-shrink: 0;
+  width: 36px;
+  background: transparent;
+  border: none;
+  border-left: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 15px;
+  cursor: pointer;
+  padding: 0;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, color 0.15s;
+}
+.sheet-mq-btn:hover,
+.sheet-mq-btn:active {
+  background: var(--wine-light);
+  color: var(--wine);
+}
+
+/* ============================================================
    S3.1 – Quiz Gate Banner
    ============================================================ */
 .quiz-gate-banner {
