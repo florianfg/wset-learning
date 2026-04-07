@@ -339,6 +339,31 @@ function renderCardContent(card) {
   `;
 }
 
+// ---------------------------------------------------------------------------
+// View-Transition Hilfsfunktionen
+// ---------------------------------------------------------------------------
+
+function scrollToTop() {
+  // Scrollt beim View-Wechsel nach oben (smooth)
+  const mainContent = document.getElementById("main-content");
+  if (mainContent) {
+    mainContent.scrollTo({ top: 0, behavior: "smooth" });
+  } else {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+}
+
+function triggerViewTransition() {
+  // Löst die Fade-In Animation auf dem #app Container aus.
+  // Durch Entfernen + void reflow + Hinzufügen der Klasse wird
+  // die CSS-Animation neu gestartet, auch wenn sie schon aktiv war.
+  const app = document.getElementById("app");
+  if (!app) return;
+  app.classList.remove("view-enter");
+  void app.offsetWidth; // erzwingt Browser-Reflow → Animation startet neu
+  app.classList.add("view-enter");
+}
+
 function shuffleArray(arr) {
   const a = [...arr];
   for (let i = a.length - 1; i > 0; i--) {
@@ -531,6 +556,7 @@ function renderQuizStats() {
 function showEmptyChapterState() {
   const chapter = getChapter(activeChapterId);
   const section  = getSection(activeSectionId);
+  scrollToTop();
 
   document.getElementById("app").innerHTML = `
     ${renderTopbar("Lernen", 0, 0)}
@@ -541,6 +567,7 @@ function showEmptyChapterState() {
       <p class="helper-text">Sobald der Content ergänzt wird, erscheinen hier die Karten automatisch.</p>
     </section>
   `;
+  triggerViewTransition();
 }
 
 function showCard() {
@@ -549,6 +576,7 @@ function showCard() {
   selectedAnswer = null;
   if (_statsCurrentMode !== "study") { startTimer("study"); } else { _resetInactivityTimer(); }
   saveChapterProgress();
+  scrollToTop();
 
   const activeCards = getCardsForChapter(activeChapterId);
 
@@ -580,6 +608,7 @@ function showCard() {
       <button class="secondary" onclick="startQuiz()">Quiz starten</button>
     </div>
   `;
+  triggerViewTransition();
 }
 
 function previousCard() {
@@ -625,6 +654,7 @@ function showQuestion() {
 
   if (activeQuestions.length === 0) { showEmptyChapterState(); return; }
   if (_statsCurrentMode !== "quiz") { startTimer("quiz"); } else { _resetInactivityTimer(); }
+  scrollToTop();
 
   // Sicherheitsnetz: questionIndices leer → initialisieren
   if (questionIndices.length === 0) {
@@ -664,6 +694,7 @@ function showQuestion() {
       ${questionAnswered ? '<button onclick="nextQuestion()">Weiter</button>' : ""}
     </div>
   `;
+  triggerViewTransition();
 
   saveChapterProgress();
 }
@@ -704,6 +735,7 @@ function nextQuestion() {
 }
 
 function showResults() {
+  scrollToTop();
   const total = questionIndices.length || getQuestionsForChapter(activeChapterId).length;
   const percentage = total === 0 ? 0 : Math.round((correctAnswers / total) * 100);
 
@@ -723,13 +755,20 @@ function showResults() {
   const roundLabel = quizRound > 1 ? `Runde ${quizRound} · ` : "";
   const hasWrong = wrongInRound.length > 0;
 
-  const retryBtn = hasWrong
-    ? `<button onclick="retryWrongQuestions()">🔁 ${wrongInRound.length} Fehler wiederholen</button>`
-    : `<button onclick="showCard()">Zurück zu den Karten</button>`;
+  // Nächstes Kapitel ermitteln für Button-Label
+  const sectionChapters = getChaptersForSection(activeSectionId);
+  const currentChapterIdx = sectionChapters.findIndex((c) => c.id === activeChapterId);
+  const nextChapter = currentChapterIdx !== -1 && currentChapterIdx < sectionChapters.length - 1
+    ? sectionChapters[currentChapterIdx + 1]
+    : null;
+  const nextChapterLabel = nextChapter
+    ? `✅ Weiter: ${escapeHtml(nextChapter.name)}`
+    : "✅ Zur Übersicht";
 
-  const secondBtn = hasWrong
-    ? `<button class="secondary" onclick="showCard()">Zurück zu den Karten</button>`
-    : `<button class="secondary" onclick="restartChapter()">Nochmal von vorne</button>`;
+  // Optionale "Fehler wiederholen"-Sektion (nur bei Fehlern sichtbar)
+  const retryWrongHtml = hasWrong
+    ? `<button class="result-retry-btn" onclick="retryWrongQuestions()">🔁 ${wrongInRound.length} Fehler wiederholen</button>`
+    : "";
 
   document.getElementById("app").innerHTML = `
     <section class="card result-hero">
@@ -737,13 +776,18 @@ function showResults() {
       <div class="result-score" style="color:${scoreColor}">${correctAnswers}/${total}</div>
       <div class="result-label">${label}</div>
       <div class="result-pct">${roundLabel}${percentage}% korrekt</div>
-      ${hasWrong ? `<div class="result-retry-hint">${wrongInRound.length} Frage${wrongInRound.length > 1 ? "n" : ""} noch nicht sicher</div>` : `<div class="result-retry-hint" style="color:#2d7a3a">Alle Fragen richtig beantwortet!</div>`}
+      ${hasWrong
+        ? `<div class="result-retry-hint">${wrongInRound.length} Frage${wrongInRound.length > 1 ? "n" : ""} noch nicht sicher</div>`
+        : `<div class="result-retry-hint" style="color:#2d7a3a">Alle Fragen richtig beantwortet! 🎉</div>`}
     </section>
-    <div class="button-row two-buttons">
-      ${secondBtn}
-      ${retryBtn}
+    ${retryWrongHtml}
+    <div class="button-row result-actions">
+      <button class="result-primary-btn" onclick="goToNextChapter()">${nextChapterLabel}</button>
+      <button class="secondary" onclick="startQuiz()">🔁 Quiz wiederholen</button>
+      <button class="secondary" onclick="restartChapter()">📖 Kapitel neu starten</button>
     </div>
   `;
+  triggerViewTransition();
 
   saveChapterProgress();
 }
@@ -759,6 +803,32 @@ function retryWrongQuestions() {
   selectedAnswer = null;
   saveChapterProgress();
   showQuestion();
+}
+
+function goToNextChapter() {
+  // Nächstes Kapitel innerhalb der aktuellen Sektion suchen
+  const sectionChapters = getChaptersForSection(activeSectionId);
+  const currentIdx = sectionChapters.findIndex((c) => c.id === activeChapterId);
+
+  if (currentIdx !== -1 && currentIdx < sectionChapters.length - 1) {
+    // Nächstes Kapitel in derselben Sektion
+    setActiveChapter(sectionChapters[currentIdx + 1].id);
+    return;
+  }
+
+  // Letztes Kapitel der Sektion → nächste Sektion suchen
+  const sectionIdx = sections.findIndex((s) => s.id === activeSectionId);
+  if (sectionIdx !== -1 && sectionIdx < sections.length - 1) {
+    const nextSection = sections[sectionIdx + 1];
+    const nextChapters = getChaptersForSection(nextSection.id);
+    if (nextChapters.length > 0) {
+      setActiveChapter(nextChapters[0].id);
+      return;
+    }
+  }
+
+  // Kein weiteres Kapitel → zurück zur Übersicht
+  goHome();
 }
 
 function restartChapter() {

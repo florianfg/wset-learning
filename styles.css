@@ -29,6 +29,24 @@
 }
 
 /* ============================================================
+   View-Transition: Fade-In beim Kartenwechsel
+   ============================================================ */
+@keyframes viewFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#app.view-enter {
+  animation: viewFadeIn 0.2s ease-out both;
+}
+
+/* ============================================================
    Reset & Base
    ============================================================ */
 *, *::before, *::after { box-sizing: border-box; }
@@ -817,6 +835,55 @@ button:disabled { opacity: 0.42; cursor: default; }
   color: var(--muted);
   margin-top: 10px;
   font-style: italic;
+}
+
+/* "Fehler wiederholen"-Button (conditional, zwischen Hero und Actions) */
+.result-retry-btn {
+  display: block;
+  width: 100%;
+  margin: 0 0 10px;
+  background: var(--wrong);
+  border: 1.5px solid var(--wrong-bdr);
+  color: #7a2020;
+  font-weight: 700;
+  font-size: 15px;
+  border-radius: var(--radius-sm);
+  padding: 14px 20px;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+  text-align: center;
+}
+.result-retry-btn:hover { background: #f5d0d0; transform: translateY(-1px); }
+.result-retry-btn:active { transform: translateY(0); }
+
+/* Aktionsbuttons am Ende des Quiz */
+.result-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.result-primary-btn {
+  display: block;
+  width: 100%;
+  background: var(--wine);
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.result-primary-btn:hover { background: var(--wine-dark); transform: translateY(-1px); }
+.result-primary-btn:active { transform: translateY(0); }
+.result-actions .secondary {
+  width: 100%;
+  text-align: center;
 }
 
 /* ============================================================
