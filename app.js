@@ -12,10 +12,20 @@ const QUIZ_PASS_THRESHOLD     = 80;   // Prozent (80 %)
 // S3.2 – Modul-Quiz
 const MQ_RESULT_PREFIX = "wsetLevel2MQResult_";
 
-// S3.3 – WSET Exam Mode
-const SM2_KEY          = "wset-level-2-sm2";
-const EXAM_TIME_LIMIT  = 90;   // Sekunden pro Frage
-const EXAM_SESSION_SIZE = 50;  // Fragen pro Exam-Session
+// T-020 – Abschnitts-Zwischenquiz
+const SECTION_QUIZ_KEY = "wsetLevel2SectionQuiz_";
+
+// S3.3 – Adaptiver Lernmodus (SM-2)
+const SM2_KEY           = "wset-level-2-sm2";
+const EXAM_TIME_LIMIT   = 90;   // Sekunden pro Frage (Adaptiv-Modus)
+const EXAM_SESSION_SIZE = 50;   // Fragen pro Session
+
+// S3.4 – Mock Exam (WSET-realistisch)
+const MOCK_EXAM_TOTAL_TIME   = 3600; // 60 Minuten in Sekunden
+const MOCK_EXAM_QUESTIONS    = 50;
+const WSET_PASS_PCT          = 55;
+const WSET_MERIT_PCT         = 70;
+const WSET_DISTINCTION_PCT   = 85;
 
 const activeSectionDefault = sections[0]?.id || null;
 let activeSectionId    = activeSectionDefault;
@@ -24,6 +34,7 @@ let activeChapterId = getChaptersForSection(activeSectionId)[0]?.id || chapters[
 
 let navSheetOpen = false;
 let currentView = "home"; // "home" | "content"
+let _slideDir   = 1;      // 1 = vorwärts (rechts), -1 = rückwärts (links)
 
 let currentCard = 0;
 let currentQuestion = 0;
@@ -48,8 +59,8 @@ let mqWrong     = 0;
 let mqAnswered  = false;
 let mqSelected  = null;
 
-// S3.3 – Exam Mode State
-let examQueue        = [];  // [{question, chapterId, chapterName, sectionName, sm2Key}]
+// S3.3 – Adaptiver Lernmodus State
+let examQueue        = [];
 let examIdx          = 0;
 let examCorrect      = 0;
 let examWrong        = 0;
@@ -57,6 +68,33 @@ let examAnswered     = false;
 let examSelected     = null;
 let examTimerInterval = null;
 let examTimeLeft     = EXAM_TIME_LIMIT;
+
+// S3.5 – Mixed Review State
+const MIXED_REVIEW_MIN_ASKED    = 2;    // mind. 2× abgefragt für "schwach"
+const MIXED_REVIEW_WEAK_THRESH  = 0.65; // unter 65 % = schwache Frage
+const MIXED_REVIEW_MAX_Q        = 30;   // max Fragen pro Session
+
+let mrQueue    = [];   // [{question, chapterId, chapterName, sectionName, statsKey}]
+let mrIdx      = 0;
+let mrCorrect  = 0;
+let mrAnswered = false;
+let mrSelected = null;
+let mrWrong    = [];
+
+// S3.4 – Mock Exam State
+let mockQueue        = [];   // [{question, chapterId, chapterName, sectionName}]
+let mockIdx          = 0;
+let mockAnswers      = [];   // gewählte Antwort-Indizes pro Frage (-1 = keine)
+let mockTimerInterval = null;
+let mockTimeLeft     = MOCK_EXAM_TOTAL_TIME;
+
+// T-020 – Abschnitts-Zwischenquiz
+let sectionQuizQueue   = [];
+let sectionQuizIdx     = 0;
+let sectionQuizCorrect = 0;
+let sectionQuizAnswered = false;
+let sectionQuizSelected = null;
+let sectionQuizSectionId = null;
 
 // Lernzeit-Timer
 let _statsTimerStart = null;        // Date.now() wenn aktuelles Segment läuft; null = pausiert
@@ -276,9 +314,20 @@ function getOverallStats() {
   const stats = chapters.map((c) => getChapterProgressData(c.id));
   const totalQuestions    = stats.reduce((s, x) => s + x.totalQuestions, 0);
   const answeredQuestions = stats.reduce((s, x) => s + x.answered, 0);
+  const totalCards        = stats.reduce((s, x) => s + x.totalCards, 0);
+  const cardsSeen         = stats.reduce((s, x) => s + x.cardsSeen, 0);
   const completedChapters = stats.filter((x) => x.state === "completed").length;
+  const masteredChapters  = chapters.filter((c) => hasChapterQuizPassed(c.id)).length;
+  // Legacy single-value für Rückwärtskompatibilität
   const progressPercentage = totalQuestions === 0 ? 0 : Math.round((answeredQuestions / totalQuestions) * 100);
-  return { totalQuestions, answeredQuestions, completedChapters, progressPercentage };
+  const cardsPct    = totalCards    === 0 ? 0 : Math.round((cardsSeen         / totalCards)    * 100);
+  const quizPct     = totalQuestions === 0 ? 0 : Math.round((answeredQuestions / totalQuestions) * 100);
+  const masteryPct  = chapters.length  === 0 ? 0 : Math.round((masteredChapters  / chapters.length)  * 100);
+  return {
+    totalQuestions, answeredQuestions, completedChapters, progressPercentage,
+    totalCards, cardsSeen, masteredChapters,
+    cardsPct, quizPct, masteryPct
+  };
 }
 
 // ---------------------------------------------------------------------------
@@ -396,14 +445,22 @@ function scrollToTop() {
 }
 
 function triggerViewTransition() {
-  // Löst die Fade-In Animation auf dem #app Container aus.
-  // Durch Entfernen + void reflow + Hinzufügen der Klasse wird
-  // die CSS-Animation neu gestartet, auch wenn sie schon aktiv war.
   const app = document.getElementById("app");
   if (!app) return;
-  app.classList.remove("view-enter");
-  void app.offsetWidth; // erzwingt Browser-Reflow → Animation startet neu
-  app.classList.add("view-enter");
+  const cls = _slideDir >= 0 ? "view-enter" : "view-enter-back";
+  const other = _slideDir >= 0 ? "view-enter-back" : "view-enter";
+  app.classList.remove("view-enter", "view-enter-back");
+  void app.offsetWidth; // Browser-Reflow → Animation startet neu
+  app.classList.remove(other);
+  app.classList.add(cls);
+  _slideDir = 1; // nach jeder Transition zurücksetzen
+  // Fortschritts-Chip pulsieren lassen
+  const chip = document.querySelector(".topbar-progress");
+  if (chip) {
+    chip.classList.remove("pulse");
+    void chip.offsetWidth;
+    chip.classList.add("pulse");
+  }
 }
 
 function shuffleArray(arr) {
@@ -677,6 +734,7 @@ function showCard() {
 
 function previousCard() {
   if (currentCard === 0) return;
+  _slideDir = -1; // Rückwärts-Animation
   currentCard -= 1;
   saveChapterProgress();
   showCard();
@@ -824,7 +882,7 @@ function showResults() {
   const roundLabel = quizRound > 1 ? "Runde " + quizRound + " · " : "";
   const hasWrong = wrongInRound.length > 0;
 
-  // Nächstes Kapitel ermitteln für Button-Label
+  // Nächstes Kapitel ermitteln
   const sectionChapters = getChaptersForSection(activeSectionId);
   const currentChapterIdx = sectionChapters.findIndex((c) => c.id === activeChapterId);
   const nextChapter = currentChapterIdx !== -1 && currentChapterIdx < sectionChapters.length - 1
@@ -833,28 +891,46 @@ function showResults() {
   const nextChapterLabel = nextChapter
     ? "Weiter: " + escapeHtml(nextChapter.name)
     : "Zur Übersicht";
+  const nextChapterFn = nextChapter ? "goToNextChapter()" : "goHome()";
 
   // Gate-Banner
   const gateBanner = gateActive
     ? '<div class="quiz-gate-banner ' + (passed ? "gate-passed" : "gate-failed") + '">' +
       (passed
-        ? '<span class="gate-icon">&#x2705;</span> Bestanden – du kannst weitermachen!'
-        : '<span class="gate-icon">&#x274C;</span> Noch nicht bestanden (mind. 80 % erforderlich)') +
+        ? '<span class="gate-icon">&#x2705;</span> Lernziel erreicht – du kannst weitermachen!'
+        : '<span class="gate-icon">&#x274C;</span> Lernziel noch nicht erreicht (mind. 80 % erforderlich)') +
       "</div>"
     : "";
 
-  // "Fehler wiederholen"-Button
-  const retryWrongHtml = hasWrong
-    ? '<button class="result-retry-btn" onclick="retryWrongQuestions()">&#x1F501; ' + wrongInRound.length + " Fehler wiederholen</button>"
-    : "";
+  // ── Dynamische Handlungsempfehlung je nach Score ──────────────────────────
+  let primaryActionHtml, secondaryActionsHtml;
 
-  // Weiter-Button: gesperrt wenn nicht bestanden
-  const nextBtn = passed
-    ? '<button class="result-primary-btn" onclick="goToNextChapter()">&#x2705; ' + nextChapterLabel + "</button>"
-    : '<button class="result-primary-btn result-primary-btn--locked" disabled>&#x1F512; ' + nextChapterLabel + "</button>";
+  if (percentage >= QUIZ_PASS_THRESHOLD) {
+    // Bestanden → Nächstes Kapitel als klarer Primär-CTA
+    primaryActionHtml =
+      '<button class="result-primary-btn" onclick="' + nextChapterFn + '">&#x2705; ' + nextChapterLabel + "</button>";
+    secondaryActionsHtml =
+      (hasWrong ? '<button class="secondary" onclick="retryWrongQuestions()">&#x1F501; ' + wrongInRound.length + " Fehler wiederholen</button>" : "") +
+      '<button class="secondary" onclick="startQuiz()">&#x1F501; Quiz wiederholen</button>';
+  } else if (percentage >= 60) {
+    // Nah dran → Fehler wiederholen als Primär-CTA, Nächstes Kapitel zugänglich
+    primaryActionHtml = hasWrong
+      ? '<button class="result-primary-btn" onclick="retryWrongQuestions()">&#x1F501; ' + wrongInRound.length + " Fehler wiederholen</button>"
+      : '<button class="result-primary-btn" onclick="startQuiz()">&#x1F501; Quiz wiederholen</button>';
+    secondaryActionsHtml =
+      '<button class="secondary" onclick="' + nextChapterFn + '">&#x27A1;&#xFE0F; ' + nextChapterLabel + "</button>" +
+      '<button class="secondary" onclick="restartChapter()">&#x1F4D6; Kapitel neu starten</button>';
+  } else {
+    // Deutlich darunter → Neustart als Primär-CTA, Nächstes Kapitel trotzdem zugänglich
+    primaryActionHtml =
+      '<button class="result-primary-btn" onclick="restartChapter()">&#x1F4D6; Kapitel neu starten</button>';
+    secondaryActionsHtml =
+      '<button class="secondary" onclick="' + nextChapterFn + '">&#x27A1;&#xFE0F; Trotzdem weiter: ' + nextChapterLabel + "</button>" +
+      (hasWrong ? '<button class="secondary" onclick="retryWrongQuestions()">&#x1F501; ' + wrongInRound.length + " Fehler wiederholen</button>" : "");
+  }
 
   document.getElementById("app").innerHTML =
-    '<section class="card result-hero">' +
+    '<section class="card result-hero" role="status">' +
     '  <span class="result-icon">' + icon + "</span>" +
     '  <div class="result-score" style="color:' + scoreColor + '">' + correctAnswers + "/" + total + "</div>" +
     '  <div class="result-label">' + label + "</div>" +
@@ -864,11 +940,9 @@ function showResults() {
       : '  <div class="result-retry-hint" style="color:#2d7a3a">Alle Fragen richtig beantwortet! &#x1F389;</div>') +
     gateBanner +
     "</section>" +
-    retryWrongHtml +
+    primaryActionHtml +
     '<div class="button-row result-actions">' +
-    nextBtn +
-    '  <button class="secondary" onclick="startQuiz()">&#x1F501; Quiz wiederholen</button>' +
-    '  <button class="secondary" onclick="restartChapter()">&#x1F4D6; Kapitel neu starten</button>' +
+    secondaryActionsHtml +
     "</div>";
 
   triggerViewTransition();
@@ -920,6 +994,22 @@ function restartChapter() {
   questionIndices = []; currentRoundIdx = 0; wrongInRound = []; quizRound = 1;
   saveChapterProgress();
   showCard();
+}
+
+// ---------------------------------------------------------------------------
+// Hilfsfunktion: dreifache Fortschrittszeile
+// ---------------------------------------------------------------------------
+
+function _progRow(label, pct, detail, fillClass) {
+  return '<div class="prog-row">' +
+    '<div class="prog-row-head">' +
+    '  <span class="prog-label">' + label + '</span>' +
+    '  <span class="prog-detail">' + detail + '</span>' +
+    '</div>' +
+    '<div class="progress-track prog-track">' +
+    '  <div class="progress-fill ' + fillClass + '" style="width:' + pct + '%"></div>' +
+    '</div>' +
+    '</div>';
 }
 
 // ---------------------------------------------------------------------------
@@ -993,36 +1083,51 @@ function renderDashboardScreen() {
       '  <div class="section-card-meta">' + sp.completedCount + "/" + sp.chapterCount + " Kapitel</div>" +
       '  <div class="section-card-bar"><div class="section-card-fill" style="width:' + pct + '%"></div></div>' +
       '  <div class="section-card-actions" onclick="event.stopPropagation()">' +
-      '    <button class="mq-start-btn" onclick="startModuleQuiz(\'' + section.id + '\')">&#x1F4DD; Modul-Quiz</button>' +
+      '    <button class="mq-start-btn" onclick="startModuleQuiz(\'' + section.id + '\')">' +
+      (sp.state === "not-started" ? "&#x1F4CB; Einstufungstest" : sp.state === "completed" ? "&#x1F4DD; Kapiteltest" : "&#x1F4DD; Modul-Quiz") +
+      '</button>' +
+      (shouldOfferSectionQuiz(section.id)
+        ? '<div class="section-quiz-offer">' +
+          '  <span class="section-quiz-offer-text">&#x1F3AF; Abschnitt vollständig! Teste dein Wissen:</span>' +
+          '  <button class="section-quiz-offer-btn" onclick="startSectionQuiz(\'' + section.id + '\')">Abschnitts-Quiz starten</button>' +
+          '  <button class="section-quiz-skip-btn" onclick="skipSectionQuiz(\'' + section.id + '\')">Überspringen</button>' +
+          "</div>"
+        : '') +
       "  </div>" +
       "</div>"
     );
   }).join("");
 
+  const progressRows =
+    _progRow("Karten gesehen",       stats.cardsPct,   stats.cardsSeen + "/" + stats.totalCards,   "prog-fill--cards") +
+    _progRow("Quiz bearbeitet",      stats.quizPct,    stats.answeredQuestions + "/" + stats.totalQuestions, "prog-fill--quiz") +
+    _progRow("Lernziele erreicht",   stats.masteryPct, stats.masteredChapters + "/" + chapters.length,       "prog-fill--mastery");
+
   document.getElementById("app").innerHTML =
     greetingHtml +
     '<section class="card dashboard-hero">' +
-    '  <div class="eyebrow">Lernfortschritt</div>' +
-    '  <div class="dashboard-hero-pct">' + stats.progressPercentage + "%</div>" +
-    '  <div class="progress-track" style="margin-bottom:12px">' +
-    '    <div class="progress-fill" style="width:' + stats.progressPercentage + '%"></div>' +
-    "  </div>" +
-    '  <div class="dashboard-hero-meta">' +
-    stats.completedChapters + "/" + chapters.length + " Kapitel abgeschlossen" +
-    " &middot; " + stats.answeredQuestions + "/" + stats.totalQuestions + " Quizfragen" +
-    "  </div>" +
+    '  <div class="eyebrow">Mein Lernstand</div>' +
+    '  <div class="progress-three">' + progressRows + "</div>" +
     timeStatsHtml +
     '  <div class="dashboard-cta-hint">' + ctaHint + "</div>" +
     '  <button onclick="continueLearning()">' + ctaLabel + " &#x2192;</button>" +
     "</section>" +
     '<div class="section-cards">' + sectionCardsHtml + "</div>" +
-    '<div class="exam-mode-card" onclick="startExamMode()">' +
-    '  <div class="exam-mode-icon">&#x1F393;</div>' +
-    '  <div class="exam-mode-body">' +
-    '    <div class="exam-mode-title">Pr&#xFC;fungssimulation</div>' +
-    '    <div class="exam-mode-sub">SM-2 Spaced Repetition &middot; ' + EXAM_SESSION_SIZE + ' Fragen &middot; 90 Sek./Frage</div>' +
+    '<div class="mode-cards-row">' +
+    '  <div class="mode-card" onclick="startMockExam()">' +
+    '    <span class="mode-card-badge">WSET-konform</span>' +
+    '    <div class="mode-card-icon">&#x1F4DD;</div>' +
+    '    <div class="mode-card-title">Mock Exam</div>' +
+    '    <div class="mode-card-sub">50 Fragen &middot; 60 Min. &middot; Ergebnis am Ende</div>' +
     "  </div>" +
-    '  <div class="exam-mode-arrow">&#x276F;</div>' +
+    '  <div class="mode-card mode-card--adaptive" onclick="startExamMode()">' +
+    '    <div class="mode-card-icon">&#x1F9E0;</div>' +
+    '    <div class="mode-card-title">Adaptiver Lernmodus</div>' +
+    '    <div class="mode-card-sub">SM-2 Spaced Repetition &middot; mit Erkl\u00e4rungen</div>' +
+    "  </div>" +
+    "</div>" +
+    '<div class="mixed-review-btn-wrap">' +
+    '  <button class="mixed-review-btn" onclick="startMixedReview()">&#x1F501; Mixed Review &ndash; schwache Fragen wiederholen</button>' +
     "</div>";
 }
 
@@ -1105,29 +1210,46 @@ function saveUserName(name) {
   localStorage.setItem(USER_NAME_KEY, name.trim());
 }
 
-function showNamePrompt() {
+function _buildNameModal(isEdit) {
+  const current = getUserName();
   const modal = document.createElement("div");
   modal.id = "name-modal-overlay";
   modal.className = "modal-overlay";
   modal.innerHTML = `
     <div class="modal-card">
       <div class="modal-icon">🍷</div>
-      <h2>Herzlich willkommen!</h2>
-      <p>Wie darf ich dich nennen?</p>
+      <h2>${isEdit ? "Namen ändern" : "Herzlich willkommen!"}</h2>
+      <p>${isEdit ? "Wie möchtest du genannt werden?" : "Wie darf ich dich nennen?"}</p>
       <input id="name-input" class="name-input" type="text"
              placeholder="Dein Name" maxlength="30"
-             autocomplete="off" autocapitalize="words" />
-      <button id="name-submit-btn" onclick="submitName()">Loslegen →</button>
+             autocomplete="off" autocapitalize="words"
+             value="${isEdit ? escapeHtml(current) : ""}" />
+      <button id="name-submit-btn" onclick="submitName()">
+        ${isEdit ? "Speichern" : "Loslegen →"}
+      </button>
+      ${!isEdit ? `<button class="name-skip-btn" onclick="skipName()">Überspringen</button>` : ""}
     </div>
   `;
   document.body.appendChild(modal);
   requestAnimationFrame(() => modal.classList.add("visible"));
-
-  // Enter-Taste bestätigt
   document.getElementById("name-input").addEventListener("keydown", (e) => {
     if (e.key === "Enter") submitName();
   });
-  setTimeout(() => document.getElementById("name-input")?.focus(), 300);
+  setTimeout(() => {
+    const inp = document.getElementById("name-input");
+    if (inp) { inp.focus(); if (isEdit) inp.select(); }
+  }, 300);
+}
+
+function showNamePrompt() {
+  _buildNameModal(false);
+}
+
+function skipName() {
+  saveUserName("Lernender");
+  _closeNameModal();
+  renderDashboardScreen();
+  maybeShowInstallBanner();
 }
 
 function submitName() {
@@ -1139,19 +1261,22 @@ function submitName() {
     return;
   }
   saveUserName(name);
+  _closeNameModal();
+  renderDashboardScreen();
+}
+
+function _closeNameModal() {
   const overlay = document.getElementById("name-modal-overlay");
   if (overlay) {
     overlay.classList.remove("visible");
     setTimeout(() => overlay.remove(), 300);
   }
-  renderDashboardScreen();
 }
 
 function editUserName() {
-  const input = prompt("Deinen Namen ändern:", getUserName());
-  if (input !== null && input.trim()) {
-    saveUserName(input.trim());
-    renderDashboardScreen();
+  // App-eigenes Modal statt browser prompt()
+  if (!document.getElementById("name-modal-overlay")) {
+    _buildNameModal(true);
   }
 }
 
@@ -1395,8 +1520,8 @@ function showModuleResults() {
   var section     = getSection(mqSectionId);
   var mqSt        = getModuleQuizStatus(mqSectionId);
   var statusLabel = mqSt === "distinction" ? "\u2605 Distinction (\u226590%)"
-                  : mqSt === "passed"      ? "\u2713 Bestanden (\u226580%)"
-                  : "\u25CF Noch nicht bestanden";
+                  : mqSt === "passed"      ? "\u2713 Lernziel erreicht (\u226580%)"
+                  : "\u25CF Lernziel noch nicht erreicht";
   var statusColor = mqSt === "distinction" ? "#b8860b"
                   : mqSt === "passed"      ? "#2d7a3a"
                   : "#8b2020";
@@ -1530,7 +1655,7 @@ function showExamQuestion() {
     renderTopbar("Pr&#xFC;fungssimulation", examIdx + 1, examQueue.length) +
     '<div class="exam-timer-wrap">' +
     '  <div class="exam-timer-bar" id="exam-timer-bar" style="width:' + timerPct + '%"></div>' +
-    '  <span class="exam-timer-label" id="exam-timer-label">' + examTimeLeft + "s</span>" +
+    '  <span class="exam-timer-label" id="exam-timer-label" aria-live="polite" aria-atomic="true">' + examTimeLeft + "s</span>" +
     "</div>" +
     '<section class="card">' +
     '  <div class="eyebrow">' + escapeHtml(entry.sectionName) + " &rsaquo; " + escapeHtml(entry.chapterName) + "</div>" +
@@ -1689,6 +1814,510 @@ function showExamResults() {
   triggerViewTransition();
 }
 
+// ---------------------------------------------------------------------------
+// S3.4 – Mock Exam (WSET-realistisch)
+// ---------------------------------------------------------------------------
+
+function buildMockQueue() {
+  // Alle Fragen aus allen Kapiteln sammeln und mischen
+  var all = [];
+  chapters.forEach(function(ch) {
+    var qs = getQuestionsForChapter(ch.id);
+    var sec = getSection(ch.sectionId);
+    qs.forEach(function(q) {
+      all.push({ question: q, chapterId: ch.id, chapterName: ch.name,
+                 sectionName: sec ? sec.name : "" });
+    });
+  });
+  return shuffleArray(all).slice(0, MOCK_EXAM_QUESTIONS);
+}
+
+function _fmtTime(seconds) {
+  var m = Math.floor(seconds / 60);
+  var s = seconds % 60;
+  return m + ":" + (s < 10 ? "0" : "") + s;
+}
+
+function startMockExam() {
+  mockQueue    = buildMockQueue();
+  if (mockQueue.length === 0) { alert("Keine Fragen verfügbar."); return; }
+  mockIdx      = 0;
+  mockAnswers  = new Array(mockQueue.length).fill(-1);
+  mockTimeLeft = MOCK_EXAM_TOTAL_TIME;
+  currentView  = "content";
+  navSheetOpen = false;
+  renderNav();
+  _startMockTimer();
+  showMockQuestion();
+}
+
+function _startMockTimer() {
+  if (mockTimerInterval) clearInterval(mockTimerInterval);
+  mockTimerInterval = setInterval(function() {
+    mockTimeLeft--;
+    _updateMockTimerUI();
+    if (mockTimeLeft <= 0) {
+      clearInterval(mockTimerInterval);
+      mockTimerInterval = null;
+      showMockResults();
+    }
+  }, 1000);
+}
+
+function _updateMockTimerUI() {
+  var valEl  = document.getElementById("mock-timer-value");
+  var barEl  = document.getElementById("mock-timer-bar");
+  if (!valEl || !barEl) return;
+  var pct = (mockTimeLeft / MOCK_EXAM_TOTAL_TIME) * 100;
+  valEl.textContent = _fmtTime(mockTimeLeft);
+  valEl.className   = "mock-timer-value" + (mockTimeLeft < 300 ? " urgent" : "");
+  barEl.style.width = pct + "%";
+  barEl.style.background = pct > 30 ? "#4a7c3f" : pct > 10 ? "#c4870a" : "#c0392b";
+}
+
+function showMockQuestion() {
+  scrollToTop();
+  if (mockIdx >= mockQueue.length) { showMockResults(); return; }
+
+  var entry = mockQueue[mockIdx];
+  var q     = entry.question;
+  var chosen = mockAnswers[mockIdx];
+
+  var optionsHtml = q.options.map(function(opt, i) {
+    var sel = chosen === i ? ' selected" disabled' : '"';
+    return '<button class="option mock-option' + sel + ' onclick="selectMockAnswer(' + i + ')">' +
+           escapeHtml(opt) + "</button>";
+  }).join("");
+
+  var progress = '<div class="exam-progress-stats" style="margin-bottom:10px">' +
+    'Frage ' + (mockIdx + 1) + ' / ' + mockQueue.length +
+    ' &nbsp;|&nbsp; bereits beantwortet: ' +
+    mockAnswers.filter(function(a) { return a >= 0; }).length +
+    "</div>";
+
+  var timerHtml =
+    '<div class="mock-timer-strip">' +
+    '  <span class="mock-timer-label">Verbleibende Zeit</span>' +
+    '  <div class="mock-timer-bar-wrap">' +
+    '    <div class="mock-timer-bar" id="mock-timer-bar" style="width:' +
+           ((mockTimeLeft / MOCK_EXAM_TOTAL_TIME) * 100) + '%; background:#4a7c3f"></div>' +
+    "  </div>" +
+    '  <span class="mock-timer-value' + (mockTimeLeft < 300 ? " urgent" : "") +
+         '" id="mock-timer-value" aria-live="assertive" aria-atomic="true">' + _fmtTime(mockTimeLeft) + "</span>" +
+    "</div>";
+
+  var prevBtn = mockIdx > 0
+    ? '<button class="secondary" onclick="prevMockQuestion()">&#x2190; Zurück</button>'
+    : '<button class="secondary" disabled>&#x2190; Zurück</button>';
+
+  var nextLabel = mockIdx < mockQueue.length - 1 ? "Weiter &#x2192;" : "&#x1F4CA; Auswerten";
+  var nextFn    = mockIdx < mockQueue.length - 1 ? "nextMockQuestion()" : "showMockResults()";
+
+  document.getElementById("app").innerHTML =
+    renderTopbar("Mock Exam", mockIdx + 1, mockQueue.length) +
+    timerHtml +
+    '<section class="card">' +
+    '  <div class="eyebrow">' + escapeHtml(entry.sectionName) + " &rsaquo; " + escapeHtml(entry.chapterName) + "</div>" +
+    progress +
+    "  <h2>" + escapeHtml(q.question) + "</h2>" +
+    '  <div class="options-list" id="mock-options">' + optionsHtml + "</div>" +
+    "</section>" +
+    '<div class="button-row two-buttons">' +
+    "  " + prevBtn +
+    '  <button onclick="' + nextFn + '">' + nextLabel + "</button>" +
+    "</div>" +
+    '<div class="button-row" style="margin-top:0">' +
+    '  <button class="secondary" onclick="confirmAbortMockExam()">Prüfung abbrechen</button>' +
+    "</div>";
+
+  triggerViewTransition();
+}
+
+function selectMockAnswer(index) {
+  mockAnswers[mockIdx] = index;
+  // Selektiert-Stil setzen ohne Feedback
+  var optList = document.getElementById("mock-options");
+  if (optList) {
+    optList.querySelectorAll(".mock-option").forEach(function(btn, i) {
+      btn.classList.toggle("selected", i === index);
+      btn.disabled = true;
+    });
+  }
+  // Weiter-Button aktivieren
+  var navEl = document.getElementById("app");
+  // Timer-Update ohne Re-Render
+}
+
+function nextMockQuestion() {
+  mockIdx++;
+  showMockQuestion();
+}
+
+function prevMockQuestion() {
+  if (mockIdx > 0) { mockIdx--; showMockQuestion(); }
+}
+
+function confirmAbortMockExam() {
+  if (mockTimerInterval) { clearInterval(mockTimerInterval); mockTimerInterval = null; }
+  goHome();
+}
+
+function showMockResults() {
+  if (mockTimerInterval) { clearInterval(mockTimerInterval); mockTimerInterval = null; }
+  scrollToTop();
+
+  var total     = mockQueue.length;
+  var correct   = 0;
+  var answered  = 0;
+  // Kapitel-Auswertung
+  var chapterMap = {};
+  mockQueue.forEach(function(entry, i) {
+    var cid  = entry.chapterId;
+    var sel  = mockAnswers[i];
+    var isC  = sel >= 0 && sel === entry.question.correct;
+    if (sel >= 0) answered++;
+    if (isC) correct++;
+    if (!chapterMap[cid]) chapterMap[cid] = { name: entry.chapterName, correct: 0, total: 0, wrong: [] };
+    chapterMap[cid].total++;
+    if (isC) chapterMap[cid].correct++;
+    else if (sel >= 0) chapterMap[cid].wrong.push(entry.chapterName);
+  });
+
+  var pct = total === 0 ? 0 : Math.round((correct / total) * 100);
+
+  // WSET-Schwelle bestimmen
+  var wsetLabel, wsetColor, wsetIcon;
+  if (pct >= WSET_DISTINCTION_PCT)   { wsetLabel = "Distinction";  wsetColor = "#b05c00"; wsetIcon = "&#x1F3C6;"; }
+  else if (pct >= WSET_MERIT_PCT)    { wsetLabel = "Merit";        wsetColor = "#8a6a1d"; wsetIcon = "&#x1F31F;"; }
+  else if (pct >= WSET_PASS_PCT)     { wsetLabel = "Pass";         wsetColor = "#2d7a3a"; wsetIcon = "&#x2705;"; }
+  else                               { wsetLabel = "Nicht bestanden"; wsetColor = "#8b2020"; wsetIcon = "&#x274C;"; }
+
+  // WSET-Badge-HTML
+  var badgesHtml =
+    '<div class="wset-thresholds">' +
+    _wsetBadge("Pass",        WSET_PASS_PCT,        "wset-badge--pass",        pct >= WSET_PASS_PCT) +
+    _wsetBadge("Merit",       WSET_MERIT_PCT,       "wset-badge--merit",       pct >= WSET_MERIT_PCT) +
+    _wsetBadge("Distinction", WSET_DISTINCTION_PCT, "wset-badge--distinction", pct >= WSET_DISTINCTION_PCT) +
+    "</div>";
+
+  // Kapitel-Breakdown – nach Score aufsteigend sortieren
+  var chapterRows = Object.values(chapterMap)
+    .sort(function(a, b) {
+      return (a.correct / a.total) - (b.correct / b.total);
+    })
+    .map(function(c) {
+      var cpct  = c.total === 0 ? 0 : Math.round((c.correct / c.total) * 100);
+      var color = cpct >= 80 ? "#2d7a3a" : cpct >= 60 ? "#8a6a1d" : "#8b2020";
+      return '<div class="mq-chapter-row">' +
+             '  <span class="mq-chapter-name">' + escapeHtml(c.name) + "</span>" +
+             '  <span class="mq-chapter-score" style="color:' + color + '">' + c.correct + "/" + c.total + " (" + cpct + "%)</span>" +
+             "</div>";
+    }).join("");
+
+  // Primär-Aktion je nach Ergebnis
+  var primaryAction;
+  if (pct >= WSET_PASS_PCT) {
+    primaryAction = '<button onclick="startMockExam()">&#x1F501; Neue Simulation</button>';
+  } else if (pct >= 40) {
+    primaryAction = '<button onclick="startMockExam()">&#x1F501; Nochmal versuchen</button>';
+  } else {
+    primaryAction = '<button onclick="goHome()">&#x1F4D6; Zurück zum Lernen</button>';
+  }
+
+  document.getElementById("app").innerHTML =
+    '<section class="card result-hero" role="status">' +
+    '  <span class="result-icon">' + wsetIcon + "</span>" +
+    '  <div class="result-score" style="color:' + wsetColor + '">' + correct + "/" + total + "</div>" +
+    '  <div class="result-label" style="color:' + wsetColor + '">WSET Level 2 &ndash; ' + wsetLabel + "</div>" +
+    '  <div class="result-pct">' + pct + "% korrekt</div>" +
+    badgesHtml +
+    '  <div style="font-size:11px;color:var(--muted);margin-top:6px">Offizielle WSET-Schwellen: Pass 55% &middot; Merit 70% &middot; Distinction 85%</div>' +
+    (answered < total
+      ? '  <div style="font-size:12px;color:#8a6a1d;margin-top:8px">&#x26A0;&#xFE0F; ' + (total - answered) + " Fragen nicht beantwortet</div>"
+      : "") +
+    "</section>" +
+    (chapterRows
+      ? '<section class="card mq-breakdown"><div class="mq-breakdown-title">Kapitel-&#xDC;bersicht (nach Score)</div>' + chapterRows + "</section>"
+      : "") +
+    '<div class="button-row result-actions">' +
+    "  " + primaryAction +
+    '  <button class="secondary" onclick="goHome()">Zur &#xDC;bersicht</button>' +
+    "</div>";
+
+  triggerViewTransition();
+}
+
+// ---------------------------------------------------------------------------
+// S3.5 – Mixed Review (schwache Fragen quer über alle Kapitel)
+// ---------------------------------------------------------------------------
+
+function buildMixedReviewQueue() {
+  var stats = getStats();
+  var qs    = stats.questionStats;
+  var weak  = [];
+
+  Object.keys(qs).forEach(function(key) {
+    var val = qs[key];
+    if (val.asked < MIXED_REVIEW_MIN_ASKED) return;
+    var accuracy = val.correct / val.asked;
+    if (accuracy >= MIXED_REVIEW_WEAK_THRESH) return;
+
+    // Key-Format: "chapterId_questionIdx" — numerischer Teil am Ende
+    var m = key.match(/^(.+)_(\d+)$/);
+    if (!m) return;
+    var chapterId = m[1];
+    var qIdx      = parseInt(m[2]);
+
+    var chapter = getChapter(chapterId);
+    if (!chapter) return;
+    var questions = getQuestionsForChapter(chapterId);
+    if (qIdx >= questions.length) return;
+
+    var section = getSection(chapter.sectionId);
+    weak.push({
+      question:    questions[qIdx],
+      chapterId:   chapterId,
+      chapterName: chapter.name,
+      sectionName: section ? section.name : "",
+      accuracy:    accuracy,
+      statsKey:    key
+    });
+  });
+
+  // Schwächste zuerst, dann mischen
+  weak.sort(function(a, b) { return a.accuracy - b.accuracy; });
+  return shuffleArray(weak).slice(0, MIXED_REVIEW_MAX_Q);
+}
+
+function startMixedReview() {
+  mrQueue    = buildMixedReviewQueue();
+  if (mrQueue.length === 0) {
+    // Noch keine schwachen Fragen – Hinweis anzeigen
+    document.getElementById("app").innerHTML =
+      '<section class="card result-hero">' +
+      '  <span class="result-icon">&#x1F9E0;</span>' +
+      '  <div class="result-label">Noch keine Schwachstellen</div>' +
+      '  <div class="result-pct" style="color:var(--muted)">Beantworte mind. ' + MIXED_REVIEW_MIN_ASKED +
+           '× Quizfragen, damit Mixed Review Schwachstellen erkennt.</div>' +
+      "</section>" +
+      '<div class="button-row"><button onclick="goHome()">Zur Übersicht</button></div>';
+    triggerViewTransition();
+    return;
+  }
+  mrIdx      = 0;
+  mrCorrect  = 0;
+  mrAnswered = false;
+  mrSelected = null;
+  mrWrong    = [];
+  currentView  = "content";
+  navSheetOpen = false;
+  renderNav();
+  showMixedQuestion();
+}
+
+function showMixedQuestion() {
+  scrollToTop();
+  if (mrIdx >= mrQueue.length) { showMixedResults(); return; }
+
+  var entry = mrQueue[mrIdx];
+  var q     = entry.question;
+
+  var optionsHtml = q.options.map(function(opt, i) {
+    var cls = "option";
+    if (mrAnswered) {
+      if (i === q.correct)  cls += " correct";
+      else if (i === mrSelected) cls += " wrong";
+    }
+    return '<button class="' + cls + '" onclick="selectMixedAnswer(' + i + ')" ' +
+           (mrAnswered ? "disabled" : "") + ">" + escapeHtml(opt) + "</button>";
+  }).join("");
+
+  document.getElementById("app").innerHTML =
+    renderTopbar("Mixed Review", mrIdx + 1, mrQueue.length) +
+    '<section class="card">' +
+    '  <div class="eyebrow">' + escapeHtml(entry.sectionName) + " &rsaquo; " + escapeHtml(entry.chapterName) + "</div>" +
+    '  <div class="exam-progress-stats" style="margin-bottom:10px">&#x2713; ' + mrCorrect +
+         ' &nbsp; &#x2717; ' + mrWrong.length + "</div>" +
+    "  <h2>" + escapeHtml(q.question) + "</h2>" +
+    '  <div class="options-list">' + optionsHtml + "</div>" +
+    (mrAnswered ? '<div class="explanation">' + escapeHtml(q.explanation) + "</div>" : "") +
+    "</section>" +
+    '<div class="button-row two-buttons">' +
+    '  <button class="secondary" onclick="goHome()">Abbrechen</button>' +
+    (mrAnswered ? '<button onclick="nextMixedQuestion()">Weiter</button>' : "") +
+    "</div>";
+
+  triggerViewTransition();
+}
+
+function selectMixedAnswer(index) {
+  if (mrAnswered) return;
+  mrAnswered = true;
+  mrSelected = index;
+  var entry = mrQueue[mrIdx];
+  var isCorrect = (index === entry.question.correct);
+  if (isCorrect) mrCorrect++;
+  else mrWrong.push(mrIdx);
+
+  // Fragenstatistik aktualisieren
+  var liveStats = getStats();
+  if (!liveStats.questionStats[entry.statsKey])
+    liveStats.questionStats[entry.statsKey] = { asked: 0, correct: 0 };
+  liveStats.questionStats[entry.statsKey].asked += 1;
+  if (isCorrect) liveStats.questionStats[entry.statsKey].correct += 1;
+  saveStats(liveStats);
+
+  showMixedQuestion();
+}
+
+function nextMixedQuestion() {
+  mrIdx++;
+  mrAnswered = false;
+  mrSelected = null;
+  showMixedQuestion();
+}
+
+function showMixedResults() {
+  scrollToTop();
+  var total = mrQueue.length;
+  var pct   = total === 0 ? 0 : Math.round((mrCorrect / total) * 100);
+  var icon  = pct >= 80 ? "&#x1F389;" : pct >= 60 ? "&#x1F44D;" : "&#x1F4DA;";
+  var color = pct >= 80 ? "#2d7a3a"  : pct >= 60 ? "#8a6a1d"   : "#8b2020";
+
+  document.getElementById("app").innerHTML =
+    '<section class="card result-hero" role="status">' +
+    '  <span class="result-icon">' + icon + "</span>" +
+    '  <div class="result-score" style="color:' + color + '">' + mrCorrect + "/" + total + "</div>" +
+    '  <div class="result-label">Mixed Review abgeschlossen</div>' +
+    '  <div class="result-pct">' + pct + "% korrekt</div>" +
+    '  <div class="result-retry-hint" style="color:var(--muted)">Die Ergebnisse wurden in die Lernstatistik eingetragen.</div>' +
+    "</section>" +
+    '<div class="button-row result-actions">' +
+    '  <button onclick="startMixedReview()">&#x1F501; Nochmal</button>' +
+    '  <button class="secondary" onclick="goHome()">Zur \u00DCbersicht</button>' +
+    "</div>";
+
+  triggerViewTransition();
+}
+
+function _wsetBadge(label, pct, cssClass, active) {
+  var activeStyle = active ? " wset-badge--active" : "";
+  return '<div class="wset-badge ' + cssClass + activeStyle + '">' +
+         '  <span class="wset-badge-label">' + label + "</span>" +
+         '  <span class="wset-badge-pct">ab ' + pct + "%</span>" +
+         "</div>";
+}
+
+// ---------------------------------------------------------------------------
+// T-020 – Abschnitts-Zwischenquiz
+// ---------------------------------------------------------------------------
+
+function shouldOfferSectionQuiz(sectionId) {
+  var sp = getSectionProgressData(sectionId);
+  if (sp.completedCount < sp.chapterCount || sp.chapterCount === 0) return false;
+  var done = localStorage.getItem(SECTION_QUIZ_KEY + sectionId);
+  return !done;
+}
+
+function startSectionQuiz(sectionId) {
+  var sc = getChaptersForSection(sectionId);
+  var all = [];
+  sc.forEach(function(ch) {
+    var qs = getQuestionsForChapter(ch.id);
+    var sec = getSection(ch.sectionId);
+    qs.forEach(function(q) {
+      all.push({ question: q, chapterId: ch.id, chapterName: ch.name,
+                 sectionName: sec ? sec.name : "" });
+    });
+  });
+  sectionQuizQueue    = shuffleArray(all);
+  sectionQuizIdx      = 0;
+  sectionQuizCorrect  = 0;
+  sectionQuizAnswered = false;
+  sectionQuizSelected = null;
+  sectionQuizSectionId = sectionId;
+  localStorage.setItem(SECTION_QUIZ_KEY + sectionId, "offered");
+  currentView  = "content";
+  navSheetOpen = false;
+  renderNav();
+  showSectionQuizQuestion();
+}
+
+function skipSectionQuiz(sectionId) {
+  localStorage.setItem(SECTION_QUIZ_KEY + sectionId, "skipped");
+  goHome();
+}
+
+function showSectionQuizQuestion() {
+  scrollToTop();
+  if (sectionQuizIdx >= sectionQuizQueue.length) { showSectionQuizResults(); return; }
+  var entry = sectionQuizQueue[sectionQuizIdx];
+  var q = entry.question;
+  var optHtml = q.options.map(function(opt, i) {
+    var cls = "option";
+    if (sectionQuizAnswered) {
+      if (i === q.correct) cls += " correct";
+      else if (i === sectionQuizSelected) cls += " wrong";
+    }
+    return '<button class="' + cls + '" onclick="selectSectionQuizAnswer(' + i + ')" ' +
+           (sectionQuizAnswered ? "disabled" : "") + ">" + escapeHtml(opt) + "</button>";
+  }).join("");
+
+  document.getElementById("app").innerHTML =
+    renderTopbar("Abschnitts-Quiz", sectionQuizIdx + 1, sectionQuizQueue.length) +
+    '<section class="card">' +
+    '  <div class="eyebrow">' + escapeHtml(entry.sectionName) + " &rsaquo; " + escapeHtml(entry.chapterName) + "</div>" +
+    '  <div class="exam-progress-stats" style="margin-bottom:10px">&#x2713; ' + sectionQuizCorrect + "</div>" +
+    "  <h2>" + escapeHtml(q.question) + "</h2>" +
+    '  <div class="options-list">' + optHtml + "</div>" +
+    (sectionQuizAnswered ? '<div class="explanation">' + escapeHtml(q.explanation) + "</div>" : "") +
+    "</section>" +
+    '<div class="button-row two-buttons">' +
+    '  <button class="secondary" onclick="confirmAbortSectionQuiz()">Abbrechen</button>' +
+    (sectionQuizAnswered ? '<button onclick="nextSectionQuizQuestion()">Weiter</button>' : "") +
+    "</div>";
+
+  triggerViewTransition();
+}
+
+function selectSectionQuizAnswer(index) {
+  if (sectionQuizAnswered) return;
+  sectionQuizAnswered = true;
+  sectionQuizSelected = index;
+  if (index === sectionQuizQueue[sectionQuizIdx].question.correct) sectionQuizCorrect++;
+  showSectionQuizQuestion();
+}
+
+function nextSectionQuizQuestion() {
+  sectionQuizIdx++;
+  sectionQuizAnswered = false;
+  sectionQuizSelected = null;
+  showSectionQuizQuestion();
+}
+
+function confirmAbortSectionQuiz() { goHome(); }
+
+function showSectionQuizResults() {
+  scrollToTop();
+  var total = sectionQuizQueue.length;
+  var pct   = total === 0 ? 0 : Math.round((sectionQuizCorrect / total) * 100);
+  var icon  = pct >= 80 ? "&#x1F389;" : pct >= 60 ? "&#x1F44D;" : "&#x1F4DA;";
+  var color = pct >= 80 ? "#2d7a3a"  : pct >= 60 ? "#8a6a1d"   : "#8b2020";
+  var section = getSection(sectionQuizSectionId);
+  document.getElementById("app").innerHTML =
+    '<section class="card result-hero" role="status">' +
+    '  <span class="result-icon">' + icon + "</span>" +
+    '  <div class="result-score" style="color:' + color + '">' + sectionQuizCorrect + "/" + total + "</div>" +
+    '  <div class="result-label">Abschnitts-Quiz: ' + escapeHtml(section ? section.name : "") + "</div>" +
+    '  <div class="result-pct">' + pct + "% korrekt</div>" +
+    "</section>" +
+    '<div class="button-row result-actions">' +
+    '  <button onclick="startSectionQuiz(\'' + sectionQuizSectionId + '\')">&#x1F501; Nochmal</button>' +
+    '  <button class="secondary" onclick="goHome()">Zur \u00DCbersicht</button>' +
+    "</div>";
+  triggerViewTransition();
+}
+
 window.retryWrongQuestions  = retryWrongQuestions;
 window.toggleSectionExpand  = toggleSectionExpand;
 window.setActiveSection     = setActiveSection;
@@ -1705,6 +2334,7 @@ window.selectAnswer         = selectAnswer;
 window.nextQuestion         = nextQuestion;
 window.restartChapter       = restartChapter;
 window.submitName           = submitName;
+window.skipName             = skipName;
 window.editUserName         = editUserName;
 window.triggerInstallPrompt = triggerInstallPrompt;
 window.dismissInstallBanner = dismissInstallBanner;
@@ -1715,11 +2345,31 @@ window.startModuleQuiz      = startModuleQuiz;
 window.selectModuleAnswer   = selectModuleAnswer;
 window.nextModuleQuestion   = nextModuleQuestion;
 
-// S3.3 – Exam Mode
+// S3.3 – Adaptiver Lernmodus
 window.startExamMode        = startExamMode;
 window.selectExamAnswer     = selectExamAnswer;
 window.nextExamQuestion     = nextExamQuestion;
 window.confirmAbortExam     = confirmAbortExam;
+
+// S3.5 – Mixed Review
+window.startMixedReview       = startMixedReview;
+window.selectMixedAnswer      = selectMixedAnswer;
+window.nextMixedQuestion      = nextMixedQuestion;
+
+// S3.4 – Mock Exam
+window.startMockExam          = startMockExam;
+window.selectMockAnswer       = selectMockAnswer;
+window.nextMockQuestion       = nextMockQuestion;
+window.prevMockQuestion       = prevMockQuestion;
+window.showMockResults        = showMockResults;
+window.confirmAbortMockExam   = confirmAbortMockExam;
+
+// T-020 – Abschnitts-Zwischenquiz
+window.startSectionQuiz        = startSectionQuiz;
+window.skipSectionQuiz         = skipSectionQuiz;
+window.selectSectionQuizAnswer = selectSectionQuizAnswer;
+window.nextSectionQuizQuestion = nextSectionQuizQuestion;
+window.confirmAbortSectionQuiz = confirmAbortSectionQuiz;
 
 // ---------------------------------------------------------------------------
 // Initialisierung

@@ -339,6 +339,7 @@ Jede Methode ergibt unterschiedliche Stil- und Aroma-Profile.`,
 
   questions: [
     {
+      type: "Prüfungsfrage",
       question: "Was ist die Hauptquelle der Süße im Süßwein?",
       options: [
         "Restzucker aus den Trauben (natürlich, nicht zugesetzt)",
@@ -350,6 +351,7 @@ Jede Methode ergibt unterschiedliche Stil- und Aroma-Profile.`,
       explanation: "Süßwein enthält natürlichen Restzucker aus den Trauben, kein zugesetzter raffinierter Zucker (dies wäre Verfälschung und illegal)."
     },
     {
+      type: "Prüfungsfrage",
       question: "Was bewirkt Botrytis cinerea?",
       options: [
         "Konzentriert Zucker und Aromen durch Wasserverlust nach Haut-Perforation",
@@ -361,6 +363,7 @@ Jede Methode ergibt unterschiedliche Stil- und Aroma-Profile.`,
       explanation: "Botrytis (Edelfäule) durchlöchert Beerenhaut und führt zu Wasserverlust, wodurch Zucker und Aromen konzentriert werden – charakteristische Honig- und Wachsaromen entstehen."
     },
     {
+      type: "Prüfungsfrage",
       question: "Warum sind viele Süßweine lange lagerfähig?",
       options: [
         "Nur hoher Alkoholgehalt allein konserviert sie",
@@ -372,6 +375,7 @@ Jede Methode ergibt unterschiedliche Stil- und Aroma-Profile.`,
       explanation: "Zucker und Säure wirken konservierend und ermöglichen Lagerung für Jahrzehnte oder länger – natürliche Konservierungsmittel."
     },
     {
+      type: "Prüfungsfrage",
       question: "Was ist KEIN Weg zur Herstellung von Süßwein?",
       options: [
         "Gärung stoppen durch Kühlung oder Alkoholzugabe",
@@ -383,6 +387,7 @@ Jede Methode ergibt unterschiedliche Stil- und Aroma-Profile.`,
       explanation: "Säure entfernen würde Süßwein schädigen (Balance ruinieren); entscheidend ist Zucker-Retention, nicht Säure-Reduktion."
     },
     {
+      type: "Prüfungsfrage",
       question: "Was ist der wichtigste Qualitätsfaktor bei Süßwein?",
       options: [
         "Der absolute Zuckergehalt allein (je höher = desto besser)",
@@ -394,6 +399,7 @@ Jede Methode ergibt unterschiedliche Stil- und Aroma-Profile.`,
       explanation: "Balance ist entscheidend – nicht die reine Süße. Große Süßweine haben hohe Säure und Komplexität, nicht nur hohen Zucker."
     },
     {
+      type: "Prüfungsfrage",
       question: "Was passiert bei sehr hohem Zuckergehalt während der Gärung?",
       options: [
         "Die Hefe arbeitet schneller und vergärt alles schneller",
@@ -405,6 +411,7 @@ Jede Methode ergibt unterschiedliche Stil- und Aroma-Profile.`,
       explanation: "Hoher Zucker hemmt die Hefetätigkeit osmotisch, sodass Gärung natürlicherweise stoppt oder verlangsamt sich – dies ist Basis für Süßwein."
     },
     {
+      type: "Prüfungsfrage",
       question: "Was unterscheidet Süße von Fruchtigkeit?",
       options: [
         "Beides ist dasselbe und wird synonym verwendet",
@@ -414,6 +421,78 @@ Jede Methode ergibt unterschiedliche Stil- und Aroma-Profile.`,
       ],
       correct: 1,
       explanation: "Frucht sind Aromen (von der Traube), Süße ist tatsächlicher Zucker im Wein – völlig unabhängige Eigenschaften."
+    },
+    {
+      type: "Prüfungsfrage",
+      question: "Wie wird Eiswein (Icewine) hergestellt?",
+      options: [
+        "Trauben werden nach der Ernte künstlich eingefroren und dann gepresst",
+        "Der fertige Wein wird bei -5 °C eingefroren, um Alkohol zu entfernen",
+        "Natürlich gefrorene Trauben werden bei Frost geerntet und direkt gepresst",
+        "Trauben werden durch Botrytis getrocknet und dann eingefroren"
+      ],
+      correct: 2,
+      explanation: "Bei Eiswein werden die Trauben natürlich gefroren geerntet (typischerweise unter -8 °C) und sofort im gefrorenen Zustand gepresst. Das Wasser bleibt als Eis zurück – nur der konzentrierte Zuckersaft fließt ab."
+    },
+    {
+      type: "Prüfungsfrage",
+      question: "Aus welchen Hauptrebsorten besteht Sauternes?",
+      options: [
+        "Ausschließlich Sémillon",
+        "Hauptsächlich Sémillon, ergänzt durch Sauvignon Blanc (und etwas Muscadelle)",
+        "Sauvignon Blanc und Riesling zu gleichen Teilen",
+        "Chardonnay und Viognier"
+      ],
+      correct: 1,
+      explanation: "Sauternes basiert hauptsächlich auf Sémillon (dünne Schale – anfällig für Botrytis), ergänzt durch Sauvignon Blanc und gelegentlich Muscadelle."
+    },
+    {
+      type: "Prüfungsfrage",
+      question: "Was ist das Passito-Verfahren?",
+      options: [
+        "Trauben werden durch Botrytis konzentriert",
+        "Trauben werden eingefroren und im gefrorenen Zustand gepresst",
+        "Trauben werden auf Strohmatten oder Gestellen getrocknet, um Wasser zu entziehen",
+        "Der Wein wird durch Zugabe von Alkohol aufgespritet"
+      ],
+      correct: 2,
+      explanation: "Beim Passito-Verfahren (z. B. für Amarone, Recioto) werden Trauben nach der Ernte getrocknet (\"appassimento\"). Der Wasserentzug konzentriert Zucker und Aromen."
+    },
+    {
+      type: "Härtefrage",
+      question: "Was unterscheidet \"Edelschimmel\" (noble rot) von \"Graufäule\" (grey rot) bei Botrytis cinerea?",
+      options: [
+        "Beide entstehen bei denselben Wetterbedingungen und sind nur verschiedene Namen für dasselbe Phänomen",
+        "Edelschimmel entsteht bei feuchten Morgen gefolgt von trockenem Nachmittagswetter; Graufäule bei anhaltender Feuchtigkeit",
+        "Graufäule entsteht nur bei Rotweintrauben, Edelschimmel nur bei Weißwein",
+        "Edelschimmel ist immer gewünscht und wird aktiv durch Pilze kultiviert"
+      ],
+      correct: 1,
+      explanation: "Edelschimmel (beneficial Botrytis) entsteht bei idealem Wechsel: morgens feucht (Pilz kann eindringen), nachmittags trocken (kein Weiterfressen, Traube schrumpft). Anhaltende Feuchtigkeit führt zu Graufäule, die Trauben zerstört."
+    },
+    {
+      type: "Prüfungsfrage",
+      question: "Was ist Tokaji Aszú?",
+      options: [
+        "Ein Eiswein aus Riesling aus dem ungarischen Weingebiet Tokaj",
+        "Ein Süßwein aus Botrytis-befallenen Beeren (Aszú-Beeren), die in Puttonyos gemessen werden",
+        "Ein aufgespriteteter Wein aus Ungarn, ähnlich wie Port",
+        "Ein Wein aus getrockneten Trauben nach dem Passito-Verfahren"
+      ],
+      correct: 1,
+      explanation: "Tokaji Aszú ist ein ungarischer Süßwein aus edelfaulen Aszú-Beeren. Die Konzentration wird in Puttonyos (Korbeinheiten) gemessen. Mehr Puttonyos = mehr Süße."
+    },
+    {
+      type: "Härtefrage",
+      question: "Welche der folgenden Methoden konzentriert Süße durch Wasserentzug aus der Traube?",
+      options: [
+        "Zugabe von Süßreserve (konzentrierter Traubenmost) nach der Gärung",
+        "Mutage (Zugabe von Alkohol zum unvergorenen Most)",
+        "Botrytis-Befall, Trocknen auf Strohmatten und Eiswein-Ernte",
+        "Unterbrechen der Gärung durch Kühlung"
+      ],
+      correct: 2,
+      explanation: "Botrytis (Verdunstung durch Pilz), Passito (Trocknen) und Eiswein (Einfrieren – Wasser bleibt als Eis) konzentrieren alle Süße durch physischen Wasserentzug aus der Traube. Mutage und Süßreserve fügen Süße extern hinzu."
     }
   ]
 });

@@ -32,7 +32,7 @@ registerChapterContent("weinstruktur", {
 
 - **Hauptsäuren**: Weinsäure (tartaric acid) und Apfelsäure (malic acid) – zwei unterschiedliche Rollen
 - **Klima steuert Säure direkt**:
-  - Kühles Klima → niedrige Temperaturen → verlangsamer Säureabbau → höhere Säure bleib
+  - Kühles Klima → niedrige Temperaturen → verlangsamt Säureabbau → höhere Säure bleib
   - Warmes Klima → schneller Säureabbau → niedrigere Säure
 - **Warum hohe Säure wichtig**:
   - Speichelfluss wird angeregt → mundwässernde Frische
@@ -119,12 +119,12 @@ registerChapterContent("weinstruktur", {
       title: "Textur und Mundgefühl – die physikalische Integration",
       content: `Textur ist die kombinierte sensorische Wahrnehmung aller Strukturelemente im Mund. Sie wird durch Tannin, Alkohol und Ausbau geprägt und unterscheidet hochwertige von einfachen Weinen.
 
-- **Deskriptoren der Textur**: Cremig, seidig, rau, schlank, samtig, sedig – beschreiben taktile Mundwahrnehmung
+- **Deskriptoren der Textur**: Cremig, seidig, rau, schlank, samtig, seidig – beschreiben taktile Mundwahrnehmung
 - **Ursachen der Textur**:
   - **Tannin + Alkohol**: Tannine erzeugen Trockenheit, Alkohol erzeugt Wärme und Gewicht
   - **Holzausbau**: Oxidative Prozesse im Fass → komplexere Textur
   - **Malolaktische Gärung**: Säureabbau macht Textur runder, cremiger, weniger spitz
-  - **Edelstahl-Ausbau**: Minimale Oxidation → frische, krispe, knackigere Textur
+  - **Edelstahl-Ausbau**: Minimale Oxidation → frische, knackige, knackigere Textur
 - **Hochwertige vs. einfache Weine**: Textur-Komplexität ist oft Qualitäts-Signal
 - **Textur-Entwicklung über Zeit**: Mit Alter können Tannine weicher werden, Textur wird seidiger
 - **Vergleich**: Edelstahl (schlank, linear) vs. Holzfass (voluminös, komplex)`,

@@ -26,24 +26,65 @@
   --radius-sm:   10px;
   --sidebar-w:   268px;
   --serif:       'Playfair Display', Georgia, 'Times New Roman', serif;
+  --sans:        -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
+  --ink:         #1a1a1a;
 }
 
 /* ============================================================
-   View-Transition: Fade-In beim Kartenwechsel
+   Accessibility: sichtbare Fokuszustände
    ============================================================ */
-@keyframes viewFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+:focus-visible {
+  outline: 2px solid var(--wine);
+  outline-offset: 2px;
 }
 
-#app.view-enter {
-  animation: viewFadeIn 0.2s ease-out both;
+button:focus-visible {
+  outline: 2px solid var(--wine);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 4px rgba(122, 49, 58, 0.18);
+}
+
+/* Farbunabhängige Status-Labels für Screenreader */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ============================================================
+   View-Transition: Slide-In beim Karten-/Viewwechsel
+   ============================================================ */
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(22px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-22px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+#app.view-enter      { animation: slideInRight 0.22s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+#app.view-enter-back { animation: slideInLeft  0.22s cubic-bezier(0.25, 0.46, 0.45, 0.94) both; }
+
+/* Fortschritts-Puls auf dem Kartenfortschritts-Chip */
+@keyframes progressPulse {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+.topbar-progress.pulse {
+  animation: progressPulse 0.3s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #app.view-enter, #app.view-enter-back { animation: none; }
+  .topbar-progress.pulse { animation: none; }
 }
 
 /* ============================================================
@@ -681,15 +722,47 @@ button:disabled { opacity: 0.42; cursor: default; }
   margin-bottom: 2px;
 }
 
-.dashboard-hero-pct {
-  font-family: var(--serif);
-  font-size: 60px;
-  font-weight: 800;
-  color: white;
-  line-height: 1;
-  margin: 4px 0 12px;
-  letter-spacing: -2px;
+/* Dreifache Fortschrittsanzeige */
+.progress-three {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 8px 0 12px;
 }
+
+.prog-row {}
+
+.prog-row-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 4px;
+}
+
+.prog-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.prog-detail {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  font-variant-numeric: tabular-nums;
+}
+
+.prog-track {
+  background: rgba(255,255,255,0.2) !important;
+  height: 6px !important;
+  margin-bottom: 0 !important;
+}
+
+.prog-fill--cards   { background: rgba(255,255,255,0.75) !important; }
+.prog-fill--quiz    { background: rgba(255,200,160,0.85) !important; }
+.prog-fill--mastery { background: rgba(180,255,180,0.80) !important; }
 
 .dashboard-hero .progress-track {
   background: rgba(255,255,255,0.2);
@@ -971,6 +1044,23 @@ button:disabled { opacity: 0.42; cursor: default; }
   animation: shake 0.4s ease;
   border-color: #c0392b;
 }
+
+.name-skip-btn {
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 13px;
+  padding: 8px 0 0;
+  cursor: pointer;
+  box-shadow: none;
+  text-align: center;
+  min-width: 0;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.name-skip-btn:hover { color: var(--text); }
 
 @keyframes shake {
   0%, 100% { transform: translateX(0); }
@@ -1284,6 +1374,195 @@ button:disabled { opacity: 0.42; cursor: default; }
   opacity: 0.7;
   flex-shrink: 0;
 }
+
+/* T-020 – Abschnitts-Quiz-Angebot in Section-Karte */
+.section-quiz-offer {
+  margin-top: 10px;
+  padding: 10px 12px;
+  background: rgba(255,255,255,0.18);
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+.section-quiz-offer-text {
+  font-size: 12px;
+  font-weight: 600;
+  flex: 1 1 100%;
+}
+.section-quiz-offer-btn {
+  font-size: 12px;
+  padding: 6px 12px;
+  background: rgba(255,255,255,0.9);
+  color: var(--wine);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 700;
+  box-shadow: none;
+  min-width: 0;
+}
+.section-quiz-skip-btn {
+  font-size: 11px;
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.65);
+  cursor: pointer;
+  box-shadow: none;
+  padding: 4px 6px;
+  min-width: 0;
+  text-decoration: underline;
+}
+
+/* S3.3 – Mode cards (Mock Exam + Adaptiv) – zwei schmale Karten nebeneinander */
+.mode-cards-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 4px;
+}
+.mode-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: linear-gradient(135deg, var(--wine-dark) 0%, var(--wine-mid) 100%);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 16px 16px 14px;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: var(--shadow);
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+}
+.mode-card:hover  { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+.mode-card:active { transform: translateY(0);    box-shadow: var(--shadow-sm); }
+.mode-card--adaptive {
+  background: linear-gradient(135deg, #2c5364 0%, #3d6b7e 100%);
+}
+.mode-card-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  background: rgba(255,255,255,0.22);
+  border-radius: 6px;
+  padding: 2px 6px;
+  line-height: 1.5;
+}
+.mode-card-icon { font-size: 22px; }
+.mode-card-title {
+  font-family: var(--serif);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-top: 2px;
+}
+.mode-card-sub {
+  font-size: 11px;
+  opacity: 0.80;
+  line-height: 1.4;
+}
+
+/* Mixed Review – Button unter den Modus-Karten */
+.mixed-review-btn-wrap {
+  margin-top: 8px;
+}
+.mixed-review-btn {
+  width: 100%;
+  background: var(--soft);
+  border: 1.5px solid var(--line);
+  color: var(--wine);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 12px 16px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.15s, border-color 0.15s;
+  box-shadow: none;
+}
+.mixed-review-btn:hover {
+  background: var(--wine-light);
+  border-color: var(--wine);
+}
+
+/* Mock Exam: Gesamt-Timer oben in der Topbar-Region */
+.mock-timer-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px 6px;
+  background: var(--card-white);
+  border-bottom: 1px solid var(--line);
+}
+.mock-timer-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--muted);
+}
+.mock-timer-value {
+  font-size: 15px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+  letter-spacing: 0.5px;
+}
+.mock-timer-value.urgent { color: #c0392b; }
+.mock-timer-bar-wrap {
+  flex: 1;
+  height: 4px;
+  background: var(--line);
+  border-radius: 2px;
+  margin: 0 12px;
+  overflow: hidden;
+}
+.mock-timer-bar {
+  height: 100%;
+  background: #4a7c3f;
+  border-radius: 2px;
+  transition: width 1s linear, background 0.4s;
+}
+
+/* Mock Exam: Antwort-auswahl ohne Farbfeedback (neutral bis zum Ende) */
+.mock-option { /* inherits .option; kein Einfärben nach Klick */ }
+.mock-option.selected {
+  border-color: var(--wine);
+  background: var(--wine-light);
+  font-weight: 600;
+}
+.mock-option:disabled { cursor: default; opacity: 1; }
+
+/* Mock Exam Ergebnis-Schwellen */
+.wset-thresholds {
+  display: flex;
+  gap: 8px;
+  margin: 14px 0 4px;
+  justify-content: center;
+}
+.wset-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  line-height: 1.4;
+}
+.wset-badge-label { font-weight: 800; font-size: 13px; }
+.wset-badge-pct   { font-size: 10px; opacity: 0.8; }
+.wset-badge--pass        { background: #e6f4e9; color: #2d7a3a; }
+.wset-badge--merit       { background: #fff8e0; color: #8a6a1d; }
+.wset-badge--distinction { background: #fdf3e3; color: #b05c00; }
+.wset-badge--active      { ring: 2px; box-shadow: 0 0 0 2px currentColor; }
 
 /* S3.3 – Exam Timer Bar */
 .exam-timer-wrap {

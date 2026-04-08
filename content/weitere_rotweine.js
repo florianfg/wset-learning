@@ -449,6 +449,7 @@ Fehler:
   ],
   questions: [
     {
+      type: "Prüfungsfrage",
       question: "Welche Rebsorte hat typischerweise sehr hohe Tannine?",
       options: [
         "Nebbiolo",
@@ -460,6 +461,7 @@ Fehler:
       explanation: "Nebbiolo ist bekannt für sehr hohe Tannine und hohe Säure."
     },
     {
+      type: "Prüfungsfrage",
       question: "Welche Rebsorte hat typischerweise niedrige Tannine und hohen Alkohol?",
       options: [
         "Grenache",
@@ -471,6 +473,7 @@ Fehler:
       explanation: "Grenache hat wenig Tannin, aber hohen Alkohol."
     },
     {
+      type: "Prüfungsfrage",
       question: "Welche Rebsorte ist typisch für Rioja?",
       options: [
         "Sangiovese",
@@ -482,6 +485,7 @@ Fehler:
       explanation: "Tempranillo ist die Hauptrebsorte in Rioja."
     },
     {
+      type: "Prüfungsfrage",
       question: "Welche Rebsorte zeigt oft Rosen- und Teeraromen?",
       options: [
         "Gamay",
@@ -493,6 +497,7 @@ Fehler:
       explanation: "Nebbiolo ist bekannt für florale und teerige Noten."
     },
     {
+      type: "Prüfungsfrage",
       question: "Welche Rebsorte hat sehr hohe Säure und niedrige Tannine?",
       options: [
         "Nebbiolo",
@@ -504,6 +509,7 @@ Fehler:
       explanation: "Barbera hat hohe Säure und niedrige Tannine."
     },
     {
+      type: "Prüfungsfrage",
       question: "Welche Technik erzeugt besonders fruchtige, leichte Rotweine?",
       options: [
         "Malolaktische Gärung",
@@ -515,7 +521,8 @@ Fehler:
       explanation: "Carbonic Maceration erzeugt fruchtige, tanninarme Weine."
     },
     {
-      question: "Welche Rebsorte ist bekannt für grüne Paprikanoten?",
+      type: "Prüfungsfrage",
+      question: "Welche Rebsorte ist bekannt für grüne Paprika-Noten?",
       options: [
         "Grenache",
         "Gamay",
@@ -524,6 +531,78 @@ Fehler:
       ],
       correct: 2,
       explanation: "Carmenère zeigt häufig grüne Paprika-Aromen."
+    },
+    {
+      type: "Prüfungsfrage",
+      question: "Welche Rebsorte ist die Hauptsorte in Barolo und Barbaresco?",
+      options: [
+        "Sangiovese",
+        "Barbera",
+        "Nebbiolo",
+        "Dolcetto"
+      ],
+      correct: 2,
+      explanation: "Nebbiolo ist die Hauptrebsorte für Barolo und Barbaresco – beide DOCG-Weine aus dem Piemont (Norditalien). Nebbiolo ist bekannt für hohe Tannine, hohe Säure und Aromen von Rosen, Teer und getrockneten Früchten."
+    },
+    {
+      type: "Prüfungsfrage",
+      question: "Welche Region ist weltweit bekannt für kräftige Malbec-Rotweine?",
+      options: [
+        "Cahors, Frankreich",
+        "Napa Valley, USA",
+        "Mendoza, Argentinien",
+        "Barossa Valley, Australien"
+      ],
+      correct: 2,
+      explanation: "Obwohl Malbec aus Frankreich (Cahors) stammt, ist Mendoza in Argentinien heute die bekannteste Region für kräftige, fruchtbetonte Malbec-Weine auf Weltklasse-Niveau."
+    },
+    {
+      type: "Härtefrage",
+      question: "Verglichen mit Tempranillo hat Grenache typischerweise...",
+      options: [
+        "höhere Tannine und mehr Farbe",
+        "niedrigere Tannine, höheren Alkohol und weniger Farbe",
+        "mehr Säure und weniger Alkohol",
+        "identisches Tannin- und Säureprofil"
+      ],
+      correct: 1,
+      explanation: "Grenache hat typischerweise niedrige Tannine, wenig Farbe und relativ hohen Alkohol – es reift in warmen Klimazonen gut aus. Tempranillo hat mittlere Tannine und mehr Struktur."
+    },
+    {
+      type: "Prüfungsfrage",
+      question: "Welcher Wein wird hauptsächlich aus Sangiovese hergestellt?",
+      options: [
+        "Valpolicella",
+        "Barolo",
+        "Chianti",
+        "Rioja Reserva"
+      ],
+      correct: 2,
+      explanation: "Chianti (Toskana, Italien) basiert hauptsächlich auf Sangiovese. Valpolicella nutzt Corvina, Barolo nutzt Nebbiolo, Rioja nutzt Tempranillo."
+    },
+    {
+      type: "Prüfungsfrage",
+      question: "Was ist das charakteristischste Aromamerkmal von Syrah/Shiraz?",
+      options: [
+        "Rote Früchte, hohe Säure und florale Veilchen-Noten",
+        "Schwarze Früchte, schwarzer Pfeffer und manchmal Fleisch/Rauch",
+        "Kirsche, Tee und Erde mit feinen Tanninen",
+        "Bitterschokolade und Vanille durch intensiven Holzausbau"
+      ],
+      correct: 1,
+      explanation: "Syrah/Shiraz ist bekannt für dunkle Früchte (Brombeere, Pflaume) und charakteristischen schwarzen Pfeffer (besonders im kühlen Klima der nördlichen Rhône). In wärmerem Klima (Barossa) dominieren reife Früchte und Schokolade."
+    },
+    {
+      type: "Härtefrage",
+      question: "Welche Rebsorte ist die Hauptsorte in Amarone della Valpolicella?",
+      options: [
+        "Nebbiolo",
+        "Sangiovese",
+        "Montepulciano",
+        "Corvina (oft mit Rondinella)"
+      ],
+      correct: 3,
+      explanation: "Amarone della Valpolicella (Venetien, Italien) basiert hauptsächlich auf Corvina, ergänzt durch Rondinella und andere lokale Sorten. Der Wein wird aus getrockneten Trauben (Appassimento) hergestellt."
     }
   ]
 });

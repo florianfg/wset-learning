@@ -405,6 +405,7 @@ Merken: Gärung erzeugt CO₂; geschlossenes System bindet es.`,
 
   questions: [
     {
+      type: "Prüfungsfrage",
       question: "Wie entsteht CO₂ im Schaumwein?",
       options: [
         "Durch künstliches Einblasen (Karbonisierung)",
@@ -416,6 +417,7 @@ Merken: Gärung erzeugt CO₂; geschlossenes System bindet es.`,
       explanation: "CO₂ entsteht durch alkoholische Gärung – entscheidend ist das geschlossene System, das es im Wein einschließt und Druck aufbaut."
     },
     {
+      type: "Prüfungsfrage",
       question: "Welche Aussage zu Extra Dry ist korrekt?",
       options: [
         "Extra Dry ist trockener als Brut",
@@ -427,6 +429,7 @@ Merken: Gärung erzeugt CO₂; geschlossenes System bindet es.`,
       explanation: "Extra Dry hat 12–17 g/L und ist süßer als Brut (<12 g/L) – eine typische Prüfungsfalle aufgrund des verwirrenden Namens."
     },
     {
+      type: "Prüfungsfrage",
       question: "Was beschreibt Autolyse?",
       options: [
         "Hefezellabbau, der komplexe Brioche- und Toast-Aromen freisetzt",
@@ -438,6 +441,7 @@ Merken: Gärung erzeugt CO₂; geschlossenes System bindet es.`,
       explanation: "Autolyse ist der Abbau abgestorbener Hefezellen und sorgt für komplexe Aromen wie Brioche, Toast, Nuss und cremigere Textur."
     },
     {
+      type: "Prüfungsfrage",
       question: "Was ist ein Blanc de Blancs?",
       options: [
         "Rosé-Schaumwein mit hohem Zuckergehalt",
@@ -449,6 +453,7 @@ Merken: Gärung erzeugt CO₂; geschlossenes System bindet es.`,
       explanation: "Blanc de Blancs wird ausschließlich aus weißen Trauben hergestellt, typischerweise Chardonnay – elegant und lagerfähig."
     },
     {
+      type: "Prüfungsfrage",
       question: "Welche Eigenschaft ist typisch für Grundwein?",
       options: [
         "Hohe Säure und relative Trockenheit",
@@ -460,6 +465,7 @@ Merken: Gärung erzeugt CO₂; geschlossenes System bindet es.`,
       explanation: "Grundwein hat hohe Säure und ist trocken, um später mit Dosage balanciert zu werden – die Basis für Schaumwein-Qualität."
     },
     {
+      type: "Prüfungsfrage",
       question: "Was beeinflusst die Perlage (Mousse)?",
       options: [
         "Nur die Traubensorte und Alkoholgehalt",
@@ -471,6 +477,7 @@ Merken: Gärung erzeugt CO₂; geschlossenes System bindet es.`,
       explanation: "Perlage hängt stark von Herstellungsmethode, Reifungsdauer (Autolyse) und Lagerbedingungen ab – nicht nur vom Glas."
     },
     {
+      type: "Prüfungsfrage",
       question: "Warum ist hohe Säure im Grundwein wichtig?",
       options: [
         "Für intensive Rotweinaromen",
@@ -482,6 +489,7 @@ Merken: Gärung erzeugt CO₂; geschlossenes System bindet es.`,
       explanation: "Hohe Säure balanciert Dosage aus, sorgt für Frische und ist natürliches Konservierungsmittel."
     },
     {
+      type: "Prüfungsfrage",
       question: "Warum wird Dosage NACH dem Degorgieren zugegeben – nicht vorher oder während Gärung?",
       options: [
         "Weil Dosage den Wein vor Oxidation schützt",
@@ -491,6 +499,90 @@ Merken: Gärung erzeugt CO₂; geschlossenes System bindet es.`,
       ],
       correct: 1,
       explanation: "Dosage-Timing hat zwei Gründe: 1) Hefe muss zuerst entfernt werden (Degorgieren) – sonst würde Zucker weiter vergären. 2) Volumenausgleich nach Hebersatz-Verlust. Die Reihenfolge ist chemisch notwendig."
+    },
+    {
+      type: "Prüfungsfrage",
+      question: "Welche Herstellungsmethode ist typisch für Champagne?",
+      options: [
+        "Tankgärung (Charmat-Methode)",
+        "Méthode Traditionnelle (Flaschengärung)",
+        "Karbonisierung durch CO₂-Einleitung",
+        "Einmalige Gärung im Druckbehälter"
+      ],
+      correct: 1,
+      explanation: "Champagne wird nach der Méthode Traditionnelle hergestellt: zweite Gärung in der Flasche, Remuage, Degorgieren und Dosage."
+    },
+    {
+      type: "Prüfungsfrage",
+      question: "Was ist ein Blanc de Noirs?",
+      options: [
+        "Rosé-Schaumwein aus Chardonnay",
+        "Weißer Schaumwein ausschließlich aus Chardonnay",
+        "Weißer Schaumwein aus roten Rebsorten (z. B. Pinot Noir)",
+        "Schaumwein ohne Schwefelzusatz"
+      ],
+      correct: 2,
+      explanation: "Blanc de Noirs ist ein weißer Schaumwein, der aus roten Rebsorten (vor allem Pinot Noir, Pinot Meunier) hergestellt wird – die Beerenhäute werden sofort nach dem Pressen entfernt."
+    },
+    {
+      type: "Prüfungsfrage",
+      question: "Was bedeutet \"NV\" auf einem Champagner-Etikett?",
+      options: [
+        "Natural Vinification – Spontangärung ohne Kultivhefe",
+        "Non-Vintage – Weine aus mehreren Jahrgängen wurden verschnitten",
+        "Non-Verified – kein offiziell klassifizierter Wein",
+        "Nouveau Vin – junger Wein des laufenden Jahrgangs"
+      ],
+      correct: 1,
+      explanation: "NV steht für Non-Vintage. Der Kellermeisstil wird durch Verschnitt mehrerer Jahrgänge konsistent gehalten – ein zentrales Qualitätsmerkmal vieler Champagnerhäuser."
+    },
+    {
+      type: "Härtefrage",
+      question: "Welche Dosage-Kategorie ist trockener: Brut oder Extra Dry?",
+      options: [
+        "Extra Dry, mit 0–6 g/L Restzucker",
+        "Beide sind identisch trocken",
+        "Brut, mit 0–12 g/L – Extra Dry hat 12–17 g/L",
+        "Brut Nature, was identisch mit Brut ist"
+      ],
+      correct: 2,
+      explanation: "Brut (0–12 g/L) ist trockener als Extra Dry (12–17 g/L). Der Name \"Extra Dry\" ist irreführend – es ist tatsächlich etwas süßer als Brut."
+    },
+    {
+      type: "Prüfungsfrage",
+      question: "Was ist Remuage beim Champagner?",
+      options: [
+        "Das Einfrieren des Flaschenhalses zur Hefesatz-Entfernung",
+        "Die Zugabe von Hefe und Zucker für die zweite Gärung",
+        "Das tägliche Drehen und Neigen der Flaschen, um Hefesatz in den Hals zu befördern",
+        "Die abschließende Zugabe von Wein und Zucker (Dosage)"
+      ],
+      correct: 2,
+      explanation: "Beim Remuage (Riddling) werden die Flaschen täglich gedreht und zunehmend steiler gestellt, bis der Hefesatz im Flaschenhals sitzt und degorgiert werden kann."
+    },
+    {
+      type: "Prüfungsfrage",
+      question: "Was passiert beim Degorgieren (Dégorgement)?",
+      options: [
+        "Der Wein wird durch eine Membran filtriert",
+        "Hefe und Zucker werden für die zweite Gärung zugegeben",
+        "Der Flaschenhals wird eingefroren und der Hefepfropfen ausgestoßen",
+        "Die Dosage wird gleichmäßig im Wein verteilt"
+      ],
+      correct: 2,
+      explanation: "Beim Degorgieren wird der Flaschenhals in Eislauge eingetaucht. Der Hefesatz gefriert als Pfropfen und wird beim Öffnen der Flasche durch den inneren Druck ausgestoßen."
+    },
+    {
+      type: "Härtefrage",
+      question: "Welcher Aussage über den Grundwein in der Champagne-Herstellung trifft zu?",
+      options: [
+        "Er hat bereits hohen Alkohol und wenig Säure, um nach der Gärung Balance zu haben",
+        "Er ist still, säurebetont und relativ leicht – ideal als Basis für die zweite Gärung",
+        "Er ist bereits ein fertiger Schaumwein, der nur mit CO₂ versetzt wird",
+        "Er muss mindestens 3 Jahre in der Flasche reifen, bevor er als Grundwein gilt"
+      ],
+      correct: 1,
+      explanation: "Der Grundwein ist still, oft sehr säurebetont und alkoholarm. Die hohe Säure ist erwünscht, da die zweite Gärung Alkohol und CO₂ hinzufügt und die Säure die Langlebigkeit des Endprodukts sichert."
     }
   ]
 });
